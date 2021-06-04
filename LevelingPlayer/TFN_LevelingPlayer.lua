@@ -2,7 +2,7 @@
 TFN_LevelingPlayer by Rickoff for Tales from Nirn server 
 tes3mp 0.7.0
 openmw 0.44
-script 0.1
+script 0.6
 ---------------------------
 DESCRIPTION :
 Leveling sytem
@@ -99,14 +99,14 @@ TFN_LevelingPlayer.OnPlayerCompetence = function(pid, Comp, State, Count)
 				tes3mp.SetSkillBase(pid, skillId, valueC)
 				Players[pid].data.customVariables.TfnLeveling.pointSoul = Players[pid].data.customVariables.TfnLeveling.pointSoul + Count	
 				Players[pid].data.customVariables.TfnLeveling[Comp] = Players[pid].data.customVariables.TfnLeveling[Comp] - Count
-			elseif Comp ~= nil and Players[pid].data.customVariables.TfnLeveling[Comp] < Count and State == "Remove"
+			else
 				local attrId = tes3mp.GetAttributeId(Comp)
 				local valueS = Players[pid].data.attributes[Comp].base - Count	
 				tes3mp.SetAttributeBase(pid, attrId, valueS)
 				Players[pid].data.customVariables.TfnLeveling.pointSoul = Players[pid].data.customVariables.TfnLeveling.pointSoul + Count
 				Players[pid].data.customVariables.TfnLeveling[Comp] = Players[pid].data.customVariables.TfnLeveling[Comp] - Count
 			end
-		else
+		elseif Comp ~= nil and Players[pid].data.customVariables.TfnLeveling[Comp] < Count and State == "Remove"
 			tes3mp.MessageBox(pid, -1, color.Default..trad.NotPts)
 		end
 
