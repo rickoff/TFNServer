@@ -2,7 +2,7 @@
 TFN_LevelingPlayer by Rickoff for Tales from Nirn server 
 tes3mp 0.7.0
 openmw 0.44
-script 0.6
+script 0.1
 ---------------------------
 DESCRIPTION :
 Leveling sytem
@@ -48,13 +48,15 @@ local function getName(pid)
 end
 
 TFN_LevelingPlayer.InputDialog = function(pid, comp, state)
-	PlayerOptionPoint[getName(pid)] = {comp = comp, state = state}
-	local message = "Enter the number of points"
-	if state == "Add" then
-		return tes3mp.InputDialog(pid, config.PlayerAddPoint, message, "add skill points")
-	elseif state == "Remove" then
-		return tes3mp.InputDialog(pid, config.PlayerAddPoint, message, "remove skill points")
-	end	
+	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then 
+		PlayerOptionPoint[getName(pid)] = {comp = comp, state = state}
+		local message = "Enter the number of points"
+		if state == "Add" then
+			return tes3mp.InputDialog(pid, config.PlayerAddPoint, message, "add skill points")
+		elseif state == "Remove" then
+			return tes3mp.InputDialog(pid, config.PlayerAddPoint, message, "remove skill points")
+		end	
+	end
 end
 
 TFN_LevelingPlayer.OnGUIAction = function(pid, idGui, data)
@@ -69,11 +71,8 @@ end
 
 TFN_LevelingPlayer.OnPlayerCompetence = function(pid, Comp, State, Count)
 	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then	
-	
-		local PointCount = Players[pid].data.customVariables.TfnLeveling.pointSoul
-		
+		local PointCount = Players[pid].data.customVariables.TfnLeveling.pointSoul	
 		local Count = Count or 0
-
 		if Comp ~= nil and PointCount >= Count and State == "Add" then	
 			if CheckComp(Comp) == "skill" then
 				local skillId = tes3mp.GetSkillId(Comp)
@@ -90,8 +89,7 @@ TFN_LevelingPlayer.OnPlayerCompetence = function(pid, Comp, State, Count)
 			end
 		elseif Comp ~= nil and PointCount < Count and State == "Add" then
 			tes3mp.MessageBox(pid, -1, color.Default..trad.NoPt)
-		end
-		
+		end	
 		if Comp ~= nil and Players[pid].data.customVariables.TfnLeveling[Comp] >= Count and State == "Remove" then	
 			if CheckComp(Comp) == "skill" then		
 				local skillId = tes3mp.GetSkillId(Comp)
@@ -109,7 +107,6 @@ TFN_LevelingPlayer.OnPlayerCompetence = function(pid, Comp, State, Count)
 		elseif Comp ~= nil and Players[pid].data.customVariables.TfnLeveling[Comp] < Count and State == "Remove"
 			tes3mp.MessageBox(pid, -1, color.Default..trad.NotPts)
 		end
-
 		Players[pid]:SaveAttributes()	
 		Players[pid]:SaveSkills()			
 		tes3mp.SendAttributes(pid)
@@ -129,22 +126,21 @@ TFN_LevelingPlayer.MainMenu = function(pid)
 end
 
 TFN_LevelingPlayer.LevelPlayer = function(eventStatus, pid)	
-	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then		
-		local player = Players[pid]		
-		if player.data.stats.level >= config.levelMax then
-			player.data.stats.level = config.levelMax
-			player.data.stats.levelProgress = 0
-			player:LoadLevel()
+	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then	
+		if Players[pid].data.stats.level >= config.levelMax then
+			Players[pid].data.stats.level = config.levelMax
+			Players[pid].data.stats.levelProgress = 0
+			Players[pid]:LoadLevel()
 			return customEventHooks.makeEventStatus(false,false)				
 		end	
 		TFN_LevelingPlayer.GetlevelSoul(pid)		
-		player:QuicksaveToDrive()
+		Players[pid]:QuicksaveToDrive()
 	end
 end
 
 TFN_LevelingPlayer.GetlevelSoul = function(pid)
 	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
-		if player.data.stats.levelProgress >= 20 then			
+		if Players[pid].data.stats.levelProgress >= 20 then			
 			Players[pid].data.customVariables.TfnLeveling.pointSoul = Players[pid].data.customVariables.TfnLeveling.pointSoul + 10
 			TFN_LevelingPlayer.NewLevelPlayer(pid)
 			tes3mp.MessageBox(pid, -1, color.Default..trad.Feli..color.Green..trad.Menu..color.Default..trad.Dep..color.Yellow..trad.Xps)
@@ -153,14 +149,13 @@ TFN_LevelingPlayer.GetlevelSoul = function(pid)
 end
 
 TFN_LevelingPlayer.NewLevelPlayer = function(pid)	
-	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then		
-		local player = Players[pid]
-		if player.data.stats.level < config.levelMax then
-			player.data.stats.level = player.data.stats.level + 1
-			player.data.stats.levelProgress = 0 
-			player:LoadLevel()
+	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then	
+		if Players[pid].data.stats.level < config.levelMax then
+			Players[pid].data.stats.level = Players[pid].data.stats.level + 1
+			Players[pid].data.stats.levelProgress = 0 
+			Players[pid]:LoadLevel()
 		end
-		player:QuicksaveToDrive()
+		Players[pid]:QuicksaveToDrive()
 	end
 end
 
