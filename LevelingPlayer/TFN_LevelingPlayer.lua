@@ -87,8 +87,12 @@ TFN_LevelingPlayer.OnPlayerCompetence = function(pid, Comp, State, Count)
 				tes3mp.SetAttributeBase(pid, attrId, valueS)
 				Players[pid].data.customVariables.TfnLeveling.pointSoul = Players[pid].data.customVariables.TfnLeveling.pointSoul - Count
 				Players[pid].data.customVariables.TfnLeveling[Comp] = Players[pid].data.customVariables.TfnLeveling[Comp] + Count
-			end	
-		elseif Comp ~= nil and Players[pid].data.customVariables.TfnLeveling[Comp] >= Count and State == "Remove" then	
+			end
+		else
+			tes3mp.MessageBox(pid, -1, color.Default..trad.NoPt)
+		end
+		
+		if Comp ~= nil and Players[pid].data.customVariables.TfnLeveling[Comp] >= Count and State == "Remove" then	
 			if CheckComp(Comp) == "skill" then		
 				local skillId = tes3mp.GetSkillId(Comp)
 				local valueC = Players[pid].data.skills[Comp].base - Count
@@ -102,6 +106,8 @@ TFN_LevelingPlayer.OnPlayerCompetence = function(pid, Comp, State, Count)
 				Players[pid].data.customVariables.TfnLeveling.pointSoul = Players[pid].data.customVariables.TfnLeveling.pointSoul + Count
 				Players[pid].data.customVariables.TfnLeveling[Comp] = Players[pid].data.customVariables.TfnLeveling[Comp] - Count
 			end
+		else
+			tes3mp.MessageBox(pid, -1, color.Default..trad.NotPts)
 		end
 
 		Players[pid]:SaveAttributes()	
