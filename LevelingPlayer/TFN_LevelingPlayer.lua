@@ -88,7 +88,7 @@ TFN_LevelingPlayer.OnPlayerCompetence = function(pid, Comp, State, Count)
 				Players[pid].data.customVariables.TfnLeveling.pointSoul = Players[pid].data.customVariables.TfnLeveling.pointSoul - Count
 				Players[pid].data.customVariables.TfnLeveling[Comp] = Players[pid].data.customVariables.TfnLeveling[Comp] + Count
 			end
-		else
+		elseif Comp ~= nil and PointCount < Count and State == "Add" then
 			tes3mp.MessageBox(pid, -1, color.Default..trad.NoPt)
 		end
 		
@@ -99,7 +99,7 @@ TFN_LevelingPlayer.OnPlayerCompetence = function(pid, Comp, State, Count)
 				tes3mp.SetSkillBase(pid, skillId, valueC)
 				Players[pid].data.customVariables.TfnLeveling.pointSoul = Players[pid].data.customVariables.TfnLeveling.pointSoul + Count	
 				Players[pid].data.customVariables.TfnLeveling[Comp] = Players[pid].data.customVariables.TfnLeveling[Comp] - Count
-			else
+			elseif Comp ~= nil and Players[pid].data.customVariables.TfnLeveling[Comp] < Count and State == "Remove"
 				local attrId = tes3mp.GetAttributeId(Comp)
 				local valueS = Players[pid].data.attributes[Comp].base - Count	
 				tes3mp.SetAttributeBase(pid, attrId, valueS)
