@@ -5,7 +5,7 @@ openmw 0.44
 script 0.1
 ---------------------------
 DESCRIPTION :
-Leveling sytem
+Leveling system with menu and auto pass level
 ---------------------------
 INSTALLATION:
 Save the file as TFN_LevelingPlayer.lua inside your server/scripts/custom folder.
