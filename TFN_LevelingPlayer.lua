@@ -71,8 +71,7 @@ TFN_LevelingPlayer.GetlevelSoul = function(pid)
 	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
 		if player.data.stats.levelProgress >= 20 then			
 			Players[pid].data.customVariables.TfnLeveling.pointSoul = Players[pid].data.customVariables.TfnLeveling.pointSoul + 10
-			TFN_LevelingPlayer.NewLevelPlayer(pid)
-			TFN_LevelingPlayer.NewLevelPlayerStats(pid)
+			TFN_LevelingPlayer.NewLevelPlayer(pid) 
 			tes3mp.MessageBox(pid, -1, color.Default..trad.Feli..color.Green..trad.Menu..color.Default..trad.Dep..color.Yellow..trad.Xps)
 		end
 	end
