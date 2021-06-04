@@ -79,7 +79,6 @@ end
 
 TFN_LevelingPlayer.OnPlayerCompetence = function(Pid, Comp, State, Count)
 	if Players[Pid] ~= nil and Players[Pid]:IsLoggedIn() then
-		local levelSoul = Players[Pid].data.customVariables.TfnLeveling.levelSoul	
 		local PointCount = Players[Pid].data.customVariables.TfnLeveling.pointSoul
 		local HungerCount = Players[Pid].data.customVariables.TfnLeveling.hungerCount
 		local ThirstCount = Players[Pid].data.customVariables.TfnLeveling.thirstCount
@@ -126,11 +125,6 @@ TFN_LevelingPlayer.OnPlayerCompetence = function(Pid, Comp, State, Count)
 		if PointCount == nil then
 			Players[Pid].data.customVariables.TfnLeveling.pointSoul = 0
 			PointCount = Players[Pid].data.customVariables.TfnLeveling.pointSoul			
-		end	
-		
-		if levelSoul == nil then
-			Players[Pid].data.customVariables.TfnLeveling.levelSoul = 1
-			levelSoul = Players[Pid].data.customVariables.TfnLeveling.levelSoul	
 		end
 		
 		if ForceCount == nil then
