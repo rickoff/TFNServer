@@ -104,14 +104,6 @@ Menus["menu cmp cmb"] = {
 
 Menus["menu cmp cmb 2"] = {
 	text = {color.Orange .. "DECREASE STATISTICS\n",
-		color.Yellow .. "\nXp : " .. color.White,
-		menuHelper.variables.currentPlayerDataVariable("customVariables.soul"), 
-		color.Red .. " >= " .. color.White,
-		menuHelper.variables.currentPlayerDataVariable("customVariables.capSoul"),
-		"\n",		
-		color.Yellow .. "\nLevel : " .. color.White,
-		menuHelper.variables.currentPlayerDataVariable("customVariables.levelSoul"), 
-		"\n",	
 		color.Yellow .. "\nskill points : " .. color.White,
 		menuHelper.variables.currentPlayerDataVariable("customVariables.pointSoul"),
 		"\n\n",
@@ -197,14 +189,6 @@ Menus["menu cmp cmb 2"] = {
 
 Menus["menu cmp mag"] = {
 	text = {color.Orange .. "INCREASE TALENT page 1\n",
-		color.Yellow .. "\nXp : " .. color.White,
-		menuHelper.variables.currentPlayerDataVariable("customVariables.soul"), 
-		color.Red .. " >= " .. color.White,
-		menuHelper.variables.currentPlayerDataVariable("customVariables.capSoul"),
-		"\n",		
-		color.Yellow .. "\nLevel : " .. color.White,
-		menuHelper.variables.currentPlayerDataVariable("customVariables.levelSoul"),
-		"\n",	
 		color.Yellow .. "\nskill points : " .. color.White,
 		menuHelper.variables.currentPlayerDataVariable("customVariables.pointSoul"),
 		"\n\n",
@@ -334,14 +318,6 @@ Menus["menu cmp mag"] = {
 
 Menus["menu cmp mag3"] = {
 	text = {color.Orange .. "DECREASE TALENT page 1\n",
-		color.Yellow .. "\nXp : " .. color.White,
-		menuHelper.variables.currentPlayerDataVariable("customVariables.soul"), 
-		color.Red .. " >= " .. color.White,
-		menuHelper.variables.currentPlayerDataVariable("customVariables.capSoul"),
-		"\n",		
-		color.Yellow .. "\nLevel : " .. color.White,
-		menuHelper.variables.currentPlayerDataVariable("customVariables.levelSoul"),
-		"\n",	
 		color.Yellow .. "\nskill points : " .. color.White,
 		menuHelper.variables.currentPlayerDataVariable("customVariables.pointSoul"),
 		"\n\n",
@@ -472,14 +448,6 @@ Menus["menu cmp mag3"] = {
 
 Menus["menu cmp mag2"] = {
 	text = {color.Orange .. "INCREASE TALENT page 2\n",
-		color.Yellow .. "\nXp : " .. color.White,
-		menuHelper.variables.currentPlayerDataVariable("customVariables.soul"), 
-		color.Red .. " >= " .. color.White,
-		menuHelper.variables.currentPlayerDataVariable("customVariables.capSoul"),
-		"\n",		
-		color.Yellow .. "\nLevel : " .. color.White,
-		menuHelper.variables.currentPlayerDataVariable("customVariables.levelSoul"), 
-		"\n",	
 		color.Yellow .. "\nskill points : " .. color.White,
 		menuHelper.variables.currentPlayerDataVariable("customVariables.pointSoul"),
 		"\n\n",
@@ -617,14 +585,6 @@ Menus["menu cmp mag2"] = {
 
 Menus["menu cmp mag4"] = {
 	text = {color.Orange .. "DECREASE TALENT page 2\n",
-		color.Yellow .. "\nXp : " .. color.White,
-		menuHelper.variables.currentPlayerDataVariable("customVariables.soul"), 
-		color.Red .. " >= " .. color.White,
-		menuHelper.variables.currentPlayerDataVariable("customVariables.capSoul"),
-		"\n",		
-		color.Yellow .. "\nLevel : " .. color.White,
-		menuHelper.variables.currentPlayerDataVariable("customVariables.levelSoul"), 
-		"\n",	
 		color.Yellow .. "\nskill points : " .. color.White,
 		menuHelper.variables.currentPlayerDataVariable("customVariables.pointSoul"),
 		"\n\n",
