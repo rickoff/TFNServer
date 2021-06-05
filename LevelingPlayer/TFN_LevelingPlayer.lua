@@ -35,7 +35,7 @@ trad.WereWolf = "Skill menu is forbidden in werewolf form"
 
 local config = {}
 config.levelMax = 50
-config.talentProgress = 1
+config.talentProgress = 10
 config.RewardPoints = 10
 config.PlayerAddPoint = 555555
 
