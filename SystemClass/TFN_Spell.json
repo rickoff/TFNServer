@@ -1,0 +1,2702 @@
+{
+  "imperial heavy armor skill":{
+    "skill":"destruction"
+  },
+  "assured glib speech":{
+    "skill":"destruction"
+  },
+  "absorb spell points":{
+    "skill":"destruction"
+  },
+  "medusa's gaze":{
+    "skill":"destruction"
+  },
+  "absorb speed [ranged]":{
+    "skill":"destruction"
+  },
+  "cure blight disease":{
+    "skill":"destruction"
+  },
+  "curse spell points":{
+    "skill":"destruction"
+  },
+  "shrine illusion skill":{
+    "skill":"destruction"
+  },
+  "the eight gifts":{
+    "skill":"destruction"
+  },
+  "spider touch":{
+    "skill":"destruction"
+  },
+  "almalexia's wrath":{
+    "skill":"destruction"
+  },
+  "touchdrain marksman":{
+    "skill":"destruction"
+  },
+  "shrine_puzzle_sp":{
+    "skill":"destruction"
+  },
+  "drain long blade":{
+    "skill":"destruction"
+  },
+  "frost shield":{
+    "skill":"destruction"
+  },
+  "absorb luck [ranged]":{
+    "skill":"destruction"
+  },
+  "heavy burden":{
+    "skill":"destruction"
+  },
+  "scourge blade":{
+    "skill":"destruction"
+  },
+  "earwig":{
+    "skill":"destruction"
+  },
+  "touchdrain medium armor":{
+    "skill":"destruction"
+  },
+  "rally beast":{
+    "skill":"destruction"
+  },
+  "summon scamp":{
+    "skill":"destruction"
+  },
+  "shrine_mountkand_sp":{
+    "skill":"destruction"
+  },
+  "hand of sleep":{
+    "skill":"destruction"
+  },
+  "imperial block skill":{
+    "skill":"destruction"
+  },
+  "strong frost shield":{
+    "skill":"destruction"
+  },
+  "masterful martial craft":{
+    "skill":"destruction"
+  },
+  "bm_paralyze_hirc":{
+    "skill":"destruction"
+  },
+  "crimson despair":{
+    "skill":"destruction"
+  },
+  "night-eye":{
+    "skill":"destruction"
+  },
+  "blood_rage_unique":{
+    "skill":"destruction"
+  },
+  "shrine alteration skill":{
+    "skill":"destruction"
+  },
+  "shrine_maargan_npc_sp":{
+    "skill":"destruction"
+  },
+  "variable resist common disease":{
+    "skill":"destruction"
+  },
+  "hand of azura":{
+    "skill":"destruction"
+  },
+  "fierce frost shield":{
+    "skill":"destruction"
+  },
+  "hand of decay":{
+    "skill":"destruction"
+  },
+  "quicksilver":{
+    "skill":"destruction"
+  },
+  "touchdrain enchant":{
+    "skill":"destruction"
+  },
+  "grave curse: spell points":{
+    "skill":"destruction"
+  },
+  "rest of st. merris":{
+    "skill":"destruction"
+  },
+  "ondusi's open door":{
+    "skill":"destruction"
+  },
+  "burning touch":{
+    "skill":"destruction"
+  },
+  "absorb agility":{
+    "skill":"destruction"
+  },
+  "masterful fleetness":{
+    "skill":"destruction"
+  },
+  "dispel":{
+    "skill":"destruction"
+  },
+  "imperial alteration skill":{
+    "skill":"destruction"
+  },
+  "shrine_gnisis_sp":{
+    "skill":"destruction"
+  },
+  "shield of the armiger":{
+    "skill":"destruction"
+  },
+  "strong shock shield":{
+    "skill":"destruction"
+  },
+  "dynamic golden wisdom":{
+    "skill":"destruction"
+  },
+  "rilm's gift":{
+    "skill":"destruction"
+  },
+  "crushing burden touch":{
+    "skill":"destruction"
+  },
+  "absorb endurance [ranged]":{
+    "skill":"destruction"
+  },
+  "dire weary":{
+    "skill":"destruction"
+  },
+  "weakness to magicka":{
+    "skill":"destruction"
+  },
+  "restore intelligence":{
+    "skill":"destruction"
+  },
+  "resist frost":{
+    "skill":"destruction"
+  },
+  "wild fortify conjuration skill":{
+    "skill":"destruction"
+  },
+  "emasculate":{
+    "skill":"destruction"
+  },
+  "demoralize humanoid":{
+    "skill":"destruction"
+  },
+  "ghost guard":{
+    "skill":"destruction"
+  },
+  "assured horny fist":{
+    "skill":"destruction"
+  },
+  "wild fortify mysticism skill":{
+    "skill":"destruction"
+  },
+  "scrib_paralysis":{
+    "skill":"destruction"
+  },
+  "weapon eater":{
+    "skill":"destruction"
+  },
+  "assured martial craft":{
+    "skill":"destruction"
+  },
+  "masterful golden wisdom":{
+    "skill":"destruction"
+  },
+  "strong resist fire":{
+    "skill":"destruction"
+  },
+  "drain enchant":{
+    "skill":"destruction"
+  },
+  "brevusa's averted eyes":{
+    "skill":"destruction"
+  },
+  "the eight wonders":{
+    "skill":"destruction"
+  },
+  "curse endurance":{
+    "skill":"destruction"
+  },
+  "dynamic smiting":{
+    "skill":"destruction"
+  },
+  "healingtouch_sp_uniq":{
+    "skill":"destruction"
+  },
+  "charming touch":{
+    "skill":"destruction"
+  },
+  "absorb willpower [ranged]":{
+    "skill":"destruction"
+  },
+  "shrine axe skill":{
+    "skill":"destruction"
+  },
+  "surpassing transcendant wisdom":{
+    "skill":"destruction"
+  },
+  "drain blunt weapon":{
+    "skill":"destruction"
+  },
+  "poet's whim":{
+    "skill":"destruction"
+  },
+  "masterful deep biting":{
+    "skill":"destruction"
+  },
+  "wild fortify medium armor skill":{
+    "skill":"destruction"
+  },
+  "restore agility":{
+    "skill":"destruction"
+  },
+  "shrine long blade skill":{
+    "skill":"destruction"
+  },
+  "shard":{
+    "skill":"destruction"
+  },
+  "curse health":{
+    "skill":"destruction"
+  },
+  "meris' warding":{
+    "skill":"destruction"
+  },
+  "dire weakness to frost":{
+    "skill":"destruction"
+  },
+  "surpassing fluid evasion":{
+    "skill":"destruction"
+  },
+  "drain security":{
+    "skill":"destruction"
+  },
+  "wild fortify long blade skill":{
+    "skill":"destruction"
+  },
+  "shrine spear skill":{
+    "skill":"destruction"
+  },
+  "hand of uthol":{
+    "skill":"destruction"
+  },
+  "surpassing transfiguring wisdom":{
+    "skill":"destruction"
+  },
+  "great resist fire":{
+    "skill":"destruction"
+  },
+  "touchdrain destruction":{
+    "skill":"destruction"
+  },
+  "spirit knife":{
+    "skill":"destruction"
+  },
+  "surpassing golden wisdom":{
+    "skill":"destruction"
+  },
+  "summon skeletal minion":{
+    "skill":"destruction"
+  },
+  "tinur's hoptoad":{
+    "skill":"destruction"
+  },
+  "cure poison":{
+    "skill":"destruction"
+  },
+  "hide":{
+    "skill":"destruction"
+  },
+  "restore strength":{
+    "skill":"destruction"
+  },
+  "rilm's cure":{
+    "skill":"destruction"
+  },
+  "shrine mysticism skill":{
+    "skill":"destruction"
+  },
+  "daedric agility":{
+    "skill":"destruction"
+  },
+  "curse fatigue":{
+    "skill":"destruction"
+  },
+  "water walking":{
+    "skill":"destruction"
+  },
+  "imperial mercantile skill":{
+    "skill":"destruction"
+  },
+  "imperial medium armor skill":{
+    "skill":"destruction"
+  },
+  "daedric speed":{
+    "skill":"destruction"
+  },
+  "fortify medium armor skill":{
+    "skill":"destruction"
+  },
+  "assured deep biting":{
+    "skill":"destruction"
+  },
+  "imperial destruction skill":{
+    "skill":"destruction"
+  },
+  "dynamic transcendant wisdom":{
+    "skill":"destruction"
+  },
+  "sixth barrier":{
+    "skill":"destruction"
+  },
+  "hornhand":{
+    "skill":"destruction"
+  },
+  "enervate":{
+    "skill":"destruction"
+  },
+  "masterful denial":{
+    "skill":"destruction"
+  },
+  "masterful sureflight":{
+    "skill":"destruction"
+  },
+  "wild clumsiness":{
+    "skill":"destruction"
+  },
+  "weakness to fire":{
+    "skill":"destruction"
+  },
+  "imperial light armor skill":{
+    "skill":"destruction"
+  },
+  "grave curse: endurance":{
+    "skill":"destruction"
+  },
+  "flameguard":{
+    "skill":"destruction"
+  },
+  "variable resist magicka":{
+    "skill":"destruction"
+  },
+  "lustidrike_cocktail":{
+    "skill":"destruction"
+  },
+  "open":{
+    "skill":"destruction"
+  },
+  "shrine restoration skill":{
+    "skill":"destruction"
+  },
+  "fortify speechcraft skill":{
+    "skill":"destruction"
+  },
+  "iron will":{
+    "skill":"destruction"
+  },
+  "fortify mysticism skill":{
+    "skill":"destruction"
+  },
+  "wrath of gilvoth":{
+    "skill":"destruction"
+  },
+  "drain marksman":{
+    "skill":"destruction"
+  },
+  "surpassing green wisdom":{
+    "skill":"destruction"
+  },
+  "imperial alchemy skill":{
+    "skill":"destruction"
+  },
+  "veloth's grace":{
+    "skill":"destruction"
+  },
+  "restore luck":{
+    "skill":"destruction"
+  },
+  "orc's strength":{
+    "skill":"destruction"
+  },
+  "absorb fatigue [ranged]":{
+    "skill":"destruction"
+  },
+  "bound longbow":{
+    "skill":"destruction"
+  },
+  "wild spite":{
+    "skill":"destruction"
+  },
+  "grave curse: fatigue":{
+    "skill":"destruction"
+  },
+  "firebloom":{
+    "skill":"destruction"
+  },
+  "gash spirit":{
+    "skill":"destruction"
+  },
+  "nimbleness":{
+    "skill":"destruction"
+  },
+  "imperial spear skill":{
+    "skill":"destruction"
+  },
+  "restore personality":{
+    "skill":"destruction"
+  },
+  "deadly poison [ranged]":{
+    "skill":"destruction"
+  },
+  "dire shockball":{
+    "skill":"destruction"
+  },
+  "shockimperfect":{
+    "skill":"destruction"
+  },
+  "ulms juicedaw's feather":{
+    "skill":"destruction"
+  },
+  "assured sureflight":{
+    "skill":"destruction"
+  },
+  "heavy_eyes_unique":{
+    "skill":"destruction"
+  },
+  "proj_trap_spell":{
+    "skill":"destruction"
+  },
+  "masterful fluid evasion":{
+    "skill":"destruction"
+  },
+  "absorb personality":{
+    "skill":"destruction"
+  },
+  "relvel_damage":{
+    "skill":"destruction"
+  },
+  "fortify alchemy skill":{
+    "skill":"destruction"
+  },
+  "prox_mine_life":{
+    "skill":"destruction"
+  },
+  "hand of the hart-king":{
+    "skill":"destruction"
+  },
+  "prox_mine_poison":{
+    "skill":"destruction"
+  },
+  "fortify long blade skill":{
+    "skill":"destruction"
+  },
+  "imperial blunt weapon skill":{
+    "skill":"destruction"
+  },
+  "drain short blade":{
+    "skill":"destruction"
+  },
+  "drain medium armor":{
+    "skill":"destruction"
+  },
+  "resist poison":{
+    "skill":"destruction"
+  },
+  "levitate":{
+    "skill":"destruction"
+  },
+  "wild fortify enchant skill":{
+    "skill":"destruction"
+  },
+  "shrine hand to hand skill":{
+    "skill":"destruction"
+  },
+  "touchdrain acrobatics":{
+    "skill":"destruction"
+  },
+  "lightning shield":{
+    "skill":"destruction"
+  },
+  "drain alchemy":{
+    "skill":"destruction"
+  },
+  "great resist corprus disease":{
+    "skill":"destruction"
+  },
+  "surpassing safekeeping":{
+    "skill":"destruction"
+  },
+  "almalexia's blessing":{
+    "skill":"destruction"
+  },
+  "ash curse: health":{
+    "skill":"destruction"
+  },
+  "trap_poison_killer":{
+    "skill":"destruction"
+  },
+  "trap_shock_killer":{
+    "skill":"destruction"
+  },
+  "trap_frost_killer":{
+    "skill":"destruction"
+  },
+  "burden touch":{
+    "skill":"destruction"
+  },
+  "gash spirit [ranged]":{
+    "skill":"destruction"
+  },
+  "trap_fire_killer":{
+    "skill":"destruction"
+  },
+  "evil eye":{
+    "skill":"destruction"
+  },
+  "seryn's gift":{
+    "skill":"destruction"
+  },
+  "blood curse: fatigue":{
+    "skill":"destruction"
+  },
+  "bm_hunterwind":{
+    "skill":"destruction"
+  },
+  "seryn's shield":{
+    "skill":"destruction"
+  },
+  "first barrier":{
+    "skill":"destruction"
+  },
+  "bm_summonbonewolf":{
+    "skill":"destruction"
+  },
+  "shrine armorer skill":{
+    "skill":"destruction"
+  },
+  "free action":{
+    "skill":"destruction"
+  },
+  "bm_summonbear":{
+    "skill":"destruction"
+  },
+  "vivec's feast":{
+    "skill":"destruction"
+  },
+  "assured red wisdom":{
+    "skill":"destruction"
+  },
+  "surpassing fleetness":{
+    "skill":"destruction"
+  },
+  "wild fortify athletics skill":{
+    "skill":"destruction"
+  },
+  "shrine unarmored skill":{
+    "skill":"destruction"
+  },
+  "divine intervention":{
+    "skill":"destruction"
+  },
+  "bm_draugr_curse":{
+    "skill":"destruction"
+  },
+  "touchdrain agility":{
+    "skill":"destruction"
+  },
+  "masterful transfiguring wisdom":{
+    "skill":"destruction"
+  },
+  "spirit of nerevar":{
+    "skill":"destruction"
+  },
+  "stone_nikulas":{
+    "skill":"destruction"
+  },
+  "stone_hunroor":{
+    "skill":"destruction"
+  },
+  "fortify athletics skill":{
+    "skill":"destruction"
+  },
+  "brittlewind":{
+    "skill":"destruction"
+  },
+  "stone_erlendr":{
+    "skill":"destruction"
+  },
+  "weary":{
+    "skill":"destruction"
+  },
+  "summon least bonewalker":{
+    "skill":"destruction"
+  },
+  "restore attributes":{
+    "skill":"destruction"
+  },
+  "aryon_rest":{
+    "skill":"destruction"
+  },
+  "gothren_gout":{
+    "skill":"destruction"
+  },
+  "dratha_spite":{
+    "skill":"destruction"
+  },
+  "rapid regenerate":{
+    "skill":"destruction"
+  },
+  "rilm's grace":{
+    "skill":"destruction"
+  },
+  "the dove's promise":{
+    "skill":"destruction"
+  },
+  "vampire touch":{
+    "skill":"destruction"
+  },
+  "bound cuirass":{
+    "skill":"destruction"
+  },
+  "fortify sneak skill":{
+    "skill":"destruction"
+  },
+  "gripes":{
+    "skill":"destruction"
+  },
+  "hand of vivec":{
+    "skill":"destruction"
+  },
+  "great resist frost":{
+    "skill":"destruction"
+  },
+  "wulfharth's cups":{
+    "skill":"destruction"
+  },
+  "cure blight_self":{
+    "skill":"destruction"
+  },
+  "kwama_poison":{
+    "skill":"destruction"
+  },
+  "resist corprus disease":{
+    "skill":"destruction"
+  },
+  "variable resist corprus disease":{
+    "skill":"destruction"
+  },
+  "drain block":{
+    "skill":"destruction"
+  },
+  "strong resist corprus disease":{
+    "skill":"destruction"
+  },
+  "concealment":{
+    "skill":"destruction"
+  },
+  "god's fire":{
+    "skill":"destruction"
+  },
+  "shrine_sanctus_sp":{
+    "skill":"destruction"
+  },
+  "surpassing unseen wisdom":{
+    "skill":"destruction"
+  },
+  "shock":{
+    "skill":"destruction"
+  },
+  "shrine light armor skill":{
+    "skill":"destruction"
+  },
+  "weakness to corprus disease":{
+    "skill":"destruction"
+  },
+  "touchdrain block":{
+    "skill":"destruction"
+  },
+  "roris' bloom":{
+    "skill":"destruction"
+  },
+  "surpassing stalking":{
+    "skill":"destruction"
+  },
+  "drain spear":{
+    "skill":"destruction"
+  },
+  "summon_centurion_unique":{
+    "skill":"destruction"
+  },
+  "sotha's grace":{
+    "skill":"destruction"
+  },
+  "cure_blight_target":{
+    "skill":"destruction"
+  },
+  "assured sublime wisdom":{
+    "skill":"destruction"
+  },
+  "shalk_firebite":{
+    "skill":"destruction"
+  },
+  "panacea":{
+    "skill":"destruction"
+  },
+  "shockball_large":{
+    "skill":"destruction"
+  },
+  "masterful sublime wisdom":{
+    "skill":"destruction"
+  },
+  "golanar's eye-maze":{
+    "skill":"destruction"
+  },
+  "imperial marksman skill":{
+    "skill":"destruction"
+  },
+  "dynamic red wisdom":{
+    "skill":"destruction"
+  },
+  "assured nimble armor":{
+    "skill":"destruction"
+  },
+  "enrichment":{
+    "skill":"destruction"
+  },
+  "fortify unarmored skill":{
+    "skill":"destruction"
+  },
+  "emperor's blessing":{
+    "skill":"destruction"
+  },
+  "strong heal companion":{
+    "skill":"destruction"
+  },
+  "invisibility":{
+    "skill":"destruction"
+  },
+  "wizard rend":{
+    "skill":"destruction"
+  },
+  "surpassing smiting":{
+    "skill":"destruction"
+  },
+  "wild levitate":{
+    "skill":"destruction"
+  },
+  "roris's bloom":{
+    "skill":"destruction"
+  },
+  "frostball_large":{
+    "skill":"destruction"
+  },
+  "dynamic safekeeping":{
+    "skill":"destruction"
+  },
+  "variable resist shock":{
+    "skill":"destruction"
+  },
+  "enervating touch":{
+    "skill":"destruction"
+  },
+  "summon frost atronach":{
+    "skill":"destruction"
+  },
+  "curse speed":{
+    "skill":"destruction"
+  },
+  "restore endurance":{
+    "skill":"destruction"
+  },
+  "vivec's fury":{
+    "skill":"destruction"
+  },
+  "reflect":{
+    "skill":"destruction"
+  },
+  "bound dagger":{
+    "skill":"destruction"
+  },
+  "soul trap":{
+    "skill":"destruction"
+  },
+  "flay spirit [ranged]":{
+    "skill":"destruction"
+  },
+  "ash curse: fatigue":{
+    "skill":"destruction"
+  },
+  "touchdrain alteration":{
+    "skill":"destruction"
+  },
+  "dread curse: personality":{
+    "skill":"destruction"
+  },
+  "demoralize creature":{
+    "skill":"destruction"
+  },
+  "assured leaping":{
+    "skill":"destruction"
+  },
+  "bound shield":{
+    "skill":"destruction"
+  },
+  "shrine_balur_sp":{
+    "skill":"destruction"
+  },
+  "fire_fathasa_unique":{
+    "skill":"destruction"
+  },
+  "resist paralysis":{
+    "skill":"destruction"
+  },
+  "touchdrain heavy armor":{
+    "skill":"destruction"
+  },
+  "strong levitate":{
+    "skill":"destruction"
+  },
+  "bound battle-axe":{
+    "skill":"destruction"
+  },
+  "cure poison touch":{
+    "skill":"destruction"
+  },
+  "drain destruction":{
+    "skill":"destruction"
+  },
+  "disintegrate weapon":{
+    "skill":"destruction"
+  },
+  "shadow weave":{
+    "skill":"destruction"
+  },
+  "assured unseen wisdom":{
+    "skill":"destruction"
+  },
+  "magicka leech":{
+    "skill":"destruction"
+  },
+  "cure corprus disease":{
+    "skill":"destruction"
+  },
+  "charisma":{
+    "skill":"destruction"
+  },
+  "sp_touchprotect":{
+    "skill":"destruction"
+  },
+  "sp_rangedheal":{
+    "skill":"destruction"
+  },
+  "energy leech":{
+    "skill":"destruction"
+  },
+  "fourth barrier":{
+    "skill":"destruction"
+  },
+  "surpassing stolid armor":{
+    "skill":"destruction"
+  },
+  "trap_shock":{
+    "skill":"destruction"
+  },
+  "trap_paralyze":{
+    "skill":"destruction"
+  },
+  "trap_frost":{
+    "skill":"destruction"
+  },
+  "cruel firebloom":{
+    "skill":"destruction"
+  },
+  "fortify axe skill":{
+    "skill":"destruction"
+  },
+  "trap_health":{
+    "skill":"destruction"
+  },
+  "shrine destruction skill":{
+    "skill":"destruction"
+  },
+  "drain restoration":{
+    "skill":"destruction"
+  },
+  "saintly touch":{
+    "skill":"destruction"
+  },
+  "poisonbloom":{
+    "skill":"destruction"
+  },
+  "burden":{
+    "skill":"destruction"
+  },
+  "saguine leaping":{
+    "skill":"destruction"
+  },
+  "shrine blunt weapon skill":{
+    "skill":"destruction"
+  },
+  "greater resist poison":{
+    "skill":"destruction"
+  },
+  "shrine conjuration skill":{
+    "skill":"destruction"
+  },
+  "grave curse: luck":{
+    "skill":"destruction"
+  },
+  "ordeal of st. olms":{
+    "skill":"destruction"
+  },
+  "masterful smiting":{
+    "skill":"destruction"
+  },
+  "daedric willpower":{
+    "skill":"destruction"
+  },
+  "shrine athletics skill":{
+    "skill":"destruction"
+  },
+  "holy touch":{
+    "skill":"destruction"
+  },
+  "five fingers of pain":{
+    "skill":"destruction"
+  },
+  "surpassing impaling thrust":{
+    "skill":"destruction"
+  },
+  "sp_ccd":{
+    "skill":"destruction"
+  },
+  "sp_nchurdamzsummon":{
+    "skill":"destruction"
+  },
+  "ogrul's_lucky_again":{
+    "skill":"destruction"
+  },
+  "ironhand":{
+    "skill":"destruction"
+  },
+  "frostguard":{
+    "skill":"destruction"
+  },
+  "suicide_test":{
+    "skill":"destruction"
+  },
+  "poison_powerful":{
+    "skill":"destruction"
+  },
+  "fortify light armor skill":{
+    "skill":"destruction"
+  },
+  "commanding touch":{
+    "skill":"destruction"
+  },
+  "surpassing leaping":{
+    "skill":"destruction"
+  },
+  "ash feast":{
+    "skill":"destruction"
+  },
+  "sp_glyphofweakness":{
+    "skill":"destruction"
+  },
+  "troll strength":{
+    "skill":"destruction"
+  },
+  "dire weakness to fire":{
+    "skill":"destruction"
+  },
+  "the rock of llothis":{
+    "skill":"destruction"
+  },
+  "shrine security skill":{
+    "skill":"destruction"
+  },
+  "cure common disease victim":{
+    "skill":"destruction"
+  },
+  "assured enterprise":{
+    "skill":"destruction"
+  },
+  "weakness to poison":{
+    "skill":"destruction"
+  },
+  "wild fortify destruction skill":{
+    "skill":"destruction"
+  },
+  "fortify hand to hand skill":{
+    "skill":"destruction"
+  },
+  "wulfharth’s cups":{
+    "skill":"destruction"
+  },
+  "masterful hewing":{
+    "skill":"destruction"
+  },
+  "daedric personality":{
+    "skill":"destruction"
+  },
+  "cure common disease other":{
+    "skill":"destruction"
+  },
+  "wrath of dagoth":{
+    "skill":"destruction"
+  },
+  "blindself":{
+    "skill":"destruction"
+  },
+  "resist cold":{
+    "skill":"destruction"
+  },
+  "doze":{
+    "skill":"destruction"
+  },
+  "zenithar_blessing":{
+    "skill":"destruction"
+  },
+  "dread curse: health":{
+    "skill":"destruction"
+  },
+  "feet of notorgo":{
+    "skill":"destruction"
+  },
+  "absorb strength":{
+    "skill":"destruction"
+  },
+  "detect_key":{
+    "skill":"destruction"
+  },
+  "strong reflect":{
+    "skill":"destruction"
+  },
+  "shrine_maargan_sp":{
+    "skill":"destruction"
+  },
+  "command beast":{
+    "skill":"destruction"
+  },
+  "swimmer's_blessing":{
+    "skill":"destruction"
+  },
+  "lightning bolt":{
+    "skill":"destruction"
+  },
+  "shrine alchemy skill":{
+    "skill":"destruction"
+  },
+  "wild fortify sneak skill":{
+    "skill":"destruction"
+  },
+  "summon daedroth":{
+    "skill":"destruction"
+  },
+  "ogrul's_quick_again":{
+    "skill":"destruction"
+  },
+  "dread curse: fatigue":{
+    "skill":"destruction"
+  },
+  "ogrul's_staunch_again":{
+    "skill":"destruction"
+  },
+  "deadly poison":{
+    "skill":"destruction"
+  },
+  "alit bite":{
+    "skill":"destruction"
+  },
+  "demoralize beast":{
+    "skill":"destruction"
+  },
+  "calming touch":{
+    "skill":"destruction"
+  },
+  "firefist":{
+    "skill":"destruction"
+  },
+  "ogrul's_strong_again":{
+    "skill":"destruction"
+  },
+  "masterful nimble armor":{
+    "skill":"destruction"
+  },
+  "ghost curse":{
+    "skill":"destruction"
+  },
+  "masterful balanced armor":{
+    "skill":"destruction"
+  },
+  "touchdrain spear":{
+    "skill":"destruction"
+  },
+  "masterful stolid armor":{
+    "skill":"destruction"
+  },
+  "masterful red wisdom":{
+    "skill":"destruction"
+  },
+  "dagoth's bosom":{
+    "skill":"destruction"
+  },
+  "ghost_snake":{
+    "skill":"destruction"
+  },
+  "charm mortal":{
+    "skill":"destruction"
+  },
+  "tevral's hawkshaw":{
+    "skill":"destruction"
+  },
+  "hand of dagoth":{
+    "skill":"destruction"
+  },
+  "drain unarmored":{
+    "skill":"destruction"
+  },
+  "dynamic glib speech":{
+    "skill":"destruction"
+  },
+  "torpor touch":{
+    "skill":"destruction"
+  },
+  "wizard's fire":{
+    "skill":"destruction"
+  },
+  "wrath of araynys":{
+    "skill":"destruction"
+  },
+  "hand of gilvoth":{
+    "skill":"destruction"
+  },
+  "shockbite":{
+    "skill":"destruction"
+  },
+  "shockbloom":{
+    "skill":"destruction"
+  },
+  "surpassing deep biting":{
+    "skill":"destruction"
+  },
+  "wrath of tureynul":{
+    "skill":"destruction"
+  },
+  "heartbite":{
+    "skill":"destruction"
+  },
+  "hand of odros":{
+    "skill":"destruction"
+  },
+  "frost barrier":{
+    "skill":"destruction"
+  },
+  "assured green wisdom":{
+    "skill":"destruction"
+  },
+  "wrath of odros":{
+    "skill":"destruction"
+  },
+  "hand of endus":{
+    "skill":"destruction"
+  },
+  "strength leech":{
+    "skill":"destruction"
+  },
+  "weakness to shock":{
+    "skill":"destruction"
+  },
+  "llivam's reversal":{
+    "skill":"destruction"
+  },
+  "dynamic stalking":{
+    "skill":"destruction"
+  },
+  "woe":{
+    "skill":"destruction"
+  },
+  "baleful glower":{
+    "skill":"destruction"
+  },
+  "assured balanced armor":{
+    "skill":"destruction"
+  },
+  "shrine_alddaedroth_sp":{
+    "skill":"destruction"
+  },
+  "exhaustion":{
+    "skill":"destruction"
+  },
+  "shrine_balur_sp":{
+    "skill":"destruction"
+  },
+  "absorb fatigue":{
+    "skill":"destruction"
+  },
+  "vampire levitate":{
+    "skill":"destruction"
+  },
+  "frenzy humanoid":{
+    "skill":"destruction"
+  },
+  "light":{
+    "skill":"destruction"
+  },
+  "resist corpus disease":{
+    "skill":"destruction"
+  },
+  "crushing burden of sin":{
+    "skill":"destruction"
+  },
+  "tempting touch":{
+    "skill":"destruction"
+  },
+  "skillmephala_sp":{
+    "skill":"destruction"
+  },
+  "dynamic fleetness":{
+    "skill":"destruction"
+  },
+  "absorb health":{
+    "skill":"destruction"
+  },
+  "masteful red wisdom":{
+    "skill":"destruction"
+  },
+  "shrine_dagonfel_sp":{
+    "skill":"destruction"
+  },
+  "stormhand":{
+    "skill":"destruction"
+  },
+  "balyna's efficacious balm":{
+    "skill":"destruction"
+  },
+  "beggar's nose spell":{
+    "skill":"destruction"
+  },
+  "dynamic fluid evasion":{
+    "skill":"destruction"
+  },
+  "weakness to common disease":{
+    "skill":"destruction"
+  },
+  "blood of the north":{
+    "skill":"destruction"
+  },
+  "dynamic impaling thrust":{
+    "skill":"destruction"
+  },
+  "touchdrain athletics":{
+    "skill":"destruction"
+  },
+  "shrine_ghostgate_sp":{
+    "skill":"destruction"
+  },
+  "saintly word":{
+    "skill":"destruction"
+  },
+  "dynamic unseen wisdom":{
+    "skill":"destruction"
+  },
+  "dynamic enterprise":{
+    "skill":"destruction"
+  },
+  "hrothmund blessing":{
+    "skill":"destruction"
+  },
+  "absorb personality [ranged]":{
+    "skill":"destruction"
+  },
+  "dynamic sureflight":{
+    "skill":"destruction"
+  },
+  "dynamic hewing":{
+    "skill":"destruction"
+  },
+  "absorb health [ranged]":{
+    "skill":"destruction"
+  },
+  "stumble":{
+    "skill":"destruction"
+  },
+  "bound helm":{
+    "skill":"destruction"
+  },
+  "dynamic silver wisdom":{
+    "skill":"destruction"
+  },
+  "dynamic stolid armor":{
+    "skill":"destruction"
+  },
+  "assured denial":{
+    "skill":"destruction"
+  },
+  "variable resist frost":{
+    "skill":"destruction"
+  },
+  "dynamic transfiguring wisdom":{
+    "skill":"destruction"
+  },
+  "veloth's indwelling":{
+    "skill":"destruction"
+  },
+  "assured fluid evasion":{
+    "skill":"destruction"
+  },
+  "frostfist":{
+    "skill":"destruction"
+  },
+  "wound":{
+    "skill":"destruction"
+  },
+  "dynamic sublime wisdom":{
+    "skill":"destruction"
+  },
+  "touchdrain short blade":{
+    "skill":"destruction"
+  },
+  "vivec's kiss":{
+    "skill":"destruction"
+  },
+  "dynamic martial craft":{
+    "skill":"destruction"
+  },
+  "fortify mercantile skill":{
+    "skill":"destruction"
+  },
+  "frost storm":{
+    "skill":"destruction"
+  },
+  "balyna's perfect balm":{
+    "skill":"destruction"
+  },
+  "great feather":{
+    "skill":"destruction"
+  },
+  "vivec's_wrath":{
+    "skill":"destruction"
+  },
+  "god's frost":{
+    "skill":"destruction"
+  },
+  "drain armorer":{
+    "skill":"destruction"
+  },
+  "second barrier":{
+    "skill":"destruction"
+  },
+  "hex":{
+    "skill":"destruction"
+  },
+  "assured stolid armor":{
+    "skill":"destruction"
+  },
+  "daedric fatigue":{
+    "skill":"destruction"
+  },
+  "god's spark":{
+    "skill":"destruction"
+  },
+  "daedric strength":{
+    "skill":"destruction"
+  },
+  "daedric luck":{
+    "skill":"destruction"
+  },
+  "imperial security skill":{
+    "skill":"destruction"
+  },
+  "imperial acrobatics skill":{
+    "skill":"destruction"
+  },
+  "drain axe":{
+    "skill":"destruction"
+  },
+  "weeping wound":{
+    "skill":"destruction"
+  },
+  "daedric endurance":{
+    "skill":"destruction"
+  },
+  "daedric health":{
+    "skill":"destruction"
+  },
+  "daedric intelligence":{
+    "skill":"destruction"
+  },
+  "daedric bite":{
+    "skill":"destruction"
+  },
+  "imperial enchant skill":{
+    "skill":"destruction"
+  },
+  "cruel noise":{
+    "skill":"destruction"
+  },
+  "wild spelldrinker":{
+    "skill":"destruction"
+  },
+  "summon flame atronach":{
+    "skill":"destruction"
+  },
+  "drain athletics":{
+    "skill":"destruction"
+  },
+  "wild shockbloom":{
+    "skill":"destruction"
+  },
+  "shield":{
+    "skill":"destruction"
+  },
+  "father's hand":{
+    "skill":"destruction"
+  },
+  "touchdrain hand to hand":{
+    "skill":"destruction"
+  },
+  "shock barrier":{
+    "skill":"destruction"
+  },
+  "drain speechcraft":{
+    "skill":"destruction"
+  },
+  "bound boots":{
+    "skill":"destruction"
+  },
+  "meris's warding":{
+    "skill":"destruction"
+  },
+  "slowfall":{
+    "skill":"destruction"
+  },
+  "wild strain":{
+    "skill":"destruction"
+  },
+  "touchdrain security":{
+    "skill":"destruction"
+  },
+  "slave belt":{
+    "skill":"destruction"
+  },
+  "sanil's murdrum":{
+    "skill":"destruction"
+  },
+  "sp_hvaulttrap":{
+    "skill":"destruction"
+  },
+  "wild flay spirit":{
+    "skill":"destruction"
+  },
+  "wild fortify speechcraft skill":{
+    "skill":"destruction"
+  },
+  "wild fortify spear skill":{
+    "skill":"destruction"
+  },
+  "wild fortify short blade skill":{
+    "skill":"destruction"
+  },
+  "wild fortify security skill":{
+    "skill":"destruction"
+  },
+  "aralor's intervention":{
+    "skill":"destruction"
+  },
+  "wild fortify mercantile skill":{
+    "skill":"destruction"
+  },
+  "great levitate":{
+    "skill":"destruction"
+  },
+  "wild torpor":{
+    "skill":"destruction"
+  },
+  "touchdrain sneak":{
+    "skill":"destruction"
+  },
+  "seryn's blessing":{
+    "skill":"destruction"
+  },
+  "assured smiting":{
+    "skill":"destruction"
+  },
+  "wild fortify heavy armor skill":{
+    "skill":"destruction"
+  },
+  "wild fortify hand to hand skill":{
+    "skill":"destruction"
+  },
+  "strong spelldrinker":{
+    "skill":"destruction"
+  },
+  "wild fortify blunt weapon skill":{
+    "skill":"destruction"
+  },
+  "nibenay's wit":{
+    "skill":"destruction"
+  },
+  "wild fortify block skill":{
+    "skill":"destruction"
+  },
+  "wild fortify axe skill":{
+    "skill":"destruction"
+  },
+  "mark":{
+    "skill":"destruction"
+  },
+  "stone_ulfgar":{
+    "skill":"destruction"
+  },
+  "wild earwig":{
+    "skill":"destruction"
+  },
+  "knuckle luck":{
+    "skill":"destruction"
+  },
+  "wild fortify alteration skill":{
+    "skill":"destruction"
+  },
+  "masterful stalking":{
+    "skill":"destruction"
+  },
+  "wild fortify acrobatics skill":{
+    "skill":"destruction"
+  },
+  "buoyancy":{
+    "skill":"destruction"
+  },
+  "eye of talos":{
+    "skill":"destruction"
+  },
+  "surpassing martial craft":{
+    "skill":"destruction"
+  },
+  "crushing burden":{
+    "skill":"destruction"
+  },
+  "hand of vemyn":{
+    "skill":"destruction"
+  },
+  "drain health_fatigue":{
+    "skill":"destruction"
+  },
+  "touchdrain alchemy":{
+    "skill":"destruction"
+  },
+  "mother's kiss":{
+    "skill":"destruction"
+  },
+  "veloth's gift":{
+    "skill":"destruction"
+  },
+  "torpor":{
+    "skill":"destruction"
+  },
+  "heal companion":{
+    "skill":"destruction"
+  },
+  "feather":{
+    "skill":"destruction"
+  },
+  "veloth's benison":{
+    "skill":"destruction"
+  },
+  "summon winged twilight":{
+    "skill":"destruction"
+  },
+  "tranasa's spelltrap":{
+    "skill":"destruction"
+  },
+  "troll's blood":{
+    "skill":"destruction"
+  },
+  "turn of the wheel":{
+    "skill":"destruction"
+  },
+  "regenerate":{
+    "skill":"destruction"
+  },
+  "curse personality":{
+    "skill":"destruction"
+  },
+  "great heal companion":{
+    "skill":"destruction"
+  },
+  "shrine marksman skill":{
+    "skill":"destruction"
+  },
+  "balyna's soothing balm":{
+    "skill":"destruction"
+  },
+  "frost bolt":{
+    "skill":"destruction"
+  },
+  "touchdrain armorer":{
+    "skill":"destruction"
+  },
+  "sheogorath's blessing":{
+    "skill":"destruction"
+  },
+  "dire weakness to shock":{
+    "skill":"destruction"
+  },
+  "temptation":{
+    "skill":"destruction"
+  },
+  "dread curse: strength":{
+    "skill":"destruction"
+  },
+  "dread curse: willpower":{
+    "skill":"destruction"
+  },
+  "purge magic":{
+    "skill":"destruction"
+  },
+  "vivec's humility":{
+    "skill":"destruction"
+  },
+  "distracting touch":{
+    "skill":"destruction"
+  },
+  "fire shield":{
+    "skill":"destruction"
+  },
+  "noise":{
+    "skill":"destruction"
+  },
+  "fortify block skill":{
+    "skill":"destruction"
+  },
+  "sotha's mirror":{
+    "skill":"destruction"
+  },
+  "poisonguard":{
+    "skill":"destruction"
+  },
+  "masterful green wisdom":{
+    "skill":"destruction"
+  },
+  "variable resist poison":{
+    "skill":"destruction"
+  },
+  "absorb spell points [ranged]":{
+    "skill":"destruction"
+  },
+  "stamina":{
+    "skill":"destruction"
+  },
+  "imperial speechcraft skill":{
+    "skill":"destruction"
+  },
+  "distraction":{
+    "skill":"destruction"
+  },
+  "assured transcendant wisdom":{
+    "skill":"destruction"
+  },
+  "balyna's antidote":{
+    "skill":"destruction"
+  },
+  "fortify enchant skill":{
+    "skill":"destruction"
+  },
+  "hearth heal":{
+    "skill":"destruction"
+  },
+  "dread curse: agility":{
+    "skill":"destruction"
+  },
+  "strong resist magicka":{
+    "skill":"destruction"
+  },
+  "drain heavy armor":{
+    "skill":"destruction"
+  },
+  "absorb endurance":{
+    "skill":"destruction"
+  },
+  "shockguard":{
+    "skill":"destruction"
+  },
+  "great resist magicka":{
+    "skill":"destruction"
+  },
+  "dynamic horny fist":{
+    "skill":"destruction"
+  },
+  "strong resist frost":{
+    "skill":"destruction"
+  },
+  "drain sneak":{
+    "skill":"destruction"
+  },
+  "fortify heavy armor skill":{
+    "skill":"destruction"
+  },
+  "variable resist corpus disease":{
+    "skill":"destruction"
+  },
+  "felms' glory":{
+    "skill":"destruction"
+  },
+  "great resist corpus disease":{
+    "skill":"destruction"
+  },
+  "resist common disease":{
+    "skill":"destruction"
+  },
+  "wrath of vivec":{
+    "skill":"destruction"
+  },
+  "wild fortify marksman skill":{
+    "skill":"destruction"
+  },
+  "bound spear":{
+    "skill":"destruction"
+  },
+  "shalidor's mirror":{
+    "skill":"destruction"
+  },
+  "drain acrobatics":{
+    "skill":"destruction"
+  },
+  "black hand":{
+    "skill":"destruction"
+  },
+  "olms' benediction":{
+    "skill":"destruction"
+  },
+  "assured swiftblade":{
+    "skill":"destruction"
+  },
+  "blightguard":{
+    "skill":"destruction"
+  },
+  "clumsy touch":{
+    "skill":"destruction"
+  },
+  "vivec's mercy":{
+    "skill":"destruction"
+  },
+  "shield of st. delyn":{
+    "skill":"destruction"
+  },
+  "spite":{
+    "skill":"destruction"
+  },
+  "ysmir's cough":{
+    "skill":"destruction"
+  },
+  "wild weakness":{
+    "skill":"destruction"
+  },
+  "dynamic balanced armor":{
+    "skill":"destruction"
+  },
+  "masterful impaling thrust":{
+    "skill":"destruction"
+  },
+  "divine aid":{
+    "skill":"destruction"
+  },
+  "dynamic deep biting":{
+    "skill":"destruction"
+  },
+  "powerwell":{
+    "skill":"destruction"
+  },
+  "spell absorption":{
+    "skill":"destruction"
+  },
+  "fortify short blade skill":{
+    "skill":"destruction"
+  },
+  "assured golden wisdom":{
+    "skill":"destruction"
+  },
+  "soul of sotha sil":{
+    "skill":"destruction"
+  },
+  "skylamp's shadow":{
+    "skill":"destruction"
+  },
+  "surpassing glib speech":{
+    "skill":"destruction"
+  },
+  "masterful glib speech":{
+    "skill":"destruction"
+  },
+  "masterful unseen wisdom":{
+    "skill":"destruction"
+  },
+  "smite the ungodly":{
+    "skill":"destruction"
+  },
+  "weakness to blight disease":{
+    "skill":"destruction"
+  },
+  "wild fortify alchemy skill":{
+    "skill":"destruction"
+  },
+  "assured stalking":{
+    "skill":"destruction"
+  },
+  "surpassing swiftblade":{
+    "skill":"destruction"
+  },
+  "masterful swiftblade":{
+    "skill":"destruction"
+  },
+  "great resist common disease":{
+    "skill":"destruction"
+  },
+  "fortify armorer skill":{
+    "skill":"destruction"
+  },
+  "resist magicka":{
+    "skill":"destruction"
+  },
+  "absorb strength [ranged]":{
+    "skill":"destruction"
+  },
+  "assured safekeeping":{
+    "skill":"destruction"
+  },
+  "dire weakness to poison":{
+    "skill":"destruction"
+  },
+  "great resist shock":{
+    "skill":"destruction"
+  },
+  "strong resist corpus disease":{
+    "skill":"destruction"
+  },
+  "colovia's grace":{
+    "skill":"destruction"
+  },
+  "surpassing enterprise":{
+    "skill":"destruction"
+  },
+  "masterful enterprise":{
+    "skill":"destruction"
+  },
+  "recall":{
+    "skill":"destruction"
+  },
+  "wrath of vemyn":{
+    "skill":"destruction"
+  },
+  "surpassing sureflight":{
+    "skill":"destruction"
+  },
+  "surpassing sunlight":{
+    "skill":"destruction"
+  },
+  "vivec's mystery":{
+    "skill":"destruction"
+  },
+  "touchdrain mercantile":{
+    "skill":"destruction"
+  },
+  "jack of trades":{
+    "skill":"destruction"
+  },
+  "tap energy":{
+    "skill":"destruction"
+  },
+  "shrine mercantile skill":{
+    "skill":"destruction"
+  },
+  "surpassing hewing":{
+    "skill":"destruction"
+  },
+  "assured hewing":{
+    "skill":"destruction"
+  },
+  "frenzy beast":{
+    "skill":"destruction"
+  },
+  "surpassing nimble armor":{
+    "skill":"destruction"
+  },
+  "wisdom":{
+    "skill":"destruction"
+  },
+  "assured fleetness":{
+    "skill":"destruction"
+  },
+  "alad's caliginy":{
+    "skill":"destruction"
+  },
+  "viperbite":{
+    "skill":"destruction"
+  },
+  "wounding touch":{
+    "skill":"destruction"
+  },
+  "assured silver wisdom":{
+    "skill":"destruction"
+  },
+  "trap_silence":{
+    "skill":"destruction"
+  },
+  "heavy burden touch":{
+    "skill":"destruction"
+  },
+  "masteful stolid armor":{
+    "skill":"destruction"
+  },
+  "wrath of uthol":{
+    "skill":"destruction"
+  },
+  "imperial armorer skill":{
+    "skill":"destruction"
+  },
+  "blood gift":{
+    "skill":"destruction"
+  },
+  "dread curse: speed":{
+    "skill":"destruction"
+  },
+  "poisonous touch":{
+    "skill":"destruction"
+  },
+  "turn undead":{
+    "skill":"destruction"
+  },
+  "the red diamond":{
+    "skill":"destruction"
+  },
+  "drain mysticism":{
+    "skill":"destruction"
+  },
+  "clumsiness":{
+    "skill":"destruction"
+  },
+  "vitality":{
+    "skill":"destruction"
+  },
+  "surpassing horny fist":{
+    "skill":"destruction"
+  },
+  "absorb willpower":{
+    "skill":"destruction"
+  },
+  "telekinesis":{
+    "skill":"destruction"
+  },
+  "imperial long blade skill":{
+    "skill":"destruction"
+  },
+  "absorb agility [ranged]":{
+    "skill":"destruction"
+  },
+  "ash curse: spell points":{
+    "skill":"destruction"
+  },
+  "great open":{
+    "skill":"destruction"
+  },
+  "vigor":{
+    "skill":"destruction"
+  },
+  "bone guard":{
+    "skill":"destruction"
+  },
+  "the moth-wing mirror":{
+    "skill":"destruction"
+  },
+  "fleabite":{
+    "skill":"destruction"
+  },
+  "assured transfiguring wisdom":{
+    "skill":"destruction"
+  },
+  "soothe the savage beast":{
+    "skill":"destruction"
+  },
+  "imperial illusion skill":{
+    "skill":"destruction"
+  },
+  "command humanoid":{
+    "skill":"destruction"
+  },
+  "dire noise":{
+    "skill":"destruction"
+  },
+  "bm_summonwolf":{
+    "skill":"destruction"
+  },
+  "frost_shield":{
+    "skill":"destruction"
+  },
+  "masterful transcendant wisdom":{
+    "skill":"destruction"
+  },
+  "strong open":{
+    "skill":"destruction"
+  },
+  "frostbite":{
+    "skill":"destruction"
+  },
+  "magickguard":{
+    "skill":"destruction"
+  },
+  "potent poison [ranged]":{
+    "skill":"destruction"
+  },
+  "demoralizing touch":{
+    "skill":"destruction"
+  },
+  "fortify restoration skill":{
+    "skill":"destruction"
+  },
+  "imperial axe skill":{
+    "skill":"destruction"
+  },
+  "wild fortify light armor skill":{
+    "skill":"destruction"
+  },
+  "surpassing denial":{
+    "skill":"destruction"
+  },
+  "calm creature":{
+    "skill":"destruction"
+  },
+  "hand of tureynul":{
+    "skill":"destruction"
+  },
+  "drain blood":{
+    "skill":"destruction"
+  },
+  "drain illusion":{
+    "skill":"destruction"
+  },
+  "imperial restoration skill":{
+    "skill":"destruction"
+  },
+  "absorb luck":{
+    "skill":"destruction"
+  },
+  "trap_fire":{
+    "skill":"destruction"
+  },
+  "variable resist fire":{
+    "skill":"destruction"
+  },
+  "almsivi restoration":{
+    "skill":"destruction"
+  },
+  "command creature":{
+    "skill":"destruction"
+  },
+  "fortify acrobatics skill":{
+    "skill":"destruction"
+  },
+  "far silence":{
+    "skill":"destruction"
+  },
+  "wild temptation":{
+    "skill":"destruction"
+  },
+  "weariness":{
+    "skill":"destruction"
+  },
+  "grave curse: personality":{
+    "skill":"destruction"
+  },
+  "touchdrain unarmored":{
+    "skill":"destruction"
+  },
+  "imperial athletics skill":{
+    "skill":"destruction"
+  },
+  "third barrier":{
+    "skill":"destruction"
+  },
+  "curse agility":{
+    "skill":"destruction"
+  },
+  "grave curse: speed":{
+    "skill":"destruction"
+  },
+  "drain alteration":{
+    "skill":"destruction"
+  },
+  "prox_mine_fire":{
+    "skill":"destruction"
+  },
+  "cruel earwig":{
+    "skill":"destruction"
+  },
+  "detect_creature":{
+    "skill":"destruction"
+  },
+  "touchdrain restoration":{
+    "skill":"destruction"
+  },
+  "weakening touch":{
+    "skill":"destruction"
+  },
+  "shrine block skill":{
+    "skill":"destruction"
+  },
+  "drain mercantile":{
+    "skill":"destruction"
+  },
+  "fire barrier":{
+    "skill":"destruction"
+  },
+  "great burden of sin":{
+    "skill":"destruction"
+  },
+  "touchdrain axe":{
+    "skill":"destruction"
+  },
+  "blessed word":{
+    "skill":"destruction"
+  },
+  "jump":{
+    "skill":"destruction"
+  },
+  "exhausting touch":{
+    "skill":"destruction"
+  },
+  "fierce fire shield":{
+    "skill":"destruction"
+  },
+  "straining touch":{
+    "skill":"destruction"
+  },
+  "soulpinch":{
+    "skill":"destruction"
+  },
+  "clench":{
+    "skill":"destruction"
+  },
+  "fortify alteration skill":{
+    "skill":"destruction"
+  },
+  "resist shock":{
+    "skill":"destruction"
+  },
+  "touchdrain illusion":{
+    "skill":"destruction"
+  },
+  "sting":{
+    "skill":"destruction"
+  },
+  "prox_mine_frost":{
+    "skill":"destruction"
+  },
+  "paralysis":{
+    "skill":"destruction"
+  },
+  "masterful silver wisdom":{
+    "skill":"destruction"
+  },
+  "summon greater bonewalker":{
+    "skill":"destruction"
+  },
+  "wild weeping wound":{
+    "skill":"destruction"
+  },
+  "cure corpus disease":{
+    "skill":"destruction"
+  },
+  "wild distraction":{
+    "skill":"destruction"
+  },
+  "wild exhaustion":{
+    "skill":"destruction"
+  },
+  "vivec's tears":{
+    "skill":"destruction"
+  },
+  "zenithar_gospel":{
+    "skill":"destruction"
+  },
+  "surpassing balanced armor":{
+    "skill":"destruction"
+  },
+  "fortify security skill":{
+    "skill":"destruction"
+  },
+  "strain":{
+    "skill":"destruction"
+  },
+  "shrine heavy armor skill":{
+    "skill":"destruction"
+  },
+  "shock shield":{
+    "skill":"destruction"
+  },
+  "dread curse: spell points":{
+    "skill":"destruction"
+  },
+  "grave curse: willpower":{
+    "skill":"destruction"
+  },
+  "shockball":{
+    "skill":"destruction"
+  },
+  "grave curse: agility":{
+    "skill":"destruction"
+  },
+  "drain hand-to-hand":{
+    "skill":"destruction"
+  },
+  "holy word":{
+    "skill":"destruction"
+  },
+  "lock":{
+    "skill":"destruction"
+  },
+  "shrine enchant skill":{
+    "skill":"destruction"
+  },
+  "fortify destruction skill":{
+    "skill":"destruction"
+  },
+  "fire storm":{
+    "skill":"destruction"
+  },
+  "curse strength":{
+    "skill":"destruction"
+  },
+  "imperial short blade skill":{
+    "skill":"destruction"
+  },
+  "dynamic denial":{
+    "skill":"destruction"
+  },
+  "fortify blunt weapons skill":{
+    "skill":"destruction"
+  },
+  "assured impaling thrust":{
+    "skill":"destruction"
+  },
+  "grave curse: health":{
+    "skill":"destruction"
+  },
+  "spite touch":{
+    "skill":"destruction"
+  },
+  "argonian breathing":{
+    "skill":"destruction"
+  },
+  "fortitude":{
+    "skill":"destruction"
+  },
+  "misfortunate touch":{
+    "skill":"destruction"
+  },
+  "almsivi intervention":{
+    "skill":"destruction"
+  },
+  "fifth barrier":{
+    "skill":"destruction"
+  },
+  "strong feather":{
+    "skill":"destruction"
+  },
+  "shrine medium armor skill":{
+    "skill":"destruction"
+  },
+  "wild reflect":{
+    "skill":"destruction"
+  },
+  "strong resist shock":{
+    "skill":"destruction"
+  },
+  "summon storm atronach":{
+    "skill":"destruction"
+  },
+  "drain light armor":{
+    "skill":"destruction"
+  },
+  "dire earwig":{
+    "skill":"destruction"
+  },
+  "surpassing sublime wisdom":{
+    "skill":"destruction"
+  },
+  "summon golden saint":{
+    "skill":"destruction"
+  },
+  "summon ancestral ghost":{
+    "skill":"destruction"
+  },
+  "wild misfortune":{
+    "skill":"destruction"
+  },
+  "shadow form":{
+    "skill":"destruction"
+  },
+  "grave curse: strength":{
+    "skill":"destruction"
+  },
+  "fireball":{
+    "skill":"destruction"
+  },
+  "weak spelldrinker":{
+    "skill":"destruction"
+  },
+  "imperial hand to hand skill":{
+    "skill":"destruction"
+  },
+  "armor eater":{
+    "skill":"destruction"
+  },
+  "disintegrate armor":{
+    "skill":"destruction"
+  },
+  "blood despair":{
+    "skill":"destruction"
+  },
+  "wrath of endus":{
+    "skill":"destruction"
+  },
+  "shocking touch":{
+    "skill":"destruction"
+  },
+  "blessed touch":{
+    "skill":"destruction"
+  },
+  "vampire's kiss":{
+    "skill":"destruction"
+  },
+  "restore willpower":{
+    "skill":"destruction"
+  },
+  "touchdrain long blade":{
+    "skill":"destruction"
+  },
+  "grave curse: intelligence":{
+    "skill":"destruction"
+  },
+  "surpassing silver wisdom":{
+    "skill":"destruction"
+  },
+  "rally creature":{
+    "skill":"destruction"
+  },
+  "reman's girdle":{
+    "skill":"destruction"
+  },
+  "summon clanfear":{
+    "skill":"destruction"
+  },
+  "restore speed":{
+    "skill":"destruction"
+  },
+  "weakness to corpus disease":{
+    "skill":"destruction"
+  },
+  "fireball_large":{
+    "skill":"destruction"
+  },
+  "bound gauntlets":{
+    "skill":"destruction"
+  },
+  "curse willpower":{
+    "skill":"destruction"
+  },
+  "poison":{
+    "skill":"destruction"
+  },
+  "flay spirit":{
+    "skill":"destruction"
+  },
+  "sphere of negation":{
+    "skill":"destruction"
+  },
+  "flamebolt":{
+    "skill":"destruction"
+  },
+  "wild fortify armorer skill":{
+    "skill":"destruction"
+  },
+  "viper":{
+    "skill":"destruction"
+  },
+  "drain conjuration":{
+    "skill":"destruction"
+  },
+  "spell drain":{
+    "skill":"destruction"
+  },
+  "misfortune":{
+    "skill":"destruction"
+  },
+  "star-curse":{
+    "skill":"destruction"
+  },
+  "touchdrain conjuration":{
+    "skill":"destruction"
+  },
+  "dire weakness to magicka":{
+    "skill":"destruction"
+  },
+  "dynamic green wisdom":{
+    "skill":"destruction"
+  },
+  "strong resist poison":{
+    "skill":"destruction"
+  },
+  "touchdrain light armor":{
+    "skill":"destruction"
+  },
+  "wearying touch":{
+    "skill":"destruction"
+  },
+  "weakness to frost":{
+    "skill":"destruction"
+  },
+  "masterful leaping":{
+    "skill":"destruction"
+  },
+  "trap_poison":{
+    "skill":"destruction"
+  },
+  "rallying touch":{
+    "skill":"destruction"
+  },
+  "masterful horny fist":{
+    "skill":"destruction"
+  },
+  "wild fortify unarmored skill":{
+    "skill":"destruction"
+  },
+  "spark":{
+    "skill":"destruction"
+  },
+  "surpassing red wisdom":{
+    "skill":"destruction"
+  },
+  "frostball":{
+    "skill":"destruction"
+  },
+  "summon dremora":{
+    "skill":"destruction"
+  },
+  "summon bonelord":{
+    "skill":"destruction"
+  },
+  "chameleon":{
+    "skill":"destruction"
+  },
+  "shadowmask":{
+    "skill":"destruction"
+  },
+  "blood sacrifice":{
+    "skill":"destruction"
+  },
+  "bound longsword":{
+    "skill":"destruction"
+  },
+  "dread curse: luck":{
+    "skill":"destruction"
+  },
+  "sanctuary":{
+    "skill":"destruction"
+  },
+  "curse intelligence":{
+    "skill":"destruction"
+  },
+  "prox_mine_shock":{
+    "skill":"destruction"
+  },
+  "burden of sin":{
+    "skill":"destruction"
+  },
+  "calm humanoid":{
+    "skill":"destruction"
+  },
+  "weakness":{
+    "skill":"destruction"
+  },
+  "wild fortify restoration skill":{
+    "skill":"destruction"
+  },
+  "self dispel":{
+    "skill":"destruction"
+  },
+  "fierce shock shield":{
+    "skill":"destruction"
+  },
+  "bound mace":{
+    "skill":"destruction"
+  },
+  "touch dispel":{
+    "skill":"destruction"
+  },
+  "blind":{
+    "skill":"destruction"
+  },
+  "sleep":{
+    "skill":"destruction"
+  },
+  "almalexia's grace":{
+    "skill":"destruction"
+  },
+  "shrine speechcraft skill":{
+    "skill":"destruction"
+  },
+  "dread curse: endurance":{
+    "skill":"destruction"
+  },
+  "summon hunger":{
+    "skill":"destruction"
+  },
+  "water breathing":{
+    "skill":"destruction"
+  },
+  "hand of araynys":{
+    "skill":"destruction"
+  },
+  "fortify marksman skill":{
+    "skill":"destruction"
+  },
+  "rally humanoid":{
+    "skill":"destruction"
+  },
+  "potent poison":{
+    "skill":"destruction"
+  },
+  "righteousness":{
+    "skill":"destruction"
+  },
+  "imperial unarmored skill":{
+    "skill":"destruction"
+  },
+  "crying eye":{
+    "skill":"destruction"
+  },
+  "absorb intelligence":{
+    "skill":"destruction"
+  },
+  "touchdrain blunt weapon":{
+    "skill":"destruction"
+  },
+  "dynamic nimble armor":{
+    "skill":"destruction"
+  },
+  "fire bite":{
+    "skill":"destruction"
+  },
+  "imperial conjuration skill":{
+    "skill":"destruction"
+  },
+  "touchdrain speechcraft":{
+    "skill":"destruction"
+  },
+  "curse luck":{
+    "skill":"destruction"
+  },
+  "wild open":{
+    "skill":"destruction"
+  },
+  "masterful safekeeping":{
+    "skill":"destruction"
+  },
+  "viperbolt":{
+    "skill":"destruction"
+  },
+  "fortify spear skill":{
+    "skill":"destruction"
+  },
+  "cruel weary":{
+    "skill":"destruction"
+  },
+  "dynamic swiftblade":{
+    "skill":"destruction"
+  },
+  "fenrick's doorjam":{
+    "skill":"destruction"
+  },
+  "cure common disease":{
+    "skill":"destruction"
+  },
+  "flame":{
+    "skill":"destruction"
+  },
+  "fortify conjuration skill":{
+    "skill":"destruction"
+  },
+  "touchdrain mysticism":{
+    "skill":"destruction"
+  },
+  "frenzying touch":{
+    "skill":"destruction"
+  },
+  "force bolt":{
+    "skill":"destruction"
+  },
+  "dread curse: intelligence":{
+    "skill":"destruction"
+  },
+  "frenzy creature":{
+    "skill":"destruction"
+  },
+  "imperial sneak skill":{
+    "skill":"destruction"
+  },
+  "silence":{
+    "skill":"destruction"
+  },
+  "fuddle":{
+    "skill":"destruction"
+  },
+  "shrine acrobatics skill":{
+    "skill":"destruction"
+  },
+  "lightning storm":{
+    "skill":"destruction"
+  },
+  "red despair":{
+    "skill":"destruction"
+  },
+  "shrine short blade skill":{
+    "skill":"destruction"
+  },
+  "resist fire":{
+    "skill":"destruction"
+  },
+  "absorb speed":{
+    "skill":"destruction"
+  },
+  "strong fire shield":{
+    "skill":"destruction"
+  },
+  "shrine_aldsotha_sp":{
+    "skill":"destruction"
+  },
+  "shrine sneak skill":{
+    "skill":"destruction"
+  },
+  "absorb intelligence [ranged]":{
+    "skill":"destruction"
+  },
+  "freezing touch":{
+    "skill":"destruction"
+  },
+  "frostbloom":{
+    "skill":"destruction"
+  },
+  "imperial mysticism skill":{
+    "skill":"destruction"
+  },
+  "detect enchantment":{
+    "skill":"destruction"
+  },
+  "fortify illusion skill":{
+    "skill":"destruction"
+  },
+  "erelvam's wild sty":{
+    "skill":"destruction"
+  }
+}
