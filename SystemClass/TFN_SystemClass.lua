@@ -68,7 +68,7 @@ local TFN_SystemClass = {}
 
 TFN_SystemClass.OnPlayerEquipment = function(eventStatus, pid)
 	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
-	    local reloadAtEnd = false
+	    	local reloadAtEnd = false
 		for index = 0, tes3mp.GetEquipmentSize() - 1 do
 			local itemRefId = tes3mp.GetEquipmentItemRefId(pid, index)
 			if itemRefId ~= "" then
@@ -91,7 +91,7 @@ end
 TFN_SystemClass.OnPlayerSpellbook = function(eventStatus, pid)
 	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
 		local action = tes3mp.GetSpellbookChangesAction(pid)
-	    local reloadAtEnd = false		
+		local reloadAtEnd = false		
 		for index = 0, tes3mp.GetSpellbookChangesSize(pid) - 1 do
 			local spellId = tes3mp.GetSpellId(pid, index)
 			if action == enumerations.spellbook.ADD then
