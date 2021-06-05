@@ -23,7 +23,7 @@ Menus["menu cmp cmb"] = {
 		menuHelper.variables.currentPlayerDataVariable("customVariables.TfnLeveling.pointSoul"),
 		"\n\n",
 		color.White .. "\nSelect a attribute from the list" .. color.Yellow,
-		"\nadd the attribute of :" .. color.Green,
+		"\nadd attribute :" .. color.Green,
 		" + 1" .. color.White,
 		" point.\n" .. color.Yellow,
 		color.Yellow .. "\nCost : ",
@@ -94,7 +94,7 @@ Menus["menu cmp cmb"] = {
                 })
             }
         },
-        { caption = "Discrease",
+        { caption = "Remove",
             destinations = {menuHelper.destinations.setDefault("menu cmp cmb 2")
             }
         },						
@@ -108,7 +108,7 @@ Menus["menu cmp cmb 2"] = {
 		menuHelper.variables.currentPlayerDataVariable("customVariables.TfnLeveling.pointSoul"),
 		"\n\n",
 		color.White .. "\nSelect a attribute from the list" .. color.Yellow,
-		"\nremove the attribute of :" .. color.Green,
+		"\nremove attribute :" .. color.Green,
 		" - 1" .. color.White,
 		" point.\n" .. color.Yellow,
 		color.Yellow .. "\nGain : ",
@@ -179,7 +179,7 @@ Menus["menu cmp cmb 2"] = {
                 })
             }
         },
-        { caption = "Increase",
+        { caption = "Add",
             destinations = {menuHelper.destinations.setDefault("menu cmp cmb")
             }
         },					
@@ -193,7 +193,7 @@ Menus["menu cmp mag"] = {
 		menuHelper.variables.currentPlayerDataVariable("customVariables.TfnLeveling.pointSoul"),
 		"\n\n",
 		color.White .. "\nSelect a skill from the list" .. color.Yellow,
-		"\nadd the skill of :" .. color.Green,
+		"\nadd skill :" .. color.Green,
 		" + 1" .. color.White,
 		" point.\n" .. color.Yellow,
 		color.Yellow .. "\nCost : ",
@@ -322,7 +322,7 @@ Menus["menu cmp mag3"] = {
 		menuHelper.variables.currentPlayerDataVariable("customVariables.TfnLeveling.pointSoul"),
 		"\n\n",
 		color.White .. "\nSelect a skill from the list" .. color.Yellow,
-		"\nremove the skill of :" .. color.Green,
+		"\nremove skill :" .. color.Green,
 		" - 1" .. color.White,
 		" point.\n" .. color.Yellow,
 		color.Yellow .. "\nGain : ",
@@ -434,7 +434,7 @@ Menus["menu cmp mag3"] = {
                 })
             }
         },
-        { caption = "Increase",
+        { caption = "Add",
             destinations = {menuHelper.destinations.setDefault("menu cmp mag")
             }
         },			
@@ -452,7 +452,7 @@ Menus["menu cmp mag2"] = {
 		menuHelper.variables.currentPlayerDataVariable("customVariables.TfnLeveling.pointSoul"),
 		"\n\n",
 		color.White .. "\nSelect a skill from the list" .. color.Yellow,
-		"\nadd the skill of :" .. color.Green,
+		"\nadd skill :" .. color.Green,
 		" + 1" .. color.White,
 		" point.\n" .. color.Yellow,
 		color.Yellow .. "\nCost : ",
@@ -571,7 +571,7 @@ Menus["menu cmp mag2"] = {
                 })
             }	
 		},
-        { caption = "Discrease",
+        { caption = "Remove",
             destinations = {menuHelper.destinations.setDefault("menu cmp mag4")
             }
         },		
@@ -589,7 +589,7 @@ Menus["menu cmp mag4"] = {
 		menuHelper.variables.currentPlayerDataVariable("customVariables.TfnLeveling.pointSoul"),
 		"\n\n",
 		color.White .. "\nSelect a skill from the list" .. color.Yellow,
-		"\nremove the skill of :" .. color.Green,
+		"\nremove skill :" .. color.Green,
 		" - 1" .. color.White,
 		" points.\n" .. color.Yellow,
 		color.Yellow .. "\nGain : ",
@@ -708,7 +708,7 @@ Menus["menu cmp mag4"] = {
                 })
             }	
 		},
-        { caption = "Increase",
+        { caption = "Add",
             destinations = {menuHelper.destinations.setDefault("menu cmp mag2")
             }
         },		
