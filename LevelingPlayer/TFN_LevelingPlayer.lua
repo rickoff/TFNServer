@@ -27,7 +27,7 @@ local trad = {}
 trad.Feli = "You have gained a level, congratulation : "
 trad.Menu = "/level"
 trad.Dep = " to spend your points"
-trad.Xps = "skill."
+trad.Xps = " skill."
 trad.NotPts = "You don't have enough skill points to decrease"
 trad.NoPt =  "You don't have enough skill points, current : "
 trad.Req = " required : "
@@ -35,7 +35,7 @@ trad.WereWolf = "Skill menu is forbidden in werewolf form"
 
 local config = {}
 config.levelMax = 50
-config.talentProgress = 10
+config.talentProgress = 1
 config.RewardPoints = 10
 config.PlayerAddPoint = 555555
 
@@ -101,7 +101,7 @@ TFN_LevelingPlayer.OnPlayerCompetence = function(pid, Comp, State, Count)
 					Check = "attribute"
 				end
 			elseif PointCount < Count and State == "Add" then
-				tes3mp.MessageBox(pid, -1, color.Default..trad.NoPt)
+				tes3mp.MessageBox(pid, -1, color.Default..trad.NoPt..PointCount)
 			end	
 			
 			if Players[pid].data.customVariables.TfnLeveling[Comp] >= Count and State == "Remove" then	
@@ -153,13 +153,12 @@ TFN_LevelingPlayer.LevelPlayer = function(eventStatus, pid)
 			Players[pid].data.stats.levelProgress = 0
 			Players[pid]:LoadLevel()
 			return customEventHooks.makeEventStatus(false,false)				
-		end	
-		TFN_LevelingPlayer.GetlevelSoul(pid)		
+		end			
 		Players[pid]:QuicksaveToDrive()
 	end
 end
 
-TFN_LevelingPlayer.GetlevelSoul = function(pid)
+TFN_LevelingPlayer.GetlevelSoul = function(eventStatus, pid)
 	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
 		if Players[pid].data.stats.levelProgress >= config.talentProgress then			
 			Players[pid].data.customVariables.TfnLeveling.pointSoul = Players[pid].data.customVariables.TfnLeveling.pointSoul + config.RewardPoints
@@ -198,6 +197,7 @@ end
 
 customCommandHooks.registerCommand("level", TFN_LevelingPlayer.MainMenu)
 customEventHooks.registerValidator("OnPlayerLevel", TFN_LevelingPlayer.LevelPlayer)
+customEventHooks.registerHandler("OnPlayerLevel", TFN_LevelingPlayer.GetlevelSoul)
 customEventHooks.registerHandler("OnPlayerAuthentified", TFN_LevelingPlayer.OnPlayerAddCustom)
 customEventHooks.registerHandler("OnGUIAction", function(eventStatus, pid, idGui, data)
 	if TFN_LevelingPlayer.OnGUIAction(pid, idGui, data) then return end
