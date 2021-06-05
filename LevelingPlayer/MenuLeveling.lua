@@ -1,11 +1,11 @@
 Menus["menu leveling"] = {
-	text = {color.Orange .. "SKILLS MENU\n",
+	text = {color.Orange .. "LEVEL MENU\n",
 		color.Yellow .. "\nskill points : " .. color.White,
 		menuHelper.variables.currentPlayerDataVariable("customVariables.TfnLeveling.pointSoul"),
 		"\n",
 	},
     buttons = {
-        { caption = "Statistics",
+        { caption = "Attributes",
 			destinations = {menuHelper.destinations.setDefault("menu cmp cmb")
 			}
         },
@@ -18,12 +18,12 @@ Menus["menu leveling"] = {
 }
 
 Menus["menu cmp cmb"] = {
-	text = {color.Orange .. "INCREASE STATISTICS\n",
+	text = {color.Orange .. "ADD ATTRIBUTES\n",
 		color.Yellow .. "\nskill points : " .. color.White,
 		menuHelper.variables.currentPlayerDataVariable("customVariables.TfnLeveling.pointSoul"),
 		"\n\n",
-		color.White .. "\nSelect a characteristic from the list" .. color.Yellow,
-		"\nincreases the characteristic of :" .. color.Green,
+		color.White .. "\nSelect a attribute from the list" .. color.Yellow,
+		"\nadd the attribute of :" .. color.Green,
 		" + 1" .. color.White,
 		" point.\n" .. color.Yellow,
 		color.Yellow .. "\nCost : ",
@@ -103,12 +103,12 @@ Menus["menu cmp cmb"] = {
 }
 
 Menus["menu cmp cmb 2"] = {
-	text = {color.Orange .. "DECREASE STATISTICS\n",
+	text = {color.Orange .. "REMOVE ATTRIBUTES\n",
 		color.Yellow .. "\nskill points : " .. color.White,
 		menuHelper.variables.currentPlayerDataVariable("customVariables.TfnLeveling.pointSoul"),
 		"\n\n",
-		color.White .. "\nSelect a characteristic from the list" .. color.Yellow,
-		"\ndecreases the characteristic of :" .. color.Green,
+		color.White .. "\nSelect a attribute from the list" .. color.Yellow,
+		"\nremove the attribute of :" .. color.Green,
 		" - 1" .. color.White,
 		" point.\n" .. color.Yellow,
 		color.Yellow .. "\nGain : ",
@@ -188,12 +188,12 @@ Menus["menu cmp cmb 2"] = {
 }
 
 Menus["menu cmp mag"] = {
-	text = {color.Orange .. "INCREASE TALENT page 1\n",
+	text = {color.Orange .. "ADD SKILL page 1\n",
 		color.Yellow .. "\nskill points : " .. color.White,
 		menuHelper.variables.currentPlayerDataVariable("customVariables.TfnLeveling.pointSoul"),
 		"\n\n",
-		color.White .. "\nSelect a talent from the list" .. color.Yellow,
-		"\nincrease the talent of :" .. color.Green,
+		color.White .. "\nSelect a skill from the list" .. color.Yellow,
+		"\nadd the skill of :" .. color.Green,
 		" + 1" .. color.White,
 		" point.\n" .. color.Yellow,
 		color.Yellow .. "\nCost : ",
@@ -317,12 +317,12 @@ Menus["menu cmp mag"] = {
 }
 
 Menus["menu cmp mag3"] = {
-	text = {color.Orange .. "DECREASE TALENT page 1\n",
+	text = {color.Orange .. "REMOVE SKILL page 1\n",
 		color.Yellow .. "\nskill points : " .. color.White,
 		menuHelper.variables.currentPlayerDataVariable("customVariables.TfnLeveling.pointSoul"),
 		"\n\n",
-		color.White .. "\nSelect a talent from the list" .. color.Yellow,
-		"\ndecreases the talent of :" .. color.Green,
+		color.White .. "\nSelect a skill from the list" .. color.Yellow,
+		"\nremove the skill of :" .. color.Green,
 		" - 1" .. color.White,
 		" point.\n" .. color.Yellow,
 		color.Yellow .. "\nGain : ",
@@ -447,12 +447,12 @@ Menus["menu cmp mag3"] = {
 }
 
 Menus["menu cmp mag2"] = {
-	text = {color.Orange .. "INCREASE TALENT page 2\n",
+	text = {color.Orange .. "ADD SKILL page 2\n",
 		color.Yellow .. "\nskill points : " .. color.White,
 		menuHelper.variables.currentPlayerDataVariable("customVariables.TfnLeveling.pointSoul"),
 		"\n\n",
-		color.White .. "\nSelect a talent from the list" .. color.Yellow,
-		"\nincreases the talent of :" .. color.Green,
+		color.White .. "\nSelect a skill from the list" .. color.Yellow,
+		"\nadd the skill of :" .. color.Green,
 		" + 1" .. color.White,
 		" point.\n" .. color.Yellow,
 		color.Yellow .. "\nCost : ",
@@ -584,12 +584,12 @@ Menus["menu cmp mag2"] = {
 }
 
 Menus["menu cmp mag4"] = {
-	text = {color.Orange .. "DECREASE TALENT page 2\n",
+	text = {color.Orange .. "REMOVE SKILL page 2\n",
 		color.Yellow .. "\nskill points : " .. color.White,
 		menuHelper.variables.currentPlayerDataVariable("customVariables.TfnLeveling.pointSoul"),
 		"\n\n",
-		color.White .. "\nSelect a talent from the list" .. color.Yellow,
-		"\ndecreases the talent of :" .. color.Green,
+		color.White .. "\nSelect a skill from the list" .. color.Yellow,
+		"\nremove the skill of :" .. color.Green,
 		" - 1" .. color.White,
 		" points.\n" .. color.Yellow,
 		color.Yellow .. "\nGain : ",
