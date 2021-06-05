@@ -18,7 +18,7 @@ Menus["menu leveling"] = {
 }
 
 Menus["menu cmp cmb"] = {
-	text = {color.Orange .. "ADD ATTRIBUTES\n",
+	text = {color.Orange .. "ADD ATTRIBUTE\n",
 		color.Yellow .. "\nskill points : " .. color.White,
 		menuHelper.variables.currentPlayerDataVariable("customVariables.TfnLeveling.pointSoul"),
 		"\n\n",
@@ -103,7 +103,7 @@ Menus["menu cmp cmb"] = {
 }
 
 Menus["menu cmp cmb 2"] = {
-	text = {color.Orange .. "REMOVE ATTRIBUTES\n",
+	text = {color.Orange .. "REMOVE ATTRIBUTE\n",
 		color.Yellow .. "\nskill points : " .. color.White,
 		menuHelper.variables.currentPlayerDataVariable("customVariables.TfnLeveling.pointSoul"),
 		"\n\n",
