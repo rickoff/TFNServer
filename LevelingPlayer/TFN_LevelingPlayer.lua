@@ -36,6 +36,7 @@ trad.WereWolf = "Skill menu is forbidden in werewolf form"
 local config = {}
 config.levelMax = 50
 config.talentProgress = 10
+config.RewardPoints = 10
 config.PlayerAddPoint = 555555
 
 local PlayerOptionPoint = {}
@@ -161,7 +162,7 @@ end
 TFN_LevelingPlayer.GetlevelSoul = function(pid)
 	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
 		if Players[pid].data.stats.levelProgress >= config.talentProgress then			
-			Players[pid].data.customVariables.TfnLeveling.pointSoul = Players[pid].data.customVariables.TfnLeveling.pointSoul + 10
+			Players[pid].data.customVariables.TfnLeveling.pointSoul = Players[pid].data.customVariables.TfnLeveling.pointSoul + config.RewardPoints
 			TFN_LevelingPlayer.NewLevelPlayer(pid)
 			tes3mp.MessageBox(pid, -1, color.Default..trad.Feli..color.Green..trad.Menu..color.Default..trad.Dep..color.Yellow..trad.Xps)
 		end
