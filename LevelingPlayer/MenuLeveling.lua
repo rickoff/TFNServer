@@ -18,7 +18,7 @@ Menus["menu leveling"] = {
 }
 
 Menus["menu cmp cmb"] = {
-	text = {color.Orange .. "INCREASE STATISTICS\n",	
+	text = {color.Orange .. "INCREASE STATISTICS\n",
 		color.Yellow .. "\nskill points : " .. color.White,
 		menuHelper.variables.currentPlayerDataVariable("customVariables.pointSoul"),
 		"\n\n",
@@ -30,7 +30,7 @@ Menus["menu cmp cmb"] = {
 		color.White .. "1 skill point.\n"		
 	},
     buttons = {						
-        { caption = {"Strength : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.forceCount")},
+        { caption = {"Strength : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Strength")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -38,7 +38,7 @@ Menus["menu cmp cmb"] = {
                 })
             }
 		},
-        { caption = {"Endurance : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.enduranceCount")},
+        { caption = {"Endurance : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Endurance")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -46,7 +46,7 @@ Menus["menu cmp cmb"] = {
                 })
             }
 		},		
-        { caption = {"Speed : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.rapiditeCount")},
+        { caption = {"Speed : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Speed")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -54,7 +54,7 @@ Menus["menu cmp cmb"] = {
                 })
             }	
 		},
-        { caption = {"Agility : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.agiliteCount")},
+        { caption = {"Agility : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Agility")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -62,7 +62,7 @@ Menus["menu cmp cmb"] = {
                 })
             }	
 		},		
-        { caption = {"Intelligence : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.intelligenceCount")},
+        { caption = {"Intelligence : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Intelligence")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -70,7 +70,7 @@ Menus["menu cmp cmb"] = {
                 })
             }
         },
-        { caption = {"Willpower : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.volonteCount")},
+        { caption = {"Willpower : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Willpower")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -78,7 +78,7 @@ Menus["menu cmp cmb"] = {
                 })
             }
         },		
-        { caption = {"Luck : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.chanceCount")},
+        { caption = {"Luck : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Luck")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -86,7 +86,7 @@ Menus["menu cmp cmb"] = {
                 })
             }
         },
-        { caption = {"Personality : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.personnaliteCount")},
+        { caption = {"Personality : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Personality")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -104,6 +104,14 @@ Menus["menu cmp cmb"] = {
 
 Menus["menu cmp cmb 2"] = {
 	text = {color.Orange .. "DECREASE STATISTICS\n",
+		color.Yellow .. "\nXp : " .. color.White,
+		menuHelper.variables.currentPlayerDataVariable("customVariables.soul"), 
+		color.Red .. " >= " .. color.White,
+		menuHelper.variables.currentPlayerDataVariable("customVariables.capSoul"),
+		"\n",		
+		color.Yellow .. "\nLevel : " .. color.White,
+		menuHelper.variables.currentPlayerDataVariable("customVariables.levelSoul"), 
+		"\n",	
 		color.Yellow .. "\nskill points : " .. color.White,
 		menuHelper.variables.currentPlayerDataVariable("customVariables.pointSoul"),
 		"\n\n",
@@ -115,7 +123,7 @@ Menus["menu cmp cmb 2"] = {
 		color.White .. "1 skill point.\n"	
 	},
     buttons = {						
-        { caption = {"Strength : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.forceCount")},
+        { caption = {"Strength : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Strength")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -123,7 +131,7 @@ Menus["menu cmp cmb 2"] = {
                 })
             }
 		},
-        { caption = {"Endurance : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.enduranceCount")},
+        { caption = {"Endurance : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Endurance")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -131,7 +139,7 @@ Menus["menu cmp cmb 2"] = {
                 })
             }
 		},		
-        { caption = {"Speed : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.rapiditeCount")},
+        { caption = {"Speed : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Speed")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -139,7 +147,7 @@ Menus["menu cmp cmb 2"] = {
                 })
             }	
 		},
-        { caption = {"Agility : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.agiliteCount")},
+        { caption = {"Agility : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Agility")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -147,7 +155,7 @@ Menus["menu cmp cmb 2"] = {
                 })
             }	
 		},		
-        { caption = {"Intelligence : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.intelligenceCount")},
+        { caption = {"Intelligence : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Intelligence")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -155,7 +163,7 @@ Menus["menu cmp cmb 2"] = {
                 })
             }
         },
-        { caption = {"Willpower : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.volonteCount")},
+        { caption = {"Willpower : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Willpower")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -163,7 +171,7 @@ Menus["menu cmp cmb 2"] = {
                 })
             }
         },		
-        { caption = {"Luck : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.chanceCount")},
+        { caption = {"Luck : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Luck")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -171,7 +179,7 @@ Menus["menu cmp cmb 2"] = {
                 })
             }
         },
-        { caption = {"Personality : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.personnaliteCount")},
+        { caption = {"Personality : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Personality")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -189,6 +197,14 @@ Menus["menu cmp cmb 2"] = {
 
 Menus["menu cmp mag"] = {
 	text = {color.Orange .. "INCREASE TALENT page 1\n",
+		color.Yellow .. "\nXp : " .. color.White,
+		menuHelper.variables.currentPlayerDataVariable("customVariables.soul"), 
+		color.Red .. " >= " .. color.White,
+		menuHelper.variables.currentPlayerDataVariable("customVariables.capSoul"),
+		"\n",		
+		color.Yellow .. "\nLevel : " .. color.White,
+		menuHelper.variables.currentPlayerDataVariable("customVariables.levelSoul"),
+		"\n",	
 		color.Yellow .. "\nskill points : " .. color.White,
 		menuHelper.variables.currentPlayerDataVariable("customVariables.pointSoul"),
 		"\n\n",
@@ -200,7 +216,7 @@ Menus["menu cmp mag"] = {
 		color.White .. "1 skill point.\n"
 	},
     buttons = {	
-        { caption = {"Handtohand : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.handtohandCount")}, 
+        { caption = {"Handtohand : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Handtohand")}, 
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -208,7 +224,7 @@ Menus["menu cmp mag"] = {
                 })
             }
         },	
-        { caption = {"Shortblade : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.shortbladeCount")},
+        { caption = {"Shortblade : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Shortblade")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -216,7 +232,7 @@ Menus["menu cmp mag"] = {
                 })
             }	
 		},	
-        { caption = {"Longblade : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.longbladeCount")},
+        { caption = {"Longblade : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Longblade")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -224,7 +240,7 @@ Menus["menu cmp mag"] = {
                 })
             }
         },
-        { caption = {"Axe : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.axeCount")},
+        { caption = {"Axe : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Axe")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -232,7 +248,7 @@ Menus["menu cmp mag"] = {
                 })
             }
         },	
-        { caption = {"Bluntweapon : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.bluntweaponCount")},
+        { caption = {"Bluntweapon : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Bluntweapon")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -240,7 +256,7 @@ Menus["menu cmp mag"] = {
                 })
             }
         },		
-        { caption = {"Spear : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.spearCount")},
+        { caption = {"Spear : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Spear")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -248,7 +264,7 @@ Menus["menu cmp mag"] = {
                 })
             }
         },		
-        { caption = {"Security : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.securityCount")},
+        { caption = {"Security : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Security")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -256,7 +272,7 @@ Menus["menu cmp mag"] = {
                 })
             }
 		},		
-        { caption = {"Athletics : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.athleticsCount")},
+        { caption = {"Athletics : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Athletics")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -264,7 +280,7 @@ Menus["menu cmp mag"] = {
                 })
             }
         },		
-        { caption = {"Marksman : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.marksmanCount")},
+        { caption = {"Marksman : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Marksman")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -272,7 +288,7 @@ Menus["menu cmp mag"] = {
                 })
             }
 		},
-        { caption = {"Acrobatics : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.acrobaticsCount")},
+        { caption = {"Acrobatics : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Acrobatics")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -280,7 +296,7 @@ Menus["menu cmp mag"] = {
                 })
             }	
 		},
-        { caption = {"Sneak : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.sneakCount")},
+        { caption = {"Sneak : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Sneak")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -288,7 +304,7 @@ Menus["menu cmp mag"] = {
                 })
             }
         },	
-        { caption = {"Mercantile : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.mercantileCount")},
+        { caption = {"Mercantile : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Mercantile")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -296,7 +312,7 @@ Menus["menu cmp mag"] = {
                 })
             }
 		},		
-        { caption = {"Unarmored : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.unarmoredCount")},
+        { caption = {"Unarmored : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Unarmored")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -318,6 +334,14 @@ Menus["menu cmp mag"] = {
 
 Menus["menu cmp mag3"] = {
 	text = {color.Orange .. "DECREASE TALENT page 1\n",
+		color.Yellow .. "\nXp : " .. color.White,
+		menuHelper.variables.currentPlayerDataVariable("customVariables.soul"), 
+		color.Red .. " >= " .. color.White,
+		menuHelper.variables.currentPlayerDataVariable("customVariables.capSoul"),
+		"\n",		
+		color.Yellow .. "\nLevel : " .. color.White,
+		menuHelper.variables.currentPlayerDataVariable("customVariables.levelSoul"),
+		"\n",	
 		color.Yellow .. "\nskill points : " .. color.White,
 		menuHelper.variables.currentPlayerDataVariable("customVariables.pointSoul"),
 		"\n\n",
@@ -330,7 +354,7 @@ Menus["menu cmp mag3"] = {
 		color.Yellow .. "\nCost : "
 	},
     buttons = {	
-        { caption = {"Handtohand : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.handtohandCount")}, 
+        { caption = {"Handtohand : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Handtohand")}, 
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -338,7 +362,7 @@ Menus["menu cmp mag3"] = {
                 })
             }
         },	
-        { caption = {"Shortblade : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.shortbladeCount")},
+        { caption = {"Shortblade : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Shortblade")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -346,7 +370,7 @@ Menus["menu cmp mag3"] = {
                 })
             }	
 		},	
-        { caption = {"Longblade : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.longbladeCount")},
+        { caption = {"Longblade : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Longblade")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -354,7 +378,7 @@ Menus["menu cmp mag3"] = {
                 })
             }
         },
-        { caption = {"Axe : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.axeCount")},
+        { caption = {"Axe : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Axe")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -362,7 +386,7 @@ Menus["menu cmp mag3"] = {
                 })
             }
         },	
-        { caption = {"Bluntweapon : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.bluntweaponCount")},
+        { caption = {"Bluntweapon : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Bluntweapon")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -370,7 +394,7 @@ Menus["menu cmp mag3"] = {
                 })
             }
         },		
-        { caption = {"Spear : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.spearCount")},
+        { caption = {"Spear : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Spear")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -378,7 +402,7 @@ Menus["menu cmp mag3"] = {
                 })
             }
         },		
-        { caption = {"Security : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.securityCount")},
+        { caption = {"Security : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Security")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -386,7 +410,7 @@ Menus["menu cmp mag3"] = {
                 })
             }
 		},		
-        { caption = {"Athletics : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.athleticsCount")},
+        { caption = {"Athletics : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Athletics")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -394,7 +418,7 @@ Menus["menu cmp mag3"] = {
                 })
             }
         },		
-        { caption = {"Marksman : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.marksmanCount")},
+        { caption = {"Marksman : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Marksman")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -402,7 +426,7 @@ Menus["menu cmp mag3"] = {
                 })
             }
 		},
-        { caption = {"Acrobatics : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.acrobaticsCount")},
+        { caption = {"Acrobatics : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Acrobatics")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -410,7 +434,7 @@ Menus["menu cmp mag3"] = {
                 })
             }	
 		},
-        { caption = {"Sneak : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.sneakCount")},
+        { caption = {"Sneak : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Sneak")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -418,7 +442,7 @@ Menus["menu cmp mag3"] = {
                 })
             }
         },	
-        { caption = {"Mercantile : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.mercantileCount")},
+        { caption = {"Mercantile : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Mercantile")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -426,7 +450,7 @@ Menus["menu cmp mag3"] = {
                 })
             }
 		},		
-        { caption = {"Unarmored : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.unarmoredCount")},
+        { caption = {"Unarmored : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Unarmored")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -448,6 +472,14 @@ Menus["menu cmp mag3"] = {
 
 Menus["menu cmp mag2"] = {
 	text = {color.Orange .. "INCREASE TALENT page 2\n",
+		color.Yellow .. "\nXp : " .. color.White,
+		menuHelper.variables.currentPlayerDataVariable("customVariables.soul"), 
+		color.Red .. " >= " .. color.White,
+		menuHelper.variables.currentPlayerDataVariable("customVariables.capSoul"),
+		"\n",		
+		color.Yellow .. "\nLevel : " .. color.White,
+		menuHelper.variables.currentPlayerDataVariable("customVariables.levelSoul"), 
+		"\n",	
 		color.Yellow .. "\nskill points : " .. color.White,
 		menuHelper.variables.currentPlayerDataVariable("customVariables.pointSoul"),
 		"\n\n",
@@ -459,7 +491,7 @@ Menus["menu cmp mag2"] = {
 		color.White .. "1 skill point.\n"
 	},
     buttons = {		
-        { caption = {"Lightarmor : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.lightarmorCount")},
+        { caption = {"Lightarmor : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Lightarmor")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -467,7 +499,7 @@ Menus["menu cmp mag2"] = {
                 })
             }	
 		},
-        { caption = {"Mediumarmor : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.mediumarmorCount")},
+        { caption = {"Mediumarmor : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Mediumarmor")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -475,7 +507,7 @@ Menus["menu cmp mag2"] = {
                 })
             }
 		},
-        { caption = {"Heavyarmor : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.heavyarmorCount")},
+        { caption = {"Heavyarmor : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Heavyarmor")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -483,7 +515,7 @@ Menus["menu cmp mag2"] = {
                 })
             }	
 		},
-        { caption = {"Block : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.blockCount")},
+        { caption = {"Block : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Block")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -491,7 +523,7 @@ Menus["menu cmp mag2"] = {
                 })
             }
 		},		
-        { caption = {"Armorer : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.armorerCount")},
+        { caption = {"Armorer : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Armorer")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -499,7 +531,7 @@ Menus["menu cmp mag2"] = {
                 })
             }
 		},
-        { caption = {"Speechcraft : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.speechcraftCount")},
+        { caption = {"Speechcraft : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Speechcraft")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -507,7 +539,7 @@ Menus["menu cmp mag2"] = {
                 })
             }	
 		},
-        { caption = {"Enchant : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.enchantCount")},
+        { caption = {"Enchant : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Enchant")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -515,7 +547,7 @@ Menus["menu cmp mag2"] = {
                 })
             }	
 		},
-        { caption = {"Destruction : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.destructionCount")},
+        { caption = {"Destruction : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Destruction")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -523,7 +555,7 @@ Menus["menu cmp mag2"] = {
                 })
             }
         },
-        { caption = {"Conjuration : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.conjurationCount")},
+        { caption = {"Conjuration : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Conjuration")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -531,7 +563,7 @@ Menus["menu cmp mag2"] = {
                 })
             }
 		},		
-        { caption = {"Illusion : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.illusionCount")},
+        { caption = {"Illusion : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Illusion")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -539,7 +571,7 @@ Menus["menu cmp mag2"] = {
                 })
             }
 		},
-        { caption = {"Alteration : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.alterationCount")},
+        { caption = {"Alteration : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Alteration")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -547,7 +579,7 @@ Menus["menu cmp mag2"] = {
                 })
             }
         },		
-        { caption = {"Mysticism : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.mysticismCount")},
+        { caption = {"Mysticism : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Mysticism")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -555,7 +587,7 @@ Menus["menu cmp mag2"] = {
                 })
             }	
 		},
-        { caption = {"Restoration : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.restorationCount")},
+        { caption = {"Restoration : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Restoration")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -563,7 +595,7 @@ Menus["menu cmp mag2"] = {
                 })
             }	
 		},
-        { caption = {"Alchemy : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.alchemyCount")},
+        { caption = {"Alchemy : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Alchemy")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -584,7 +616,15 @@ Menus["menu cmp mag2"] = {
 }
 
 Menus["menu cmp mag4"] = {
-	text = {color.Orange .. "DECREASE TALENT page 2\n",	
+	text = {color.Orange .. "DECREASE TALENT page 2\n",
+		color.Yellow .. "\nXp : " .. color.White,
+		menuHelper.variables.currentPlayerDataVariable("customVariables.soul"), 
+		color.Red .. " >= " .. color.White,
+		menuHelper.variables.currentPlayerDataVariable("customVariables.capSoul"),
+		"\n",		
+		color.Yellow .. "\nLevel : " .. color.White,
+		menuHelper.variables.currentPlayerDataVariable("customVariables.levelSoul"), 
+		"\n",	
 		color.Yellow .. "\nskill points : " .. color.White,
 		menuHelper.variables.currentPlayerDataVariable("customVariables.pointSoul"),
 		"\n\n",
@@ -596,7 +636,7 @@ Menus["menu cmp mag4"] = {
 		color.White .. "1 skill point.\n"
 	},
     buttons = {		
-        { caption = {"Lightarmor : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.lightarmorCount")},
+        { caption = {"Lightarmor : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Lightarmor")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -604,7 +644,7 @@ Menus["menu cmp mag4"] = {
                 })
             }	
 		},
-        { caption = {"Mediumarmor : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.mediumarmorCount")},
+        { caption = {"Mediumarmor : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Mediumarmor")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -612,7 +652,7 @@ Menus["menu cmp mag4"] = {
                 })
             }
 		},
-        { caption = {"Heavyarmor : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.heavyarmorCount")},
+        { caption = {"Heavyarmor : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Heavyarmor")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -620,7 +660,7 @@ Menus["menu cmp mag4"] = {
                 })
             }	
 		},
-        { caption = {"Block : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.blockCount")},
+        { caption = {"Block : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Block")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -628,7 +668,7 @@ Menus["menu cmp mag4"] = {
                 })
             }
 		},		
-        { caption = {"Armorer : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.armorerCount")},
+        { caption = {"Armorer : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Armorer")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -636,7 +676,7 @@ Menus["menu cmp mag4"] = {
                 })
             }
 		},
-        { caption = {"Speechcraft : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.speechcraftCount")},
+        { caption = {"Speechcraft : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Speechcraft")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -644,7 +684,7 @@ Menus["menu cmp mag4"] = {
                 })
             }	
 		},
-        { caption = {"Enchant : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.enchantCount")},
+        { caption = {"Enchant : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Enchant")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -652,7 +692,7 @@ Menus["menu cmp mag4"] = {
                 })
             }	
 		},
-        { caption = {"Destruction : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.destructionCount")},
+        { caption = {"Destruction : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Destruction")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -660,7 +700,7 @@ Menus["menu cmp mag4"] = {
                 })
             }
         },
-        { caption = {"Conjuration : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.conjurationCount")},
+        { caption = {"Conjuration : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Conjuration")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -668,7 +708,7 @@ Menus["menu cmp mag4"] = {
                 })
             }
 		},		
-        { caption = {"Illusion : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.illusionCount")},
+        { caption = {"Illusion : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Illusion")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -676,7 +716,7 @@ Menus["menu cmp mag4"] = {
                 })
             }
 		},
-        { caption = {"Alteration : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.alterationCount")},
+        { caption = {"Alteration : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Alteration")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -684,7 +724,7 @@ Menus["menu cmp mag4"] = {
                 })
             }
         },		
-        { caption = {"Mysticism : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.mysticismCount")},
+        { caption = {"Mysticism : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Mysticism")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -692,7 +732,7 @@ Menus["menu cmp mag4"] = {
                 })
             }	
 		},
-        { caption = {"Restoration : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.restorationCount")},
+        { caption = {"Restoration : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Restoration")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
@@ -700,7 +740,7 @@ Menus["menu cmp mag4"] = {
                 })
             }	
 		},
-        { caption = {"Alchemy : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.alchemyCount")},
+        { caption = {"Alchemy : ", color.Gold, menuHelper.variables.currentPlayerDataVariable("customVariables.Alchemy")},
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("TFN_LevelingPlayer", "InputDialog", 
