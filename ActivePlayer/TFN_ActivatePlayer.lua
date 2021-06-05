@@ -95,7 +95,7 @@ TFN_ActivatePlayer.ResurrectCheck = function(eventStatus, pid)
 	return customEventHooks.makeEventStatus(false,false)	
 end	
 
-GameplayAdvance.ResurrectProcess = function(pid)	
+TFN_ActivatePlayer.ResurrectProcess = function(pid)	
 	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then	
 		if DragonDoor then
 			DragonDoor.OnPlayerConnect(true, pid)
