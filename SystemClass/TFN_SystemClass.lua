@@ -7,7 +7,9 @@ DESCRIPTION :
 ---------------------------
 INSTALLATION:
 Save the file as TFN_SystemClass.lua inside your server/scripts/custom folder.
-
+Save the file as TFN_WeaponsArmors.json inside your server/data/custom folder.
+Save the file as TFN_Spell.json inside your server/data/custom folder.
+Save the file as TFN_Miscs.json inside your server/data/custom folder.
 Edits to customScripts.lua :
 TFN_SystemClass = require("custom.TFN_SystemClass")
 ---------------------------
