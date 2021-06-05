@@ -119,7 +119,7 @@ TFN_LevelingPlayer.OnPlayerCompetence = function(pid, Comp, State, Count)
 					Players[pid].data.customVariables.TfnLeveling[Comp] = Players[pid].data.customVariables.TfnLeveling[Comp] - Count
 					Check = "attribute"				
 				end
-			elseif Players[pid].data.customVariables.TfnLeveling[Comp] < Count and State == "Remove"
+			elseif Players[pid].data.customVariables.TfnLeveling[Comp] < Count and State == "Remove" then
 				tes3mp.MessageBox(pid, -1, color.Default..trad.NotPts)
 			end
 			
