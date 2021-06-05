@@ -193,7 +193,7 @@ Menus["menu cmp mag"] = {
 		menuHelper.variables.currentPlayerDataVariable("customVariables.TfnLeveling.pointSoul"),
 		"\n\n",
 		color.White .. "\nSelect a talent from the list" .. color.Yellow,
-		"\naugmente le talent de :" .. color.Green,
+		"\nincrease the talent of :" .. color.Green,
 		" + 1" .. color.White,
 		" point.\n" .. color.Yellow,
 		color.Yellow .. "\nCost : ",
