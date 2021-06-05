@@ -75,7 +75,7 @@ TFN_LevelingPlayer.OnPlayerCompetence = function(pid, Comp, State, Count)
 		local Check = "Nothing"
 		local Type = "Nothing"
 		
-		if Comp ~= nil
+		if Comp ~= nil then
 		
 			if Players[pid].data.skills[Comp] then
 				Type = "skill"
