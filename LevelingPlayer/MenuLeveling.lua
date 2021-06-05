@@ -304,7 +304,7 @@ Menus["menu cmp mag"] = {
                 })
             }
         },
-        { caption = "Decreases",
+        { caption = "Remove",
             destinations = {menuHelper.destinations.setDefault("menu cmp mag3")
             }
         },			
