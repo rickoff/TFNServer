@@ -7,9 +7,7 @@ DESCRIPTION :
 ---------------------------
 INSTALLATION:
 Save the file as TFN_SystemClass.lua inside your server/scripts/custom folder.
-Save the file as TFN_WeaponsArmors.json inside your server/data/custom folder.
-Save the file as TFN_Spell.json inside your server/data/custom folder.
-Save the file as TFN_Miscs.json inside your server/data/custom folder.
+
 Edits to customScripts.lua :
 TFN_SystemClass = require("custom.TFN_SystemClass")
 ---------------------------
@@ -48,9 +46,10 @@ local listMisc = jsonInterface.load("custom/TFN_Misc.json")
 
 local function CheckSkills(pid, skill)
 	
-	if Players[pid].data.customClass.minorSkills then
-		if tableHelper.containsValue(Players[pid].data.customClass.minorSkills, skill, true) or
-			tableHelper.containsValue(Players[pid].data.customClass.majorSkills, skill, true) then		
+	if Players[pid].data.customClass.minorSkills and Players[pid].data.customClass.majorSkill then
+		if tableHelper.containsValue(Players[pid].data.customClass.minorSkills, skill, true) then		
+			return true
+		elseif tableHelper.containsValue(Players[pid].data.customClass.majorSkill, true) then
 			return true
 		else
 			return false
@@ -156,6 +155,14 @@ TFN_SystemClass.OnPlayerQuickKeys = function(eventStatus, pid)
 		end
 	end
 end
+
+TFN_SystemClass.OnPlayerAuthentified = function(eventStatus, pid)
+	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
+		TFN_SystemClass.OnPlayerEquipment(true, pid)		
+	end
+end
+
+customEventHooks.registerHandler("OnPlayerAuthentified", TFN_SystemClass.OnPlayerAuthentified)
 customEventHooks.registerValidator("OnPlayerEquipment", TFN_SystemClass.OnPlayerEquipment)
 customEventHooks.registerValidator("OnPlayerSpellbook", TFN_SystemClass.OnPlayerSpellbook)
 customEventHooks.registerValidator("OnPlayerItemUse", TFN_SystemClass.OnPlayerItemUse)
