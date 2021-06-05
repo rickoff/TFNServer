@@ -1,0 +1,3110 @@
+{
+  "adamantium_helm":{
+    "skill":"mediumarmor"
+  },
+  "bm_arrow_riekling_uni":{
+    "skill":"marksman"
+  },
+  "adamantium_mace":{
+    "skill":"bluntweapon"
+  },
+  "ebony_bow_auriel":{
+    "skill":"marksman"
+  },
+  "goblin_shield_durgok_uni":{
+    "skill":"lightarmor"
+  },
+  "silver arrow_thirsk_0":{
+    "skill":"marksman"
+  },
+  "fur_pauldron_left":{
+    "skill":"lightarmor"
+  },
+  "iron warhammer":{
+    "skill":"bluntweapon"
+  },
+  "shadow_shield":{
+    "skill":"heavyarmor"
+  },
+  "silver sparksword":{
+    "skill":"longblade"
+  },
+  "bm nordic silver dagger":{
+    "skill":"shortblade"
+  },
+  "mace of slurring_x":{
+    "skill":"bluntweapon"
+  },
+  "steel viperaxe":{
+    "skill":"axe"
+  },
+  "silver flamesword":{
+    "skill":"longblade"
+  },
+  "orcish_cuirass":{
+    "skill":"mediumarmor"
+  },
+  "blood_feast_shield":{
+    "skill":"heavyarmor"
+  },
+  "indoril_almalexia_pauldron_l":{
+    "skill":"heavyarmor"
+  },
+  "devil tanto":{
+    "skill":"shortblade"
+  },
+  "demon cephalopod":{
+    "skill":"lightarmor"
+  },
+  "iron war axe":{
+    "skill":"axe"
+  },
+  "indoril_mh_guard_greaves":{
+    "skill":"heavyarmor"
+  },
+  "silver arrow_thirsk_8":{
+    "skill":"marksman"
+  },
+  "indoril_mh_guard_gauntlet_r":{
+    "skill":"heavyarmor"
+  },
+  "indoril_mh_guard_gauntlet_l":{
+    "skill":"heavyarmor"
+  },
+  "silver viperblade":{
+    "skill":"shortblade"
+  },
+  "silver shardblade":{
+    "skill":"shortblade"
+  },
+  "bonemold_armun-an_cuirass":{
+    "skill":"mediumarmor"
+  },
+  "templar_cuirass":{
+    "skill":"heavyarmor"
+  },
+  "indoril_mh_guard_cuirass":{
+    "skill":"heavyarmor"
+  },
+  "indoril_mh_guard_boots":{
+    "skill":"heavyarmor"
+  },
+  "king's_oath_pc":{
+    "skill":"longblade"
+  },
+  "steel battle axe":{
+    "skill":"axe"
+  },
+  "right gauntlet of horny fist":{
+    "skill":"lightarmor"
+  },
+  "cruel viperstar":{
+    "skill":"marksman"
+  },
+  "silver spear":{
+    "skill":"spear"
+  },
+  "heart wall":{
+    "skill":"mediumarmor"
+  },
+  "bipolar blade":{
+    "skill":"longblade"
+  },
+  "silver flameaxe":{
+    "skill":"axe"
+  },
+  "dwarven claymore":{
+    "skill":"longblade"
+  },
+  "grey shaft of nonsense":{
+    "skill":"marksman"
+  },
+  "goblin_shield":{
+    "skill":"heavyarmor"
+  },
+  "bm nord leg":{
+    "skill":"bluntweapon"
+  },
+  "imperial netch blade":{
+    "skill":"shortblade"
+  },
+  "steel dagger of swiftblade":{
+    "skill":"shortblade"
+  },
+  "adamantium_pauldron_left":{
+    "skill":"mediumarmor"
+  },
+  "iron shardcleaver":{
+    "skill":"spear"
+  },
+  "wooden staff":{
+    "skill":"bluntweapon"
+  },
+  "wraithguard_jury_rig":{
+    "skill":"heavyarmor"
+  },
+  "adamantium_pauldron_right":{
+    "skill":"mediumarmor"
+  },
+  "adamantium_greaves":{
+    "skill":"mediumarmor"
+  },
+  "ebony arrow_sadri":{
+    "skill":"marksman"
+  },
+  "bm wolf right gauntlet":{
+    "skill":"lightarmor"
+  },
+  "adamantium_cuirass":{
+    "skill":"mediumarmor"
+  },
+  "shield of the undaunted":{
+    "skill":"lightarmor"
+  },
+  "merisan helm":{
+    "skill":"lightarmor"
+  },
+  "silver sword of paralysis":{
+    "skill":"longblade"
+  },
+  "adamantium_bracer_right":{
+    "skill":"mediumarmor"
+  },
+  "cuirass_savior_unique":{
+    "skill":"lightarmor"
+  },
+  "bm_wolf_cuirass_snow":{
+    "skill":"lightarmor"
+  },
+  "darkbrotherhood boots":{
+    "skill":"lightarmor"
+  },
+  "bm ice longsword":{
+    "skill":"longblade"
+  },
+  "light staff":{
+    "skill":"bluntweapon"
+  },
+  "wild flamesword":{
+    "skill":"shortblade"
+  },
+  "bonemold_pauldron_r":{
+    "skill":"mediumarmor"
+  },
+  "gauntlet_of_glory_right":{
+    "skill":"lightarmor"
+  },
+  "steel wakizashi":{
+    "skill":"shortblade"
+  },
+  "spite_dart":{
+    "skill":"marksman"
+  },
+  "darkbrotherhood gauntlet_r":{
+    "skill":"lightarmor"
+  },
+  "longbow_shadows_unique_x":{
+    "skill":"marksman"
+  },
+  "fine spring dart":{
+    "skill":"marksman"
+  },
+  "glass_greaves":{
+    "skill":"lightarmor"
+  },
+  "adamantium_spear":{
+    "skill":"spear"
+  },
+  "iron flameblade":{
+    "skill":"shortblade"
+  },
+  "trollbone_shield":{
+    "skill":"heavyarmor"
+  },
+  "netch_leather_gauntlet_left":{
+    "skill":"lightarmor"
+  },
+  "darkbrotherhood pauldron_l":{
+    "skill":"lightarmor"
+  },
+  "darkbrotherhood greaves":{
+    "skill":"lightarmor"
+  },
+  "clutterbane":{
+    "skill":"bluntweapon"
+  },
+  "darkbrotherhood cuirass":{
+    "skill":"lightarmor"
+  },
+  "netch_leather_greaves":{
+    "skill":"lightarmor"
+  },
+  "silver vipersword":{
+    "skill":"longblade"
+  },
+  "glass netch dagger":{
+    "skill":"shortblade"
+  },
+  "ebony shortsword_soscean":{
+    "skill":"shortblade"
+  },
+  "bonemold_tshield_hrlb":{
+    "skill":"mediumarmor"
+  },
+  "daedric_boots":{
+    "skill":"heavyarmor"
+  },
+  "dwarven halberd":{
+    "skill":"spear"
+  },
+  "chitin throwing star":{
+    "skill":"marksman"
+  },
+  "iron sparkskewer":{
+    "skill":"spear"
+  },
+  "steel viperblade":{
+    "skill":"shortblade"
+  },
+  "shard_bolt":{
+    "skill":"marksman"
+  },
+  "helsethguard_pauldron_right":{
+    "skill":"mediumarmor"
+  },
+  "ebony_towershield":{
+    "skill":"heavyarmor"
+  },
+  "bm_saber_seasplitter":{
+    "skill":"longblade"
+  },
+  "ebon_plate_cuirass_unique":{
+    "skill":"mediumarmor"
+  },
+  "steel throwing star":{
+    "skill":"marksman"
+  },
+  "flame arrow":{
+    "skill":"marksman"
+  },
+  "iron shardblade":{
+    "skill":"shortblade"
+  },
+  "helsethguard_pauldron_left":{
+    "skill":"mediumarmor"
+  },
+  "helsethguard_gauntlet_right":{
+    "skill":"mediumarmor"
+  },
+  "helsethguard_gauntlet_left":{
+    "skill":"mediumarmor"
+  },
+  "helsethguard_greaves":{
+    "skill":"mediumarmor"
+  },
+  "bm nordic silver mace":{
+    "skill":"bluntweapon"
+  },
+  "cruel sparkblade":{
+    "skill":"shortblade"
+  },
+  "erur_dan_spear_unique":{
+    "skill":"spear"
+  },
+  "daedric wakizashi":{
+    "skill":"shortblade"
+  },
+  "helsethguard_boots":{
+    "skill":"mediumarmor"
+  },
+  "ebony longsword":{
+    "skill":"longblade"
+  },
+  "daedric arrow":{
+    "skill":"marksman"
+  },
+  "bm_nordicmail_pauldronr":{
+    "skill":"mediumarmor"
+  },
+  "bonemold long bow":{
+    "skill":"marksman"
+  },
+  "helsethguard_helmet":{
+    "skill":"mediumarmor"
+  },
+  "steel bolt":{
+    "skill":"marksman"
+  },
+  "fur_pauldron_right":{
+    "skill":"lightarmor"
+  },
+  "silver shardskewer":{
+    "skill":"spear"
+  },
+  "imperial_chain_pauldron_left":{
+    "skill":"heavyarmor"
+  },
+  "fiend katana":{
+    "skill":"longblade"
+  },
+  "bm nordic silver axe_spurius":{
+    "skill":"axe"
+  },
+  "dwarven war axe":{
+    "skill":"axe"
+  },
+  "indoril_almalexia_gauntlet_l":{
+    "skill":"heavyarmor"
+  },
+  "bm nordic silver longsword":{
+    "skill":"longblade"
+  },
+  "warhammer_rammekald_unique":{
+    "skill":"bluntweapon"
+  },
+  "indoril_almalexia_gauntlet_r":{
+    "skill":"heavyarmor"
+  },
+  "indoril_almalexia_pauldron_r":{
+    "skill":"heavyarmor"
+  },
+  "shortbow of sanguine sureflight":{
+    "skill":"marksman"
+  },
+  "nordic claymore_stormfang":{
+    "skill":"longblade"
+  },
+  "indoril_almalexia_greaves":{
+    "skill":"heavyarmor"
+  },
+  "demon mace":{
+    "skill":"bluntweapon"
+  },
+  "indoril_almalexia_cuirass":{
+    "skill":"heavyarmor"
+  },
+  "silver shardsword":{
+    "skill":"longblade"
+  },
+  "chargen dagger":{
+    "skill":"shortblade"
+  },
+  "chitin_shield":{
+    "skill":"lightarmor"
+  },
+  "we_stormforge":{
+    "skill":"spear"
+  },
+  "katana_goldbrand_unique":{
+    "skill":"longblade"
+  },
+  "shockbite halberd":{
+    "skill":"spear"
+  },
+  "demon katana":{
+    "skill":"longblade"
+  },
+  "indoril_almalexia_helmet":{
+    "skill":"heavyarmor"
+  },
+  "silver_helm_uvenim":{
+    "skill":"heavyarmor"
+  },
+  "bonemold_chuzei_helm":{
+    "skill":"mediumarmor"
+  },
+  "chitin shortsword":{
+    "skill":"shortblade"
+  },
+  "dust_adept_helm":{
+    "skill":"lightarmor"
+  },
+  "iron arrow":{
+    "skill":"marksman"
+  },
+  "icebreaker":{
+    "skill":"bluntweapon"
+  },
+  "bm huntsman longsword":{
+    "skill":"longblade"
+  },
+  "lords_cuirass_unique_x":{
+    "skill":"heavyarmor"
+  },
+  "silver_dukesguard_cuirass":{
+    "skill":"heavyarmor"
+  },
+  "boots of blinding speed[unique]":{
+    "skill":"lightarmor"
+  },
+  "bound_gauntlet_left":{
+    "skill":"lightarmor"
+  },
+  "vfx_destructmarksman":{
+    "skill":"marksman"
+  },
+  "spark_bolt":{
+    "skill":"marksman"
+  },
+  "widowmaker":{
+    "skill":"axe"
+  },
+  "silver sparkskewer":{
+    "skill":"spear"
+  },
+  "bonemold_bracer_left":{
+    "skill":"mediumarmor"
+  },
+  "steel_towershield":{
+    "skill":"heavyarmor"
+  },
+  "fur_gauntlet_right":{
+    "skill":"lightarmor"
+  },
+  "steel stormsword":{
+    "skill":"longblade"
+  },
+  "iron spear":{
+    "skill":"spear"
+  },
+  "silver arrow_thirsk_7":{
+    "skill":"marksman"
+  },
+  "steel dai-katana":{
+    "skill":"longblade"
+  },
+  "ebony_closed_helm":{
+    "skill":"heavyarmor"
+  },
+  "bound_helm":{
+    "skill":"lightarmor"
+  },
+  "boots_apostle_unique_x":{
+    "skill":"lightarmor"
+  },
+  "sword of almalexia":{
+    "skill":"longblade"
+  },
+  "indoril boots":{
+    "skill":"mediumarmor"
+  },
+  "steel longbow_carnius":{
+    "skill":"marksman"
+  },
+  "wooden staff of divine":{
+    "skill":"bluntweapon"
+  },
+  "slave_bracer_right":{
+    "skill":"heavyarmor"
+  },
+  "saint's black sword":{
+    "skill":"shortblade"
+  },
+  "mountain spirit":{
+    "skill":"mediumarmor"
+  },
+  "tenpaceboots_x":{
+    "skill":"heavyarmor"
+  },
+  "bound_longsword":{
+    "skill":"longblade"
+  },
+  "steel staff of divine judgement":{
+    "skill":"bluntweapon"
+  },
+  "silver viperslayer":{
+    "skill":"longblade"
+  },
+  "cruel viperarrow":{
+    "skill":"marksman"
+  },
+  "flying viper":{
+    "skill":"marksman"
+  },
+  "cuirass_savior_unique_x":{
+    "skill":"lightarmor"
+  },
+  "spell_breaker_unique_x":{
+    "skill":"heavyarmor"
+  },
+  "claymore_iceblade_unique":{
+    "skill":"longblade"
+  },
+  "towershield_eleidon_unique_x":{
+    "skill":"heavyarmor"
+  },
+  "dreugh club":{
+    "skill":"bluntweapon"
+  },
+  "adamantium_shortsword":{
+    "skill":"shortblade"
+  },
+  "stormkiss":{
+    "skill":"axe"
+  },
+  "dwemer_shield":{
+    "skill":"heavyarmor"
+  },
+  "dwarven battle axe":{
+    "skill":"axe"
+  },
+  "steel vipersword":{
+    "skill":"longblade"
+  },
+  "fur_greaves":{
+    "skill":"lightarmor"
+  },
+  "bm ice mace":{
+    "skill":"bluntweapon"
+  },
+  "daedric_towershield":{
+    "skill":"heavyarmor"
+  },
+  "orcish_helm":{
+    "skill":"mediumarmor"
+  },
+  "wolfwalkers":{
+    "skill":"lightarmor"
+  },
+  "steel staff of shaming":{
+    "skill":"bluntweapon"
+  },
+  "daedric mace":{
+    "skill":"bluntweapon"
+  },
+  "conoon_chodala_axe_unique":{
+    "skill":"axe"
+  },
+  "ane_teria_mace_unique":{
+    "skill":"bluntweapon"
+  },
+  "daedric_greaves_htab":{
+    "skill":"heavyarmor"
+  },
+  "orcish warhammer":{
+    "skill":"bluntweapon"
+  },
+  "silver sparkslayer":{
+    "skill":"longblade"
+  },
+  "iron saber":{
+    "skill":"longblade"
+  },
+  "bm_ebonyarrow_s":{
+    "skill":"marksman"
+  },
+  "snowy crown":{
+    "skill":"bluntweapon"
+  },
+  "silver bolt":{
+    "skill":"marksman"
+  },
+  "bm bear helmet_ber":{
+    "skill":"lightarmor"
+  },
+  "bm_ice_pauldronr":{
+    "skill":"lightarmor"
+  },
+  "daedric_fountain_helm":{
+    "skill":"heavyarmor"
+  },
+  "daedric war axe":{
+    "skill":"axe"
+  },
+  "bm_ice_helmet":{
+    "skill":"lightarmor"
+  },
+  "bm_ice_greaves":{
+    "skill":"lightarmor"
+  },
+  "glass staff":{
+    "skill":"bluntweapon"
+  },
+  "steel flamescythe":{
+    "skill":"longblade"
+  },
+  "iron viperblade":{
+    "skill":"shortblade"
+  },
+  "staff_hasedoki_unique":{
+    "skill":"bluntweapon"
+  },
+  "bm bear boots":{
+    "skill":"lightarmor"
+  },
+  "glass dagger":{
+    "skill":"shortblade"
+  },
+  "sword of white woe":{
+    "skill":"longblade"
+  },
+  "silver viperaxe":{
+    "skill":"axe"
+  },
+  "dwemer_boots":{
+    "skill":"heavyarmor"
+  },
+  "wooden staff of war":{
+    "skill":"bluntweapon"
+  },
+  "bm_ice_gauntletr":{
+    "skill":"lightarmor"
+  },
+  "dwemer jinksword":{
+    "skill":"shortblade"
+  },
+  "steel broadsword":{
+    "skill":"longblade"
+  },
+  "bm_ice_gauntletl":{
+    "skill":"lightarmor"
+  },
+  "bm_ice_cuirass":{
+    "skill":"lightarmor"
+  },
+  "vfx_multiple5":{
+    "skill":"marksman"
+  },
+  "bonemold_armun-an_pauldron_l":{
+    "skill":"mediumarmor"
+  },
+  "bm_ice_boots":{
+    "skill":"lightarmor"
+  },
+  "bm_nordicmail_greaves":{
+    "skill":"mediumarmor"
+  },
+  "steel flameskewer":{
+    "skill":"spear"
+  },
+  "bm ice war axe":{
+    "skill":"axe"
+  },
+  "bm_nordicmail_helmet":{
+    "skill":"mediumarmor"
+  },
+  "viperstar":{
+    "skill":"marksman"
+  },
+  "iron shardmauler":{
+    "skill":"bluntweapon"
+  },
+  "bm_nordicmail_gauntletr":{
+    "skill":"mediumarmor"
+  },
+  "bm_nordicmail_gauntletl":{
+    "skill":"mediumarmor"
+  },
+  "bm_nordicmail_pauldronl":{
+    "skill":"mediumarmor"
+  },
+  "sunder_fake":{
+    "skill":"bluntweapon"
+  },
+  "bm_nordicmail_cuirass":{
+    "skill":"mediumarmor"
+  },
+  "silver flameslayer":{
+    "skill":"longblade"
+  },
+  "wooden staff of shaming":{
+    "skill":"bluntweapon"
+  },
+  "bonemold_tshield_hlaaluguard":{
+    "skill":"mediumarmor"
+  },
+  "bm_nordicmail_boots":{
+    "skill":"mediumarmor"
+  },
+  "bonemold_towershield":{
+    "skill":"mediumarmor"
+  },
+  "divine judgement silver staff":{
+    "skill":"bluntweapon"
+  },
+  "boethiah's walking stick":{
+    "skill":"bluntweapon"
+  },
+  "shard arrow":{
+    "skill":"marksman"
+  },
+  "iron broadsword":{
+    "skill":"longblade"
+  },
+  "imperial left gauntlet":{
+    "skill":"heavyarmor"
+  },
+  "nordic claymore":{
+    "skill":"longblade"
+  },
+  "sparkstar":{
+    "skill":"marksman"
+  },
+  "claymore_chrysamere_unique":{
+    "skill":"longblade"
+  },
+  "bm_bear_right_pauldron_snow":{
+    "skill":"lightarmor"
+  },
+  "steel spider blade":{
+    "skill":"shortblade"
+  },
+  "daedric_cuirass":{
+    "skill":"heavyarmor"
+  },
+  "ebony dart_db_unique":{
+    "skill":"marksman"
+  },
+  "steel war axe of deep biting":{
+    "skill":"axe"
+  },
+  "storm helm":{
+    "skill":"mediumarmor"
+  },
+  "silver staff of reckoning":{
+    "skill":"bluntweapon"
+  },
+  "bm bear helmet":{
+    "skill":"lightarmor"
+  },
+  "bm_bear_left_gauntlet_snow":{
+    "skill":"lightarmor"
+  },
+  "glass firesword":{
+    "skill":"longblade"
+  },
+  "orcish_greaves":{
+    "skill":"mediumarmor"
+  },
+  "cruel viper bolt":{
+    "skill":"marksman"
+  },
+  "bm_bear_helmet_snow":{
+    "skill":"lightarmor"
+  },
+  "iron shardaxe":{
+    "skill":"axe"
+  },
+  "icicle":{
+    "skill":"longblade"
+  },
+  "glass throwing knife":{
+    "skill":"marksman"
+  },
+  "imperial left pauldron":{
+    "skill":"heavyarmor"
+  },
+  "nordic broadsword":{
+    "skill":"longblade"
+  },
+  "bm_bear_cuirass_snow":{
+    "skill":"lightarmor"
+  },
+  "steel_helm":{
+    "skill":"heavyarmor"
+  },
+  "bonemold_tshield_telvanniguard":{
+    "skill":"mediumarmor"
+  },
+  "devil longbow":{
+    "skill":"marksman"
+  },
+  "wild shardblade":{
+    "skill":"shortblade"
+  },
+  "steel shardscythe":{
+    "skill":"longblade"
+  },
+  "imperial_chain_greaves":{
+    "skill":"mediumarmor"
+  },
+  "ebony mace":{
+    "skill":"bluntweapon"
+  },
+  "imperial_studded_cuirass":{
+    "skill":"lightarmor"
+  },
+  "silver arrow_thirsk_9":{
+    "skill":"marksman"
+  },
+  "bm_wolf_left_pauldron_snow":{
+    "skill":"lightarmor"
+  },
+  "bm_ice_minion_lance":{
+    "skill":"shortblade"
+  },
+  "indoril right gauntlet":{
+    "skill":"mediumarmor"
+  },
+  "steel halberd":{
+    "skill":"spear"
+  },
+  "dire sparkarrow":{
+    "skill":"marksman"
+  },
+  "succour of indoril":{
+    "skill":"mediumarmor"
+  },
+  "trollbone_cuirass":{
+    "skill":"heavyarmor"
+  },
+  "holy_shield":{
+    "skill":"mediumarmor"
+  },
+  "arrow of wasting viper":{
+    "skill":"marksman"
+  },
+  "adamantium boots":{
+    "skill":"mediumarmor"
+  },
+  "widowmaker_unique":{
+    "skill":"axe"
+  },
+  "iron spider dagger":{
+    "skill":"shortblade"
+  },
+  "netch_leather_shield":{
+    "skill":"lightarmor"
+  },
+  "imperial shortsword":{
+    "skill":"shortblade"
+  },
+  "fur_colovian_helm_white":{
+    "skill":"lightarmor"
+  },
+  "wild viperblade":{
+    "skill":"shortblade"
+  },
+  "iron_gauntlet_left":{
+    "skill":"heavyarmor"
+  },
+  "bm wolf pauldrons":{
+    "skill":"lightarmor"
+  },
+  "iron wakizashi":{
+    "skill":"shortblade"
+  },
+  "ebony scimitar_her":{
+    "skill":"longblade"
+  },
+  "bm wolf boots":{
+    "skill":"lightarmor"
+  },
+  "steel_towershield_ancient":{
+    "skill":"heavyarmor"
+  },
+  "bm_hunterspear_unique":{
+    "skill":"spear"
+  },
+  "iron_towershield":{
+    "skill":"heavyarmor"
+  },
+  "blessed_tower_shield":{
+    "skill":"heavyarmor"
+  },
+  "merisan club":{
+    "skill":"bluntweapon"
+  },
+  "bm_nordicmail_shield":{
+    "skill":"mediumarmor"
+  },
+  "steel sparkaxe":{
+    "skill":"axe"
+  },
+  "fur_cuirass":{
+    "skill":"lightarmor"
+  },
+  "steel_helm_ancient":{
+    "skill":"heavyarmor"
+  },
+  "bonemold_bracer_right":{
+    "skill":"mediumarmor"
+  },
+  "steel_gauntlet_right_ancient":{
+    "skill":"heavyarmor"
+  },
+  "bound_shield":{
+    "skill":"lightarmor"
+  },
+  "steel_cuirass_ancient":{
+    "skill":"heavyarmor"
+  },
+  "dragonbone_cuirass_unique_x":{
+    "skill":"heavyarmor"
+  },
+  "chitin greaves":{
+    "skill":"lightarmor"
+  },
+  "bm wolf right pauldron":{
+    "skill":"lightarmor"
+  },
+  "bound_cuirass":{
+    "skill":"lightarmor"
+  },
+  "grey shaft of holding":{
+    "skill":"marksman"
+  },
+  "glass_pauldron_right":{
+    "skill":"lightarmor"
+  },
+  "stormblade":{
+    "skill":"longblade"
+  },
+  "steel saber_elberoth":{
+    "skill":"longblade"
+  },
+  "bm wolf greaves":{
+    "skill":"lightarmor"
+  },
+  "bm wolf cuirass":{
+    "skill":"lightarmor"
+  },
+  "bm bear left pauldron":{
+    "skill":"lightarmor"
+  },
+  "helm_bearclaw_unique":{
+    "skill":"heavyarmor"
+  },
+  "chitin guantlet - right":{
+    "skill":"lightarmor"
+  },
+  "bm bear greaves":{
+    "skill":"lightarmor"
+  },
+  "fiend spear_dae_cursed":{
+    "skill":"spear"
+  },
+  "imperial helmet armor_dae_curse":{
+    "skill":"heavyarmor"
+  },
+  "claymore_chrysamere_unique_x":{
+    "skill":"longblade"
+  },
+  "daedric_greaves":{
+    "skill":"heavyarmor"
+  },
+  "wild flameblade":{
+    "skill":"shortblade"
+  },
+  "corkbulb bolt":{
+    "skill":"marksman"
+  },
+  "steel arrow_carnius":{
+    "skill":"marksman"
+  },
+  "silver dart":{
+    "skill":"marksman"
+  },
+  "bm bear right gauntlet":{
+    "skill":"lightarmor"
+  },
+  "daedric_gauntlet_right":{
+    "skill":"heavyarmor"
+  },
+  "silver dagger":{
+    "skill":"shortblade"
+  },
+  "vfx_multiple8":{
+    "skill":"marksman"
+  },
+  "silver viperskewer":{
+    "skill":"spear"
+  },
+  "vfx_multiple4":{
+    "skill":"marksman"
+  },
+  "bm bear cuirass":{
+    "skill":"lightarmor"
+  },
+  "bonemold_cuirass":{
+    "skill":"mediumarmor"
+  },
+  "azura's servant":{
+    "skill":"heavyarmor"
+  },
+  "lugrub's axe":{
+    "skill":"axe"
+  },
+  "glass_bracer_left":{
+    "skill":"lightarmor"
+  },
+  "gondolier_helm":{
+    "skill":"mediumarmor"
+  },
+  "gauntlet_of_glory_left":{
+    "skill":"lightarmor"
+  },
+  "staff_magnus_unique":{
+    "skill":"bluntweapon"
+  },
+  "bm silver dagger wolfender":{
+    "skill":"shortblade"
+  },
+  "indoril_mh_guard_pauldron_l":{
+    "skill":"heavyarmor"
+  },
+  "staff_magnus_unique_x":{
+    "skill":"bluntweapon"
+  },
+  "cephalopod_helm_htnk":{
+    "skill":"lightarmor"
+  },
+  "iron_shield":{
+    "skill":"heavyarmor"
+  },
+  "rusty_dagger_unique":{
+    "skill":"shortblade"
+  },
+  "fine bleeder dart":{
+    "skill":"marksman"
+  },
+  "darksun_shield_unique":{
+    "skill":"heavyarmor"
+  },
+  "chitin dagger":{
+    "skill":"shortblade"
+  },
+  "vfx_alterationmarksman":{
+    "skill":"marksman"
+  },
+  "iron sparkblade":{
+    "skill":"shortblade"
+  },
+  "ebon_plate_cuirass_unique_x":{
+    "skill":"mediumarmor"
+  },
+  "bonedancer gauntlet":{
+    "skill":"lightarmor"
+  },
+  "boneweave gauntlet":{
+    "skill":"lightarmor"
+  },
+  "ebony spear_hrce_unique":{
+    "skill":"spear"
+  },
+  "silver throwing star":{
+    "skill":"marksman"
+  },
+  "icecap_unique":{
+    "skill":"lightarmor"
+  },
+  "conoon_chodala_boots_unique":{
+    "skill":"lightarmor"
+  },
+  "netch_leather_boiled_cuirass":{
+    "skill":"lightarmor"
+  },
+  "steel shardskewer":{
+    "skill":"spear"
+  },
+  "silver_staff_dawn_uniq":{
+    "skill":"bluntweapon"
+  },
+  "steel shardblade":{
+    "skill":"shortblade"
+  },
+  "chitin boots":{
+    "skill":"lightarmor"
+  },
+  "steel staff of the ancestors":{
+    "skill":"bluntweapon"
+  },
+  "fiend spear":{
+    "skill":"spear"
+  },
+  "bm nordic silver axe_ber":{
+    "skill":"axe"
+  },
+  "cruel shardsword":{
+    "skill":"shortblade"
+  },
+  "silver staff of peace":{
+    "skill":"bluntweapon"
+  },
+  "bm bear right pauldron":{
+    "skill":"lightarmor"
+  },
+  "dragonbone_cuirass_unique":{
+    "skill":"heavyarmor"
+  },
+  "iron throwing knife":{
+    "skill":"marksman"
+  },
+  "spiderbite":{
+    "skill":"longblade"
+  },
+  "saint's shield":{
+    "skill":"heavyarmor"
+  },
+  "templar bracer right":{
+    "skill":"heavyarmor"
+  },
+  "chitin war axe":{
+    "skill":"axe"
+  },
+  "iron halberd":{
+    "skill":"spear"
+  },
+  "nordic_iron_cuirass":{
+    "skill":"heavyarmor"
+  },
+  "steel vipercleaver":{
+    "skill":"spear"
+  },
+  "newtscale_cuirass":{
+    "skill":"lightarmor"
+  },
+  "gauntlet_fists_r_unique":{
+    "skill":"heavyarmor"
+  },
+  "gauntlet_fists_l_unique":{
+    "skill":"heavyarmor"
+  },
+  "silver shortsword":{
+    "skill":"shortblade"
+  },
+  "steel poisonsword":{
+    "skill":"longblade"
+  },
+  "adamantium_bracer_left":{
+    "skill":"mediumarmor"
+  },
+  "gravedigger":{
+    "skill":"longblade"
+  },
+  "firebite sword":{
+    "skill":"shortblade"
+  },
+  "glass stormsword":{
+    "skill":"longblade"
+  },
+  "dire shardsword":{
+    "skill":"shortblade"
+  },
+  "bloodworm_helm_unique":{
+    "skill":"heavyarmor"
+  },
+  "silver war axe":{
+    "skill":"axe"
+  },
+  "gauntlet_horny_fist_r":{
+    "skill":"lightarmor"
+  },
+  "dreugh_helm":{
+    "skill":"mediumarmor"
+  },
+  "helm_bearclaw_unique_x":{
+    "skill":"heavyarmor"
+  },
+  "viper_bolt":{
+    "skill":"marksman"
+  },
+  "boots of blinding speed_x":{
+    "skill":"lightarmor"
+  },
+  "ebony_bracer_left_tgeb":{
+    "skill":"heavyarmor"
+  },
+  "bound_gauntlet_right":{
+    "skill":"lightarmor"
+  },
+  "daedric_helm_clavicusvile":{
+    "skill":"heavyarmor"
+  },
+  "silver spear_uvenim":{
+    "skill":"spear"
+  },
+  "steel sparksword":{
+    "skill":"longblade"
+  },
+  "dreugh_cuirass_ttrm":{
+    "skill":"mediumarmor"
+  },
+  "netch_leather_pauldron_left":{
+    "skill":"lightarmor"
+  },
+  "daedric battle axe":{
+    "skill":"axe"
+  },
+  "tenpaceboots":{
+    "skill":"heavyarmor"
+  },
+  "dwemer_bracer_right":{
+    "skill":"heavyarmor"
+  },
+  "wraithguard":{
+    "skill":"heavyarmor"
+  },
+  "bm_ice_shield":{
+    "skill":"lightarmor"
+  },
+  "dwarven axe_soultrap":{
+    "skill":"axe"
+  },
+  "erur_dan_cuirass_unique":{
+    "skill":"mediumarmor"
+  },
+  "staff of the forefathers":{
+    "skill":"bluntweapon"
+  },
+  "ebony dart":{
+    "skill":"marksman"
+  },
+  "dwe_jinksword_curse_unique":{
+    "skill":"shortblade"
+  },
+  "steel throwing knife":{
+    "skill":"marksman"
+  },
+  "demon helm":{
+    "skill":"lightarmor"
+  },
+  "stendar_hammer_unique_x":{
+    "skill":"bluntweapon"
+  },
+  "bonemold_pauldron_l":{
+    "skill":"mediumarmor"
+  },
+  "dwarven shortsword":{
+    "skill":"shortblade"
+  },
+  "silver flameblade":{
+    "skill":"shortblade"
+  },
+  "dwemer_boots of flying":{
+    "skill":"heavyarmor"
+  },
+  "iron vipermauler":{
+    "skill":"bluntweapon"
+  },
+  "bm_wolf_greaves_snow":{
+    "skill":"lightarmor"
+  },
+  "left cloth horny fist bracer":{
+    "skill":"lightarmor"
+  },
+  "right cloth horny fist bracer":{
+    "skill":"lightarmor"
+  },
+  "iron_helmet":{
+    "skill":"heavyarmor"
+  },
+  "bipolar blade_x":{
+    "skill":"longblade"
+  },
+  "devil cephalopod helm":{
+    "skill":"lightarmor"
+  },
+  "airan_ahhe's_spirit_spear_uniq":{
+    "skill":"spear"
+  },
+  "devil mole crab helm":{
+    "skill":"lightarmor"
+  },
+  "devil helm":{
+    "skill":"lightarmor"
+  },
+  "fiend helm":{
+    "skill":"lightarmor"
+  },
+  "templar_helmet_armor":{
+    "skill":"heavyarmor"
+  },
+  "steel_gauntlet_left_ancient":{
+    "skill":"heavyarmor"
+  },
+  "daedric_god_helm":{
+    "skill":"heavyarmor"
+  },
+  "steel jinkblade of the aegis":{
+    "skill":"shortblade"
+  },
+  "steel shardsword":{
+    "skill":"longblade"
+  },
+  "ebony_shield_auriel_x":{
+    "skill":"heavyarmor"
+  },
+  "bm wolf left gauntlet":{
+    "skill":"lightarmor"
+  },
+  "shockbite mace":{
+    "skill":"bluntweapon"
+  },
+  "glass_pauldron_left":{
+    "skill":"lightarmor"
+  },
+  "glass_bracer_right":{
+    "skill":"lightarmor"
+  },
+  "bleeder dart":{
+    "skill":"marksman"
+  },
+  "silver arrow_thirsk_4":{
+    "skill":"marksman"
+  },
+  "daedric_crescent_unique":{
+    "skill":"longblade"
+  },
+  "bm huntsmanbolt":{
+    "skill":"marksman"
+  },
+  "helm of holy fire":{
+    "skill":"mediumarmor"
+  },
+  "cephalopod_helm":{
+    "skill":"lightarmor"
+  },
+  "dwarven_hammer_volendrung":{
+    "skill":"bluntweapon"
+  },
+  "fiend tanto":{
+    "skill":"shortblade"
+  },
+  "lbonemold brace of horny fist":{
+    "skill":"mediumarmor"
+  },
+  "silver flameskewer":{
+    "skill":"spear"
+  },
+  "dire viper bolt":{
+    "skill":"marksman"
+  },
+  "chest of fire":{
+    "skill":"lightarmor"
+  },
+  "velothian shield":{
+    "skill":"lightarmor"
+  },
+  "steel dagger":{
+    "skill":"shortblade"
+  },
+  "orcish_boots":{
+    "skill":"mediumarmor"
+  },
+  "bladepiece_01":{
+    "skill":"longblade"
+  },
+  "last wish":{
+    "skill":"shortblade"
+  },
+  "heavy_leather_boots":{
+    "skill":"lightarmor"
+  },
+  "dwemer_shield_battle_unique":{
+    "skill":"heavyarmor"
+  },
+  "vfx_illusionmarksman":{
+    "skill":"marksman"
+  },
+  "axe_queen_of_bats_unique":{
+    "skill":"axe"
+  },
+  "ebony wizard's staff":{
+    "skill":"bluntweapon"
+  },
+  "cruel flamearrow":{
+    "skill":"marksman"
+  },
+  "cruel flamesword":{
+    "skill":"shortblade"
+  },
+  "bm_bear_left_pauldron_snow":{
+    "skill":"lightarmor"
+  },
+  "fur_helm":{
+    "skill":"lightarmor"
+  },
+  "helm of wounding":{
+    "skill":"heavyarmor"
+  },
+  "bonemold bolt":{
+    "skill":"marksman"
+  },
+  "left_horny_fist_gauntlet":{
+    "skill":"lightarmor"
+  },
+  "right horny fist gauntlet":{
+    "skill":"lightarmor"
+  },
+  "cruel shardstar":{
+    "skill":"marksman"
+  },
+  "indoril_mh_guard_helmet":{
+    "skill":"heavyarmor"
+  },
+  "demon mole crab":{
+    "skill":"lightarmor"
+  },
+  "holy_tower_shield":{
+    "skill":"heavyarmor"
+  },
+  "veloths_tower_shield":{
+    "skill":"lightarmor"
+  },
+  "blessed_shield":{
+    "skill":"heavyarmor"
+  },
+  "templar bracer left":{
+    "skill":"heavyarmor"
+  },
+  "feather_shield":{
+    "skill":"lightarmor"
+  },
+  "bound_longbow":{
+    "skill":"marksman"
+  },
+  "steel flamemace":{
+    "skill":"bluntweapon"
+  },
+  "trollbone_helm":{
+    "skill":"heavyarmor"
+  },
+  "bm_axe_heartfang_unique":{
+    "skill":"axe"
+  },
+  "bonemold_founders_helm":{
+    "skill":"mediumarmor"
+  },
+  "velothian_helm":{
+    "skill":"lightarmor"
+  },
+  "silver staff of chastening":{
+    "skill":"bluntweapon"
+  },
+  "steel spear of impaling thrust":{
+    "skill":"spear"
+  },
+  "the_chiding_cuirass":{
+    "skill":"lightarmor"
+  },
+  "shield_of_light":{
+    "skill":"lightarmor"
+  },
+  "merisan_cuirass":{
+    "skill":"lightarmor"
+  },
+  "cruel sparksword":{
+    "skill":"shortblade"
+  },
+  "iron shardskewer":{
+    "skill":"spear"
+  },
+  "ebony_closed_helm_fghl":{
+    "skill":"heavyarmor"
+  },
+  "katana_bluebrand_unique":{
+    "skill":"longblade"
+  },
+  "fur_bracer_left":{
+    "skill":"lightarmor"
+  },
+  "cruel vipersword":{
+    "skill":"shortblade"
+  },
+  "bm_bear_boots_snow":{
+    "skill":"lightarmor"
+  },
+  "chitin helm":{
+    "skill":"lightarmor"
+  },
+  "viper arrow":{
+    "skill":"marksman"
+  },
+  "iron_gauntlet_right":{
+    "skill":"heavyarmor"
+  },
+  "imperial_chain_pauldron_right":{
+    "skill":"heavyarmor"
+  },
+  "imperial broadsword":{
+    "skill":"longblade"
+  },
+  "ebony_bracer_right_tgeb":{
+    "skill":"heavyarmor"
+  },
+  "chitin arrow":{
+    "skill":"marksman"
+  },
+  "fur_gauntlet_left":{
+    "skill":"lightarmor"
+  },
+  "bm_wolf_right_pauldron_snow":{
+    "skill":"lightarmor"
+  },
+  "crosierstllothis":{
+    "skill":"bluntweapon"
+  },
+  "orcish_bracer_right":{
+    "skill":"mediumarmor"
+  },
+  "throwing knife of sureflight":{
+    "skill":"marksman"
+  },
+  "iron sparkcleaver":{
+    "skill":"spear"
+  },
+  "netch_leather_pauldron_right":{
+    "skill":"lightarmor"
+  },
+  "cruel flamestar":{
+    "skill":"marksman"
+  },
+  "daedric_shield":{
+    "skill":"heavyarmor"
+  },
+  "daedric_gauntlet_left":{
+    "skill":"heavyarmor"
+  },
+  "daedric_pauldron_left":{
+    "skill":"heavyarmor"
+  },
+  "daedric_pauldron_right":{
+    "skill":"heavyarmor"
+  },
+  "glass poisonsword":{
+    "skill":"longblade"
+  },
+  "centurion_projectile_dart":{
+    "skill":"marksman"
+  },
+  "bonemold_armun-an_pauldron_r":{
+    "skill":"mediumarmor"
+  },
+  "ebony_shield":{
+    "skill":"heavyarmor"
+  },
+  "steel sparkskewer":{
+    "skill":"spear"
+  },
+  "steel longbow":{
+    "skill":"marksman"
+  },
+  "we_shimsil":{
+    "skill":"shortblade"
+  },
+  "bm huntsman spear":{
+    "skill":"spear"
+  },
+  "carmine dart":{
+    "skill":"marksman"
+  },
+  "ebony_bracer_right":{
+    "skill":"heavyarmor"
+  },
+  "dwarven mace":{
+    "skill":"bluntweapon"
+  },
+  "fur_colovian_helm":{
+    "skill":"lightarmor"
+  },
+  "steel flamemauler":{
+    "skill":"bluntweapon"
+  },
+  "ebony_cuirass":{
+    "skill":"heavyarmor"
+  },
+  "6th bell hammer":{
+    "skill":"bluntweapon"
+  },
+  "nordic_leather_shield":{
+    "skill":"lightarmor"
+  },
+  "ebony_pauldron_left":{
+    "skill":"heavyarmor"
+  },
+  "dire viperblade":{
+    "skill":"shortblade"
+  },
+  "dire flameblade":{
+    "skill":"shortblade"
+  },
+  "ebony_pauldron_right":{
+    "skill":"heavyarmor"
+  },
+  "steel saber":{
+    "skill":"longblade"
+  },
+  "cruel shard bolt":{
+    "skill":"marksman"
+  },
+  "dwemer_pauldron_left":{
+    "skill":"heavyarmor"
+  },
+  "steel claymore":{
+    "skill":"longblade"
+  },
+  "bm riekling sword_rusted":{
+    "skill":"longblade"
+  },
+  "glass_cuirass":{
+    "skill":"lightarmor"
+  },
+  "steel claymore of hewing":{
+    "skill":"longblade"
+  },
+  "glass_helm":{
+    "skill":"lightarmor"
+  },
+  "cruel flameblade":{
+    "skill":"shortblade"
+  },
+  "bm riekling sword":{
+    "skill":"longblade"
+  },
+  "glass dagger_dae_cursed":{
+    "skill":"shortblade"
+  },
+  "glass war axe":{
+    "skill":"axe"
+  },
+  "redoran_master_helm":{
+    "skill":"mediumarmor"
+  },
+  "fury":{
+    "skill":"longblade"
+  },
+  "ebony spear":{
+    "skill":"spear"
+  },
+  "bound_dagger":{
+    "skill":"shortblade"
+  },
+  "dire flamesword":{
+    "skill":"shortblade"
+  },
+  "veloths_shield":{
+    "skill":"lightarmor"
+  },
+  "claymore_iceblade_unique_x":{
+    "skill":"longblade"
+  },
+  "orcish_towershield":{
+    "skill":"mediumarmor"
+  },
+  "orcish_bracer_left":{
+    "skill":"mediumarmor"
+  },
+  "orcish_pauldron_left":{
+    "skill":"mediumarmor"
+  },
+  "orcish_pauldron_right":{
+    "skill":"mediumarmor"
+  },
+  "dagger of judgement":{
+    "skill":"shortblade"
+  },
+  "indoril pauldron right":{
+    "skill":"mediumarmor"
+  },
+  "staff_of_llevule":{
+    "skill":"bluntweapon"
+  },
+  "warhammer_crusher_unique":{
+    "skill":"bluntweapon"
+  },
+  "mole_crab_helm":{
+    "skill":"lightarmor"
+  },
+  "glass_shield":{
+    "skill":"lightarmor"
+  },
+  "dwemer_bracer_left":{
+    "skill":"heavyarmor"
+  },
+  "bm_wolf_right_gauntlet_snow":{
+    "skill":"lightarmor"
+  },
+  "iron flamemauler":{
+    "skill":"bluntweapon"
+  },
+  "iron sparksword":{
+    "skill":"longblade"
+  },
+  "bonemold_gah-julan_helm":{
+    "skill":"mediumarmor"
+  },
+  "dwemer_helm":{
+    "skill":"heavyarmor"
+  },
+  "cruel frostarrow":{
+    "skill":"marksman"
+  },
+  "dreugh_cuirass":{
+    "skill":"mediumarmor"
+  },
+  "ebony_staff_tges":{
+    "skill":"bluntweapon"
+  },
+  "ebony war axe":{
+    "skill":"axe"
+  },
+  "dire sparksword":{
+    "skill":"shortblade"
+  },
+  "iron boots":{
+    "skill":"heavyarmor"
+  },
+  "imperial shortsword severio":{
+    "skill":"shortblade"
+  },
+  "spiked club":{
+    "skill":"bluntweapon"
+  },
+  "silver arrow_thirsk_5":{
+    "skill":"marksman"
+  },
+  "darkbrotherhood gauntlet_l":{
+    "skill":"lightarmor"
+  },
+  "steelstaffancestors_ttsa":{
+    "skill":"bluntweapon"
+  },
+  "cleaverstfelms":{
+    "skill":"axe"
+  },
+  "bonemold_shield":{
+    "skill":"mediumarmor"
+  },
+  "chitin spear":{
+    "skill":"spear"
+  },
+  "bonemold_boots":{
+    "skill":"mediumarmor"
+  },
+  "bonemold_greaves":{
+    "skill":"mediumarmor"
+  },
+  "shockbite warhammer":{
+    "skill":"bluntweapon"
+  },
+  "steel axe":{
+    "skill":"axe"
+  },
+  "steel_greaves_ancient":{
+    "skill":"heavyarmor"
+  },
+  "steel_boots_ancient":{
+    "skill":"heavyarmor"
+  },
+  "glass frostsword":{
+    "skill":"longblade"
+  },
+  "bonemold_gah-julan_cuirass":{
+    "skill":"mediumarmor"
+  },
+  "bonemold_gah-julan_pauldron_l":{
+    "skill":"mediumarmor"
+  },
+  "arrow of wasting spark":{
+    "skill":"marksman"
+  },
+  "daedric_terrifying_helm":{
+    "skill":"heavyarmor"
+  },
+  "vfx_multiple7":{
+    "skill":"marksman"
+  },
+  "steel sparkblade":{
+    "skill":"shortblade"
+  },
+  "morag_tong_helm":{
+    "skill":"lightarmor"
+  },
+  "cruel viperblade":{
+    "skill":"shortblade"
+  },
+  "left gauntlet of the horny fist":{
+    "skill":"lightarmor"
+  },
+  "bm_ebonylongsword_s":{
+    "skill":"longblade"
+  },
+  "dwemer_pauldron_right":{
+    "skill":"heavyarmor"
+  },
+  "bm nordic silver battleaxe_ber":{
+    "skill":"axe"
+  },
+  "wild vipersword":{
+    "skill":"shortblade"
+  },
+  "miner's pick":{
+    "skill":"axe"
+  },
+  "slave_bracer_left":{
+    "skill":"heavyarmor"
+  },
+  "warhammer of wounds":{
+    "skill":"bluntweapon"
+  },
+  "iron_cuirass":{
+    "skill":"heavyarmor"
+  },
+  "bm nordic silver claymore_ber":{
+    "skill":"longblade"
+  },
+  "devil spear":{
+    "skill":"spear"
+  },
+  "netch_leather_gauntlet_right":{
+    "skill":"lightarmor"
+  },
+  "iron_pauldron_left":{
+    "skill":"heavyarmor"
+  },
+  "steel_greaves":{
+    "skill":"heavyarmor"
+  },
+  "fiend battle axe":{
+    "skill":"axe"
+  },
+  "boots_apostle_unique":{
+    "skill":"lightarmor"
+  },
+  "bm winterwound dagger":{
+    "skill":"shortblade"
+  },
+  "magic_bolt":{
+    "skill":"marksman"
+  },
+  "steel staff of war":{
+    "skill":"bluntweapon"
+  },
+  "iron dagger":{
+    "skill":"shortblade"
+  },
+  "steel_gauntlet_left":{
+    "skill":"heavyarmor"
+  },
+  "steel_shield":{
+    "skill":"heavyarmor"
+  },
+  "iron flamecleaver":{
+    "skill":"spear"
+  },
+  "azura_star_unique":{
+    "skill":"marksman"
+  },
+  "cloudcleaver_unique":{
+    "skill":"axe"
+  },
+  "fur_bracer_right":{
+    "skill":"lightarmor"
+  },
+  "iron flamemace":{
+    "skill":"bluntweapon"
+  },
+  "daedric katana":{
+    "skill":"longblade"
+  },
+  "mace of slurring":{
+    "skill":"bluntweapon"
+  },
+  "iron viperskewer":{
+    "skill":"spear"
+  },
+  "steel_pauldron_right":{
+    "skill":"heavyarmor"
+  },
+  "dragonscale_cuirass":{
+    "skill":"mediumarmor"
+  },
+  "iron flameskewer":{
+    "skill":"spear"
+  },
+  "long bow":{
+    "skill":"marksman"
+  },
+  "nordic_iron_helm":{
+    "skill":"heavyarmor"
+  },
+  "her dart":{
+    "skill":"marksman"
+  },
+  "vfx_multiple3":{
+    "skill":"marksman"
+  },
+  "imperial_greaves":{
+    "skill":"heavyarmor"
+  },
+  "steel viperscythe":{
+    "skill":"longblade"
+  },
+  "bm huntsman axe":{
+    "skill":"axe"
+  },
+  "cruel shardblade":{
+    "skill":"shortblade"
+  },
+  "chitin_towershield":{
+    "skill":"lightarmor"
+  },
+  "shield_bolt":{
+    "skill":"marksman"
+  },
+  "chitin_watchman_helm":{
+    "skill":"lightarmor"
+  },
+  "chitin_mask_helm":{
+    "skill":"lightarmor"
+  },
+  "iron long spear":{
+    "skill":"spear"
+  },
+  "iron shardmace":{
+    "skill":"bluntweapon"
+  },
+  "nordic_ringmail_cuirass":{
+    "skill":"mediumarmor"
+  },
+  "imperial_chain_cuirass":{
+    "skill":"mediumarmor"
+  },
+  "imperial_chain_coif_helm":{
+    "skill":"mediumarmor"
+  },
+  "dwemer_cuirass":{
+    "skill":"heavyarmor"
+  },
+  "rbonemold bracer of horny fist":{
+    "skill":"mediumarmor"
+  },
+  "iron mace":{
+    "skill":"bluntweapon"
+  },
+  "peacemaker":{
+    "skill":"bluntweapon"
+  },
+  "ebony_cuirass_soscean":{
+    "skill":"heavyarmor"
+  },
+  "fur_boots":{
+    "skill":"lightarmor"
+  },
+  "fur_bearskin_cuirass":{
+    "skill":"lightarmor"
+  },
+  "ebony_bracer_left":{
+    "skill":"heavyarmor"
+  },
+  "ebony broadsword":{
+    "skill":"longblade"
+  },
+  "shield of wounds":{
+    "skill":"heavyarmor"
+  },
+  "netch_leather_towershield":{
+    "skill":"lightarmor"
+  },
+  "wild sparkblade":{
+    "skill":"shortblade"
+  },
+  "bonemold_helm":{
+    "skill":"mediumarmor"
+  },
+  "bm ice longsword_fg_unique":{
+    "skill":"longblade"
+  },
+  "darkbrotherhood pauldron_r":{
+    "skill":"lightarmor"
+  },
+  "daedric spear":{
+    "skill":"spear"
+  },
+  "netch_leather_cuirass":{
+    "skill":"lightarmor"
+  },
+  "spark arrow":{
+    "skill":"marksman"
+  },
+  "chitin guantlet - left":{
+    "skill":"lightarmor"
+  },
+  "chitin club":{
+    "skill":"bluntweapon"
+  },
+  "daedric_club_tgdc":{
+    "skill":"bluntweapon"
+  },
+  "iron battle axe":{
+    "skill":"axe"
+  },
+  "bm nordic silver axe":{
+    "skill":"axe"
+  },
+  "ebony shortsword":{
+    "skill":"shortblade"
+  },
+  "glass_boots":{
+    "skill":"lightarmor"
+  },
+  "netch_leather_boiled_helm":{
+    "skill":"lightarmor"
+  },
+  "daedric wakizashi_hhst":{
+    "skill":"shortblade"
+  },
+  "devil_tanto_tgamg":{
+    "skill":"shortblade"
+  },
+  "longsword_umbra_unique":{
+    "skill":"longblade"
+  },
+  "iron viperaxe":{
+    "skill":"axe"
+  },
+  "imperial shield":{
+    "skill":"heavyarmor"
+  },
+  "cloth bracer right":{
+    "skill":"lightarmor"
+  },
+  "cloth bracer left":{
+    "skill":"lightarmor"
+  },
+  "left leather bracer":{
+    "skill":"lightarmor"
+  },
+  "ebony_bow_auriel_x":{
+    "skill":"marksman"
+  },
+  "spear_mercy_unique":{
+    "skill":"spear"
+  },
+  "steel vipermauler":{
+    "skill":"bluntweapon"
+  },
+  "bm_wolf_helmet_snow":{
+    "skill":"lightarmor"
+  },
+  "ebony throwing star":{
+    "skill":"marksman"
+  },
+  "indoril left gauntlet":{
+    "skill":"mediumarmor"
+  },
+  "glass longsword":{
+    "skill":"longblade"
+  },
+  "glass stormblade":{
+    "skill":"shortblade"
+  },
+  "iron sparkaxe":{
+    "skill":"axe"
+  },
+  "indoril cuirass":{
+    "skill":"mediumarmor"
+  },
+  "imperial helmet armor":{
+    "skill":"heavyarmor"
+  },
+  "vfx_conjuremarksman":{
+    "skill":"marksman"
+  },
+  "wind of ahaz":{
+    "skill":"axe"
+  },
+  "bm nordic silver longsword_ber":{
+    "skill":"longblade"
+  },
+  "dire vipersword":{
+    "skill":"shortblade"
+  },
+  "spirit-eater":{
+    "skill":"longblade"
+  },
+  "imperial boots":{
+    "skill":"heavyarmor"
+  },
+  "silver claymore":{
+    "skill":"longblade"
+  },
+  "steel sparkslayer":{
+    "skill":"longblade"
+  },
+  "bound_mace":{
+    "skill":"bluntweapon"
+  },
+  "steel shortsword":{
+    "skill":"shortblade"
+  },
+  "imperial right gauntlet":{
+    "skill":"heavyarmor"
+  },
+  "bm_wolf_boots_snow":{
+    "skill":"lightarmor"
+  },
+  "imperial right pauldron":{
+    "skill":"heavyarmor"
+  },
+  "bonemold_tshield_redoranguard":{
+    "skill":"mediumarmor"
+  },
+  "towershield_eleidon_unique":{
+    "skill":"heavyarmor"
+  },
+  "velothis_shield":{
+    "skill":"lightarmor"
+  },
+  "mephala's teacher":{
+    "skill":"bluntweapon"
+  },
+  "ebony staff":{
+    "skill":"bluntweapon"
+  },
+  "silver staff":{
+    "skill":"bluntweapon"
+  },
+  "black dart":{
+    "skill":"marksman"
+  },
+  "silver_cuirass":{
+    "skill":"heavyarmor"
+  },
+  "indoril shield":{
+    "skill":"mediumarmor"
+  },
+  "templar_pauldron_left":{
+    "skill":"heavyarmor"
+  },
+  "imperial_helm_frald_uniq":{
+    "skill":"heavyarmor"
+  },
+  "chitin pauldron - right":{
+    "skill":"lightarmor"
+  },
+  "fur_colovian_helm_red":{
+    "skill":"lightarmor"
+  },
+  "bm_dagger_wolfgiver":{
+    "skill":"shortblade"
+  },
+  "bm wolf shield":{
+    "skill":"lightarmor"
+  },
+  "iron sparkslayer":{
+    "skill":"longblade"
+  },
+  "bm nordic silver longsword_cft":{
+    "skill":"longblade"
+  },
+  "ebony broadsword_dae_cursed":{
+    "skill":"longblade"
+  },
+  "iron fork":{
+    "skill":"shortblade"
+  },
+  "katana_goldbrand_unique_x":{
+    "skill":"longblade"
+  },
+  "daedric dagger":{
+    "skill":"shortblade"
+  },
+  "arrow of wasting shard":{
+    "skill":"marksman"
+  },
+  "templar_pauldron_right":{
+    "skill":"heavyarmor"
+  },
+  "steel spear":{
+    "skill":"spear"
+  },
+  "steel war axe":{
+    "skill":"axe"
+  },
+  "vfx_mysticismmarksman":{
+    "skill":"marksman"
+  },
+  "templar_greaves":{
+    "skill":"heavyarmor"
+  },
+  "steel katana":{
+    "skill":"longblade"
+  },
+  "dire viperarrow":{
+    "skill":"marksman"
+  },
+  "daedric dai-katana":{
+    "skill":"longblade"
+  },
+  "bonemold_gah-julan_hhda":{
+    "skill":"mediumarmor"
+  },
+  "firebite club":{
+    "skill":"bluntweapon"
+  },
+  "netch_leather_helm":{
+    "skill":"lightarmor"
+  },
+  "steel_cuirass":{
+    "skill":"heavyarmor"
+  },
+  "sunder":{
+    "skill":"bluntweapon"
+  },
+  "glass halberd":{
+    "skill":"spear"
+  },
+  "darkbrotherhood helm":{
+    "skill":"lightarmor"
+  },
+  "adamantium_claymore":{
+    "skill":"longblade"
+  },
+  "staff_hasedoki_unique_x":{
+    "skill":"bluntweapon"
+  },
+  "firebite war axe":{
+    "skill":"axe"
+  },
+  "indoril_almalexia_boots":{
+    "skill":"heavyarmor"
+  },
+  "shardstar":{
+    "skill":"marksman"
+  },
+  "wild sparksword":{
+    "skill":"shortblade"
+  },
+  "dwarven crossbow":{
+    "skill":"marksman"
+  },
+  "imperial cuirass_armor":{
+    "skill":"heavyarmor"
+  },
+  "racerbeak":{
+    "skill":"shortblade"
+  },
+  "silver dagger_droth_unique_a":{
+    "skill":"shortblade"
+  },
+  "bm ice dagger":{
+    "skill":"shortblade"
+  },
+  "steel shardmace":{
+    "skill":"bluntweapon"
+  },
+  "steel firesword":{
+    "skill":"longblade"
+  },
+  "silver dagger_droth_unique":{
+    "skill":"shortblade"
+  },
+  "ebony spear_blessed_unique":{
+    "skill":"spear"
+  },
+  "steel jinksword":{
+    "skill":"shortblade"
+  },
+  "short bow":{
+    "skill":"marksman"
+  },
+  "last rites":{
+    "skill":"axe"
+  },
+  "fork_horripilation_unique":{
+    "skill":"shortblade"
+  },
+  "glass arrow":{
+    "skill":"marksman"
+  },
+  "banhammer_unique":{
+    "skill":"bluntweapon"
+  },
+  "daunting mace":{
+    "skill":"bluntweapon"
+  },
+  "false_sunder":{
+    "skill":"bluntweapon"
+  },
+  "silver sparkaxe":{
+    "skill":"axe"
+  },
+  "dreugh staff":{
+    "skill":"bluntweapon"
+  },
+  "steel spear snow prince":{
+    "skill":"spear"
+  },
+  "dagoth dagger":{
+    "skill":"shortblade"
+  },
+  "dire frostarrow":{
+    "skill":"marksman"
+  },
+  "gauntlet _horny_fist_l":{
+    "skill":"lightarmor"
+  },
+  "iron longsword":{
+    "skill":"longblade"
+  },
+  "bm_hunter_battleaxe_unique":{
+    "skill":"axe"
+  },
+  "iron_bracer_left":{
+    "skill":"heavyarmor"
+  },
+  "warhammer_crusher_unique_x":{
+    "skill":"bluntweapon"
+  },
+  "silver arrow_thirsk_1":{
+    "skill":"marksman"
+  },
+  "iron bolt":{
+    "skill":"marksman"
+  },
+  "cruel flame bolt":{
+    "skill":"marksman"
+  },
+  "steel_pauldron_left":{
+    "skill":"heavyarmor"
+  },
+  "bm nordic silver battleaxe":{
+    "skill":"axe"
+  },
+  "steel flamecleaver":{
+    "skill":"spear"
+  },
+  "fiend longbow":{
+    "skill":"marksman"
+  },
+  "dire shardblade":{
+    "skill":"shortblade"
+  },
+  "dragonscale_towershield":{
+    "skill":"mediumarmor"
+  },
+  "glass claymore_magebane":{
+    "skill":"longblade"
+  },
+  "bm_ice minion_shield1":{
+    "skill":"lightarmor"
+  },
+  "silver staff of hunger":{
+    "skill":"bluntweapon"
+  },
+  "iron tanto":{
+    "skill":"shortblade"
+  },
+  "war_axe_airan_ammu":{
+    "skill":"axe"
+  },
+  "silver arrow":{
+    "skill":"marksman"
+  },
+  "ebony_shield_auriel":{
+    "skill":"heavyarmor"
+  },
+  "silver_helm":{
+    "skill":"heavyarmor"
+  },
+  "steel longsword":{
+    "skill":"longblade"
+  },
+  "spear_of_light":{
+    "skill":"spear"
+  },
+  "nerevarblade_01_flame":{
+    "skill":"longblade"
+  },
+  "steel warhammer of smiting":{
+    "skill":"bluntweapon"
+  },
+  "bm reaver battle axe":{
+    "skill":"axe"
+  },
+  "silver staff of shaming":{
+    "skill":"bluntweapon"
+  },
+  "iron flameslayer":{
+    "skill":"longblade"
+  },
+  "bm huntsman crossbow":{
+    "skill":"marksman"
+  },
+  "longsword_umbra_unique_x":{
+    "skill":"longblade"
+  },
+  "bound_spear":{
+    "skill":"spear"
+  },
+  "bonebiter_bow_unique":{
+    "skill":"marksman"
+  },
+  "bm bear shield":{
+    "skill":"lightarmor"
+  },
+  "iron_greaves":{
+    "skill":"heavyarmor"
+  },
+  "ebony_greaves":{
+    "skill":"heavyarmor"
+  },
+  "iron flamesword":{
+    "skill":"longblade"
+  },
+  "dwemer_greaves":{
+    "skill":"heavyarmor"
+  },
+  "bm riekling lance":{
+    "skill":"shortblade"
+  },
+  "cruel sparkarrow":{
+    "skill":"marksman"
+  },
+  "dire sparkblade":{
+    "skill":"shortblade"
+  },
+  "spell_breaker_unique":{
+    "skill":"heavyarmor"
+  },
+  "wooden staff of peace":{
+    "skill":"bluntweapon"
+  },
+  "helsethguard_cuirass":{
+    "skill":"mediumarmor"
+  },
+  "dire shardarrow":{
+    "skill":"marksman"
+  },
+  "daedric warhammer_ttgd":{
+    "skill":"bluntweapon"
+  },
+  "steel blade of heaven":{
+    "skill":"shortblade"
+  },
+  "wild shardsword":{
+    "skill":"shortblade"
+  },
+  "bm frostgore":{
+    "skill":"shortblade"
+  },
+  "iron viperslayer":{
+    "skill":"longblade"
+  },
+  "silver staff of war":{
+    "skill":"bluntweapon"
+  },
+  "daedric_cuirass_htab":{
+    "skill":"heavyarmor"
+  },
+  "dagger_fang_unique":{
+    "skill":"shortblade"
+  },
+  "gavel of the ordinator":{
+    "skill":"bluntweapon"
+  },
+  "iron club":{
+    "skill":"bluntweapon"
+  },
+  "goblin_club":{
+    "skill":"bluntweapon"
+  },
+  "steel staff of peace":{
+    "skill":"bluntweapon"
+  },
+  "glass_dagger_enamor":{
+    "skill":"shortblade"
+  },
+  "longbow_shadows_unique":{
+    "skill":"marksman"
+  },
+  "steel warhammer":{
+    "skill":"bluntweapon"
+  },
+  "ebony arrow":{
+    "skill":"marksman"
+  },
+  "orcish bolt":{
+    "skill":"marksman"
+  },
+  "indoril_mh_guard_pauldron_r":{
+    "skill":"heavyarmor"
+  },
+  "bm nordic silver claymore":{
+    "skill":"longblade"
+  },
+  "steel jinkblade":{
+    "skill":"shortblade"
+  },
+  "dragonscale_helm":{
+    "skill":"mediumarmor"
+  },
+  "iron vipercleaver":{
+    "skill":"spear"
+  },
+  "herder_crook":{
+    "skill":"bluntweapon"
+  },
+  "bm_ebony_staff_necro":{
+    "skill":"bluntweapon"
+  },
+  "war axe of wounds":{
+    "skill":"axe"
+  },
+  "battle axe of wounds":{
+    "skill":"axe"
+  },
+  "orcish battle axe":{
+    "skill":"axe"
+  },
+  "bm wolf helmet_heartfang":{
+    "skill":"lightarmor"
+  },
+  "steel sparkmauler":{
+    "skill":"bluntweapon"
+  },
+  "solvistapp":{
+    "skill":"longblade"
+  },
+  "silver sparkblade":{
+    "skill":"shortblade"
+  },
+  "centurion_projectile_dart_shock":{
+    "skill":"marksman"
+  },
+  "daedric long bow":{
+    "skill":"marksman"
+  },
+  "devil katana":{
+    "skill":"longblade"
+  },
+  "flame_bolt":{
+    "skill":"marksman"
+  },
+  "steel_gauntlet_right":{
+    "skill":"heavyarmor"
+  },
+  "silver dagger_othril_unique":{
+    "skill":"shortblade"
+  },
+  "iron vipersword":{
+    "skill":"longblade"
+  },
+  "dwarven spear":{
+    "skill":"spear"
+  },
+  "silver shardslayer":{
+    "skill":"longblade"
+  },
+  "silver dagger_rathalas_unique":{
+    "skill":"shortblade"
+  },
+  "fine black dart":{
+    "skill":"marksman"
+  },
+  "daedric shortsword":{
+    "skill":"shortblade"
+  },
+  "daedric claymore":{
+    "skill":"longblade"
+  },
+  "bm bear helmet eddard":{
+    "skill":"lightarmor"
+  },
+  "iron sparkmauler":{
+    "skill":"bluntweapon"
+  },
+  "steel flameaxe":{
+    "skill":"axe"
+  },
+  "bm_bear_right_gauntlet_snow":{
+    "skill":"lightarmor"
+  },
+  "steel vipermace":{
+    "skill":"bluntweapon"
+  },
+  "bm_ice_pauldronl":{
+    "skill":"lightarmor"
+  },
+  "firebite dagger":{
+    "skill":"shortblade"
+  },
+  "glass_towershield":{
+    "skill":"lightarmor"
+  },
+  "vfx_multiple2":{
+    "skill":"marksman"
+  },
+  "steel staff of chastening":{
+    "skill":"bluntweapon"
+  },
+  "steel shardmauler":{
+    "skill":"bluntweapon"
+  },
+  "steel club":{
+    "skill":"bluntweapon"
+  },
+  "fireblade":{
+    "skill":"shortblade"
+  },
+  "bonemold_gah-julan_pauldron_r":{
+    "skill":"mediumarmor"
+  },
+  "shockbite war axe":{
+    "skill":"axe"
+  },
+  "ebony war axe_elanande":{
+    "skill":"axe"
+  },
+  "dagger_fang_unique_x":{
+    "skill":"shortblade"
+  },
+  "steel sparkscythe":{
+    "skill":"longblade"
+  },
+  "chitin pauldron - left":{
+    "skill":"lightarmor"
+  },
+  "bm nordic_longsword_tracker":{
+    "skill":"longblade"
+  },
+  "daedric dagger_mtas":{
+    "skill":"shortblade"
+  },
+  "cruel sparkstar":{
+    "skill":"marksman"
+  },
+  "silver dagger_iryon_unique":{
+    "skill":"shortblade"
+  },
+  "vfx_restoremarksman":{
+    "skill":"marksman"
+  },
+  "steel broadsword of hewing":{
+    "skill":"longblade"
+  },
+  "daedric club":{
+    "skill":"bluntweapon"
+  },
+  "vfx_poisonmarksman":{
+    "skill":"marksman"
+  },
+  "ebony_boots":{
+    "skill":"heavyarmor"
+  },
+  "silver axe of paralysis":{
+    "skill":"axe"
+  },
+  "bound_boots":{
+    "skill":"lightarmor"
+  },
+  "bloodworm_helm_unique_x":{
+    "skill":"heavyarmor"
+  },
+  "dreugh_shield":{
+    "skill":"mediumarmor"
+  },
+  "we_temreki":{
+    "skill":"longblade"
+  },
+  "mace of molag bal_unique":{
+    "skill":"bluntweapon"
+  },
+  "cruel spark bolt":{
+    "skill":"marksman"
+  },
+  "glass dagger_symmachus_unique":{
+    "skill":"shortblade"
+  },
+  "karpal's friend":{
+    "skill":"axe"
+  },
+  "daedric_scourge_unique":{
+    "skill":"bluntweapon"
+  },
+  "arrow of wasting flame":{
+    "skill":"marksman"
+  },
+  "w_art_ice_mace":{
+    "skill":"bluntweapon"
+  },
+  "iron shortsword":{
+    "skill":"shortblade"
+  },
+  "dire flamearrow":{
+    "skill":"marksman"
+  },
+  "flamestar":{
+    "skill":"marksman"
+  },
+  "indoril pauldron left":{
+    "skill":"mediumarmor"
+  },
+  "iron sparkmace":{
+    "skill":"bluntweapon"
+  },
+  "iron claymore":{
+    "skill":"longblade"
+  },
+  "glass jinkblade":{
+    "skill":"shortblade"
+  },
+  "steel shardaxe":{
+    "skill":"axe"
+  },
+  "vfx_multiple6":{
+    "skill":"marksman"
+  },
+  "daedric staff":{
+    "skill":"bluntweapon"
+  },
+  "mehrunes'_razor_unique":{
+    "skill":"shortblade"
+  },
+  "dwarven halberd_soultrap":{
+    "skill":"spear"
+  },
+  "iron_bracer_right":{
+    "skill":"heavyarmor"
+  },
+  "daedric warhammer":{
+    "skill":"bluntweapon"
+  },
+  "steel_boots":{
+    "skill":"heavyarmor"
+  },
+  "steel arrow":{
+    "skill":"marksman"
+  },
+  "iron shardsword":{
+    "skill":"longblade"
+  },
+  "fine carmine dart":{
+    "skill":"marksman"
+  },
+  "daedric dagger_bar":{
+    "skill":"shortblade"
+  },
+  "silver arrow_thirsk_6":{
+    "skill":"marksman"
+  },
+  "steel_pauldron_left_ancient":{
+    "skill":"heavyarmor"
+  },
+  "steel viperslayer":{
+    "skill":"longblade"
+  },
+  "daedric dart":{
+    "skill":"marksman"
+  },
+  "vfx_frostmarksman":{
+    "skill":"marksman"
+  },
+  "silver staff of paralysis":{
+    "skill":"bluntweapon"
+  },
+  "glass throwing star":{
+    "skill":"marksman"
+  },
+  "steel sparkmace":{
+    "skill":"bluntweapon"
+  },
+  "bm nordic silver shortsword":{
+    "skill":"shortblade"
+  },
+  "spirit of indoril":{
+    "skill":"mediumarmor"
+  },
+  "silver dagger_hanin cursed":{
+    "skill":"shortblade"
+  },
+  "water spear":{
+    "skill":"spear"
+  },
+  "bm bear left gauntlet":{
+    "skill":"lightarmor"
+  },
+  "bm wolf helmet":{
+    "skill":"lightarmor"
+  },
+  "daedric longsword":{
+    "skill":"longblade"
+  },
+  "netch_leather_boots":{
+    "skill":"lightarmor"
+  },
+  "indoril_almalexia_shield":{
+    "skill":"heavyarmor"
+  },
+  "steel shardcleaver":{
+    "skill":"spear"
+  },
+  "bonemold_armun-an_helm":{
+    "skill":"mediumarmor"
+  },
+  "lords_cuirass_unique":{
+    "skill":"heavyarmor"
+  },
+  "corkbulb arrow":{
+    "skill":"marksman"
+  },
+  "steel mace":{
+    "skill":"bluntweapon"
+  },
+  "dire flame bolt":{
+    "skill":"marksman"
+  },
+  "dwarven warhammer":{
+    "skill":"bluntweapon"
+  },
+  "steel shardslayer":{
+    "skill":"longblade"
+  },
+  "nerevarblade_01":{
+    "skill":"longblade"
+  },
+  "dire spark bolt":{
+    "skill":"marksman"
+  },
+  "steel staff":{
+    "skill":"bluntweapon"
+  },
+  "dire shard bolt":{
+    "skill":"marksman"
+  },
+  "stendar_hammer_unique":{
+    "skill":"bluntweapon"
+  },
+  "bm_nordic_silver_lgswd_bloodska":{
+    "skill":"longblade"
+  },
+  "lucky_break":{
+    "skill":"bluntweapon"
+  },
+  "silver shardaxe":{
+    "skill":"axe"
+  },
+  "templar boots":{
+    "skill":"heavyarmor"
+  },
+  "claymore_agustas":{
+    "skill":"longblade"
+  },
+  "steel flameblade":{
+    "skill":"shortblade"
+  },
+  "bm huntsman war axe":{
+    "skill":"axe"
+  },
+  "shock_bolt":{
+    "skill":"marksman"
+  },
+  "lightofday_unique":{
+    "skill":"bluntweapon"
+  },
+  "silver longsword":{
+    "skill":"longblade"
+  },
+  "ebony_staff_trebonius":{
+    "skill":"bluntweapon"
+  },
+  "keening":{
+    "skill":"shortblade"
+  },
+  "greed":{
+    "skill":"spear"
+  },
+  "dwarven war axe_redas":{
+    "skill":"axe"
+  },
+  "nordic battle axe":{
+    "skill":"axe"
+  },
+  "daedric warhammer_ttgd_x":{
+    "skill":"bluntweapon"
+  },
+  "demon longbow":{
+    "skill":"marksman"
+  },
+  "glass claymore":{
+    "skill":"longblade"
+  },
+  "iron_arrow_uniq_judgement":{
+    "skill":"marksman"
+  },
+  "spear_mercy_unique_x":{
+    "skill":"spear"
+  },
+  "ebony scimitar":{
+    "skill":"longblade"
+  },
+  "demon tanto":{
+    "skill":"shortblade"
+  },
+  "dart_uniq_judgement":{
+    "skill":"marksman"
+  },
+  "goblin_sword":{
+    "skill":"shortblade"
+  },
+  "addamantium_helm":{
+    "skill":"mediumarmor"
+  },
+  "steel sparkcleaver":{
+    "skill":"spear"
+  },
+  "silver arrow_thirsk_2":{
+    "skill":"marksman"
+  },
+  "bonemold arrow":{
+    "skill":"marksman"
+  },
+  "iron_pauldron_right":{
+    "skill":"heavyarmor"
+  },
+  "steel flamesword":{
+    "skill":"longblade"
+  },
+  "daedric tanto":{
+    "skill":"shortblade"
+  },
+  "adamantium_shortsword_db":{
+    "skill":"shortblade"
+  },
+  "steel dart":{
+    "skill":"marksman"
+  },
+  "chitin short bow":{
+    "skill":"marksman"
+  },
+  "bound_battle_axe":{
+    "skill":"axe"
+  },
+  "bm_bear_greaves_snow":{
+    "skill":"lightarmor"
+  },
+  "bm_mace_aevar_uni":{
+    "skill":"bluntweapon"
+  },
+  "indoril_mh_guard_shield":{
+    "skill":"heavyarmor"
+  },
+  "iron dagger_telasero_unique":{
+    "skill":"shortblade"
+  },
+  "bm_wolf_left_gauntlet_snow":{
+    "skill":"lightarmor"
+  },
+  "bm nordic pick":{
+    "skill":"axe"
+  },
+  "wooden staff of chastening":{
+    "skill":"bluntweapon"
+  },
+  "steel frostsword":{
+    "skill":"longblade"
+  },
+  "iron shardslayer":{
+    "skill":"longblade"
+  },
+  "steel_pauldron_right_ancient":{
+    "skill":"heavyarmor"
+  },
+  "steel viperskewer":{
+    "skill":"spear"
+  },
+  "steel tanto":{
+    "skill":"shortblade"
+  },
+  "silver arrow_thirsk_3":{
+    "skill":"marksman"
+  },
+  "cruel shardarrow":{
+    "skill":"marksman"
+  },
+  "steel flameslayer":{
+    "skill":"longblade"
+  },
+  "king's_oath":{
+    "skill":"longblade"
+  },
+  "right leather bracer":{
+    "skill":"lightarmor"
+  },
+  "mace of molag bal_unique_x":{
+    "skill":"bluntweapon"
+  },
+  "daedric dagger_soultrap":{
+    "skill":"shortblade"
+  },
+  "shockbite battle axe":{
+    "skill":"axe"
+  },
+  "ebony_dagger_mehrunes":{
+    "skill":"shortblade"
+  },
+  "spring dart":{
+    "skill":"marksman"
+  },
+  "glass dagger_symmachus_unique_x":{
+    "skill":"shortblade"
+  },
+  "we_illkurok":{
+    "skill":"spear"
+  },
+  "indoril helmet":{
+    "skill":"mediumarmor"
+  },
+  "we_hellfirestaff":{
+    "skill":"bluntweapon"
+  },
+  "ebony staff caper":{
+    "skill":"bluntweapon"
+  },
+  "firebite star":{
+    "skill":"marksman"
+  },
+  "dwarven mace_salandas":{
+    "skill":"bluntweapon"
+  },
+  "adamantium_axe":{
+    "skill":"axe"
+  },
+  "foeburner":{
+    "skill":"longblade"
+  },
+  "steel crossbow":{
+    "skill":"marksman"
+  },
+  "grey shaft of unraveling":{
+    "skill":"marksman"
+  },
+  "pick_apprentice_01":{
+	"skill":"security"
+  },
+  "pick_grandmaster":{
+	"skill":"security"
+  },
+  "pick_journeyman_01":{
+	"skill":"security"
+  },
+  "pick_master":{
+	"skill":"security"
+  },
+  "pick_secretmaster":{
+	"skill":"security"
+  },  
+  "skeleton_key":{
+	"skill":"security"
+  },
+  "probe_apprentice_01":{
+	"skill":"security"
+  },
+  "probe_bent":{
+	"skill":"security"
+  },
+  "probe_grandmaster":{
+	"skill":"security"
+  },
+  "probe_journeyman_01":{
+	"skill":"security"
+  },
+  "probe_master":{
+	"skill":"security"
+  },  
+  "probe_secretmaster":{
+	"skill":"security"
+  }
+}
