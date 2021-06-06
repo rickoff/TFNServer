@@ -10,4 +10,16 @@ Site : https://talesfromnirn.com/
 
 Discord : https://discord.gg/VD7Mw4yZXN
 
-script tes3mp for Tales from Nirn server
+script tes3mp for Tales from Nirn server :
+
+- ActivePlayer : Active player for resurrect with 25% health
+
+- RegenPlayer : Natural regen health for players +1pts/s
+
+- LevelingPlayer : New Leveling sytem with GUI menu
+
+- Deathdrop : Drop on the ground after death 10% of gold
+
+- SystemClass : Class system limiting the use of weapons, armor, various items and sort according to the corresponding talent.
+
+
