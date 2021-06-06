@@ -9,7 +9,7 @@ INSTALLATION:
 Require TFN_Decorate, TFN_Furniture
 
 Save the file as TFN_HousingShop.lua inside your server/scripts/custom folder.
-Save the file as TFN_Door.lua inside your server/data/custom folder.
+Save the file as TFN_Door.json inside your server/data/custom folder.
 Save the file as MenuHousing.lua inside your scripts/menu folder
 
 Edits to customScripts.lua
@@ -19,7 +19,7 @@ Edits to config.lua
 add in config.menuHelperFiles, "MenuHousing"
 ---------------------------
 FUNCTION:
-/estate in your chat for open menu
+/home in your chat for open menu
 ---------------------------
 ]]
 local DoorData = {}
@@ -2269,7 +2269,7 @@ TFN_HousingShop.OnPlayerAuthentified = function(eventStatus, pid)
 	end
 end
 
-customCommandHooks.registerCommand("estate", TFN_HousingShop.MainMenuHouse)
+customCommandHooks.registerCommand("home", TFN_HousingShop.MainMenuHouse)
 customCommandHooks.registerCommand("myhouse", TFN_HousingShop.OnUserMyHouse)
 customCommandHooks.registerCommand("roomate", TFN_HousingShop.OnUserCopro)
 customCommandHooks.registerCommand("catalog", TFN_HousingShop.OnUserCommand)
