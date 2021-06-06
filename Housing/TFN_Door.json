@@ -1,0 +1,800 @@
+[
+  {
+    "refid": "ex_redoran_hut_01_a"
+  },
+  {
+    "refid": "in_impsmall_door_01"
+  },
+  {
+    "refid": "in_impsmall_trapdoor_01a"
+  },
+  {
+    "refid": "ex_velothicave_door_01"
+  },
+  {
+    "refid": "ex_velothicave_door_03"
+  },
+  {
+    "refid": "ex_emp_tower_01_a"
+  },
+  {
+    "refid": "ex_nord_door_01"
+  },
+  {
+    "refid": "ex_nord_door_02"
+  },
+  {
+    "refid": "ex_common_door_01"
+  },
+  {
+    "refid": "ex_imp_loaddoor_01"
+  },
+  {
+    "refid": "ex_imp_loaddoor_02"
+  },
+  {
+    "refid": "ex_imp_loaddoor_03"
+  },
+  {
+    "refid": "ex_redoran_barracks_door"
+  },
+  {
+    "refid": "in_redoran_barrack_door"
+  },
+  {
+    "refid": "in_strong_vaultdoor00"
+  },
+  {
+    "refid": "in_ar_door_01"
+  },
+  {
+    "refid": "in_redoran_ladder_01"
+  },
+  {
+    "refid": "door_cavern_doors00"
+  },
+  {
+    "refid": "door_cavern_doors10"
+  },
+  {
+    "refid": "in_r_s_door_01"
+  },
+  {
+    "refid": "in_c_door_arched"
+  },
+  {
+    "refid": "in_c_door_wood_square"
+  },
+  {
+    "refid": "door_cavern_doors20"
+  },
+  {
+    "refid": "ex_emp_tower_01_b"
+  },
+  {
+    "refid": "in_com_trapbottom_01"
+  },
+  {
+    "refid": "in_com_traptop_01"
+  },
+  {
+    "refid": "hlaal_loaddoor_01"
+  },
+  {
+    "refid": "hlaalu_loaddoor_ 02"
+  },
+  {
+    "refid": "in_redoran_hut_door_01"
+  },
+  {
+    "refid": "ex_t_door_01"
+  },
+  {
+    "refid": "ex_t_door_02"
+  },
+  {
+    "refid": "ex_t_door_stone_large"
+  },
+  {
+    "refid": "in_impsmall_door_jail_01"
+  },
+  {
+    "refid": "in_impsmall_loaddoor_01"
+  },
+  {
+    "refid": "ex_t_door_sphere_01"
+  },
+  {
+    "refid": "ex_t_door_slavepod_01"
+  },
+  {
+    "refid": "door_dwrv_double00"
+  },
+  {
+    "refid": "door_dwrv_double01"
+  },
+  {
+    "refid": "in_hlaalu_door"
+  },
+  {
+    "refid": "in_t_housepod_door_exit"
+  },
+  {
+    "refid": "in_t_door_small"
+  },
+  {
+    "refid": "in_t_s_plain_door"
+  },
+  {
+    "refid": "in_t_l_door_01"
+  },
+  {
+    "refid": "ex_de_shack_door"
+  },
+  {
+    "refid": "in_de_shack_door"
+  },
+  {
+    "refid": "door_dwrv_inner00"
+  },
+  {
+    "refid": "ex_cave_door_01"
+  },
+  {
+    "refid": "in_v_s_trapdoor_01"
+  },
+  {
+    "refid": "in_v_s_trapdoor_02"
+  },
+  {
+    "refid": "door_dwrv_main00"
+  },
+  {
+    "refid": "door_dwrv_load00"
+  },
+  {
+    "refid": "ex_velothi_loaddoor_01"
+  },
+  {
+    "refid": "in_dae_door_01"
+  },
+  {
+    "refid": "ex_ashl_door_01"
+  },
+  {
+    "refid": "ex_dae_door_load_oval"
+  },
+  {
+    "refid": "in_ashl_door_01"
+  },
+  {
+    "refid": "ex_ashl_door_02"
+  },
+  {
+    "refid": "ex_common_door_balcony"
+  },
+  {
+    "refid": "ex_velothi_loaddoor_02"
+  },
+  {
+    "refid": "in_ashl_door_02"
+  },
+  {
+    "refid": "in_hlaalu_loaddoor_01"
+  },
+  {
+    "refid": "in_hlaalu_loaddoor_02"
+  },
+  {
+    "refid": "in_vivec_grate_door_01"
+  },
+  {
+    "refid": "ex_vivec_grate_01"
+  },
+  {
+    "refid": "in_impsmall_d_cave_01"
+  },
+  {
+    "refid": "in_impsmall_d_hidden_01"
+  },
+  {
+    "refid": "in_velothismall_ndoor_01"
+  },
+  {
+    "refid": "chargen door hall"
+  },
+  {
+    "refid": "chargen customs door"
+  },
+  {
+    "refid": "ex_r_trapdoor_01"
+  },
+  {
+    "refid": "in_r_trapdoor_01"
+  },
+  {
+    "refid": "ex_v_palace_grate_01"
+  },
+  {
+    "refid": "ex_de_ship_trapdoor"
+  },
+  {
+    "refid": "in_de_ship_cabindoor"
+  },
+  {
+    "refid": "vivec_grate_door_02"
+  },
+  {
+    "refid": "door_dwrv_loaddown00"
+  },
+  {
+    "refid": "door_dwrv_loadup00"
+  },
+  {
+    "refid": "in_ci_door_01"
+  },
+  {
+    "refid": "smora_fara_door"
+  },
+  {
+    "refid": "pelagiad_halfway_room"
+  },
+  {
+    "refid": "rent_ebon_six_door"
+  },
+  {
+    "refid": "rent_balmora_south_door"
+  },
+  {
+    "refid": "rent_balmora_council_door"
+  },
+  {
+    "refid": "rent_balmora_lucky_door"
+  },
+  {
+    "refid": "rent_balmora_eight_door"
+  },
+  {
+    "refid": "rent_caldera_shenk_door"
+  },
+  {
+    "refid": "rent_maargan_andus_door"
+  },
+  {
+    "refid": "rent_vivec_lizard_door"
+  },
+  {
+    "refid": "rent_vivec_flower_door"
+  },
+  {
+    "refid": "rent_vivec_black_door"
+  },
+  {
+    "refid": "in_v_s_jaildoor_01"
+  },
+  {
+    "refid": "ex_h_pcfort_exdoor_ 01"
+  },
+  {
+    "refid": "ex_r_pcfort_d_01"
+  },
+  {
+    "refid": "ex_r_pcfort_d_02"
+  },
+  {
+    "refid": "ex_h_pcfort_exdoor_ 03"
+  },
+  {
+    "refid": "ex_h_pcfort_exdoor_ 03-3"
+  },
+  {
+    "refid": "ex_h_pcfort_exdoor_ 02"
+  },
+  {
+    "refid": "ex_r_pcfort_d_01-3"
+  },
+  {
+    "refid": "ex_r_pcfort_d_01-2"
+  },
+  {
+    "refid": "ex_t_door_01_pc_hold_a"
+  },
+  {
+    "refid": "ex_t_door_02_pc_hold_a"
+  },
+  {
+    "refid": "ex_t_door_02_pc_hold_b"
+  },
+  {
+    "refid": "ex_t_door_01_pc_hold_b"
+  },
+  {
+    "refid": "in_t_door_small_load"
+  },
+  {
+    "refid": "ex_h_trapdoor_01"
+  },
+  {
+    "refid": "in_h_trapdoor_01"
+  },
+  {
+    "refid": "ex_h_pcfort_trapdoor_01-2"
+  },
+  {
+    "refid": "chargen door exit"
+  },
+  {
+    "refid": "in_velothismall_ndoor_agrippina"
+  },
+  {
+    "refid": "ex_cave_door_01_koal"
+  },
+  {
+    "refid": "in_de_shipdoor_toplevel"
+  },
+  {
+    "refid": "ex_de_ship_cabindoor"
+  },
+  {
+    "refid": "chargen_ship_trapdoor"
+  },
+  {
+    "refid": "chargen_cabindoor"
+  },
+  {
+    "refid": "ex_nord_door_01-back"
+  },
+  {
+    "refid": "chargen exit door"
+  },
+  {
+    "refid": "ex_de_sn_gate"
+  },
+  {
+    "refid": "in_de_shack_trapdoor_01"
+  },
+  {
+    "refid": "in_de_shack_trapdoor"
+  },
+  {
+    "refid": "in_hlaalu_door_01"
+  },
+  {
+    "refid": "chargen door captain"
+  },
+  {
+    "refid": "hlaalu_loaddoor_ 02_balyn"
+  },
+  {
+    "refid": "chargen_shipdoor"
+  },
+  {
+    "refid": "in_de_llshipdoor_large"
+  },
+  {
+    "refid": "in_ashl_door_02_sha"
+  },
+  {
+    "refid": "ex_v_palace_grate_02"
+  },
+  {
+    "refid": "velothi_sewer_door"
+  },
+  {
+    "refid": "in_impsmall_door_01_shrine"
+  },
+  {
+    "refid": "rent_ghost_dusk_door"
+  },
+  {
+    "refid": "chargendoorjournal"
+  },
+  {
+    "refid": "ex_v_cantondoor_01"
+  },
+  {
+    "refid": "in_strong_vaultdoor_tela_unique"
+  },
+  {
+    "refid": "in_v_s_jaildoor_frelene"
+  },
+  {
+    "refid": "in_ci_door_01_indoor"
+  },
+  {
+    "refid": "ex_dae_door_static"
+  },
+  {
+    "refid": "clutter_whouse_door_01"
+  },
+  {
+    "refid": "clutter_whouse_door_02"
+  },
+  {
+    "refid": "door_cavern_vassir_un"
+  },
+  {
+    "refid": "in_velothismall_ndoor_01_jeanne"
+  },
+  {
+    "refid": "door_ravenrock_mine"
+  },
+  {
+    "refid": "ex_s_door"
+  },
+  {
+    "refid": "in_s_door"
+  },
+  {
+    "refid": "ex_s_door_double"
+  },
+  {
+    "refid": "ex_s_door_rounded"
+  },
+  {
+    "refid": "ex_s_fence_gate"
+  },
+  {
+    "refid": "ex_colony_bardoor"
+  },
+  {
+    "refid": "ex_colony_minedoor"
+  },
+  {
+    "refid": "ex_colony_door01.nif"
+  },
+  {
+    "refid": "ex_colony_door02"
+  },
+  {
+    "refid": "ex_colony_door03"
+  },
+  {
+    "refid": "ex_colony_door04"
+  },
+  {
+    "refid": "ex_colony_door05"
+  },
+  {
+    "refid": "ex_nord_door_wolf"
+  },
+  {
+    "refid": "in_thirsk_door"
+  },
+  {
+    "refid": "ex_bm_tomb_door_03"
+  },
+  {
+    "refid": "ex_bm_tomb_door_02"
+  },
+  {
+    "refid": "ex_bm_tomb_door_01"
+  },
+  {
+    "refid": "ex_colony_door02_1"
+  },
+  {
+    "refid": "ex_colony_door04_2"
+  },
+  {
+    "refid": "ex_colony_door04_1"
+  },
+  {
+    "refid": "ex_colony_door03_4"
+  },
+  {
+    "refid": "ex_colony_door02_2"
+  },
+  {
+    "refid": "ex_colony_door03_1"
+  },
+  {
+    "refid": "ex_colony_door03_2"
+  },
+  {
+    "refid": "ex_colony_door04_2b"
+  },
+  {
+    "refid": "ex_colony_door03_4a"
+  },
+  {
+    "refid": "ex_colony_door05b_4"
+  },
+  {
+    "refid": "ex_colony_door05c_4"
+  },
+  {
+    "refid": "ex_colony_door05_2"
+  },
+  {
+    "refid": "ex_colony_door02b_2"
+  },
+  {
+    "refid": "ex_colony_door04_3"
+  },
+  {
+    "refid": "ex_colony_door04b_3"
+  },
+  {
+    "refid": "ex_colony_door05_3"
+  },
+  {
+    "refid": "ex_colony_door04c_3"
+  },
+  {
+    "refid": "bm_ka_door"
+  },
+  {
+    "refid": "bm_ka_door_dark"
+  },
+  {
+    "refid": "ex_s_fence_gate_uni"
+  },
+  {
+    "refid": "bm_ic_door_01"
+  },
+  {
+    "refid": "ex_s_door_double_fixing"
+  },
+  {
+    "refid": "ex_s_door_double_fixed"
+  },
+  {
+    "refid": "in_thirsk_door_main_1"
+  },
+  {
+    "refid": "in_thirsk_door_main_2"
+  },
+  {
+    "refid": "ex_nord_door_lair"
+  },
+  {
+    "refid": "bm_ic_door_pelt"
+  },
+  {
+    "refid": "bm_ic_door_pelt_dark"
+  },
+  {
+    "refid": "ex_colony_door06"
+  },
+  {
+    "refid": "in_thirsk_door_main_1_b"
+  },
+  {
+    "refid": "in_thirsk_door_main_2_b"
+  },
+  {
+    "refid": "ex_nord_door_gyldenhul"
+  },
+  {
+    "refid": "ex_colony_door07"
+  },
+  {
+    "refid": "ex_colony_door08"
+  },
+  {
+    "refid": "ex_colony_door03 int"
+  },
+  {
+    "refid": "ex_colony_door01_1b.nif"
+  },
+  {
+    "refid": "ex_colony_door03_int"
+  },
+  {
+    "refid": "ex_colony_door05a_4"
+  },
+  {
+    "refid": "ex_colony_door05_int"
+  },
+  {
+    "refid": "bm_ka_door_dark_udyr"
+  },
+  {
+    "refid": "bm_ic_door_pelt_wolf"
+  },
+  {
+    "refid": "ex_s_door_rigmor"
+  },
+  {
+    "refid": "ex_s_door_rigmor2"
+  },
+  {
+    "refid": "bm_karstcav_door"
+  },
+  {
+    "refid": "bm_kartaag_door"
+  },
+  {
+    "refid": "ex_bm_tomb_door_skaalara"
+  },
+  {
+    "refid": "ex_co_ship_trapdoor"
+  },
+  {
+    "refid": "ex_co_ship_cabindoor"
+  },
+  {
+    "refid": "ex_colony_door03_1_uryn"
+  },
+  {
+    "refid": "rent_colony_door"
+  },
+  {
+    "refid": "bm_mazegate_01"
+  },
+  {
+    "refid": "bm_mazegate_02"
+  },
+  {
+    "refid": "bm_mazegate_03"
+  },
+  {
+    "refid": "bm_ka_door_dark_sg"
+  },
+  {
+    "refid": "ex_s_door_double_gh"
+  },
+  {
+    "refid": "bm_ka_door_dark_02"
+  },
+  {
+    "refid": "ex_bm_ringdoor"
+  },
+  {
+    "refid": "ex_colony_door05_int_a"
+  },
+  {
+    "refid": "ex_colony_door05_int_b"
+  },
+  {
+    "refid": "ex_colony_door05_int_c"
+  },
+  {
+    "refid": "in_db_door01"
+  },
+  {
+    "refid": "in_db_door_oval"
+  },
+  {
+    "refid": "in_om_door_round"
+  },
+  {
+    "refid": "in_m_sewer_trapdoor_01"
+  },
+  {
+    "refid": "in_m_sewer_door_01"
+  },
+  {
+    "refid": "in_db_door_oval_02"
+  },
+  {
+    "refid": "in_mh_door_01"
+  },
+  {
+    "refid": "in_mh_door_02"
+  },
+  {
+    "refid": "door_sotha_load"
+  },
+  {
+    "refid": "door_sotha_pre_load"
+  },
+  {
+    "refid": "door_dwe_00_exp"
+  },
+  {
+    "refid": "ex_nord_door_01_ignatius"
+  },
+  {
+    "refid": "ex_nord_door_01_ignatius1"
+  },
+  {
+    "refid": "door_cavern_doors00_velas"
+  },
+  {
+    "refid": "in_hlaalu_door_uni"
+  },
+  {
+    "refid": "door_sotha_mach_door"
+  },
+  {
+    "refid": "ex_mh_sewer_trapdoor_01"
+  },
+  {
+    "refid": "indalen_closet_door"
+  },
+  {
+    "refid": "ex_mh_temple_door_01"
+  },
+  {
+    "refid": "ex_mh_door_01"
+  },
+  {
+    "refid": "in_db_door_oval_relvel"
+  },
+  {
+    "refid": "in_mh_jaildoor_01"
+  },
+  {
+    "refid": "in_mh_door_02_play"
+  },
+  {
+    "refid": "ex_mh_swr_trapdr_blkd"
+  },
+  {
+    "refid": "in_m_sewer_trapdoor_01_blkd"
+  },
+  {
+    "refid": "ex_mh_door_02"
+  },
+  {
+    "refid": "in_mh_trapdoor_01"
+  },
+  {
+    "refid": "in_mh_door_01_velas"
+  },
+  {
+    "refid": "door_sotha_mach_door2"
+  },
+  {
+    "refid": "door_sotha_imp_door"
+  },
+  {
+    "refid": "in_mh_door_02_hels_uni"
+  },
+  {
+    "refid": "in_mh_door_02_bar2_uni"
+  },
+  {
+    "refid": "in_mh_door_02_bar1_uni"
+  },
+  {
+    "refid": "ex_mh_door_02_sadri"
+  },
+  {
+    "refid": "ex_mh_sewer_trapdoor_sadri"
+  },
+  {
+    "refid": "in_mh_door_02_bar3_uni"
+  },
+  {
+    "refid": "door_load_darkness00"
+  },
+  {
+    "refid": "ex_mh_pav_gate_door"
+  },
+  {
+    "refid": "ex_mh_pav_ladder_01"
+  },
+  {
+    "refid": "ex_mh_palace_gate"
+  },
+  {
+    "refid": "in_mh_pav_ladder"
+  },
+  {
+    "refid": "in_mh_door_02_chapel"
+  },
+  {
+    "refid": "ex_mh_temple_door_01_ch"
+  },
+  {
+    "refid": "in_mh_door_02_bar4_uni"
+  },
+  {
+    "refid": "ex_mh_door_02_velas"
+  },
+  {
+    "refid": "rent_mh_guar_door"
+  },
+  {
+    "refid": "ex_mh_door_02_ignatius"
+  },
+  {
+    "refid": "in_mh_door_02_throne1"
+  },
+  {
+    "refid": "in_mh_door_02_throne2"
+  }
+]
