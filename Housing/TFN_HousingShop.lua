@@ -25,7 +25,7 @@ FUNCTION:
 local DoorData = {}
 local DoorList = jsonInterface.load("custom/TFN_Door.json")
 for index, item in pairs(DoorList) do
-	table.insert(DoorData, {NAME = item.name, REFID = string.lower(item.Refid)})
+	DoorData[item.refid] = ""
 end
 
 local trad = {
@@ -34,13 +34,13 @@ local trad = {
 	coma = "--------------------------------------- \n",
 	count = "\ncost : ",
 	commandInfo = ". \nWrite /houseinfo for more information.\n--------------------------------------- ",
-	welcomeHouse = "Welcome home,",
-	welcome = "Welcome",
+	welcomeHouse = "Welcome home, ",
+	welcome = "Welcome ",
 	shop = "shop.",
 	house = "house." ,
 	closeHouse = "The house is locked.",
 	openHouse = "The house is a shop.",
-	access = "You have just entered part of",
+	access = "You have just entered part of ",
 	questCell = "The house is currently locked, but you can enter here because it is important for a quest.",
 	questPass = ", do only what you need to do for the quest.",
 	Close = "The tenant has closed the house.",
@@ -1871,7 +1871,7 @@ TFN_HousingShop.OnActivatedObject = function(eventStatus, pid, cellDescription, 
 			local hdata = housingData.houses[houseName]		
 			if houseName then
 				if getHouseOwnerName(houseName) then
-					if not tableHelper.containsValue(DoorData, string.lower(ObjectRefid), true) then
+					if not DoorData[string.lower(ObjectRefid)]then
 						if not isShop(hdata.name) then	
 							if not isOwner(getName(pid), houseName) and not isCoOwner(getName(pid), houseName) then
 								local dirtyThief = true
@@ -1882,7 +1882,6 @@ TFN_HousingShop.OnActivatedObject = function(eventStatus, pid, cellDescription, 
 								end
 									
 								if dirtyThief then
-									onDirtyThief(pid)
 									return customEventHooks.makeEventStatus(false,false)
 								end
 							end
@@ -1915,7 +1914,7 @@ TFN_HousingShop.OnObjectDelete = function (eventStatus, pid, cellDescription, ob
 			local hdata = housingData.houses[houseName]		
 			if houseName then
 				if getHouseOwnerName(houseName) then
-					if not tableHelper.containsValue(DoorData, string.lower(ObjectRefid), true) then
+					if not DoorData[string.lower(ObjectRefid)] then
 						if not isShop(hdata.name) then	
 							if not isOwner(getName(pid), houseName) and not isCoOwner(getName(pid), houseName) then
 								local dirtyThief = true
