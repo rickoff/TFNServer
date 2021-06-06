@@ -49,7 +49,7 @@ local function CheckSkills(pid, skill)
 	if Players[pid].data.customClass.minorSkills and Players[pid].data.customClass.majorSkills then
 		if tableHelper.containsValue(Players[pid].data.customClass.minorSkills, skill, true) then		
 			return true
-		elseif tableHelper.containsValue(Players[pid].data.customClass.majorSkill, skill, true) then
+		elseif tableHelper.containsValue(Players[pid].data.customClass.majorSkills, skill, true) then
 			return true
 		else
 			return false
