@@ -18,7 +18,7 @@ script tes3mp for Tales from Nirn server :
 
 - LevelingPlayer : New Leveling system with GUI menu
 
-- Deathdrop : Drop on the ground after death 10% of gold
+- DeathDrop : Drop on the ground after death 10% of gold
 
 - SystemClass : Class system limiting the use of weapons, armor, various items and sort according to the corresponding talent.
 
