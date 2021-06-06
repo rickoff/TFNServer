@@ -16,7 +16,7 @@ script tes3mp for Tales from Nirn server :
 
 - RegenPlayer : Natural regen health for players +1pts/s
 
-- LevelingPlayer : New Leveling sytem with GUI menu
+- LevelingPlayer : New Leveling system with GUI menu
 
 - Deathdrop : Drop on the ground after death 10% of gold
 
