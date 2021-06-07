@@ -1876,35 +1876,37 @@ TFN_HousingShop.OnContainer = function(eventStatus, pid, cellDescription, object
 		if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then	
 			local houseName, cdata = getIsInHouse(pid)			
 			if houseName then		
-				if getHouseOwnerName(houseName) then			
-					if action == enumerations.container.REMOVE then
-						if not isOwner(getName(pid), houseName) and not isCoOwner(getName(pid), houseName) then
-							local dirtyThief = true
-							for index, resetData in pairs(cdata.resetInfo) do
-								if resetData.refIndex == ObjectIndex then
-									dirtyThief = false
-									break
+				if getHouseOwnerName(houseName) then
+					if string.sub(ObjectIndex, 1, 1) == "0" then				
+						if action == enumerations.container.REMOVE then
+							if not isOwner(getName(pid), houseName) and not isCoOwner(getName(pid), houseName) then
+								local dirtyThief = true
+								for index, resetData in pairs(cdata.resetInfo) do
+									if resetData.refIndex == ObjectIndex then
+										dirtyThief = false
+										break
+									end
+								end
+								
+								if dirtyThief then
+									onDirtyThief(pid, houseName)
+									return customEventHooks.makeEventStatus(false,false)
 								end
 							end
-							
-							if dirtyThief then
-								onDirtyThief(pid, houseName)
-								return customEventHooks.makeEventStatus(false,false)
-							end
-						end
-					elseif action == enumerations.container.SET then
-						if not isOwner(getName(pid), houseName) and not isCoOwner(getName(pid), houseName) then
-							local dirtyThief = true
-							for index, resetData in pairs(cdata.resetInfo) do
-								if resetData.refIndex == ObjectIndex then
-									dirtyThief = false
-									break
+						elseif action == enumerations.container.SET then
+							if not isOwner(getName(pid), houseName) and not isCoOwner(getName(pid), houseName) then
+								local dirtyThief = true
+								for index, resetData in pairs(cdata.resetInfo) do
+									if resetData.refIndex == ObjectIndex then
+										dirtyThief = false
+										break
+									end
 								end
+								if dirtyThief then
+									onDirtyThief(pid, houseName)
+									return customEventHooks.makeEventStatus(false,false)
+								end							
 							end
-							if dirtyThief then
-								onDirtyThief(pid, houseName)
-								return customEventHooks.makeEventStatus(false,false)
-							end							
 						end
 					end
 				end
@@ -1956,7 +1958,7 @@ TFN_HousingShop.OnActivatedObject = function(eventStatus, pid, cellDescription, 
 	end
 end
 
-TFN_HousingShop.OnObjectDelete = function (eventStatus, pid, cellDescription, objects)
+TFN_HousingShop.OnObjectDelete = function(eventStatus, pid, cellDescription, objects)
 	local ObjectIndex
 	local ObjectRefid
 	for _, object in pairs(objects) do
@@ -1968,8 +1970,8 @@ TFN_HousingShop.OnObjectDelete = function (eventStatus, pid, cellDescription, ob
 			local houseName, cdata = getIsInHouse(pid)
 			local hdata = housingData.houses[houseName]		
 			if houseName then
-				if getHouseOwnerName(houseName) then
-					if not DoorData[string.lower(ObjectRefid)] then
+				if getHouseOwnerName(houseName) then			
+					if string.sub(ObjectIndex, 1, 1) == "0" then	
 						if not isShop(hdata.name) then	
 							if not isOwner(getName(pid), houseName) and not isCoOwner(getName(pid), houseName) then
 								local dirtyThief = true
