@@ -10,7 +10,7 @@ Require TFN_Decorate, TFN_Furniture
 
 Save the file as TFN_HousingShop.lua inside your server/scripts/custom folder.
 Save the file as TFN_Door.json inside your server/data/custom folder.
-Save the folder as CellDataBase with all files contain inside your server/data/custom/
+Save the folder as CellDataBase with all files contain inside your server/data/custom/CellDataBase/
 Save the file as CellDataBaseStat.json inside your server/data/custom/CellDataBase folder.
 Save the file as MenuHousing.lua inside your scripts/menu folder
 
@@ -49,8 +49,9 @@ local trad = {
 	houseAct = "The house is currently ",
 	closeKey = "locked. \n",
 	openKey = "unlocked. \n",
-	houseShop = "\nThe House is currently a shop. \n",
+	houseShop = "\nThe House is currently a Shop. \n",
 	houseHouse = "\nThe House is currently a House. \n",
+	statutHouse = "\nThe Statut is currently : ",	
 	locTime = "\nThe house is rented until : ",
 	explainHouse = (color.Yellow .. "[Select]" .. color.White .. "\nselect the house whose settings you want to change"
 	..color.Yellow .. "\n\n [Add roommate]" .. color.White .. "\nadd a roommate"
@@ -59,8 +60,9 @@ local trad = {
 	..color.Yellow .. "\n\n [Teleport]" .. color.White .. "\nthis teleport home"
 	..color.Yellow .. "\n\n [Sell]" .. color.White .. "\nto sell the house"
 	..color.Yellow .. "\n\n [Shop]" .. color.White .. "\nto switch house or shop"
+	..color.Yellow .. "\n\n [Statut]" .. color.White .. "\nto switch 'furniture' or 'empty' vanilla object\n(log-out/log-in require for respawn furn)"	
 	),
-	optMainHouse = "Select;Add roommate;Remove roommate;Lock;Teleport;Sell;Shop;Return;Close",
+	optMainHouse = "Select;Add roommate;Remove roommate;Lock;Teleport;Sell;Shop;Statut;Return;Close",
 	coHouseInfo = color.Yellow .. "[Select]" .. color.White .. "\nselect home" .. color.Yellow .. "\n\n [Teleport]" .. color.White .. "\teleport home\n ",
 	optCoHouse = "Select;Teleport;Back;Close",
 	menuCat = (color.Red .. "HOUSING MENU"
@@ -182,12 +184,13 @@ local config = {
 	PlayerSettingGUICo = 31391,
 	PlayerOwnedHouseSelectCo = 31392
 }
-
+local FurnData = {}
 local StaticData = {}
 local StaticList = jsonInterface.load("custom/CellDataBase/CellDataBaseStat.json")	
 for i = 1, #StaticList do
 	if config.Furn == true then
 		if string.find(StaticList[i], "furn") then
+			FurnData[StaticList[i]] = ""		
 		else
 			StaticData[StaticList[i]] = ""
 		end
@@ -331,6 +334,7 @@ local function createNewHouse(houseName)
 	housingData.houses[houseName] = {
 		name = houseName,
 		price = config.defaultPrice,
+		statut = "nothing",
 		cells = {},
 		doors = {}, 
 		inside = {},
@@ -927,7 +931,11 @@ local function showPlayerSettingsMainCo(pid)
 				message = message..trad.houseShop
 			else
 				message = message..trad.houseHouse
-			end		
+			end	
+
+			if hdata.statut then
+				message = message..trad.statutHouse..hdata.statut.."\n"
+			end				
 		end
 	end	
 	message = message .. "\n"
@@ -1052,6 +1060,10 @@ local function showPlayerSettingsMain(pid)
 			else
 				message = message..trad.houseHouse 
 			end	
+			
+			if hdata.statut then
+				message = message..trad.statutHouse..hdata.statut.."\n"
+			end				
 		end
 		if odata then
 			local DateLastLocation = odata.dateLocation + config.NextLocation
@@ -1312,6 +1324,21 @@ local function onPlayerShopHouse(pid)
 		housingData.owners[getName(pid)].houses[playerSelectedHouse[getName(pid)]].isShop = (not housingData.owners[getName(pid)].houses[playerSelectedHouse[getName(pid)]].isShop)
 		Save()
 		onShopStatusChange(playerSelectedHouse[getName(pid)])
+	else
+		return tes3mp.MessageBox(pid, -1, trad.noSelectHouse)
+	end
+	return showPlayerSettingsMain(pid)	
+end
+
+local function onPlayerChangeStatut(pid)
+	if playerSelectedHouse[getName(pid)] then
+		local hdata = housingData.houses[playerSelectedHouse[getName(pid)]].statut
+		if hdata == "empty" then
+			housingData.houses[playerSelectedHouse[getName(pid)]].statut = "furn"
+		else
+			housingData.houses[playerSelectedHouse[getName(pid)]].statut = "empty"
+		end
+		Save()
 	else
 		return tes3mp.MessageBox(pid, -1, trad.noSelectHouse)
 	end
@@ -1634,8 +1661,11 @@ TFN_HousingShop.OnGUIAction = function(eventStatus, pid, idGui, data)
 			return true
 		elseif tonumber(data) == 6 then --Shop House
 			onPlayerShopHouse(pid)
-			return true		
-		elseif tonumber(data) == 7 then --Return
+			return true
+		elseif tonumber(data) == 7 then --Statut empty furniture
+			onPlayerChangeStatut(pid)
+			return true					
+		elseif tonumber(data) == 8 then --Return
 			Players[pid].currentCustomMenu = "menu housing"--main menu
 			return true, menuHelper.DisplayMenu(pid, Players[pid].currentCustomMenu)		
 		else --Close
@@ -1765,7 +1795,7 @@ TFN_HousingShop.OnPlayerCellChange = function(eventStatus, pid)
 	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
 		local currentCell = tes3mp.GetCell(pid)	
 		if housingData.cells[currentCell] and housingData.cells[currentCell].house ~= nil then
-			hdata = housingData.houses[housingData.cells[currentCell].house]
+			local hdata = housingData.houses[housingData.cells[currentCell].house]
 			unlockChecks(currentCell)			
 			local canEnter, enterReason = isAllowedEnter(pid, currentCell)
 			if enterReason == "unowned" then
@@ -2291,8 +2321,8 @@ TFN_HousingShop.OnPlayerAuthentified = function(eventStatus, pid)
 	end
 end
 
-TFN_HousingShop.CleanCell = function(cellDescription)
-	if cellDescription ~= nil then
+TFN_HousingShop.CleanCell = function(cellDescription, Stat)
+	if cellDescription ~= nil and Stat ~= "nothing" then
 		local cell = LoadedCells[cellDescription]
 		local cellData = jsonInterface.load("custom/CellDataBase/"..cellDescription..".json")	
 		local useTemporaryLoad = false	
@@ -2305,15 +2335,28 @@ TFN_HousingShop.CleanCell = function(cellDescription)
 			local uniqueIndex = refNum.."-0"
 			local refId = slot.refId
 			if not StaticData[refId] and not DoorData[refId] then
-				if config.Actor == true then 
-					if cell.data.objectData[uniqueIndex] then
-						tableHelper.removeValue(cell.data.packets, uniqueIndex)
-						cell.data.objectData[uniqueIndex] = nil		
-						tableHelper.cleanNils(cell.data.objectData)							
+				if config.Actor == true then 			
+					if Stat == "empty" then
+						if cell.data.objectData[uniqueIndex] then
+							tableHelper.removeValue(cell.data.packets, uniqueIndex)
+							cell.data.objectData[uniqueIndex] = nil		
+							tableHelper.cleanNils(cell.data.objectData)							
+						end
+						if tableHelper.getCount(Players) > 0 then		
+							logicHandler.DeleteObjectForEveryone(cellDescription, uniqueIndex)
+						end	
+					else
+						if not FurnData[refId] then
+							if cell.data.objectData[uniqueIndex] then
+								tableHelper.removeValue(cell.data.packets, uniqueIndex)
+								cell.data.objectData[uniqueIndex] = nil		
+								tableHelper.cleanNils(cell.data.objectData)							
+							end
+							if tableHelper.getCount(Players) > 0 then		
+								logicHandler.DeleteObjectForEveryone(cellDescription, uniqueIndex)
+							end								
+						end
 					end
-					if tableHelper.getCount(Players) > 0 then		
-						logicHandler.DeleteObjectForEveryone(cellDescription, uniqueIndex)
-					end	
 				else
 					if not tableHelper.containsValue(cell.data.packets.actorList, uniqueIndex, true) then
 						if cell.data.objectData[uniqueIndex] then
@@ -2338,7 +2381,11 @@ end
 TFN_HousingShop.OnCellLoad = function(eventStatus, pid, cellDescription)
 	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
 		if housingData.cells[cellDescription] and housingData.cells[cellDescription].house ~= nil then
-			TFN_HousingShop.CleanCell(cellDescription)
+			if housingData.houses[housingData.cells[cellDescription].house].statut == nil then
+				housingData.houses[housingData.cells[cellDescription].house].statut = "nothing"
+			end				
+			local Stat = housingData.houses[housingData.cells[cellDescription].house].statut 		
+			TFN_HousingShop.CleanCell(cellDescription, Stat)
 		end
 	end
 end
