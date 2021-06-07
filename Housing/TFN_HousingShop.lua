@@ -10,7 +10,7 @@ Require TFN_Decorate, TFN_Furniture
 
 Save the file as TFN_HousingShop.lua inside your server/scripts/custom folder.
 Save the file as TFN_Door.json inside your server/data/custom folder.
-Decompress the folder as CellDataBase with all files contain inside your server/data/custom/
+Save the folder as CellDataBase with all files contain inside your server/data/custom/
 Save the file as CellDataBaseStat.json inside your server/data/custom/CellDataBase folder.
 Save the file as MenuHousing.lua inside your scripts/menu folder
 
@@ -25,8 +25,8 @@ FUNCTION:
 ---------------------------
 ]]
 local trad = {
-	WaitJail = color.White .. "You are in prison for a period of" .. color.Red .. "5" .. color.White .. "minutes",
-	StopJail = color.White .. "Your time for" .. color.Red .. "prison" .. color.White .. "has just ended",
+	WaitJail = color.White .. "You are in prison for a period of" .. color.Red .. " 5 " .. color.White .. "minutes",
+	StopJail = color.White .. "Your time for" .. color.Red ..  " prison " .. color.White .. "has just ended",
 	coma = "--------------------------------------- \n",
 	count = "\ncost : ",
 	commandInfo = ". \nWrite /houseinfo for more information.\n--------------------------------------- ",
@@ -221,16 +221,16 @@ local function msg(pid, text)
 	tes3mp.SendMessage(pid, config.chatColor .. text .. "\n" .. color.Default)
 end
 
-local function Save()
-	jsonInterface.save("custom/TFN_HousingShop.json", housingData)
-end
-
 local function Load()
 	housingData = jsonInterface.load("custom/TFN_HousingShop.json")
 end
 
 local function getName(pid)
 	return string.lower(Players[pid].accountName)
+end
+
+local function Save()
+	jsonInterface.save("custom/TFN_HousingShop.json", housingData)
 end
 
 local function getPlayerGold(playerName)
@@ -370,6 +370,13 @@ local function deleteHouse(houseName)
 			housingData.cells[cellName].house = nil
 		end
 	end
+	for ownerName, v in pairs(housingData.owners) do
+		for cellName, slot in pairs(housingData.owners[ownerName].houses) do			
+			if cellName == houseName then
+				housingData.owners[ownerName].houses[cellName] = nil
+			end
+		end
+	end	
 	Save()
 end
 
@@ -521,7 +528,6 @@ local function addCoOwner(houseName, pname)
 		end
 	end	
 	Save()
-	Load()
 end
 
 local function getHouseInfoLong(houseName, toggleMeanings) --Used in GUI labels
