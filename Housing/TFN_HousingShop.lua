@@ -155,10 +155,11 @@ local config = {
 	defaultPrice = 5000, --The price a house defaults to when it's created
 	requiredAdminRank = 1, --The admin rank required to use the admin GUI
 	allowWarp = true, --Whether or not players can use the option to warp to their home
+	allowWarpCo = true, --Whether or not players can use the option to warp to their home	
 	logging = true, --If the script reports its own information to the server log
 	chatColor = "#FFDC00", --The color used for the script's chat messages
 	CountMaxOwners = 2, --The max house by player
-	NextLocation = 2628000,
+	NextLocation = 2628000, --Time location
 	Furn = true,
 	Actor = true,
 	AdminMainGUI = 31371,
@@ -782,6 +783,10 @@ local function canWarp(pid)
 	return config.allowWarp
 end
 
+local function canWarpCo(pid)
+	return config.allowWarpCo
+end
+
 local function unlockChecks(cell)	
 	local changes = false
 	for houseName, hdata in pairs(housingData.houses) do
@@ -1314,6 +1319,39 @@ local function onPlayerSelectWarp(pid)
 	end
 end
 
+local function onPlayerSelectWarpCo(pid)
+	if not canWarpCo(pid) then
+		local message
+		if config.allowWarpCo == false then
+			message = trad.WarpSelect
+		else
+			message = trad.WarpNo
+		end
+		return false, tes3mp.MessageBox(pid, -1, message, false)
+	end
+	
+	if playerSelectedHouse[getName(pid)] then
+		local destinationCell
+		local destinationPos
+		
+		local hdata = housingData.houses[playerSelectedHouse[getName(pid)]]
+
+		if not hdata.inside.cell then
+			for cellName, v in pairs(hdata.cells) do
+				destinationCell = cellName
+				break
+			end
+			destinationPos = {x = 0, y = 0, z = 0}
+		else
+			destinationCell = hdata.inside.cell
+			destinationPos = hdata.inside.pos
+		end
+		warpPlayer(pid, destinationCell, destinationPos)
+	else
+		return tes3mp.MessageBox(pid, -1, trad.noSelectHouse)
+	end
+end
+
 local function onPlayerSelectSell(pid)
 	if playerSelectedHouse[getName(pid)] then
 		showPlayerSellOptions(pid)
@@ -1680,7 +1718,7 @@ TFN_HousingShop.OnGUIAction = function(eventStatus, pid, idGui, data)
 			onPlayerSettingsOwnedCo(pid)
 			return true
 		elseif tonumber(data) == 1 then --Warp to House
-			onPlayerSelectWarp(pid)
+			onPlayerSelectWarpCo(pid)
 			return true
 		elseif tonumber(data) == 2 then --Return
 			Players[pid].currentCustomMenu = "menu housing"--main menu
