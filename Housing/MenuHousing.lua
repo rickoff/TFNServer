@@ -12,7 +12,6 @@ color.Yellow .. "\n\n [Decorate Mode]",
 color.White .. "\nOpens the furniture and decoration editor.",
 color.Yellow .. "\n\n [Mannequins]",
 color.White .. "\nAllows you to purchase mannequins to\ndisplay your items.\n",
-
 },
     buttons = {
         {caption = "Homes/Shops",
@@ -73,8 +72,8 @@ color.Red .. "WARNING!",
 color.White .. "\nYou have attempted to bypass the anti-steal measures\nto steal from another player's home.",
 color.White .. "\n\nThe object has been disabled for the remainder of your session.",
 color.Red .. "\nTo make it re-appear, please reconnect.",
-color.Yellow .. "\n\nIf you are attempting to help decorate,\nmake sure the owner adds you as a 'roommate'."
-color.Red .. "\n\nIf you attempt to bypass the measures again, moderators will be notified."
+color.Yellow .. "\n\nIf you are attempting to help decorate,\nmake sure the owner adds you as a 'roommate'.",
+color.Red .. "\n\nIf you attempt to bypass the measures again, moderators will be notified.",
 color.White .. "\nDo you agree to" .. color.Red .. "NOT" .. color.white .. "reproduce this action?"
 },
     buttons = {
