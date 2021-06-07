@@ -1,9 +1,8 @@
 Menus["resurrect player"] = {
-    text = color.Gold .. "Do you want to\n" .. color.LightGreen ..
-    "resurrect\n" .. color.Gold .. "this player ?\n" ..
-        color.White .. "...",
+    text = color.White .. "Do you want to" .. color.Gold ..
+    "help\n" .. color.White .. "this person?",
     buttons = {						
-        { caption = "yes",
+        { caption = "Patch them up.",
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction("GameplayAdvance", "ResurrectPlayer", 
@@ -11,16 +10,15 @@ Menus["resurrect player"] = {
                 })
             }
         },			
-        { caption = "no", destinations = nil }
+        { caption = "Leave them there.", destinations = nil }
     }
 }
 
 Menus["resurrectvamp"] = {
-    text = color.Gold .. "You are dead !!!\n" .. color.LightGreen ..
-    "you have to\n" .. color.Gold .. "wait for a player\n" ..
-        color.White .. "...",
+    text = color.Red .. "You are unconcious.\n" .. color.White .. "You can wait for another player\n"
+    "or respawn at the nearest temple.",
     buttons = {						
-       { caption = "resurrect",
+       { caption = "Respawn",
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction(nil, "OnPlayerSendMessage",
@@ -28,16 +26,15 @@ Menus["resurrectvamp"] = {
                 })
             }
         },			
-        { caption = "wait", destinations = nil }
+        { caption = "Wait", destinations = nil }
     }
 }
 
 Menus["resurrect"] = {
-    text = color.Gold .. "You are dead !!!\n" .. color.LightGreen ..
-    "you have to\n" .. color.Gold .. "wait for a player\n" ..
-        color.White .. "...",
+    text = color.Red .. "You are unconcious.\n" .. color.White .. "You can wait for another player\n"
+    "or respawn at the nearest temple.",
     buttons = {						
-        { caption = "resurrect",
+        { caption = "Respawn",
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
 				menuHelper.effects.runGlobalFunction(nil, "OnPlayerSendMessage",
@@ -45,6 +42,6 @@ Menus["resurrect"] = {
                 })
             }
         },			
-        { caption = "wait", destinations = nil }
+        { caption = "Wait", destinations = nil }
     }
 }
