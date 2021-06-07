@@ -17,34 +17,36 @@ self.data.objectData[uniqueIndex].scale = 1
 tableHelper.insertValueIfMissing(self.data.packets.scale, uniqueIndex)
 ---------------------------
 ]]
-local config = {}
-config.MainId = 31360
-config.PromptId = 31361
+local config = {
+	MainId = 31360,
+	PromptId = 31361
+}
 ------
-local trad = {}
-trad.prompt = "] - Enter a number to add / subtract"
-trad.rotx = "Turn X"
-trad.roty = "Turn Y"
-trad.rotz = "Turn Z"
-trad.movn = "+/- North"
-trad.move = "+/- East"
-trad.movup = "+/- Height"
-trad.up = "Up"
-trad.down = "Down"
-trad.east = "East"
-trad.west = "West"
-trad.north = "North"
-trad.sud = "South"
-trad.bigger = "Bigger"
-trad.lower = "Smaller"
-trad.drop = "Catch"
-trad.noselect = "No object selected."
-trad.nooption = "Object cannot be modified."
-trad.placeobjet = "The object has just been placed."
-trad.warningcell = "Be careful, the object is leaving the area !!!"
-trad.info = "To place the object, switch to stealth mode.\nTo rotate, take out your weapon or your magic."
-trad.opt1 = "Choose an option. Your current article : "
-trad.opt2 = "Adjust North;Adjust East;Adjust Height;Turn X;Turn Y;Turn Z;Up;Down;East;West;North;South;Bigger;Smaller;Catch;Return" 
+local trad = {
+	prompt = "] - Enter a number to add / subtract",
+	rotx = "Turn X",
+	roty = "Turn Y",
+	rotz = "Turn Z",
+	movn = "+/- North",
+	move = "+/- East",
+	movup = "+/- Height",
+	up = "Up",
+	down = "Down",
+	east = "East",
+	west = "West",
+	north = "North",
+	sud = "South",
+	bigger = "Bigger",
+	Lower = "Smaller",
+	drop = "Grab",
+	noselect = "No object selected.",
+	nooption = "Object cannot be modified.",
+	placeobjet = "The object has just been placed.",
+	warningcell = "Be careful, the object is leaving the area !!!",
+	info = "To place the object, switch to stealth mode.\nTo rotate, take out your weapon or your magic.",
+	opt1 = "Choose an option. Your current article : ",
+	opt2 = "Adjust North;Adjust East;Adjust Height;Turn X;Turn Y;Turn Z;Up;Down;East;West;North;South;Bigger;Smaller;Grab;Return" 
+}
 ------
 
 local TimerDrop = tes3mp.CreateTimer("StartDrop", time.seconds(0.01))
@@ -158,7 +160,6 @@ end
 
 local function showPromptGUI(pid)
 	local message = "[" .. playerCurrentMode[tes3mp.GetName(pid)] .. trad.prompt
-
 	tes3mp.InputDialog(pid, config.PromptId, message, "")
 end
 
@@ -217,7 +218,7 @@ local function onEnterPrompt(pid, data)
 				else
 					tes3mp.MessageBox(pid, -1, trad.nooption)		
 				end
-			elseif mode == trad.lower then
+			elseif mode == trad.Lower then
 				if scaling ~= nil then
 					if scaling > 0.1 then
 						object.scale = object.scale - 0.1
@@ -345,7 +346,7 @@ TFN_Decorate.OnGUIAction = function(pid, idGui, data)
 				onEnterPrompt(pid, 0)			
 				return true, showMainGUI(pid)
 			elseif tonumber(data) == 13 then --Reduire
-				playerCurrentMode[pname] = trad.lower
+				playerCurrentMode[pname] = trad.Lower
 				onEnterPrompt(pid, 0)
 				return true, showMainGUI(pid)	
 			elseif tonumber(data) == 14 then --Attraper
@@ -432,7 +433,7 @@ end
 
 TFN_Decorate.OnCheckStateMove = function(eventStatus, pid)
 	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then 
-		if playersTab.player[pid] then
+		if playersTab.player[pid] and getObject(playerSelectedObject[tes3mp.GetName(pid)], tes3mp.GetCell(pid)) then
 			return customEventHooks.makeEventStatus(false,false)
 		end
 	end
