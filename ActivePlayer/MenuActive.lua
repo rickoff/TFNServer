@@ -5,7 +5,7 @@ Menus["resurrect player"] = {
         { caption = "Patch them up.",
             destinations = {menuHelper.destinations.setDefault(nil,
             { 
-				menuHelper.effects.runGlobalFunction("GameplayAdvance", "ResurrectPlayer", 
+				menuHelper.effects.runGlobalFunction("TFN_ActivatePlayer", "ResurrectPlayer", 
 					{menuHelper.variables.currentPlayerDataVariable("targetPid")})
                 })
             }
