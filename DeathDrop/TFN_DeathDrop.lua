@@ -14,7 +14,7 @@ TFN_DeathDrop = require("custom.TFN_DeathDrop")
 ]]
 local trad = {}
 trad.Gold = " gold."
-trad.Lose = "You lost : "
+trad.Lose = "You lost "
 
 local config = {}
 config.pourcent = 5
