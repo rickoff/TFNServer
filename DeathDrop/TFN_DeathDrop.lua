@@ -12,7 +12,11 @@ Edits to customScripts.lua
 TFN_DeathDrop = require("custom.TFN_DeathDrop")
 
 ]]
-local config ={}
+local trad = {}
+trad.Gold = " gold."
+trad.Lose = "You lost : "
+
+local config = {}
 config.pourcent = 5
 
 local TFN_DeathDrop = {}
@@ -42,7 +46,7 @@ TFN_DeathDrop.Drop = function(eventStatus, pid)
 					player.data.inventory[goldLoc].count = reste
 					Players[pid]:QuicksaveToDrive()
 					Players[pid]:LoadItemChanges({itemref}, enumerations.inventory.REMOVE)	
-					tes3mp.MessageBox(pid, -1, color.White.."Vous avez perdu : "..color.Red..removeGold..color.White.." pièces d'or.")
+					tes3mp.MessageBox(pid, -1, color.White..trad.Lose..color.Red..removeGold..color.White..trad.Gold)
 					
 					WorldInstance:SetCurrentMpNum(mpNum)
 					tes3mp.SetCurrentMpNum(mpNum)
