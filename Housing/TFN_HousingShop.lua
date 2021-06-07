@@ -10,7 +10,7 @@ Require TFN_Decorate, TFN_Furniture
 
 Save the file as TFN_HousingShop.lua inside your server/scripts/custom folder.
 Save the file as TFN_Door.json inside your server/data/custom folder.
-Save the folder as CellDataBase with all files contain inside your server/data/custom/
+Decompress the folder as CellDataBase with all files contain inside your server/data/custom/
 Save the file as CellDataBaseStat.json inside your server/data/custom/CellDataBase folder.
 Save the file as MenuHousing.lua inside your scripts/menu folder
 
@@ -24,20 +24,6 @@ FUNCTION:
 /home in your chat for open menu
 ---------------------------
 ]]
-local StaticData = {}
-local StaticList = jsonInterface.load("custom/CellDataBase/CellDataBaseStat.json")	
-for i = 1, #StaticList do
-	if string.find(StaticList[i], "furn") then
-	else
-		StaticData[StaticList[i]] = ""
-	end
-end
-local DoorData = {}
-local DoorList = jsonInterface.load("custom/TFN_Door.json")
-for index, item in pairs(DoorList) do
-	DoorData[item.refid] = ""
-end
-
 local trad = {
 	WaitJail = color.White .. "You are in prison for a period of" .. color.Red .. "5" .. color.White .. "minutes",
 	StopJail = color.White .. "Your time for" .. color.Red .. "prison" .. color.White .. "has just ended",
@@ -171,6 +157,8 @@ local config = {
 	chatColor = "#FFDC00", --The color used for the script's chat messages
 	CountMaxOwners = 2, --The max house by player
 	NextLocation = 2628000,
+	Furn = true,
+	Actor = true,
 	AdminMainGUI = 31371,
 	AdminHouseCreateGUI = 31372,
 	AdminHouseSelectGUI = 31373,
@@ -194,6 +182,24 @@ local config = {
 	PlayerSettingGUICo = 31391,
 	PlayerOwnedHouseSelectCo = 31392
 }
+
+local StaticData = {}
+local StaticList = jsonInterface.load("custom/CellDataBase/CellDataBaseStat.json")	
+for i = 1, #StaticList do
+	if config.Furn == true then
+		if string.find(StaticList[i], "furn") then
+		else
+			StaticData[StaticList[i]] = ""
+		end
+	else
+		StaticData[StaticList[i]] = ""
+	end
+end
+local DoorData = {}
+local DoorList = jsonInterface.load("custom/TFN_Door.json")
+for index, item in pairs(DoorList) do
+	DoorData[item.refid] = ""
+end
 
 local serverConfig = require("config")
 
@@ -2293,14 +2299,27 @@ TFN_HousingShop.CleanCell = function(cellDescription)
 			local uniqueIndex = refNum.."-0"
 			local refId = slot.refId
 			if not StaticData[refId] and not DoorData[refId] then
-				if cell.data.objectData[uniqueIndex] then
-					tableHelper.removeValue(cell.data.packets, uniqueIndex)
-					cell.data.objectData[uniqueIndex] = nil		
-					tableHelper.cleanNils(cell.data.objectData)							
+				if config.Actor == true then 
+					if cell.data.objectData[uniqueIndex] then
+						tableHelper.removeValue(cell.data.packets, uniqueIndex)
+						cell.data.objectData[uniqueIndex] = nil		
+						tableHelper.cleanNils(cell.data.objectData)							
+					end
+					if tableHelper.getCount(Players) > 0 then		
+						logicHandler.DeleteObjectForEveryone(cellDescription, uniqueIndex)
+					end	
+				else
+					if not tableHelper.containsValue(cell.data.packets.actorList, uniqueIndex, true) then
+						if cell.data.objectData[uniqueIndex] then
+							tableHelper.removeValue(cell.data.packets, uniqueIndex)
+							cell.data.objectData[uniqueIndex] = nil		
+							tableHelper.cleanNils(cell.data.objectData)							
+						end
+						if tableHelper.getCount(Players) > 0 then		
+							logicHandler.DeleteObjectForEveryone(cellDescription, uniqueIndex)
+						end	
+					end
 				end
-				if tableHelper.getCount(Players) > 0 then		
-					logicHandler.DeleteObjectForEveryone(cellDescription, uniqueIndex)
-				end	
 			end
 		end
 		cell:QuicksaveToDrive()
