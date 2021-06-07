@@ -1,5 +1,5 @@
 Menus["resurrect player"] = {
-    text = color.White.."Do you want to"..color.Gold..
+    text = color.White.."Do you want to "..color.Gold..
     "help\n"..color.White.."this person?",
     buttons = {						
         { caption = "Patch them up.",
