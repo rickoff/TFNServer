@@ -34,7 +34,7 @@ menuHelper.effects.runGlobalFunction (nil, "OnPlayerSendMessage",
 destinations = {menuHelper.destinations.setDefault (nil,
 {
 menuHelper.effects.runGlobalFunction (nil, "OnPlayerSendMessage",
-{menuHelper.variables.currentPid (), "/roomate"})
+{menuHelper.variables.currentPid (), "/roommate"})
 })
 }
         },
@@ -74,7 +74,7 @@ color.White .. "\n\nThe object has been disabled for the remainder of your sessi
 color.Red .. "\nTo make it re-appear, please reconnect.",
 color.Yellow .. "\n\nIf you are attempting to help decorate,\nmake sure the owner adds you as a 'roommate'.",
 color.Red .. "\n\nIf you attempt to bypass the measures again, moderators will be notified.",
-color.White .. "\nDo you agree to" .. color.Red .. "NOT" .. color.White .. "reproduce this action?"
+color.White .. "\n\nDo you agree to" .. color.Red .. " NOT " .. color.White .. "reproduce this action?"
 },
     buttons = {
         {caption = "Agree.",
