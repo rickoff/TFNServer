@@ -1,6 +1,6 @@
 Menus["resurrect player"] = {
-    text = color.White .. "Do you want to" .. color.Gold ..
-    "help\n" .. color.White .. "this person?",
+    text = color.White.."Do you want to"..color.Gold..
+    "help\n"..color.White.."this person?",
     buttons = {						
         { caption = "Patch them up.",
             destinations = {menuHelper.destinations.setDefault(nil,
@@ -15,8 +15,7 @@ Menus["resurrect player"] = {
 }
 
 Menus["resurrectvamp"] = {
-    text = color.Red .. "You are unconcious.\n" .. color.White .. "You can wait for another player\n"
-    "or respawn at the nearest temple.",
+    text = color.Red .. "You are unconcious.\n" .. color.White .. "You can wait for another player\nor respawn at the nearest temple.",
     buttons = {						
        { caption = "Respawn",
             destinations = {menuHelper.destinations.setDefault(nil,
@@ -31,8 +30,7 @@ Menus["resurrectvamp"] = {
 }
 
 Menus["resurrect"] = {
-    text = color.Red .. "You are unconcious.\n" .. color.White .. "You can wait for another player\n"
-    "or respawn at the nearest temple.",
+    text = color.Red .. "You are unconcious.\n" .. color.White .. "You can wait for another player\nor respawn at the nearest temple.",
     buttons = {						
         { caption = "Respawn",
             destinations = {menuHelper.destinations.setDefault(nil,
