@@ -190,18 +190,18 @@ local StaticList = jsonInterface.load("custom/CellDataBase/CellDataBaseStat.json
 for i = 1, #StaticList do
 	if config.Furn == true then
 		if string.find(StaticList[i], "furn") then
-			FurnData[StaticList[i]] = ""		
+			FurnData[string.lower(StaticList[i])] = ""		
 		else
-			StaticData[StaticList[i]] = ""
+			StaticData[string.lower(StaticList[i])] = ""
 		end
 	else
-		StaticData[StaticList[i]] = ""
+		StaticData[string.lower(StaticList[i])] = ""
 	end
 end
 local DoorData = {}
 local DoorList = jsonInterface.load("custom/TFN_Door.json")
 for index, item in pairs(DoorList) do
-	DoorData[item.refid] = ""
+	DoorData[string.lower(item.refid)] = ""
 end
 
 local serverConfig = require("config")
@@ -819,18 +819,21 @@ local function unlockChecks(cell)
 	end
 end
 
-local function onDirtyThief(pid)
+local function onDirtyThief(pid, houseName)
 	local destinationCell, destinationPos
-	if hdata.outside.cell then
-		destinationCell = hdata.outside.cell
-		destinationPos = hdata.outside.pos
-	else
-		destinationCell = serverConfig.defaultSpawnCell
-		destinationPos = {x = serverConfig.defaultSpawnPos[1], y = serverConfig.defaultSpawnPos[2], z = serverConfig.defaultSpawnPos[3]}
-	end	
-	warpPlayer(pid, destinationCell, destinationPos)	
-	Players[pid].currentCustomMenu = "menu prison house"--Avertisseent
-	menuHelper.DisplayMenu(pid, Players[pid].currentCustomMenu)	
+	local hdata = housingData.houses[houseName]
+	if hdata then
+		if hdata.outside.cell then
+			destinationCell = hdata.outside.cell
+			destinationPos = hdata.outside.pos
+		else
+			destinationCell = serverConfig.defaultSpawnCell
+			destinationPos = {x = serverConfig.defaultSpawnPos[1], y = serverConfig.defaultSpawnPos[2], z = serverConfig.defaultSpawnPos[3]}
+		end	
+		warpPlayer(pid, destinationCell, destinationPos)	
+		Players[pid].currentCustomMenu = "menu prison house"--Avertisseent
+		menuHelper.DisplayMenu(pid, Players[pid].currentCustomMenu)	
+	end
 end
 
 local function showAdminMain(pid)
@@ -1885,7 +1888,7 @@ TFN_HousingShop.OnContainer = function(eventStatus, pid, cellDescription, object
 							end
 							
 							if dirtyThief then
-								onDirtyThief(pid)
+								onDirtyThief(pid, houseName)
 								return customEventHooks.makeEventStatus(false,false)
 							end
 						end
@@ -1899,7 +1902,7 @@ TFN_HousingShop.OnContainer = function(eventStatus, pid, cellDescription, object
 								end
 							end
 							if dirtyThief then
-								onDirtyThief(pid)
+								onDirtyThief(pid, houseName)
 								return customEventHooks.makeEventStatus(false,false)
 							end							
 						end
@@ -1977,7 +1980,7 @@ TFN_HousingShop.OnObjectDelete = function (eventStatus, pid, cellDescription, ob
 								end
 									
 								if dirtyThief then
-									onDirtyThief(pid)
+									onDirtyThief(pid, houseName)
 									return customEventHooks.makeEventStatus(false,false)
 								end
 							end
@@ -2013,7 +2016,7 @@ TFN_HousingShop.OnObjectDelete = function (eventStatus, pid, cellDescription, ob
 										local itemref = {refId = ObjectRefid, count = 1, charge = -1}
 										Players[pid]:QuicksaveToDrive()
 										Players[pid]:LoadItemChanges({itemref}, enumerations.inventory.REMOVE)		
-										onDirtyThief(pid)
+										onDirtyThief(pid, houseName)
 										return customEventHooks.makeEventStatus(false,false)
 									end
 								end
@@ -2333,7 +2336,7 @@ TFN_HousingShop.CleanCell = function(cellDescription, Stat)
 		end
 		for refNum, slot in pairs(cellData.objects) do
 			local uniqueIndex = refNum.."-0"
-			local refId = slot.refId
+			local refId = string.lower(slot.refId)
 			if not StaticData[refId] and not DoorData[refId] then
 				if config.Actor == true then 			
 					if Stat == "empty" then
