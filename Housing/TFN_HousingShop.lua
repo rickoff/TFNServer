@@ -10,6 +10,8 @@ Require TFN_Decorate, TFN_Furniture
 
 Save the file as TFN_HousingShop.lua inside your server/scripts/custom folder.
 Save the file as TFN_Door.json inside your server/data/custom folder.
+Save the folder as CellDataBase with all files contain inside your server/data/custom/
+Save the file as CellDataBaseStat.json inside your server/data/custom/CellDataBase folder.
 Save the file as MenuHousing.lua inside your scripts/menu folder
 
 Edits to customScripts.lua
@@ -22,6 +24,14 @@ FUNCTION:
 /home in your chat for open menu
 ---------------------------
 ]]
+local StaticData = {}
+local StaticList = jsonInterface.load("custom/CellDataBase/CellDataBaseStat.json")	
+for i = 1, #StaticList do
+	if string.find(StaticList[i], "furn") then
+	else
+		StaticData[StaticList[i]] = ""
+	end
+end
 local DoorData = {}
 local DoorList = jsonInterface.load("custom/TFN_Door.json")
 for index, item in pairs(DoorList) do
@@ -82,7 +92,7 @@ local trad = {
 	selectHouseList = "Select a house from the list.",
 	returnList = "* Return * \n",
 	notConnect = "This player is not connected. \n",
-	jail = "is in prison. \n",
+	jail = " is in prison. \n",
 	newPrice = "Enter a new price:",
 	costPrice = "\n\nCost : ",
 	optPrice = "Change price;Return",
@@ -2209,8 +2219,8 @@ end
 TFN_HousingShop.PunishPrison = function(pid)
     if Players[pid]~= nil and Players[pid]:IsLoggedIn() then
 		local targetPlayerName = Players[pid].name
-		local msg = color.Orange.."SERVER: "..targetPlayerName..trad.jail
-		local cell = "Fort Ebonheart"		
+		local msg = color.Orange.."SERVER : "..targetPlayerName..trad.jail
+		local cell = "Coeurébène, Fort Noctuelle"		
 		tes3mp.SetCell(pid, cell)
 		tes3mp.SendCell(pid)	
 		tes3mp.SetPos(pid, 756, 2560, -383)
@@ -2269,6 +2279,45 @@ TFN_HousingShop.OnPlayerAuthentified = function(eventStatus, pid)
 	end
 end
 
+TFN_HousingShop.CleanCell = function(cellDescription)
+	if cellDescription ~= nil then
+		local cell = LoadedCells[cellDescription]
+		local cellData = jsonInterface.load("custom/CellDataBase/"..cellDescription..".json")	
+		local useTemporaryLoad = false	
+		if cell == nil then
+			logicHandler.LoadCell(cellDescription)
+			useTemporaryLoad = true
+			cell = LoadedCells[cellDescription]	
+		end
+		for refNum, slot in pairs(cellData.objects) do
+			local uniqueIndex = refNum.."-0"
+			local refId = slot.refId
+			if not StaticData[refId] and not DoorData[refId] then
+				if cell.data.objectData[uniqueIndex] then
+					tableHelper.removeValue(cell.data.packets, uniqueIndex)
+					cell.data.objectData[uniqueIndex] = nil		
+					tableHelper.cleanNils(cell.data.objectData)							
+				end
+				if tableHelper.getCount(Players) > 0 then		
+					logicHandler.DeleteObjectForEveryone(cellDescription, uniqueIndex)
+				end	
+			end
+		end
+		cell:QuicksaveToDrive()
+		if useTemporaryLoad == true then
+			logicHandler.UnloadCell(cellDescription)
+		end
+	end
+end
+
+TFN_HousingShop.OnCellLoad = function(eventStatus, pid, cellDescription)
+	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
+		if housingData.cells[cellDescription] and housingData.cells[cellDescription].house ~= nil then
+			TFN_HousingShop.CleanCell(cellDescription)
+		end
+	end
+end
+
 customCommandHooks.registerCommand("home", TFN_HousingShop.MainMenuHouse)
 customCommandHooks.registerCommand("myhouse", TFN_HousingShop.OnUserMyHouse)
 customCommandHooks.registerCommand("roomate", TFN_HousingShop.OnUserCopro)
@@ -2282,6 +2331,7 @@ customEventHooks.registerHandler("OnServerPostInit", TFN_HousingShop.OnServerPos
 customEventHooks.registerHandler("OnPlayerCellChange", TFN_HousingShop.OnPlayerCellChange)
 customEventHooks.registerHandler("OnObjectLock", TFN_HousingShop.OnObjectLock)
 customEventHooks.registerHandler("OnPlayerAuthentified", TFN_HousingShop.OnPlayerAuthentified)
+customEventHooks.registerValidator("OnCellLoad", TFN_HousingShop.OnCellLoad)
 customEventHooks.registerValidator("OnContainer", TFN_HousingShop.OnContainer)
 customEventHooks.registerValidator("OnObjectDelete", TFN_HousingShop.OnObjectDelete)
 customEventHooks.registerValidator("OnObjectActivate", TFN_HousingShop.OnActivatedObject)
