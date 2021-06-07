@@ -1,17 +1,21 @@
 Menus ["menu housing"] = {
-text = {color.Orange.."HOUSING MENU \n",
-color.Yellow .. "\n\n[Catalog]",
-color.White .. "\nallows you to buy or use your goods",
-color.Yellow .. "\n\n [Store]",
-color.White .. "\nbuy decorative items",
-color.Yellow .. "\n\n [Models]",
-color.White .. "\nbuy mannequins",
-color.Yellow .. "\n\n [Decoration]",
-color.White .. "\ndecorate your space \n"
+text = {color.Orange.."HOUSING MENU",
+color.Yellow .. "\n\n[Homes/Shops]",
+color.White .. "\nAllows you to see a list of homes/shops\navailable for purchase.",
+color.Yellow .. "\n\n[My Homes]",
+color.White .. "\nOpens your house menu.",
+color.Yellow .. "\n\n[Shared Homes]",
+color.White .. "\nOpens the shared homes menu, for houses\nyou may not own, but live together in.",
+color.Yellow .. "\n\n [Furniture Store]",
+color.White .. "\nOpens the furniture store menu.",
+color.Yellow .. "\n\n [Decorate Mode]",
+color.White .. "\nOpens the furniture and decoration editor."
+color.Yellow .. "\n\n [Mannequins]",
+color.White .. "\nAllows you to purchase mannequins to\ndisplay your items.\n",
 
 },
     buttons = {
-        {caption = "Catalog",
+        {caption = "Homes/Shops",
 destinations = {menuHelper.destinations.setDefault (nil,
 {
 menuHelper.effects.runGlobalFunction (nil, "OnPlayerSendMessage",
@@ -19,7 +23,7 @@ menuHelper.effects.runGlobalFunction (nil, "OnPlayerSendMessage",
 })
 }
         },
-        {caption = "My House",
+        {caption = "My Homes",
 destinations = {menuHelper.destinations.setDefault (nil,
 {
 menuHelper.effects.runGlobalFunction (nil, "OnPlayerSendMessage",
@@ -27,7 +31,7 @@ menuHelper.effects.runGlobalFunction (nil, "OnPlayerSendMessage",
 })
 }
         },
-        {caption = "House Roomate",
+        {caption = "Shared Homes",
 destinations = {menuHelper.destinations.setDefault (nil,
 {
 menuHelper.effects.runGlobalFunction (nil, "OnPlayerSendMessage",
@@ -35,7 +39,7 @@ menuHelper.effects.runGlobalFunction (nil, "OnPlayerSendMessage",
 })
 }
         },
-        {caption = "Store",
+        {caption = "Furniture Store",
 destinations = {menuHelper.destinations.setDefault (nil,
 {
 menuHelper.effects.runGlobalFunction (nil, "OnPlayerSendMessage",
@@ -43,19 +47,19 @@ menuHelper.effects.runGlobalFunction (nil, "OnPlayerSendMessage",
 })
 }
         },
-        {caption = "Models",
-destinations = {menuHelper.destinations.setDefault (nil,
-{
-menuHelper.effects.runGlobalFunction (nil, "OnPlayerSendMessage",
-{menuHelper.variables.currentPid (), "/mannequins"})
-})
-}
-        },
-        {caption = "Decoration",
+        {caption = "Decorate Mode",
 destinations = {menuHelper.destinations.setDefault (nil,
 {
 menuHelper.effects.runGlobalFunction (nil, "OnPlayerSendMessage",
 {menuHelper.variables.currentPid (), "/dh"})
+})
+}
+        },
+        {caption = "Mannequins",
+destinations = {menuHelper.destinations.setDefault (nil,
+{
+menuHelper.effects.runGlobalFunction (nil, "OnPlayerSendMessage",
+{menuHelper.variables.currentPid (), "/mannequins"})
 })
 }
         },
@@ -65,18 +69,16 @@ menuHelper.effects.runGlobalFunction (nil, "OnPlayerSendMessage",
 
 Menus ["menu prison house"] = {
 	text = {
-color.Red .. "WARNING !!!",
-color.White .. "\n\nYou have just committed a crime against the server.",
-color.Red .. "\n\n\nTENTATIVE BY CHEAT !!!",
-color.Yellow .. "\n\nA message to was recorded in the server logs to warn moderation",
-color.White .. "\n\nBe careful next time",
-color.Yellow .. "\n\nObject to was disabled only for you during this game session",
-color.White .. "\n\nTo make it reappear you can disconnect and reconnect",
-color.Cyan .. "\n\nGood game, fair play and role play.",
-color.Red .. "\n\n\nBy continuing you agree not to reproduce this action?"
+color.Red .. "WARNING!",
+color.White .. "\nYou have attempted to bypass the anti-steal measures\nto steal from another player's home.",
+color.White .. "\n\nThe object has been disabled for the remainder of your session.",
+color.Red .. "\nTo make it re-appear, please reconnect.",
+color.Yellow .. "\n\nIf you are attempting to help decorate,\nmake sure the owner adds you as a 'roommate'."
+color.Red .. "\n\nIf you attempt to bypass the measures again, moderators will be notified."
+color.White .. "\nDo you agree to" .. color.Red .. "NOT" .. color.white .. "reproduce this action?"
 },
     buttons = {
-        {caption = "yes",
+        {caption = "Agree.",
             destinations = {
                 menuHelper.destinations.setDefault (nil,
                 {
@@ -87,7 +89,7 @@ color.Red .. "\n\n\nBy continuing you agree not to reproduce this action?"
                 })
             }
         },
-        {caption = "no",
+        {caption = "No.",
             destinations = {
                 menuHelper.destinations.setDefault (nil,
                 {
@@ -99,4 +101,4 @@ color.Red .. "\n\n\nBy continuing you agree not to reproduce this action?"
             }
         }
     }
-} 	
+} 
