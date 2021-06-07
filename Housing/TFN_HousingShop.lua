@@ -2397,7 +2397,7 @@ end
 
 customCommandHooks.registerCommand("home", TFN_HousingShop.MainMenuHouse)
 customCommandHooks.registerCommand("myhouse", TFN_HousingShop.OnUserMyHouse)
-customCommandHooks.registerCommand("roomate", TFN_HousingShop.OnUserCopro)
+customCommandHooks.registerCommand("roommate", TFN_HousingShop.OnUserCopro)
 customCommandHooks.registerCommand("catalog", TFN_HousingShop.OnUserCommand)
 customCommandHooks.registerCommand("adminhouse", TFN_HousingShop.OnAdminCommand)
 customCommandHooks.registerCommand("houseinfo", TFN_HousingShop.OnInfoCommand)
