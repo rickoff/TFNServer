@@ -189,7 +189,7 @@ local StaticData = {}
 local StaticList = jsonInterface.load("custom/CellDataBase/CellDataBaseStat.json")	
 for i = 1, #StaticList do
 	if config.Furn == true then
-		if string.find(StaticList[i], "furn") then
+		if string.find(string.lower(StaticList[i]), "furn") then
 			FurnData[string.lower(StaticList[i])] = ""		
 		else
 			StaticData[string.lower(StaticList[i])] = ""
