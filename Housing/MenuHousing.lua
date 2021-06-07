@@ -9,7 +9,7 @@ color.White .. "\nOpens the shared homes menu, for houses\nyou may not own, but 
 color.Yellow .. "\n\n [Furniture Store]",
 color.White .. "\nOpens the furniture store menu.",
 color.Yellow .. "\n\n [Decorate Mode]",
-color.White .. "\nOpens the furniture and decoration editor."
+color.White .. "\nOpens the furniture and decoration editor.",
 color.Yellow .. "\n\n [Mannequins]",
 color.White .. "\nAllows you to purchase mannequins to\ndisplay your items.\n",
 
