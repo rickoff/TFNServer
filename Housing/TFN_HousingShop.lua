@@ -2226,7 +2226,7 @@ TFN_HousingShop.PunishPrison = function(pid)
     if Players[pid]~= nil and Players[pid]:IsLoggedIn() then
 		local targetPlayerName = Players[pid].name
 		local msg = color.Orange.."SERVER : "..targetPlayerName..trad.jail
-		local cell = "Coeurébène, Fort Noctuelle"		
+		local cell = "Ebonheart, Hawkmoth Legion Garrison"		
 		tes3mp.SetCell(pid, cell)
 		tes3mp.SendCell(pid)	
 		tes3mp.SetPos(pid, 756, 2560, -383)
