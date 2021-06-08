@@ -12,40 +12,41 @@ Edits to customScripts.lua :
 TFN_SystemClass = require("custom.TFN_SystemClass")
 ---------------------------
 ]]
-local trad = {}
-trad.NoSkillItem = "You do not have the corresponding skill to equip this item !\n"
-trad.NoSkillSpell = "You do not have the corresponding skill to learn this spell !\n"
-trad.NoSkillMisc = "You do not have the corresponding skill to use this object !\n"
+local trad = {
+	NoSkillItem = "You do not have the corresponding skill to equip this item !\n",
+	NoSkillSpell = "You do not have the corresponding skill to learn this spell !\n",
+	NoSkillMisc = "You do not have the corresponding skill to use this object !\n"
+}
 
-local VanillaClass = {}
-VanillaClass.acrobat = {"acrobatics","athletics","marksman","sneak","unarmored","speechcraft","alteration","spear","handtohand","lightarmor"}
-VanillaClass.agent = {"speechcraft","sneak","acrobatics","lightarmor","shortblade","mercantile","conjuration","block","unarmored","illusion"}
-VanillaClass.archer = {"marksman","longblade","block","athletics","lightarmor","unarmored","spear","restoration","sneak","mediumarmor"}
-VanillaClass.assassin = {"sneak","marksman","lightarmor","shortblade","acrobatics","security","longblade","alchemy","block","athletics"}
-VanillaClass.barbarian = {"axe","mediumarmor","bluntweapon","athletics","block","acrobatics","lightarmor","armorer","marksman","unarmored"}
-VanillaClass.bard = {"speechcraft","alchemy","acrobatics","longblade","block","mercantile","illusion","mediumarmor","enchant","security"}
-VanillaClass.battlemage = {"alteration","destruction","conjuration","axe","heavyarmor","mysticism","longblade","marksman","enchant","alchemy"}
-VanillaClass.crusader = {"bluntweapon","longblade","destruction","heavyarmor","block","restoration","armorer","handtohand","mediumarmor","alchemy"}
-VanillaClass.healer = {"restoration","mysticism","alteration","handtohand","speechcraft","illusion","alchemy","unarmored","lightarmor","bluntweapon"}
-VanillaClass.knight = {"longblade","axe","speechcraft","heavyarmor","block","restoration","mercantile","mediumarmor","enchant","armorer"}
-VanillaClass.mage = {"mysticism","destruction","alteration","illusion","restoration","enchant","alchemy","unarmored","shortblade","conjuration"}
-VanillaClass.monk = {"handtohand","unarmored","athletics","acrobatics","sneak","block","marksman","lightarmor","restoration","bluntweapon"}
-VanillaClass.nightblade = {"mysticism","illusion","alteration","sneak","shortblade","lightarmor","unarmored","destruction","marksman","security"}
-VanillaClass.pilgrim = {"speechcraft","mercantile","marksman","restoration","mediumarmor","illusion","handtohand","shortblade","block","alchemy"}
-VanillaClass.rogue = {"shortblade","mercantile","axe","lightarmor","handtohand","block","mediumarmor","speechcraft","athletics","longblade"}
-VanillaClass.scout = {"sneak","longblade","mediumarmor","athletics","block","marksman","alchemy","alteration","lightarmor","unarmored"}
-VanillaClass.sorcerer = {"enchant","conjuration","mysticism","destruction","alteration","illusion","mediumarmor","heavyarmor","marksman","shortblade"}
-VanillaClass.spellsword = {"block","restoration","longblade","destruction","alteration","bluntweapon","enchant","alchemy","mediumarmor","axe"}
-VanillaClass.thief = {"security","sneak","acrobatics","lightarmor","shortblade","marksman","speechcraft","handtohand","mercantile","athletics"}
-VanillaClass.warrior = {"longblade","mediumarmor","heavyarmor","athletics","block","armorer","spear","marksman","axe","bluntweapon"}
-VanillaClass.witchhunter = {"conjuration","enchant","alchemy","lightarmor","marksman","unarmored","block","bluntweapon","sneak","mysticism"}
+local VanillaClass = {
+	acrobat = {"acrobatics","athletics","marksman","sneak","unarmored","speechcraft","alteration","spear","handtohand","lightarmor"},
+	agent = {"speechcraft","sneak","acrobatics","lightarmor","shortblade","mercantile","conjuration","block","unarmored","illusion"},
+	archer = {"marksman","longblade","block","athletics","lightarmor","unarmored","spear","restoration","sneak","mediumarmor"},
+	assassin = {"sneak","marksman","lightarmor","shortblade","acrobatics","security","longblade","alchemy","block","athletics"},
+	barbarian = {"axe","mediumarmor","bluntweapon","athletics","block","acrobatics","lightarmor","armorer","marksman","unarmored"},
+	bard = {"speechcraft","alchemy","acrobatics","longblade","block","mercantile","illusion","mediumarmor","enchant","security"},
+	battlemage = {"alteration","destruction","conjuration","axe","heavyarmor","mysticism","longblade","marksman","enchant","alchemy"},
+	crusader = {"bluntweapon","longblade","destruction","heavyarmor","block","restoration","armorer","handtohand","mediumarmor","alchemy"},
+	healer = {"restoration","mysticism","alteration","handtohand","speechcraft","illusion","alchemy","unarmored","lightarmor","bluntweapon"},
+	knight = {"longblade","axe","speechcraft","heavyarmor","block","restoration","mercantile","mediumarmor","enchant","armorer"},
+	mage = {"mysticism","destruction","alteration","illusion","restoration","enchant","alchemy","unarmored","shortblade","conjuration"},
+	monk = {"handtohand","unarmored","athletics","acrobatics","sneak","block","marksman","lightarmor","restoration","bluntweapon"},
+	nightblade = {"mysticism","illusion","alteration","sneak","shortblade","lightarmor","unarmored","destruction","marksman","security"},
+	pilgrim = {"speechcraft","mercantile","marksman","restoration","mediumarmor","illusion","handtohand","shortblade","block","alchemy"},
+	rogue = {"shortblade","mercantile","axe","lightarmor","handtohand","block","mediumarmor","speechcraft","athletics","longblade"},
+	scout = {"sneak","longblade","mediumarmor","athletics","block","marksman","alchemy","alteration","lightarmor","unarmored"},
+	sorcerer = {"enchant","conjuration","mysticism","destruction","alteration","illusion","mediumarmor","heavyarmor","marksman","shortblade"},
+	spellsword = {"block","restoration","longblade","destruction","alteration","bluntweapon","enchant","alchemy","mediumarmor","axe"},
+	thief = {"security","sneak","acrobatics","lightarmor","shortblade","marksman","speechcraft","handtohand","mercantile","athletics"},
+	warrior = {"longblade","mediumarmor","heavyarmor","athletics","block","armorer","spear","marksman","axe","bluntweapon"},
+	witchhunter = {"conjuration","enchant","alchemy","lightarmor","marksman","unarmored","block","bluntweapon","sneak","mysticism"}
+}
 
 local listItems = jsonInterface.load("custom/TFN_WeaponsArmors.json")
 local listSpell = jsonInterface.load("custom/TFN_Spell.json")
 local listMisc = jsonInterface.load("custom/TFN_Misc.json")
 
-local function CheckSkills(pid, skill)
-	
+local function CheckSkills(pid, skill)	
 	if Players[pid].data.customClass.minorSkills and Players[pid].data.customClass.majorSkills then
 		
 		if tableHelper.containsValue(Players[pid].data.customClass, skill, true) then		
@@ -64,6 +65,19 @@ local function CheckSkills(pid, skill)
 end
 
 local TFN_SystemClass = {}
+
+TFN_SystemClass.OnServerInit = function(eventStatus)
+	local weaponsCustom = jsonInterface.load("recordstore/weapon.json")
+	for index, item in pairs(weaponsCustom.generatedRecords) do
+		local Slot = weaponsCustom.generatedRecords[index]
+		listItems[string.lower(index)] = listItems[string.lower(Slot.baseId)]
+	end
+	local armorCustom = jsonInterface.load("recordstore/armor.json")
+	for index, item in pairs(armorCustom.generatedRecords) do
+		local Slot = armorCustom.generatedRecords[index]
+		listItems[string.lower(index)] = listItems[string.lower(Slot.baseId)]
+	end
+end
 
 TFN_SystemClass.OnPlayerEquipment = function(eventStatus, pid)
 	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
@@ -155,12 +169,29 @@ TFN_SystemClass.OnPlayerQuickKeys = function(eventStatus, pid)
 	end
 end
 
+TFN_SystemClass.OnRecordDynamic = function(eventStatus, pid)
+	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
+		local weaponsCustom = jsonInterface.load("recordstore/weapon.json")
+		for index, item in pairs(weaponsCustom.generatedRecords) do
+			local Slot = weaponsCustom.generatedRecords[index]
+			listItems[string.lower(index)] = listItems[string.lower(Slot.baseId)]
+		end
+		local armorCustom = jsonInterface.load("recordstore/armor.json")
+		for index, item in pairs(armorCustom.generatedRecords) do
+			local Slot = armorCustom.generatedRecords[index]
+			listItems[string.lower(index)] = listItems[string.lower(Slot.baseId)]
+		end
+	end
+end
+
 TFN_SystemClass.OnPlayerAuthentified = function(eventStatus, pid)
 	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
 		TFN_SystemClass.OnPlayerEquipment(true, pid)		
 	end
 end
 
+customEventHooks.registerHandler("OnServerInit", TFN_SystemClass.OnServerInit)
+customEventHooks.registerHandler("OnRecordDynamic", TFN_SystemClass.OnRecordDynamic)
 customEventHooks.registerHandler("OnPlayerAuthentified", TFN_SystemClass.OnPlayerAuthentified)
 customEventHooks.registerValidator("OnPlayerEquipment", TFN_SystemClass.OnPlayerEquipment)
 customEventHooks.registerValidator("OnPlayerSpellbook", TFN_SystemClass.OnPlayerSpellbook)
