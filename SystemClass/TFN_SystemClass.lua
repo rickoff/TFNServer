@@ -47,8 +47,8 @@ local listSpell = jsonInterface.load("custom/TFN_Spell.json")
 local listMisc = jsonInterface.load("custom/TFN_Misc.json")
 
 local function CheckSkills(pid, skill)	
-	if Players[pid].data.customClass.minorSkills and Players[pid].data.customClass.majorSkills then
-		
+	if skill == "nothing" then return false end
+	if Players[pid].data.customClass.minorSkills and Players[pid].data.customClass.majorSkills then	
 		if tableHelper.containsValue(Players[pid].data.customClass, skill, true) then		
 			return true
 		else
@@ -140,35 +140,6 @@ TFN_SystemClass.OnPlayerItemUse = function(eventStatus, pid, itemRefId)
 	end
 end
 
-TFN_SystemClass.OnPlayerQuickKeys = function(eventStatus, pid)
-	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
-		local reloadAtEnd = false
-		for index = 0, tes3mp.GetQuickKeyChangesSize(pid) - 1 do
-			local slot = tes3mp.GetQuickKeySlot(pid, index)
-			local itemRefId = tes3mp.GetQuickKeyItemId(pid, index)
-			if itemRefId ~= "" then
-				if listMisc[string.lower(itemRefId)] then
-					local Skill = listMisc[string.lower(itemRefId)].skill 
-					if CheckSkills(pid, Skill) == false then
-						tes3mp.MessageBox(pid, -1, trad.NoSkillMisc..color.Red..Skill)
-						Players[pid].data.quickKeys[slot] = {
-							keyType = 0,
-							itemId = "Misc_Potion_Cheap_01"
-						}						
-						reloadAtEnd = true
-					end
-				end
-			end
-		end
-		if reloadAtEnd == true then
-			logicHandler.RunConsoleCommandOnPlayer(pid, "player->additem Misc_Potion_Cheap_01 1")		
-			Players[pid]:LoadQuickKeys() 
-			logicHandler.RunConsoleCommandOnPlayer(pid, "player->removeitem Misc_Potion_Cheap_01 1")			
-			return customEventHooks.makeEventStatus(false, false)
-		end
-	end
-end
-
 TFN_SystemClass.OnRecordDynamic = function(eventStatus, pid)
 	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
 		local weaponsCustom = jsonInterface.load("recordstore/weapon.json")
@@ -186,7 +157,53 @@ end
 
 TFN_SystemClass.OnPlayerAuthentified = function(eventStatus, pid)
 	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
-		TFN_SystemClass.OnPlayerEquipment(true, pid)		
+		TFN_SystemClass.OnCheckEquipment(pid)
+		TFN_SystemClass.OnCheckSpellbook(pid)		
+	end
+end
+
+TFN_SystemClass.OnCheckEquipment = function(pid)
+	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
+	    local reloadAtEnd = false
+		for index, slot in pairs(Players[pid].data.equipment) do
+			local itemRefId = slot.refId
+			if itemRefId ~= "" then
+				if listItems[string.lower(itemRefId)] then
+					local Skill = listItems[string.lower(itemRefId)].skill 
+					if CheckSkills(pid, Skill) == false then
+						Players[pid].data.equipment[index] = nil
+						reloadAtEnd = true
+					end
+				end
+			end
+		end
+		if reloadAtEnd == true then		
+			Players[pid]:QuicksaveToDrive()
+			Players[pid]:LoadEquipment()
+			tableHelper.cleanNils(Players[pid].data.equipment)			
+		end
+	end
+end
+
+TFN_SystemClass.OnCheckSpellbook = function(pid)
+	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
+	    local reloadAtEnd = false		
+		for index, spellId in pairs(Players[pid].data.spellbook) do
+			if spellId ~= "" then
+				if listSpell[string.lower(spellId)] then
+					local Skill = listSpell[string.lower(spellId)].skill 
+					if CheckSkills(pid, Skill) == false then
+						Players[pid].data.spellbook[index] = nil
+						reloadAtEnd = true
+					end
+				end
+			end			
+		end
+		if reloadAtEnd == true then	
+			Players[pid]:QuicksaveToDrive()		
+			Players[pid]:LoadSpellbook()
+			tableHelper.cleanNils(Players[pid].data.spellbook)				
+		end		
 	end
 end
 
@@ -199,3 +216,4 @@ customEventHooks.registerValidator("OnPlayerItemUse", TFN_SystemClass.OnPlayerIt
 customEventHooks.registerValidator("OnPlayerQuickKeys", TFN_SystemClass.OnPlayerQuickKeys)
 
 return TFN_SystemClass
+
