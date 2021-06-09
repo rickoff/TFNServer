@@ -2365,9 +2365,10 @@ TFN_HousingShop.OnPlayerAuthentified = function(eventStatus, pid)
 end
 
 TFN_HousingShop.CleanCell = function(cellDescription, Stat)
-	if cellDescription ~= nil and Stat ~= "nothing" then
+	if cellDescription ~= nil then
 		local cell = LoadedCells[cellDescription]
 		local cellData = jsonInterface.load("custom/CellDataBase/"..cellDescription..".json")	
+		if cellData == nil then return end
 		local useTemporaryLoad = false	
 		if cell == nil then
 			logicHandler.LoadCell(cellDescription)
@@ -2375,42 +2376,34 @@ TFN_HousingShop.CleanCell = function(cellDescription, Stat)
 			cell = LoadedCells[cellDescription]	
 		end
 		for refNum, slot in pairs(cellData.objects) do
+			local deleted = false
 			local uniqueIndex = refNum.."-0"
 			local refId = string.lower(slot.refId)
 			if not StaticData[refId] and not DoorData[refId] then
 				if config.Actor == true then 			
 					if Stat == "empty" then
-						if cell.data.objectData[uniqueIndex] then
-							tableHelper.removeValue(cell.data.packets, uniqueIndex)
-							cell.data.objectData[uniqueIndex] = nil		
-							tableHelper.cleanNils(cell.data.objectData)							
-						end
-						if tableHelper.getCount(Players) > 0 then		
-							logicHandler.DeleteObjectForEveryone(cellDescription, uniqueIndex)
-						end	
-					else
-						if not FurnData[refId] then
-							if cell.data.objectData[uniqueIndex] then
-								tableHelper.removeValue(cell.data.packets, uniqueIndex)
-								cell.data.objectData[uniqueIndex] = nil		
-								tableHelper.cleanNils(cell.data.objectData)							
-							end
-							if tableHelper.getCount(Players) > 0 then		
-								logicHandler.DeleteObjectForEveryone(cellDescription, uniqueIndex)
-							end								
-						end
+						deleted = true				
+					elseif Stat == "furn" and not FurnData[refId] then
+						deleted = true
 					end
 				else
 					if not tableHelper.containsValue(cell.data.packets.actorList, uniqueIndex, true) then
-						if cell.data.objectData[uniqueIndex] then
-							tableHelper.removeValue(cell.data.packets, uniqueIndex)
-							cell.data.objectData[uniqueIndex] = nil		
-							tableHelper.cleanNils(cell.data.objectData)							
-						end
-						if tableHelper.getCount(Players) > 0 then		
-							logicHandler.DeleteObjectForEveryone(cellDescription, uniqueIndex)
-						end	
+						deleted = true
 					end
+				end
+			end
+			if deleted == true then
+				if cell.data.objectData[uniqueIndex] then
+					tableHelper.removeValue(cell.data.packets, uniqueIndex)
+					cell.data.objectData[uniqueIndex] = nil		
+					tableHelper.cleanNils(cell.data.objectData)							
+				end
+				if not tableHelper.containsValue(cell.data.packets.delete, uniqueIndex) then
+					table.insert(cell.data.packets.delete, uniqueIndex)
+					cell.data.objectData[uniqueIndex] = { refId = refId }					
+					if tableHelper.getCount(Players) > 0 then		
+						logicHandler.DeleteObjectForEveryone(cellDescription, uniqueIndex)
+					end							
 				end
 			end
 		end
