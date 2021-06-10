@@ -1,0 +1,1088 @@
+{
+  "furn_c_t_stendarr_01":{
+    "refId":"furn_c_t_stendarr_01",
+    "price":100,
+    "name":"Banner (Stendarr)",
+    "cat":"Misc"
+  },
+  "furn_c_t_wizard_01":{
+    "refId":"furn_c_t_wizard_01",
+    "price":100,
+    "name":"Banner (Wizard)",
+    "cat":"Misc"
+  },
+  "light_com_sconce_01":{
+    "refId":"light_com_sconce_01",
+    "price":25,
+    "name":"Wall Sconce (Single Candle)",
+    "cat":"Lighting"
+  },
+  "furn_com_rm_bar_01":{
+    "refId":"furn_com_rm_bar_01",
+    "price":200,
+    "name":"Bar Counter, Middle",
+    "cat":"Furniture"
+  },
+  "com_chest_11_empty":{
+    "refId":"com_chest_11_empty",
+    "price":150,
+    "name":"Cheap Chest",
+    "cat":"Chesty"
+  },
+  "furn_colony_wolfrug01":{
+    "refId":"furn_colony_wolfrug01",
+    "price":50,
+    "name":"Wolf Rug",
+    "cat":"Rugs"
+  },
+  "crate_01_empty":{
+    "refId":"crate_01_empty",
+    "price":200,
+    "name":"Crate 1",
+    "cat":"Containers"
+  },
+  "barrel_02":{
+    "refId":"barrel_02",
+    "price":50,
+    "name":"Barrel 2",
+    "cat":"Containers"
+  },
+  "de_r_drawers_01":{
+    "refId":"de_r_drawers_01",
+    "price":600,
+    "name":"Dunmer Drawers (Fine)",
+    "cat":"Dunmer"
+  },
+  "furn_com_tapestry_05":{
+    "refId":"furn_com_tapestry_05",
+    "price":100,
+    "name":"Banner (Imperial, Tapestry 5)",
+    "cat":"Misc"
+  },
+  "furn_com_rm_bar_02":{
+    "refId":"furn_com_rm_bar_02",
+    "price":200,
+    "name":"Bar Counter, End Cap 2",
+    "cat":"Furniture"
+  },
+  "active_com_bed_03":{
+    "refId":"active_com_bed_03",
+    "price":400,
+    "name":"Bed, Single 2 (Imperial, Light, Pale Red)",
+    "cat":"Beds"
+  },
+  "active_com_bed_05":{
+    "refId":"active_com_bed_05",
+    "price":400,
+    "name":"Bed, Single 4 (Imperial, Light, Grey)",
+    "cat":"Beds"
+  },
+  "furn_de_r_bench_01":{
+    "refId":"furn_de_r_bench_01",
+    "price":400,
+    "name":"Bench, Long (Fine)",
+    "cat":"Furniture"
+  },
+  "active_de_bedroll":{
+    "refId":"active_de_bedroll",
+    "price":100,
+    "name":"Bedroll",
+    "cat":"Beds"
+  },
+  "furn_de_rug_big_01":{
+    "refId":"furn_de_rug_big_01",
+    "price":200,
+    "name":"Rug, Big Round 1 (Red)",
+    "cat":"Rugs"
+  },
+  "furn_de_r_wallscreen_02":{
+    "refId":"furn_de_r_wallscreen_02",
+    "price":100,
+    "name":"Paper Wallscreen",
+    "cat":"Misc"
+  },
+  "furn_de_p_bench_03":{
+    "refId":"furn_de_p_bench_03",
+    "price":150,
+    "name":"Bench (Crude)",
+    "cat":"Furniture"
+  },
+  "barrel_01":{
+    "refId":"barrel_01",
+    "price":50,
+    "name":"Barrel 1",
+    "cat":"Containers"
+  },
+  "furn_c_t_ritual_01":{
+    "refId":"furn_c_t_ritual_01",
+    "price":100,
+    "name":"Banner (Ritual)",
+    "cat":"Misc"
+  },
+  "light_com_candle_11":{
+    "refId":"light_com_candle_11",
+    "price":25,
+    "name":"Blue Candles",
+    "cat":"Lighting"
+  },
+  "chest_small_02":{
+    "refId":"chest_small_02",
+    "price":25,
+    "name":"Small Chest (Wood)",
+    "cat":"Chesty"
+  },
+  "bm_bearhead_brown":{
+    "refId":"bm_bearhead_brown",
+    "price":200,
+    "name":"Mounted Bear Head (Brown)",
+    "cat":"Misc"
+  },
+  "com_basket_01":{
+    "refId":"com_basket_01",
+    "price":50,
+    "name":"Basket",
+    "cat":"Containers"
+  },
+  "de_p_desk_01":{
+    "refId":"de_p_desk_01",
+    "price":75,
+    "name":"Dunmer Desk",
+    "cat":"Dunmer"
+  },
+  "furn_de_rug_big_03":{
+    "refId":"furn_de_rug_big_03",
+    "price":200,
+    "name":"Rug, Big Round 3 (Green)",
+    "cat":"Rugs"
+  },
+  "furn_com_rm_table_04":{
+    "refId":"furn_com_rm_table_04",
+    "price":400,
+    "name":"Table, Rectangle 1",
+    "cat":"Furniture"
+  },
+  "light_de_lantern_08":{
+    "refId":"light_de_lantern_08",
+    "price":25,
+    "name":"Blue Paper Lantern",
+    "cat":"Lighting"
+  },
+  "furn_de_ex_table_02":{
+    "refId":"furn_de_ex_table_02",
+    "price":200,
+    "name":"Table, Square (Crude)",
+    "cat":"Furniture"
+  },
+  "active_de_p_bed_16":{
+    "refId":"active_de_p_bed_16",
+    "price":800,
+    "name":"Bed, Double 3 (Dunmer, Red Patterned)",
+    "cat":"Beds"
+  },
+  "furn_de_ex_stool_02":{
+    "refId":"furn_de_ex_stool_02",
+    "price":50,
+    "name":"Stool (Crude)",
+    "cat":"Furniture"
+  },
+  "furn_com_rm_table_03":{
+    "refId":"furn_com_rm_table_03",
+    "price":400,
+    "name":"Table, Round",
+    "cat":"Furniture"
+  },
+  "active_de_pr_bed_07":{
+    "refId":"active_de_pr_bed_07",
+    "price":400,
+    "name":"Bed, Single 11 (Headboard, Blue Patterned)",
+    "cat":"Beds"
+  },
+  "furn_c_t_dibella_01":{
+    "refId":"furn_c_t_dibella_01",
+    "price":100,
+    "name":"Banner (Dibella)",
+    "cat":"Misc"
+  },
+  "active_de_r_bed_17":{
+    "refId":"active_de_r_bed_17",
+    "price":400,
+    "name":"Bed, Single Cot 2 (Dunmer, Blue Patterned)",
+    "cat":"Beds"
+  },
+  "de_p_table_02":{
+    "refId":"de_p_table_02",
+    "price":25,
+    "name":"Dunmer Drawer Table (Large)",
+    "cat":"Dunmer"
+  },
+  "furn_com_rm_barstool":{
+    "refId":"furn_com_rm_barstool",
+    "price":100,
+    "name":"Stool (Bar Stool)",
+    "cat":"Furniture"
+  },
+  "active_com_bunk_02":{
+    "refId":"active_com_bunk_02",
+    "price":800,
+    "name":"Bunk Bed 2",
+    "cat":"Beds"
+  },
+  "furn_de_rug_big_06":{
+    "refId":"furn_de_rug_big_06",
+    "price":200,
+    "name":"Rug, Big Rectangle 3 (Green)",
+    "cat":"Rugs"
+  },
+  "com_hutch_01":{
+    "refId":"com_hutch_01",
+    "price":75,
+    "name":"Imperial Hutch",
+    "cat":"Imperial"
+  },
+  "furn_c_t_julianos_01":{
+    "refId":"furn_c_t_julianos_01",
+    "price":100,
+    "name":"Banner (Juilianos)",
+    "cat":"Misc"
+  },
+  "furn_c_t_apprentice_01":{
+    "refId":"furn_c_t_apprentice_01",
+    "price":100,
+    "name":"Banner (Apprentice)",
+    "cat":"Misc"
+  },
+  "furn_de_rug_big_07":{
+    "refId":"furn_de_rug_big_07",
+    "price":200,
+    "name":"Rug, Big Rectangle 4 (Green)",
+    "cat":"Rugs"
+  },
+  "furn_fireplace10":{
+    "refId":"furn_fireplace10",
+    "price":2000,
+    "name":"Fireplace",
+    "cat":"Fireplaces"
+  },
+  "furn_de_r_bookshelf_02":{
+    "refId":"furn_de_r_bookshelf_02",
+    "price":700,
+    "name":"Bookshelf, Standing (Fine)",
+    "cat":"Furniture"
+  },
+  "furn_de_ex_table_03":{
+    "refId":"furn_de_ex_table_03",
+    "price":200,
+    "name":"Table, Rectangle (Crude)",
+    "cat":"Furniture"
+  },
+  "de_r_chest_01":{
+    "refId":"de_r_chest_01",
+    "price":200,
+    "name":"Dunmer Chest (Cheap)",
+    "cat":"Dunmer"
+  },
+  "furn_com_cauldron_01":{
+    "refId":"furn_com_cauldron_01",
+    "price":100,
+    "name":"Cauldron, Standing",
+    "cat":"Misc"
+  },
+  "furn_de_r_chair_03":{
+    "refId":"furn_de_r_chair_03",
+    "price":200,
+    "name":"Chair (Fine)",
+    "cat":"Furniture"
+  },
+  "furn_banner_temple_01_indoors":{
+    "refId":"furn_banner_temple_01_indoors",
+    "price":100,
+    "name":"Banner (Temple 1)",
+    "cat":"Misc"
+  },
+  "furn_de_p_bookshelf_01":{
+    "refId":"furn_de_p_bookshelf_01",
+    "price":350,
+    "name":"Bookshelf, Standing (Cheap)",
+    "cat":"Furniture"
+  },
+  "de_p_closet_02":{
+    "refId":"de_p_closet_02",
+    "price":300,
+    "name":"Dunmer Closet (Cheap)",
+    "cat":"Dunmer"
+  },
+  "active_com_bunk_01":{
+    "refId":"active_com_bunk_01",
+    "price":800,
+    "name":"Bunk Bed 1",
+    "cat":"Beds"
+  },
+  "light_com_sconce_02_128":{
+    "refId":"light_com_sconce_02_128",
+    "price":25,
+    "name":"Wall Sconce (Three Candles)",
+    "cat":"Lighting"
+  },
+  "de_r_closet_01":{
+    "refId":"de_r_closet_01",
+    "price":600,
+    "name":"Dunmer Closet (Fine)",
+    "cat":"Dunmer"
+  },
+  "furn_de_rug_big_08":{
+    "refId":"furn_de_rug_big_08",
+    "price":200,
+    "name":"Rug, Big Round 4 (Blue)",
+    "cat":"Rugs"
+  },
+  "furn_rug_bearskin":{
+    "refId":"furn_rug_bearskin",
+    "price":100,
+    "name":"Bearskin Rug",
+    "cat":"Rugs"
+  },
+  "furn_de_tapestry_02":{
+    "refId":"furn_de_tapestry_02",
+    "price":100,
+    "name":"Banner (Dunmer, Tapestry 2)",
+    "cat":"Misc"
+  },
+  "de_p_table_01":{
+    "refId":"de_p_table_01",
+    "price":25,
+    "name":"Dunmer Drawer Table (Small)",
+    "cat":"Dunmer"
+  },
+  "crate_02_empty":{
+    "refId":"crate_02_empty",
+    "price":200,
+    "name":"Crate 2",
+    "cat":"Containers"
+  },
+  "furn_de_firepit_01":{
+    "refId":"furn_de_firepit_01",
+    "price":100,
+    "name":"Firepit 2",
+    "cat":"Fireplaces"
+  },
+  "active_de_p_bed_09":{
+    "refId":"active_de_p_bed_09",
+    "price":800,
+    "name":"Bunk Bed 4",
+    "cat":"Beds"
+  },
+  "furn_com_p_bench_01":{
+    "refId":"furn_com_p_bench_01",
+    "price":200,
+    "name":"Common Bench 1",
+    "cat":"Furniture"
+  },
+  "furn_de_rug_big_09":{
+    "refId":"furn_de_rug_big_09",
+    "price":200,
+    "name":"Rug, Big Rectangle 5 (Blue)",
+    "cat":"Rugs"
+  },
+  "furn_com_table_colony":{
+    "refId":"furn_com_table_colony",
+    "price":400,
+    "name":"Table, Colony",
+    "cat":"Furniture"
+  },
+  "furn_de_r_table_07":{
+    "refId":"furn_de_r_table_07",
+    "price":800,
+    "name":"Table, Big Rectangle (Fine)",
+    "cat":"Furniture"
+  },
+  "furn_de_rug_big_04":{
+    "refId":"furn_de_rug_big_04",
+    "price":200,
+    "name":"Rug, Big Rectangle 1 (Red)",
+    "cat":"Rugs"
+  },
+  "furn_com_pm_chair_02":{
+    "refId":"furn_com_pm_chair_02",
+    "price":50,
+    "name":"Chair (Camp)",
+    "cat":"Furniture"
+  },
+  "active_de_r_bed_18":{
+    "refId":"active_de_r_bed_18",
+    "price":400,
+    "name":"Bed, Single Cot 3 (Dunmer, Red Patterned)",
+    "cat":"Beds"
+  },
+  "furn_de_p_table_01":{
+    "refId":"furn_de_p_table_01",
+    "price":400,
+    "name":"Table, Low Round (Cheap) 1",
+    "cat":"Furniture"
+  },
+  "furn_com_r_chair_01":{
+    "refId":"furn_com_r_chair_01",
+    "price":200,
+    "name":"Chair (Padded)",
+    "cat":"Furniture"
+  },
+  "furn_de_p_chair_02":{
+    "refId":"furn_de_p_chair_02",
+    "price":100,
+    "name":"Chair (General 3)",
+    "cat":"Furniture"
+  },
+  "com_chest_02":{
+    "refId":"com_chest_02",
+    "price":400,
+    "name":"Imperial Chest (Fine)",
+    "cat":"Imperial"
+  },
+  "furn_com_rm_bench_02":{
+    "refId":"furn_com_rm_bench_02",
+    "price":200,
+    "name":"Common Bench 2",
+    "cat":"Furniture"
+  },
+  "urn_04":{
+    "refId":"urn_04",
+    "price":100,
+    "name":"Urn 4",
+    "cat":"Containers"
+  },
+  "furn_c_t_lord_01":{
+    "refId":"furn_c_t_lord_01",
+    "price":100,
+    "name":"Banner (Lord)",
+    "cat":"Misc"
+  },
+  "active_de_pr_bed_08":{
+    "refId":"active_de_pr_bed_08",
+    "price":800,
+    "name":"Bed, Double 6 (Headboard, Red Patterned)",
+    "cat":"Beds"
+  },
+  "urn_02":{
+    "refId":"urn_02",
+    "price":100,
+    "name":"Urn 2",
+    "cat":"Containers"
+  },
+  "furn_com_rm_chair_03":{
+    "refId":"furn_com_rm_chair_03",
+    "price":100,
+    "name":"Chair (General 1)",
+    "cat":"Furniture"
+  },
+  "active_de_r_bed_02":{
+    "refId":"active_de_r_bed_02",
+    "price":150,
+    "name":"Standing Hammock",
+    "cat":"Beds"
+  },
+  "furn_com_rm_bar_03":{
+    "refId":"furn_com_rm_bar_03",
+    "price":200,
+    "name":"Bar Counter, Corner",
+    "cat":"Furniture"
+  },
+  "active_de_p_bed_12":{
+    "refId":"active_de_p_bed_12",
+    "price":400,
+    "name":"Bed, Single 8 (Dunmer, Blue Patterned)",
+    "cat":"Beds"
+  },
+  "active_com_bed_02":{
+    "refId":"active_com_bed_02",
+    "price":400,
+    "name":"Bed, Single 1 (Imperial, Dark, Red Patterned)",
+    "cat":"Beds"
+  },
+  "furn_com_rm_bookshelf_02":{
+    "refId":"furn_com_rm_bookshelf_02",
+    "price":500,
+    "name":"Bookshelf, Backed (Cheap)",
+    "cat":"Furniture"
+  },
+  "active_de_p_bed_04":{
+    "refId":"active_de_p_bed_04",
+    "price":400,
+    "name":"Bed, Single 5 (Dunmer, Grey-Brown)",
+    "cat":"Beds"
+  },
+  "dwrv_barrel10_empty":{
+    "refId":"dwrv_barrel10_empty",
+    "price":75,
+    "name":"Steel Quarter Keg",
+    "cat":"Containers"
+  },
+  "furn_de_rug_01":{
+    "refId":"furn_de_rug_01",
+    "price":200,
+    "name":"Dunmer Rug 1",
+    "cat":"Rugs"
+  },
+  "active_de_r_bed_06":{
+    "refId":"active_de_r_bed_06",
+    "price":800,
+    "name":"Bed, Double 8 (Cot, Red Patterned)",
+    "cat":"Beds"
+  },
+  "furn_c_t_shadow_01":{
+    "refId":"furn_c_t_shadow_01",
+    "price":100,
+    "name":"Banner (Shadow)",
+    "cat":"Misc"
+  },
+  "com_sack_00":{
+    "refId":"com_sack_00",
+    "price":50,
+    "name":"Sack (Light)",
+    "cat":"Containers"
+  },
+  "furn_c_t_steed_01":{
+    "refId":"furn_c_t_steed_01",
+    "price":100,
+    "name":"Banner (Steed)",
+    "cat":"Misc"
+  },
+  "active_de_p_bed_11":{
+    "refId":"active_de_p_bed_11",
+    "price":400,
+    "name":"Bed, Single 7 (Dunmer, Blue Patterned)",
+    "cat":"Beds"
+  },
+  "active_de_r_bed_20":{
+    "refId":"active_de_r_bed_20",
+    "price":800,
+    "name":"Bed, Double 7 (Cot, Red Patterned)",
+    "cat":"Beds"
+  },
+  "furn_com_tapestry_04":{
+    "refId":"furn_com_tapestry_04",
+    "price":100,
+    "name":"Banner (Imperial, Tapestry 4 - Empire)",
+    "cat":"Misc"
+  },
+  "active_de_pr_bed_22":{
+    "refId":"active_de_pr_bed_22",
+    "price":400,
+    "name":"Bed, Single 13 (Headboard, Red Patterned)",
+    "cat":"Beds"
+  },
+  "furn_c_t_tower_01":{
+    "refId":"furn_c_t_tower_01",
+    "price":100,
+    "name":"Banner (Tower)",
+    "cat":"Misc"
+  },
+  "furn_c_t_thief_01":{
+    "refId":"furn_c_t_thief_01",
+    "price":100,
+    "name":"Banner (Thief)",
+    "cat":"Misc"
+  },
+  "active_de_r_bed_01":{
+    "refId":"active_de_r_bed_01",
+    "price":400,
+    "name":"Bed, Single Cot 1 (Dunmer, Blue Patterned)",
+    "cat":"Beds"
+  },
+  "active_de_r_bed_19":{
+    "refId":"active_de_r_bed_19",
+    "price":400,
+    "name":"Bed, Single Cot 4 (Dunmer, Red Patterned)",
+    "cat":"Beds"
+  },
+  "furn_com_tapestry_03":{
+    "refId":"furn_com_tapestry_03",
+    "price":100,
+    "name":"Banner (Imperial, Tapestry 3)",
+    "cat":"Misc"
+  },
+  "furn_com_kegstand":{
+    "refId":"furn_com_kegstand",
+    "price":200,
+    "name":"Keg On Stand",
+    "cat":"Misc"
+  },
+  "active_de_p_bed_14":{
+    "refId":"active_de_p_bed_14",
+    "price":400,
+    "name":"Bed, Single 10 (Dunmer, Grey)",
+    "cat":"Beds"
+  },
+  "active_de_pr_bed_26":{
+    "refId":"active_de_pr_bed_26",
+    "price":800,
+    "name":"Bed, Double 5 (Headboard, Red Patterned)",
+    "cat":"Beds"
+  },
+  "furn_banner_temple_02_indoors":{
+    "refId":"furn_banner_temple_02_indoors",
+    "price":100,
+    "name":"Banner (Temple 2)",
+    "cat":"Misc"
+  },
+  "furn_c_t_arkay_01":{
+    "refId":"furn_c_t_arkay_01",
+    "price":100,
+    "name":"Banner (Arkay)",
+    "cat":"Misc"
+  },
+  "furn_chieftains_chair":{
+    "refId":"furn_chieftains_chair",
+    "price":200,
+    "name":"Chair (Chieftain)",
+    "cat":"Furniture"
+  },
+  "light_com_lamp_02_128":{
+    "refId":"light_com_lamp_02_128",
+    "price":50,
+    "name":"Standing Candleholder (Three Candles)",
+    "cat":"Lighting"
+  },
+  "active_com_bed_06":{
+    "refId":"active_com_bed_06",
+    "price":800,
+    "name":"Bed, Double 9 (Imperial, Four Poster, Blue)",
+    "cat":"Beds"
+  },
+  "furn_anvil00":{
+    "refId":"furn_anvil00",
+    "price":200,
+    "name":"Anvil",
+    "cat":"Misc"
+  },
+  "furn_de_r_table_08":{
+    "refId":"furn_de_r_table_08",
+    "price":800,
+    "name":"Table, Low Round (Fine)",
+    "cat":"Furniture"
+  },
+  "furn_de_p_table_04":{
+    "refId":"furn_de_p_table_04",
+    "price":400,
+    "name":"Table, Big Rectangle (Cheap)",
+    "cat":"Furniture"
+  },
+  "active_de_p_bed_13":{
+    "refId":"active_de_p_bed_13",
+    "price":400,
+    "name":"Bed, Single 9 (Dunmer, Red Patterned)",
+    "cat":"Beds"
+  },
+  "ex_de_shack_awning_03":{
+    "refId":"ex_de_shack_awning_03",
+    "price":100,
+    "name":"Shack Awning",
+    "cat":"Misc"
+  },
+  "furn_com_tapestry_02":{
+    "refId":"furn_com_tapestry_02",
+    "price":100,
+    "name":"Banner (Imperial, Tapestry 2 - Tree)",
+    "cat":"Misc"
+  },
+  "active_de_pr_bed_24":{
+    "refId":"active_de_pr_bed_24",
+    "price":400,
+    "name":"Bed, Single 16 (Headboard, Pale Green)",
+    "cat":"Beds"
+  },
+  "furn_de_rug_02":{
+    "refId":"furn_de_rug_02",
+    "price":200,
+    "name":"Dunmer Rug 2",
+    "cat":"Rugs"
+  },
+  "chest_small_01":{
+    "refId":"chest_small_01",
+    "price":50,
+    "name":"Small Chest (Metal)",
+    "cat":"Chesty"
+  },
+  "active_de_p_bed_15":{
+    "refId":"active_de_p_bed_15",
+    "price":800,
+    "name":"Bed, Double 2 (Dunmer, Red Patterned)",
+    "cat":"Beds"
+  },
+  "in_velothi_ashpit_01":{
+    "refId":"in_velothi_ashpit_01",
+    "price":100,
+    "name":"Ashpit",
+    "cat":"Misc"
+  },
+  "active_com_bed_04":{
+    "refId":"active_com_bed_04",
+    "price":400,
+    "name":"Bed, Single 3 (Imperial, Dark, Pale Green)",
+    "cat":"Beds"
+  },
+  "furn_c_t_golem_01":{
+    "refId":"furn_c_t_golem_01",
+    "price":100,
+    "name":"Banner (Golem)",
+    "cat":"Misc"
+  },
+  "furn_de_p_chair_01":{
+    "refId":"furn_de_p_chair_01",
+    "price":100,
+    "name":"Chair (General 2)",
+    "cat":"Furniture"
+  },
+  "bm_wolfhead_white":{
+    "refId":"bm_wolfhead_white",
+    "price":200,
+    "name":"Mounted Wolf Head (White)",
+    "cat":"Misc"
+  },
+  "furn_c_t_lover_01":{
+    "refId":"furn_c_t_lover_01",
+    "price":100,
+    "name":"Banner (Lover)",
+    "cat":"Misc"
+  },
+  "active_de_pr_bed_23":{
+    "refId":"active_de_pr_bed_23",
+    "price":400,
+    "name":"Bed, Single 14 (Headboard, Red Patterned)",
+    "cat":"Beds"
+  },
+  "furn_c_t_warrior_01":{
+    "refId":"furn_c_t_warrior_01",
+    "price":100,
+    "name":"Banner (Warrior)",
+    "cat":"Misc"
+  },
+  "active_de_p_bed_10":{
+    "refId":"active_de_p_bed_10",
+    "price":400,
+    "name":"Bed, Single 6 (Dunmer, Pale Red)",
+    "cat":"Beds"
+  },
+  "furn_de_p_table_05":{
+    "refId":"furn_de_p_table_05",
+    "price":400,
+    "name":"Table, Small Square (Cheap)",
+    "cat":"Furniture"
+  },
+  "active_de_pr_bed_21":{
+    "refId":"active_de_pr_bed_21",
+    "price":400,
+    "name":"Bed, Single 12 (Headboard, Blue Patterned)",
+    "cat":"Beds"
+  },
+  "active_de_pr_bed_27":{
+    "refId":"active_de_pr_bed_27",
+    "price":800,
+    "name":"Bed, Double 4 (Headboard, Pale Green)",
+    "cat":"Beds"
+  },
+  "furn_t_fireplace_01":{
+    "refId":"furn_t_fireplace_01",
+    "price":500,
+    "name":"Fireplace (Simple Oven)",
+    "cat":"Fireplaces"
+  },
+  "urn_03":{
+    "refId":"urn_03",
+    "price":100,
+    "name":"Urn 3",
+    "cat":"Containers"
+  },
+  "furn_banner_temple_03_indoors":{
+    "refId":"furn_banner_temple_03_indoors",
+    "price":100,
+    "name":"Banner (Temple 3)",
+    "cat":"Misc"
+  },
+  "furn_de_rug_big_05":{
+    "refId":"furn_de_rug_big_05",
+    "price":200,
+    "name":"Rug, Big Rectangle 2 (Red)",
+    "cat":"Rugs"
+  },
+  "furn_de_bar_02":{
+    "refId":"furn_de_bar_02",
+    "price":200,
+    "name":"Bar Counter, End Cap 2 (Dunmer)",
+    "cat":"Furniture"
+  },
+  "urn_01":{
+    "refId":"urn_01",
+    "price":100,
+    "name":"Urn 1",
+    "cat":"Containers"
+  },
+  "com_sack_03":{
+    "refId":"com_sack_03",
+    "price":50,
+    "name":"Sack (Crumpled)",
+    "cat":"Containers"
+  },
+  "furn_com_r_bookshelf_01":{
+    "refId":"furn_com_r_bookshelf_01",
+    "price":1000,
+    "name":"Bookshelf, Backed (Fine)",
+    "cat":"Furniture"
+  },
+  "urn_05":{
+    "refId":"urn_05",
+    "price":100,
+    "name":"Urn 5",
+    "cat":"Containers"
+  },
+  "com_cupboard_01":{
+    "refId":"com_cupboard_01",
+    "price":100,
+    "name":"Imperial Cupboard",
+    "cat":"Imperial"
+  },
+  "furn_de_tapestry_06":{
+    "refId":"furn_de_tapestry_06",
+    "price":100,
+    "name":"Banner (Dunmer, Tapestry 6)",
+    "cat":"Misc"
+  },
+  "com_chest_11_open":{
+    "refId":"com_chest_11_open",
+    "price":150,
+    "name":"Cheap Chest (Open)",
+    "cat":"Chesty"
+  },
+  "com_sack_02":{
+    "refId":"com_sack_02",
+    "price":50,
+    "name":"Sack (Bag)",
+    "cat":"Containers"
+  },
+  "furn_com_rm_bar_04":{
+    "refId":"furn_com_rm_bar_04",
+    "price":200,
+    "name":"Bar Counter, End Cap 1",
+    "cat":"Furniture"
+  },
+  "furn_com_rm_table_05":{
+    "refId":"furn_com_rm_table_05",
+    "price":400,
+    "name":"Table, Small Rectangle",
+    "cat":"Furniture"
+  },
+  "furn_de_tapestry_05":{
+    "refId":"furn_de_tapestry_05",
+    "price":100,
+    "name":"Banner (Dunmer, Tapestry 5)",
+    "cat":"Misc"
+  },
+  "furn_de_p_table_02":{
+    "refId":"furn_de_p_table_02",
+    "price":400,
+    "name":"Table, Small Round (Cheap)",
+    "cat":"Furniture"
+  },
+  "furn_c_t_lady_01":{
+    "refId":"furn_c_t_lady_01",
+    "price":100,
+    "name":"Banner (Lady)",
+    "cat":"Misc"
+  },
+  "active_de_p_bed_03":{
+    "refId":"active_de_p_bed_03",
+    "price":800,
+    "name":"Bunk Bed 3",
+    "cat":"Beds"
+  },
+  "furn_de_tapestry_07":{
+    "refId":"furn_de_tapestry_07",
+    "price":100,
+    "name":"Banner (Dunmer, Tapestry 7)",
+    "cat":"Misc"
+  },
+  "furn_de_r_bench_02":{
+    "refId":"furn_de_r_bench_02",
+    "price":400,
+    "name":"Bench, Short (Fine)",
+    "cat":"Furniture"
+  },
+  "com_chest_01":{
+    "refId":"com_chest_01",
+    "price":150,
+    "name":"Imperial Chest (Cheap)",
+    "cat":"Imperial"
+  },
+  "furn_de_r_table_03":{
+    "refId":"furn_de_r_table_03",
+    "price":800,
+    "name":"Table, Big Oval (Fine)",
+    "cat":"Furniture"
+  },
+  "furn_de_p_table_06":{
+    "refId":"furn_de_p_table_06",
+    "price":400,
+    "name":"Table, Low Round (Cheap) 2",
+    "cat":"Furniture"
+  },
+  "furn_c_t_kynareth_01":{
+    "refId":"furn_c_t_kynareth_01",
+    "price":100,
+    "name":"Banner (Kynareth)",
+    "cat":"Misc"
+  },
+  "furn_velothi_prayer_stool_01":{
+    "refId":"furn_velothi_prayer_stool_01",
+    "price":50,
+    "name":"Stool (Prayer)",
+    "cat":"Furniture"
+  },
+  "de_drawers_02":{
+    "refId":"de_drawers_02",
+    "price":300,
+    "name":"Dunmer Drawers (Cheap)",
+    "cat":"Dunmer"
+  },
+  "active_de_p_bed_05":{
+    "refId":"active_de_p_bed_05",
+    "price":800,
+    "name":"Bed, Double 1 (Dunmer, Pale Green)",
+    "cat":"Beds"
+  },
+  "light_com_chandelier_03":{
+    "refId":"light_com_chandelier_03",
+    "price":50,
+    "name":"Chandelier, Simple (Four Candles)",
+    "cat":"Lighting"
+  },
+  "light_de_lantern_03":{
+    "refId":"light_de_lantern_03",
+    "price":25,
+    "name":"Yellow Paper Lantern",
+    "cat":"Lighting"
+  },
+  "in_nord_fireplace_01":{
+    "refId":"in_nord_fireplace_01",
+    "price":1500,
+    "name":"Fireplace (Nord)",
+    "cat":"Fireplaces"
+  },
+  "furn_de_bar_03":{
+    "refId":"furn_de_bar_03",
+    "price":200,
+    "name":"Bar Counter, Corner (Dunmer)",
+    "cat":"Furniture"
+  },
+  "light_com_candle_07":{
+    "refId":"light_com_candle_07",
+    "price":25,
+    "name":"Yellow Candles",
+    "cat":"Lighting"
+  },
+  "furn_de_rug_big_02":{
+    "refId":"furn_de_rug_big_02",
+    "price":200,
+    "name":"Rug, Big Round 2 (Red)",
+    "cat":"Rugs"
+  },
+  "furn_de_forge_01":{
+    "refId":"furn_de_forge_01",
+    "price":500,
+    "name":"Fireplace (Forge)",
+    "cat":"Fireplaces"
+  },
+  "furn_c_t_zenithar_01":{
+    "refId":"furn_c_t_zenithar_01",
+    "price":100,
+    "name":"Banner (Zenithar)",
+    "cat":"Misc"
+  },
+  "com_drawers_01":{
+    "refId":"com_drawers_01",
+    "price":300,
+    "name":"Imperial Drawers",
+    "cat":"Imperial"
+  },
+  "dwrv_barrel00_empty":{
+    "refId":"dwrv_barrel00_empty",
+    "price":150,
+    "name":"Steel Keg",
+    "cat":"Containers"
+  },
+  "furn_c_t_mara_01":{
+    "refId":"furn_c_t_mara_01",
+    "price":100,
+    "name":"Banner (Mara)",
+    "cat":"Misc"
+  },
+  "furn_de_firepit":{
+    "refId":"furn_de_firepit",
+    "price":100,
+    "name":"Firepit",
+    "cat":"Fireplaces"
+  },
+  "furn_de_p_bench_04":{
+    "refId":"furn_de_p_bench_04",
+    "price":200,
+    "name":"Bench, Short (Cheap)",
+    "cat":"Furniture"
+  },
+  "furn_c_t_akatosh_01":{
+    "refId":"furn_c_t_akatosh_01",
+    "price":100,
+    "name":"Banner (Akatosh)",
+    "cat":"Misc"
+  },
+  "furn_de_bar_01":{
+    "refId":"furn_de_bar_01",
+    "price":200,
+    "name":"Bar Counter, Middle (Dunmer)",
+    "cat":"Furniture"
+  },
+  "furn_de_bar_04":{
+    "refId":"furn_de_bar_04",
+    "price":200,
+    "name":"Bar Counter, End Cap 1 (Dunmer)",
+    "cat":"Furniture"
+  },
+  "com_closet_01":{
+    "refId":"com_closet_01",
+    "price":300,
+    "name":"Imperial Closet",
+    "cat":"Imperial"
+  },
+  "furn_de_r_table_09":{
+    "refId":"furn_de_r_table_09",
+    "price":800,
+    "name":"Table, Small Square (Fine)",
+    "cat":"Furniture"
+  },
+  "furn_de_table10":{
+    "refId":"furn_de_table10",
+    "price":800,
+    "name":"Table, Oval",
+    "cat":"Furniture"
+  },
+  "de_p_chest_02":{
+    "refId":"de_p_chest_02",
+    "price":400,
+    "name":"Dunmer Chest (Fine)",
+    "cat":"Dunmer"
+  },
+  "in_imp_fireplace_grand":{
+    "refId":"in_imp_fireplace_grand",
+    "price":5000,
+    "name":"Fireplace (Grand Imperial)",
+    "cat":"Fireplaces"
+  },
+  "furn_com_r_table_01":{
+    "refId":"furn_com_r_table_01",
+    "price":800,
+    "name":"Table, Rectangle 2",
+    "cat":"Furniture"
+  },
+  "com_sack_01":{
+    "refId":"com_sack_01",
+    "price":50,
+    "name":"Sack (Flat)",
+    "cat":"Containers"
+  }
+}
