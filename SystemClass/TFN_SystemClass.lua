@@ -47,6 +47,7 @@ local listSpell = jsonInterface.load("custom/TFN_Spell.json")
 local listMisc = jsonInterface.load("custom/TFN_Misc.json")
 
 local function CheckSkills(pid, skill)	
+	if skill == "nothing" then return false end
 	if Players[pid].data.customClass.minorSkills and Players[pid].data.customClass.majorSkills then	
 		if tableHelper.containsValue(Players[pid].data.customClass.minorSkills, skill, true) then		
 			return true
