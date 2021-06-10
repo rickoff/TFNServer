@@ -7,16 +7,13 @@ Script principal housing
 ---------------------------
 INSTALLATION:
 Require TFN_Decorate, TFN_Furniture
-
 Save the file as TFN_HousingShop.lua inside your server/scripts/custom folder.
 Save the file as TFN_Door.json inside your server/data/custom folder.
 Save the folder as CellDataBase with all files contain inside your server/data/custom/CellDataBase/
 Save the file as CellDataBaseStat.json inside your server/data/custom/CellDataBase folder.
 Save the file as MenuHousing.lua inside your scripts/menu folder
-
 Edits to customScripts.lua
 TFN_HousingShop = require("custom.TFN_HousingShop")
-
 Edits to config.lua
 add in config.menuHelperFiles, "MenuHousing"
 ---------------------------
@@ -148,7 +145,8 @@ local trad = {
 	NoFindHouse = "Cannot find the selected house.",
 	HouseInfoBuyDe = "you are already the tenant of",
 	DeleteOwner = "Enter 'none' to delete",
-	LocAct = "current tenant" 
+	LocAct = "current tenant",
+	NoDataBaseCell = "No benchmark data for this cell."	
 }
 	
 local config = {
@@ -185,28 +183,8 @@ local config = {
 	PlayerSettingGUICo = 31391,
 	PlayerOwnedHouseSelectCo = 31392
 }
-local FurnData = {}
-local StaticData = {}
-local StaticList = jsonInterface.load("custom/CellDataBase/CellDataBaseStat.json")	
-for i = 1, #StaticList do
-	if config.Furn == true then
-		if string.find(string.lower(StaticList[i]), "furn") then
-			FurnData[string.lower(StaticList[i])] = ""		
-		else
-			StaticData[string.lower(StaticList[i])] = ""
-		end
-	else
-		StaticData[string.lower(StaticList[i])] = ""
-	end
-end
-local DoorData = {}
-local DoorList = jsonInterface.load("custom/TFN_Door.json")
-for index, item in pairs(DoorList) do
-	DoorData[string.lower(item.refid)] = ""
-end
 
 local serverConfig = require("config")
-
 local lastEnteredHouse = {}
 local adminSelectedHouse = {}
 local adminHouseList = {}
@@ -216,10 +194,31 @@ local playerOwnedHouseList = {}
 local playerOwnedHouseListCo = {}
 local playerCoOwnerList = {}
 local playerViewChoice = {}
+local FurnData = {}
+local StaticData = {}
+local DoorData = {}
+local housingData = {houses = {}, cells = {}, owners = {}}
 
 local TFN_HousingShop = {}
 
-local housingData = {houses = {}, cells = {}, owners = {}}
+local function ListCheck()
+	local StaticList = jsonInterface.load("custom/CellDataBase/CellDataBaseStat.json")	
+	for i = 1, #StaticList do
+		if config.Furn == true then
+			if string.find(string.lower(StaticList[i]), "furn") then
+				FurnData[string.lower(StaticList[i])] = ""		
+			else
+				StaticData[string.lower(StaticList[i])] = ""
+			end
+		else
+			StaticData[string.lower(StaticList[i])] = ""
+		end
+	end
+	local DoorList = jsonInterface.load("custom/TFN_Door.json")
+	for index, item in pairs(DoorList) do
+		DoorData[string.lower(item.refid)] = ""
+	end
+end
 
 local function msg(pid, text)
 	tes3mp.SendMessage(pid, config.chatColor .. text .. "\n" .. color.Default)
@@ -255,11 +254,9 @@ local function getPlayerGold(playerName)
 end
 
 local function addGold(playerName, amount)
-	local player = logicHandler.GetPlayerByName(playerName)
-	
+	local player = logicHandler.GetPlayerByName(playerName)	
 	if player then
 		local goldLoc = inventoryHelper.getItemIndex(player.data.inventory, "gold_001", -1)
-
 		if goldLoc then
 			player.data.inventory[goldLoc].count = player.data.inventory[goldLoc].count + amount
 
@@ -271,8 +268,7 @@ local function addGold(playerName, amount)
 			if amount > 0 then
 				table.insert(player.data.inventory, {refId = "gold_001", count = amount, charge = -1, soul = ""})
 			end
-		end
-		
+		end		
 		if player:IsLoggedIn() then
 			local itemref = {refId = "gold_001", count = amount, charge = -1, soul = ""}	
 			player:QuicksaveToDrive()
@@ -291,7 +287,6 @@ end
 
 local function removeGold(playerName, amount)
 	local player = logicHandler.GetPlayerByName(playerName)
-	
 	if player then
 		local goldLoc = inventoryHelper.getItemIndex(player.data.inventory, "gold_001", -1)
 		
@@ -305,7 +300,6 @@ local function removeGold(playerName, amount)
 				table.insert(player.data.inventory, {refId = "gold_001", count = amount, charge = -1, soul = ""})
 			end
 		end		
-
 		if player:IsLoggedIn() then
 
 			local itemref = {refId = "gold_001", count = amount, charge = -1, soul = ""}	
@@ -316,8 +310,7 @@ local function removeGold(playerName, amount)
 			player.loggedIn = true
 			player:QuicksaveToDrive()
 			player.loggedIn = false
-		end
-		
+		end		
 		return true
 	else
 		return false
@@ -744,7 +737,6 @@ local function onShopStatusChange(houseName)
 		destinationCell = serverConfig.defaultSpawnCell
 		destinationPos = {x = serverConfig.defaultSpawnPos[1], y = serverConfig.defaultSpawnPos[2], z = serverConfig.defaultSpawnPos[3]}
 	end
-
 	if isShop(houseName) then
 		for playerId, player in pairs(Players) do
 			if player:IsLoggedIn() then
@@ -768,7 +760,6 @@ local function removeCoOwner(houseName, pname)
 	local hdata = housingData.houses[houseName]	
 	housingData.owners[oname].houses[houseName].coowners[pname] = nil	
 	if TFN_Furniture ~= nil then
-		--Remove the player's permission to place furniture in all of the house's cells, as well as return all the furniture that they placed.
 		for cellName, v in pairs(hdata.cells) do
 			TFN_Furniture.RemovePermission(pname, cellName)
 			TFN_Furniture.RemoveAllPlayerFurnitureInCell(pname, cellName, true)
@@ -1106,8 +1097,7 @@ local function onHouseEditPricePrompt(pid, data)
 		price = config.defaultPrice
 	else
 		price = data
-	end
-	
+	end	
 	if housingData.houses[adminSelectedHouse[getName(pid)]] then
 		setHousePrice(adminSelectedHouse[getName(pid)], price)
 		return showHouseEditMain(pid)
@@ -1135,7 +1125,7 @@ end
 
 local function onPlayerSettingsAddPrompt(pid, data)
 	if data == nil or data == "" then
-		--Do nothing
+
 	else
 		addCoOwner(playerSelectedHouse[getName(pid)], string.lower(data))
 	end
@@ -1144,10 +1134,8 @@ end
 
 local function showPlayerSettingsOwnedList(pid)
 	local message = trad.selectHouseList
-	--Generate a list of options
 	local options = {}	
-	local list =  trad.returnList
-	
+	local list =  trad.returnList	
 	for houseName, v in pairs(housingData.houses) do
 		if getHouseOwnerName(houseName) == getName(pid) then
 			table.insert(options, houseName)
@@ -1158,19 +1146,15 @@ local function showPlayerSettingsOwnedList(pid)
 		if not (i == #options) then
 			list = list .. "\n"
 		end
-	end
-	
+	end	
 	playerOwnedHouseList[getName(pid)] = options
 	return tes3mp.ListBox(pid, config.PlayerOwnedHouseSelect, message, list)
 end
 
 local function showAllHousesList(pid)
 	local message = trad.selectHouseList
-	
-	--Generate a list of options
 	local options = {}	
-	local list = trad.returnList
-	
+	local list = trad.returnList	
 	for houseName, v in pairs(housingData.houses) do
 		table.insert(options, houseName)
 	end
@@ -1180,8 +1164,7 @@ local function showAllHousesList(pid)
 		if not (i == #options) then
 			list = list .. "\n"
 		end
-	end
-	
+	end	
 	playerAllHouseList[getName(pid)] = options
 	return tes3mp.ListBox(pid, config.PlayerAllHouseSelectGUI, message, list)
 end
@@ -1189,7 +1172,6 @@ end
 local function showSellHousesList(pid)
 	local message = trad.selectHouseList
 	local cellNameCell
-	--Generate a list of options
 	local options = {}	
 	local list = trad.returnList
 	local listBlackList = {}
@@ -1211,16 +1193,13 @@ local function showSellHousesList(pid)
 		if not (i == #options) then
 			list = list .. "\n"
 		end
-	end
-	
+	end	
 	playerAllHouseList[getName(pid)] = options
 	return tes3mp.ListBox(pid, config.PlayerAllHouseSelectGUI, message, list)
 end
 
 local function showShopHousesList(pid)
 	local message = trad.selectHouseList
-	
-	--Generate a list of options
 	local options = {}	
 	local list = trad.returnList
 	
@@ -1235,8 +1214,7 @@ local function showShopHousesList(pid)
 		if not (i == #options) then
 			list = list .. "\n"
 		end
-	end
-	
+	end	
 	playerAllHouseList[getName(pid)] = options
 	return tes3mp.ListBox(pid, config.PlayerAllHouseSelectGUI, message, list)
 end
@@ -1295,8 +1273,7 @@ local function onPlayerSelectWarp(pid)
 			message = trad.WarpNo
 		end
 		return false, tes3mp.MessageBox(pid, -1, message, false)
-	end
-	
+	end	
 	if playerSelectedHouse[getName(pid)] then
 		local destinationCell
 		local destinationPos
@@ -1328,8 +1305,7 @@ local function onPlayerSelectWarpCo(pid)
 			message = trad.WarpNo
 		end
 		return false, tes3mp.MessageBox(pid, -1, message, false)
-	end
-	
+	end	
 	if playerSelectedHouse[getName(pid)] then
 		local destinationCell
 		local destinationPos
@@ -1460,11 +1436,9 @@ end
 
 local function onHouseEditOwnerPrompt(pid, data)
 	if data == nil or data == "" or string.lower(data) == "none" then
-		--Do nothing
 		removeHouseOwner(pid, adminSelectedHouse[getName(pid)], true, "return")
 	else
 		if string.lower(data) == getHouseOwnerName(adminSelectedHouse[getName(pid)]) then
-			--Player already owns this house... do nothing
 		else
 			removeHouseOwner(pid, adminSelectedHouse[getName(pid)], true, "return")
 			addHouseOwner(data, adminSelectedHouse[getName(pid)])
@@ -1498,7 +1472,12 @@ end
 local function onCellEditAssign(pid)
 	local cell = tes3mp.GetCell(pid)
 	local pname = getName(pid)	
-	if adminSelectedHouse[pname] and housingData.houses[adminSelectedHouse[pname]] then
+	if adminSelectedHouse[pname] and housingData.houses[adminSelectedHouse[pname]] and assignCellToHouse then
+		local cellData = jsonInterface.load("custom/CellDataBase/"..cell..".json")	
+		if cellData == nil then
+			tes3mp.MessageBox(pid, -1, trad.NoDataBaseCell)
+			return
+		end	
 		assignCellToHouse(cell, adminSelectedHouse[pname])
 		return true, showCellEditMain(pid, adminSelectedHouse[pname])
 	end
@@ -1867,11 +1846,9 @@ TFN_HousingShop.OnPlayerCellChange = function(eventStatus, pid)
 						message = message..trad.openHouse			
 					end					
 					msg(pid, message)
-				end
-				
+				end				
 			elseif enterReason == "Admin" then 
 				msg(pid, trad.welcome..getHouseOwnerName(hdata.name)..trad.closeHouse)
-
 			elseif enterReason == "access" then
 				local message = trad.access..getHouseOwnerName(hdata.name)..trad.questCell..getHouseOwnerName(hdata.name)..trad.questPass
 				msg(pid, message)
@@ -2074,6 +2051,7 @@ TFN_HousingShop.ReloadData = function()
 end
 
 TFN_HousingShop.OnServerPostInit = function(eventStatus)
+	ListCheck()
 	local file = io.open(tes3mp.GetDataPath().. "/custom/TFN_HousingShop.json", "r")
 	if file ~= nil then
 		io.close()
@@ -2151,24 +2129,19 @@ TFN_HousingShop.onShopOptionSelect = function(pid)
 					local hdata = housingData.houses[housingData.cells[cellId].house]
 					local existingPlayer = getHouseOwnerName(hdata.name)
 					local player = logicHandler.GetPlayerByName(existingPlayer)
-					local goldLocSeller = nil
-					
+					local goldLocSeller = nil					
 					for slot, item in pairs(player.data.inventory) do
 						if item.refId == "gold_001" then
 							goldLocSeller = slot
 						end
-					end
-					
+					end					
 					if goldLocSeller ~= nil then
-						player.data.inventory[goldLocSeller].count = player.data.inventory[goldLocSeller].count + price
-					
+						player.data.inventory[goldLocSeller].count = player.data.inventory[goldLocSeller].count + price					
 						if player:IsLoggedIn() then
-							--If the player is logged in, we have to update their inventory to reflect the changes
 							local itemref = {refId = "gold_001", count = price, charge = -1, soul = ""}	
 							player:QuicksaveToDrive()
 							player:LoadItemChanges({itemref}, enumerations.inventory.ADD)						
 						else
-							--If the player isn't logged in, we have to temporarily set the player's logged in variable to true, otherwise the Save function won't save the player's data
 							player.loggedIn = true
 							player:QuicksaveToDrive()
 							player.loggedIn = false
@@ -2176,12 +2149,10 @@ TFN_HousingShop.onShopOptionSelect = function(pid)
 					else
 						table.insert(player.data.inventory, {refId = "gold_001", count = price, charge = -1, soul = ""})	
 						if player:IsLoggedIn() then
-							--If the player is logged in, we have to update their inventory to reflect the changes
 							local itemref = {refId = "gold_001", count = price, charge = -1, soul = ""}	
 							player:QuicksaveToDrive()
 							player:LoadItemChanges({itemref}, enumerations.inventory.ADD)
 						else
-							--If the player isn't logged in, we have to temporarily set the player's logged in variable to true, otherwise the Save function won't save the player's data
 							player.loggedIn = true
 							player:QuicksaveToDrive()
 							player.loggedIn = false
@@ -2368,7 +2339,9 @@ TFN_HousingShop.CleanCell = function(cellDescription, Stat)
 	if cellDescription ~= nil then
 		local cell = LoadedCells[cellDescription]
 		local cellData = jsonInterface.load("custom/CellDataBase/"..cellDescription..".json")	
-		if cellData == nil then return end
+		if cellData == nil then
+			return 
+		end
 		local useTemporaryLoad = false	
 		if cell == nil then
 			logicHandler.LoadCell(cellDescription)
