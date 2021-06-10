@@ -21,7 +21,7 @@ local config = {
 	MainId = 31360,
 	PromptId = 31361
 }
-------
+
 local trad = {
 	prompt = "] - Enter a number to add / subtract",
 	rotx = "Turn X",
@@ -47,7 +47,6 @@ local trad = {
 	opt1 = "Choose an option. Your current article : ",
 	opt2 = "Adjust North;Adjust East;Adjust Height;Turn X;Turn Y;Turn Z;Up;Down;East;West;North;South;Bigger;Smaller;Grab;Return" 
 }
-------
 
 local TimerDrop = tes3mp.CreateTimer("StartDrop", time.seconds(0.01))
 local playerSelectedObject = {}
@@ -76,7 +75,6 @@ local function getObject(refIndex, cell)
 	if refIndex == nil then
 		return false
 	end
-
 	if LoadedCells[cell]:ContainsObject(refIndex) then 
 		return LoadedCells[cell].data.objectData[refIndex]
 	else
@@ -92,24 +90,17 @@ local function resendPlaceToAll(refIndex, cell)
 	local posX, posY, posZ = object.location.posX, object.location.posY, object.location.posZ
 	local rotX, rotY, rotZ = object.location.rotX, object.location.rotY, object.location.rotZ
 	local scale = object.scale or 1
-
-	local refIndex = refIndex
-	
-	local inventory = object.inventory or nil
-	
+	local refIndex = refIndex	
+	local inventory = object.inventory or nil	
 	local splitIndex = refIndex:split("-")
-
 	for pid, pdata in pairs(Players) do
 		if Players[pid]:IsLoggedIn() then
-			--First, delete the original
 			tes3mp.InitializeEvent(pid)
 			tes3mp.SetEventCell(cell)
 			tes3mp.SetObjectRefNumIndex(0)
 			tes3mp.SetObjectMpNum(splitIndex[2])
-			tes3mp.AddWorldObject() --?
+			tes3mp.AddWorldObject()
 			tes3mp.SendObjectDelete()
-			
-			--Now remake it
 			tes3mp.InitializeEvent(pid)
 			tes3mp.SetEventCell(cell)
 			tes3mp.SetObjectRefId(refId)
@@ -127,8 +118,7 @@ local function resendPlaceToAll(refIndex, cell)
 					tes3mp.SetContainerItemCharge(item.charge)
 					tes3mp.AddContainerItem()
 				end
-			end
-			
+			end			
 			tes3mp.AddWorldObject()
 			tes3mp.SendObjectPlace()
 			tes3mp.SendObjectScale()
@@ -146,11 +136,11 @@ local function resendPlaceToAll(refIndex, cell)
 			end
 		end
 	end
-	if EcarlateFurniture then
-		if WorldInstance.data.customVariables.EcarlateFurniture.placed[cell] then	
-			if WorldInstance.data.customVariables.EcarlateFurniture.placed[cell][refIndex] then
-				WorldInstance.data.customVariables.EcarlateFurniture.placed[cell][refIndex]["loc"] = object.location
-				WorldInstance.data.customVariables.EcarlateFurniture.placed[cell][refIndex]["scale"] = object.scale
+	if TFN_Furniture then
+		if WorldInstance.data.customVariables.TFN_Furniture.placed[cell] then	
+			if WorldInstance.data.customVariables.TFN_Furniture.placed[cell][refIndex] then
+				WorldInstance.data.customVariables.TFN_Furniture.placed[cell][refIndex]["loc"] = object.location
+				WorldInstance.data.customVariables.TFN_Furniture.placed[cell][refIndex]["scale"] = object.scale
 				WorldInstance:QuicksaveToDrive()
 			end	
 		end
@@ -251,15 +241,12 @@ end
 
 local function showMainGUI(pid)
 	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
-		--Determine if the player has an item
-		local currentItem = "None" --default
+		local currentItem = "None"
 		local selected = playerSelectedObject[tes3mp.GetName(pid)]
-		local object = getObject(selected, tes3mp.GetCell(pid))
-		
-		if selected and object then --If they have an entry and it isn't gone
+		local object = getObject(selected, tes3mp.GetCell(pid))		
+		if selected and object then
 			currentItem = object.refId .. " (" .. selected .. ")"
-		end
-		
+		end		
 		local message = trad.opt1 .. currentItem
 		tes3mp.CustomMessageBox(pid, config.MainId, message, trad.opt2)
 	end
@@ -278,13 +265,8 @@ TFN_Decorate.SetSelectedObject = function(pid, refIndex)
 end
 
 TFN_Decorate.OnObjectPlace = function(eventStatus, pid, cellDescription)
-	--Get the last event, which should hopefully be the place packet
 	tes3mp.ReadLastEvent()
-	
-	--Get the refIndex of the first item in the object place packet (in theory, there should only by one)
 	local refIndex = tes3mp.GetObjectRefNumIndex(0) .. "-" .. tes3mp.GetObjectMpNum(0)
-	
-	--Record that item as the last one the player interacted with in this cell
 	setSelectedObject(pid, refIndex)
 end
 
