@@ -33,7 +33,7 @@ local trad = {
 	SelectBuy = "Select an item you want to buy",
 	NoPermBuy = "You can't afford to buy",
 	OptMenu = "Buy;Inventory;Display;Return",
-	CatMenu = "CATEGORY.\n\n",
+	CatMenu = "CATEGORY.\n",
 	OptCat = "Beds;Chesty;Furn;Misc;Lighting;Rugs;Containers;Imperial;Dunmer;Return",
 	MainMenu = (
 	color.Green .. "WELCOME TO THE STORE.\n\n"
@@ -42,7 +42,7 @@ local trad = {
 	..color.Yellow .. "Inventory"
 	..color.White .. " to view the furniture items you own \n\n"
 	..color.Yellow .. "Show "
-	..color.White .. " to display a list of all the furniture you own in the cell where you are currently \n\n"
+	..color.White .. " to display a list of all the furniture you own in the cell where you are currently\n\n"
 	)	
 }
 
@@ -56,7 +56,8 @@ local config = {
 	InventoryGUI = 31365,
 	ViewGUI = 31366,
 	InventoryOptionsGUI = 31367,
-	ViewOptionsGUI = 31368
+	ViewOptionsGUI = 31368,
+	InputDialog = 31369
 }
 
 local furnitureData = jsonInterface.load("custom/TFN_Furnitures.json")
@@ -68,6 +69,7 @@ TFN_Furniture = {}
 local showMainGUI, showBuyGUI, showInventoryGUI, showViewGUI, showInventoryOptionsGUI, showViewOptionsGUI
 
 local playerBuyOptions = {} 
+local playerBuyChoiceIndex = {} 
 local playerInventoryOptions = {}
 local playerInventoryChoice = {}
 local playerViewOptions = {} 
@@ -626,16 +628,18 @@ showBuyGUI = function(pid, cat)
 	tes3mp.ListBox(pid, config.BuyGUI, color.CornflowerBlue ..trad.SelectBuy.. color.Default, list)
 end
 	
-local function onBuyChoice(pid, loc)
+local function onBuyChoice(pid, count)
 	local pgold = getPlayerGold(pid)
-	local choice = playerBuyOptions[getName(pid)][loc]	
-	if pgold < choice.price then
+	local indexChoice = playerBuyChoiceIndex[getName(pid)]
+	local choice = playerBuyOptions[getName(pid)][indexChoice]
+	local totalPrice = choice.price * count
+	if pgold < totalPrice then
 		tes3mp.MessageBox(pid, -1, trad.NoPermBuy.. choice.name .. ".")
 		return false
 	else
-		removeGold(pid, choice.price)
-		addFurnitureItem(getName(pid), choice.refId, 1, true)		
-		tes3mp.MessageBox(pid, -1, "" .. choice.name .. trad.AddObject)
+		removeGold(pid, totalPrice)
+		addFurnitureItem(getName(pid), choice.refId, count, true)		
+		tes3mp.MessageBox(pid, -1, "" .. choice.name .. trad.AddObject.." "..color.Green..count)
 		return true	
 	end	
 end
@@ -655,6 +659,12 @@ end
 
 local function onMainView(pid)
 	showViewGUI(pid)
+end
+
+local function InputDialog(pid, loc)
+	playerBuyChoiceIndex[getName(pid)] = loc
+	local message = "How many want to buy ?"
+	return tes3mp.InputDialog(pid, config.InputDialog, message, "enter a number/0 for return")
 end
 
 TFN_Furniture.OnGUIAction = function(pid, idGui, data)	
@@ -708,9 +718,17 @@ TFN_Furniture.OnGUIAction = function(pid, idGui, data)
 		if tonumber(data) == 0 or tonumber(data) == 18446744073709551615 then --Close/Nothing Selected
 			return showMainGUI(pid)
 		else
-			onBuyChoice(pid, tonumber(data))
-			return onMainBuy(pid)
+			InputDialog(pid, tonumber(data))
+			return true
 		end
+	elseif idGui == config.InputDialog then
+		if tonumber(data) == nil or tonumber(data) == 0 then
+			return onMainBuy(pid)
+		else
+			onBuyChoice(pid, tonumber(data))
+			return true	
+		end
+
 	elseif idGui == config.InventoryGUI then --Inventory main
 		if tonumber(data) == 0 or tonumber(data) == 18446744073709551615 then --Close/Nothing Selected
 			return showMainGUI(pid)
