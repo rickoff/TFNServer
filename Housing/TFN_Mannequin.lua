@@ -3,7 +3,7 @@ TFN_Mannequin by Rickoff
 tes3mp 0.7.0
 ---------------------------
 DESCRIPTION :
-
+class system limiting the use of weapons, armor, various items and sort according to the corresponding talent.
 ---------------------------
 INSTALLATION:
 Save the file as TFN_Mannequin.lua inside your server/scripts/custom folder.
@@ -712,7 +712,7 @@ end
 
 local checkForMannequinRefIds = function(pid, cellDescription)
 	if LoadedCells[cellDescription] ~= nil then
-		for _index,objIndex in pairs(LoadedCells[cellDescription].data.packets.place) do
+		for _index,objIndex in pairs(LoadedCells[cellDescription].data.packets.actorList) do
 			if cellDescription ~= nil and LoadedCells[cellDescription] ~= nil and LoadedCells[cellDescription].data.objectData[objIndex] ~= nil then 
 				local targetRefId = LoadedCells[cellDescription].data.objectData[objIndex].refId				
 				if tableHelper.containsValue(config.mannequinRefIDs, targetRefId) then
@@ -745,7 +745,7 @@ TFN_Mannequin.spawnPlacedMannequin = function(pid, refId)
 	local cellId = tes3mp.GetCell(pid)
 	local location = {posX = tes3mp.GetPosX(pid), posY = tes3mp.GetPosY(pid), posZ = tes3mp.GetPosZ(pid), rotX = tes3mp.GetRotX(pid), rotY = 0, rotZ = tes3mp.GetRotZ(pid)}
 	local targetRefId = config.mannequinItemToNPC[refId]
-	local targetUniqueIndex = logicHandler.CreateObjectAtLocation(cellId, location, targetRefId, "place")	
+	local targetUniqueIndex = logicHandler.CreateObjectAtLocation(cellId, location, targetRefId, "spawn")	
 	if cellId ~= nil and targetUniqueIndex ~= nil then
 		if LoadedCells[cellId] ~= nil then
 			LoadedCells[cellId].data.objectData[targetUniqueIndex].equipment = {}
@@ -779,7 +779,12 @@ TFN_Mannequin.deletePlacedMannequin = function(pid)
 		end
 		if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
 			if LoadedCells[cellDescription] ~= nil then
-				logicHandler.DeleteObject(pid, cellDescription, tUniqueIndex, true)
+				if LoadedCells[cellDescription].data.objectData[tUniqueIndex] then
+					tableHelper.removeValue(LoadedCells[cellDescription].data.packets, tUniqueIndex)
+					LoadedCells[cellDescription].data.objectData[tUniqueIndex] = nil		
+					tableHelper.cleanNils(LoadedCells[cellDescription].data.objectData)							
+				end						
+				logicHandler.DeleteObjectForEveryone(cellDescription, tUniqueIndex)						
 			end
 		end		
 	end	
