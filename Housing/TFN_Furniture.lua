@@ -710,10 +710,13 @@ TFN_Furniture.OnGUIAction = function(pid, idGui, data)
 		elseif tonumber(data) == 8 then 
 			showBuyGUI(pid, "Dunmer")
 			return true
-		elseif tonumber(data) == 9 then -- Close
+		elseif tonumber(data) == 9 then 
+			showBuyGUI(pid, "Fireplaces")
+			return true			
+		elseif tonumber(data) == 10 then -- Close
 			Players[pid].currentCustomMenu = "menu housing"--main menu
 			return true, menuHelper.DisplayMenu(pid, Players[pid].currentCustomMenu)
-		end	
+		end
 	elseif idGui == config.BuyGUI then -- Buy
 		if tonumber(data) == 0 or tonumber(data) == 18446744073709551615 then --Close/Nothing Selected
 			return showMainGUI(pid)
