@@ -1084,5 +1084,185 @@
     "price":50,
     "name":"Sack (Flat)",
     "cat":"Containers"
+  },
+  "furn_de_cushion_round_01":{
+    "refId":"furn_de_cushion_round_01",
+    "price":200,
+    "name":"Floor Cushion, Round 1",
+    "cat":"Furniture"
+  },
+  "furn_de_cushion_round_02":{
+    "refId":"furn_de_cushion_round_02",
+    "price":200,
+    "name":"Floor Cushion, Round 2",
+    "cat":"Furniture"
+  },
+  "furn_de_cushion_round_03":{
+    "refId":"furn_de_cushion_round_03",
+    "price":200,
+    "name":"Floor Cushion, Round 3",
+    "cat":"Furniture"
+  },
+  "furn_de_cushion_round_04":{
+    "refId":"furn_de_cushion_round_04",
+    "price":200,
+    "name":"Floor Cushion, Round 4",
+    "cat":"Furniture"
+  },
+  "furn_de_cushion_round_05":{
+    "refId":"furn_de_cushion_round_05",
+    "price":200,
+    "name":"Floor Cushion, Round 5",
+    "cat":"Furniture"
+  },
+  "furn_de_cushion_round_06":{
+    "refId":"furn_de_cushion_round_06",
+    "price":200,
+    "name":"Floor Cushion, Round 6",
+    "cat":"Furniture"
+  },
+  "furn_de_cushion_round_07":{
+    "refId":"furn_de_cushion_round_07",
+    "price":200,
+    "name":"Floor Cushion, Round 7",
+    "cat":"Furniture"-
+  },
+  "furn_de_cushion_square_01":{
+    "refId":"furn_de_cushion_square_01",
+    "price":200,
+    "name":"Floor Cushion, Square 1",
+    "cat":"Furniture"
+  },
+  "furn_de_cushion_square_02":{
+    "refId":"furn_de_cushion_square_02",
+    "price":200,
+    "name":"Floor Cushion, Square 2",
+    "cat":"Furniture"
+  },
+  "furn_de_cushion_square_03":{
+    "refId":"furn_de_cushion_square_03",
+    "price":200,
+    "name":"Floor Cushion, Square 3",
+    "cat":"Furniture"
+  },
+  "furn_de_cushion_square_04":{
+    "refId":"furn_de_cushion_square_04",
+    "price":200,
+    "name":"Floor Cushion, Square 4",
+    "cat":"Furniture"
+  },
+  "furn_de_cushion_square_05":{
+    "refId":"furn_de_cushion_square_05",
+    "price":200,
+    "name":"Floor Cushion, Square 5",
+    "cat":"Furniture"
+  },
+  "furn_de_cushion_square_06":{
+    "refId":"furn_de_cushion_square_06",
+    "price":200,
+    "name":"Floor Cushion, Square 6",
+    "cat":"Furniture"
+  },
+  "furn_de_cushion_square_07":{
+    "refId":"furn_de_cushion_square_07",
+    "price":200,
+    "name":"Floor Cushion, Square 7",
+    "cat":"Furniture"
+  },
+  "furn_de_cushion_square_08":{
+    "refId":"furn_de_cushion_square_08",
+    "price":200,
+    "name":"Floor Cushion, Square 8",
+    "cat":"Furniture"
+  },
+  "furn_de_cushion_square_09":{
+    "refId":"furn_de_cushion_square_09",
+    "price":200,
+    "name":"Floor Cushion, Square 9",
+    "cat":"Furniture"
+  },
+  "furn_de_lecturn":{
+    "refId":"furn_de_lecturn",
+    "price":200,
+    "name":"Dunmer Lectern",
+    "cat":"Dunmer"
+  },
+  "furn_de_loom_01":{
+    "refId":"furn_de_loom_01",
+    "price":500,
+    "name":"Loom",
+    "cat":"Misc"
+  },
+  "furn_de_overhang_01":{
+    "refId":"furn_de_overhang_01",
+    "price":600,
+    "name":"Guarskin Overhang, 3-piece",
+    "cat":"Misc"
+  },
+  "furn_de_overhang_02":{
+    "refId":"furn_de_overhang_01",
+    "price":500,
+    "name":"Thatched Overhang, Ornate",
+    "cat":"Misc"
+  },
+  "furn_de_overhang_03":{
+    "refId":"furn_de_overhang_03",
+    "price":300,
+    "name":"Guarskin Overhang",
+    "cat":"Misc"
+  },
+  "furn_de_overhang_04":{
+    "refId":"furn_de_overhang_04",
+    "price":200,
+    "name":"Guarskin Overhang, Signpost",
+    "cat":"Misc"
+  },
+  "furn_de_overhang_05":{
+    "refId":"furn_de_overhang_05",
+    "price":300,
+    "name":"Guarskin Overhang, Wall",
+    "cat":"Misc"
+  },
+  "furn_de_overhang_06":{
+    "refId":"furn_de_overhang_06",
+    "price":600,
+    "name":"Guarskin Overhang, Wall, 3-piece",
+    "cat":"Misc"
+  },
+  "furn_de_overhang_07":{
+    "refId":"furn_de_overhang_07",
+    "price":200,
+    "name":"Guarskin Overhang, Corner",
+    "cat":"Misc"
+  },
+  "furn_de_overhang_09":{
+    "refId":"furn_de_overhang_09",
+    "price":600,
+    "name":"Guarskin Overhang, Wall",
+    "cat":"Misc"
+  },
+  "furn_de_overhang_18":{
+    "refId":"furn_de_overhang_18",
+    "price":600,
+    "name":"Guarskin Overhang, Top, 3-piece",
+    "cat":"Misc"
+  },
+  "Furn_Practice_Dummy":{
+    "refId":"Furn_Practice_Dummy",
+    "price":1000,
+    "name":"Practice Dummy",
+    "cat":"Misc"
+  },
+  "furn_de_screen_guar_01":{
+    "refId":"furn_de_screen_guar_01",
+    "price":100,
+    "name":"Guarskin Wallscreen",
+    "cat":"Misc"
+  },
+  "furn_velothi_prayer_stool_01":{
+    "refId":"furn_velothi_prayer_stool_01",
+    "price":50,
+    "name":"Prayer Stool",
+    "cat":"Furniture"
   }
 }
