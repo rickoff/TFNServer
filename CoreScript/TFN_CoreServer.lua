@@ -100,7 +100,7 @@ TFN_CoreServer.OnGUIAction = function(eventStatus, pid, idGui, data)
 				if data == nil then
 					Players[pid]:Message("Incorrect password!\n")
 					guiHelper.ShowLogin(pid)
-					return true
+					return customEventHooks.makeEventStatus(false,false) 
 				end
 
 				Players[pid]:LoadFromDrive()
@@ -109,7 +109,7 @@ TFN_CoreServer.OnGUIAction = function(eventStatus, pid, idGui, data)
 				if tostring(Players[pid].data.login.password) ~= data then
 					Players[pid]:Message("Incorrect password!\n")
 					guiHelper.ShowLogin(pid)
-					return true
+					return customEventHooks.makeEventStatus(false,false) 
 				end
 
 				-- Is this player on the banlist? If so, store their new IP and ban them
@@ -132,7 +132,7 @@ TFN_CoreServer.OnGUIAction = function(eventStatus, pid, idGui, data)
 				if data == nil then
 					Players[pid]:Message("Password can not be empty\n")
 					guiHelper.ShowRegister(pid)
-					return true
+					return customEventHooks.makeEventStatus(false,false) 
 				end
 				Players[pid]:Register(data)
 				Players[pid]:Message("You have successfully registered.\n" .. config.chatWindowInstructions)
