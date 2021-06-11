@@ -2355,7 +2355,9 @@ TFN_HousingShop.CleanCell = function(cellDescription, Stat)
 			if not StaticData[refId] and not DoorData[refId] then
 				if config.Actor == true then 			
 					if Stat == "empty" then
-						deleted = true				
+						deleted = true
+					elseif Stat == "nothing" and not FurnData[refId] then
+						deleted = true						
 					elseif Stat == "furn" and not FurnData[refId] then
 						deleted = true
 					end
