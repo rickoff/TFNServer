@@ -3,7 +3,7 @@ TFN_Mannequin by Rickoff
 tes3mp 0.7.0
 ---------------------------
 DESCRIPTION :
-class system limiting the use of weapons, armor, various items and sort according to the corresponding talent.
+
 ---------------------------
 INSTALLATION:
 Save the file as TFN_Mannequin.lua inside your server/scripts/custom folder.
