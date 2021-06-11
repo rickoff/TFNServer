@@ -2355,7 +2355,14 @@ TFN_HousingShop.CleanCell = function(cellDescription, Stat)
 			local uniqueIndex = refNum.."-0"
 			local refId = string.lower(slot.refId)
 			if not StaticData[refId] and not DoorData[refId] then
-				if config.Actor == true then 			
+				if config.Actor == true then
+					if Stat == "furn" then
+						if tableHelper.containsValue(cell.data.packets.delete, uniqueIndex) then
+							tableHelper.removeValue(cell.data.packets, uniqueIndex)
+							cell.data.objectData[uniqueIndex] = nil		
+							tableHelper.cleanNils(cell.data.objectData)	
+						end
+					end
 					if Stat == "empty" then
 						deleted = true
 					elseif Stat == "nothing" and not FurnData[refId] then
@@ -2365,7 +2372,13 @@ TFN_HousingShop.CleanCell = function(cellDescription, Stat)
 					end
 				else
 					if not tableHelper.containsValue(cell.data.packets.actorList, uniqueIndex, true) then
-						deleted = true
+						if Stat == "empty" then
+							deleted = true
+						elseif Stat == "nothing" and not FurnData[refId] then
+							deleted = true						
+						elseif Stat == "furn" and not FurnData[refId] then
+							deleted = true
+						end
 					end
 				end
 			end
