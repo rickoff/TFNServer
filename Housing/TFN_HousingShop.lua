@@ -394,12 +394,13 @@ local function getHouseOwnerName(houseName)
 	return false
 end
 
-local function getHouseCoOwnerName(houseName)
+local function getHouseCoOwnerName(houseName, coName)
 	local oname = getHouseOwnerName(houseName)
+	local tableCoowners = {}
 	if oname then
-		for coName, v in pairs(housingData.owners[oname].houses[houseName].coowners) do
-			if housingData.owners[oname].houses[houseName].coowners[coName] ~= nil then
-				return coName
+		if housingData.owners[oname].houses[houseName].coowners then
+			if housingData.owners[oname].houses[houseName].coowners[coName] then
+				return true
 			end
 		end
 	end
@@ -914,7 +915,7 @@ end
 
 local function showPlayerSettingsMainCo(pid)
 	local message = ""
-	if playerSelectedHouse[getName(pid)] and getHouseCoOwnerName(playerSelectedHouse[getName(pid)]) ~= getName(pid) then
+	if playerSelectedHouse[getName(pid)] and getHouseCoOwnerName(playerSelectedHouse[getName(pid)], getName(pid)) == false then
 		playerSelectedHouse[getName(pid)] = nil
 	end
 	message = message..color.White..trad.setSelectHouse..color.Yellow..(playerSelectedHouse[getName(pid)] or trad.nothing).."\n\n\n"	
@@ -1025,7 +1026,7 @@ local function showPlayerSettingsOwnedListCo(pid)
 	local options = {}	
 	local list = trad.returnList	
 	for houseName, v in pairs(housingData.houses) do
-		if getHouseCoOwnerName(houseName) == getName(pid) then
+		if getHouseCoOwnerName(houseName, getName(pid)) == true then
 			table.insert(options, houseName)
 		end
 	end
@@ -2243,8 +2244,8 @@ TFN_HousingShop.GetHouseOwnerName = function(houseName)
 	return getHouseOwnerName(houseName)
 end
 
-TFN_HousingShop.GetHouseCoOwnerName = function(houseName)
-	return getHouseCoOwnerName(houseName)
+TFN_HousingShop.GetHouseCoOwnerName = function(houseName, coName)
+	return getHouseCoOwnerName(houseName, coName)
 end
 
 TFN_HousingShop.GetIsInHouse = function(pid)
