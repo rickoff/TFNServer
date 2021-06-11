@@ -47,11 +47,19 @@ local listSpell = jsonInterface.load("custom/TFN_Spell.json")
 local listMisc = jsonInterface.load("custom/TFN_Misc.json")
 
 local function CheckSkills(pid, skill)	
-	if skill == "nothing" then return false end
+	if skill == nil or skill == "nothing" then return false end
 	if Players[pid].data.customClass.minorSkills and Players[pid].data.customClass.majorSkills then	
-		if tableHelper.containsValue(Players[pid].data.customClass.minorSkills, skill, true) then		
+		local listMinorSkills = {}
+		local listMajorSkills = {}
+		for skillMinor in string.gmatch(Players[pid].data.customClass.minorSkills, "%a+") do
+			listMinorSkills[string.lower(skillMinor)] = ""
+		end
+		for skillMajor in string.gmatch(Players[pid].data.customClass.majorSkills, "%a+") do
+			listMajorSkills[string.lower(skillMajor)] = ""
+		end			
+		if listMinorSkills[skill] then		
 			return true
-		elseif tableHelper.containsValue(Players[pid].data.customClass.majorSkills, skill, true) then
+		elseif listMajorSkills[skill] then
 			return true
 		else
 			return false
