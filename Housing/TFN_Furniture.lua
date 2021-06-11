@@ -34,7 +34,7 @@ local trad = {
 	NoPermBuy = "You can't afford to buy",
 	OptMenu = "Buy;Inventory;Display;Return",
 	CatMenu = "CATEGORY.\n",
-	OptCat = "Beds;Chesty;Furn;Misc;Lighting;Rugs;Containers;Imperial;Dunmer;Return",
+	OptCat = "Beds;Chesty;Furn;Misc;Lighting;Rugs;Containers;Imperial;Dunmer;Fireplaces;Return",
 	MainMenu = (
 	color.Green .. "WELCOME TO THE STORE.\n\n"
 	..color.Yellow .. "Buy"
