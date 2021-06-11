@@ -627,9 +627,11 @@ end
 local function isCoOwner(pname, houseName)
 	local pname = string.lower(pname)
 	local oname = getHouseOwnerName(houseName)
-	for coOwner, v in pairs(housingData.owners[getHouseOwnerName(houseName)].houses[houseName].coowners) do
-		if pname == string.lower(coOwner) then
-			return true
+	if oname then
+		for coOwner, v in pairs(housingData.owners[oname].houses[houseName].coowners) do
+			if pname == string.lower(coOwner) then
+				return true
+			end
 		end
 	end
 	return false
