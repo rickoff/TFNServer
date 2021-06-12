@@ -632,16 +632,18 @@ local function onBuyChoice(pid, count)
 	local pgold = getPlayerGold(pid)
 	local indexChoice = playerBuyChoiceIndex[getName(pid)]
 	local choice = playerBuyOptions[getName(pid)][indexChoice]
-	local totalPrice = choice.price * count
-	if pgold < totalPrice then
-		tes3mp.MessageBox(pid, -1, trad.NoPermBuy.. choice.name .. ".")
-		return false
-	else
-		removeGold(pid, totalPrice)
-		addFurnitureItem(getName(pid), choice.refId, count, true)		
-		tes3mp.MessageBox(pid, -1, "" .. choice.name .. trad.AddObject.." "..color.Green..count)
-		return true	
-	end	
+	if choice.price then
+		local totalPrice = choice.price * count
+		if pgold < totalPrice then
+			tes3mp.MessageBox(pid, -1, trad.NoPermBuy.. choice.name .. ".")
+			return false
+		else
+			removeGold(pid, totalPrice)
+			addFurnitureItem(getName(pid), choice.refId, count, true)		
+			tes3mp.MessageBox(pid, -1, "" .. choice.name .. trad.AddObject.." "..color.Green..count)
+			return true	
+		end	
+	end
 end
 
 showMainGUI = function(pid)
