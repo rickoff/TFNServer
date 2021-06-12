@@ -3,7 +3,7 @@ TFN_Mannequin by Rickoff
 tes3mp 0.7.0
 ---------------------------
 DESCRIPTION :
-
+class system limiting the use of weapons, armor, various items and sort according to the corresponding talent.
 ---------------------------
 INSTALLATION:
 Save the file as TFN_Mannequin.lua inside your server/scripts/custom folder.
@@ -119,22 +119,22 @@ local config = {
 }
 
 local mannequinShopInventory = {
-	{name = "Mannequin: Altmer Homme", refId = "mannequin_script_item_altmer_male", price = config.DefaultMannequinPrice, qty = 1},
-	{name = "Mannequin: Altmer Femme", refId = "mannequin_script_item_altmer_female", price = config.DefaultMannequinPrice, qty = 1},
-	{name = "Mannequin: Bosmer Homme", refId = "mannequin_script_item_bosmer_male", price = config.DefaultMannequinPrice, qty = 1},
-	{name = "Mannequin: Bosmer Femme", refId = "mannequin_script_item_bosmer_female", price = config.DefaultMannequinPrice, qty = 1},
-	{name = "Mannequin: Breton Homme", refId = "mannequin_script_item_breton_male", price = config.DefaultMannequinPrice, qty = 1},
-	{name = "Mannequin: Breton Femme", refId = "mannequin_script_item_breton_female", price = config.DefaultMannequinPrice, qty = 1},
-	{name = "Mannequin: Dunmer Homme", refId = "mannequin_script_item_dunmer_male", price = config.DefaultMannequinPrice, qty = 1},
-	{name = "Mannequin: Dunmer Femme", refId = "mannequin_script_item_dunmer_female", price = config.DefaultMannequinPrice, qty = 1},
-	{name = "Mannequin: Imperial Homme", refId = "mannequin_script_item_imperial_male", price = config.DefaultMannequinPrice, qty = 1},
-	{name = "Mannequin: Imperial Femme", refId = "mannequin_script_item_imperial_female", price = config.DefaultMannequinPrice, qty = 1},
-	{name = "Mannequin: Nord Homme", refId = "mannequin_script_item_nord_male", price = config.DefaultMannequinPrice, qty = 1},
-	{name = "Mannequin: Nord Femme", refId = "mannequin_script_item_nord_female", price = config.DefaultMannequinPrice, qty = 1},
-	{name = "Mannequin: Orc Homme", refId = "mannequin_script_item_orc_male", price = config.DefaultMannequinPrice, qty = 1},
-	{name = "Mannequin: Orc Femme", refId = "mannequin_script_item_orc_female", price = config.DefaultMannequinPrice, qty = 1},
-	{name = "Mannequin: Rougegarde Homme", refId = "mannequin_script_item_redguard_male", price = config.DefaultMannequinPrice, qty = 1},
-	{name = "Mannequin: Rougegarde Femme", refId = "mannequin_script_item_redguard_female", price = config.DefaultMannequinPrice, qty = 1}
+	{name = "Mannequin: Altmer Man", refId = "mannequin_script_item_altmer_male", price = config.DefaultMannequinPrice, qty = 1},
+	{name = "Mannequin: Altmer Woman", refId = "mannequin_script_item_altmer_female", price = config.DefaultMannequinPrice, qty = 1},
+	{name = "Mannequin: Bosmer Man", refId = "mannequin_script_item_bosmer_male", price = config.DefaultMannequinPrice, qty = 1},
+	{name = "Mannequin: Bosmer Woman", refId = "mannequin_script_item_bosmer_female", price = config.DefaultMannequinPrice, qty = 1},
+	{name = "Mannequin: Breton Man", refId = "mannequin_script_item_breton_male", price = config.DefaultMannequinPrice, qty = 1},
+	{name = "Mannequin: Breton Woman", refId = "mannequin_script_item_breton_female", price = config.DefaultMannequinPrice, qty = 1},
+	{name = "Mannequin: Dunmer Man", refId = "mannequin_script_item_dunmer_male", price = config.DefaultMannequinPrice, qty = 1},
+	{name = "Mannequin: Dunmer Woman", refId = "mannequin_script_item_dunmer_female", price = config.DefaultMannequinPrice, qty = 1},
+	{name = "Mannequin: Imperial Man", refId = "mannequin_script_item_imperial_male", price = config.DefaultMannequinPrice, qty = 1},
+	{name = "Mannequin: Imperial Woman", refId = "mannequin_script_item_imperial_female", price = config.DefaultMannequinPrice, qty = 1},
+	{name = "Mannequin: Nord Man", refId = "mannequin_script_item_nord_male", price = config.DefaultMannequinPrice, qty = 1},
+	{name = "Mannequin: Nord Woman", refId = "mannequin_script_item_nord_female", price = config.DefaultMannequinPrice, qty = 1},
+	{name = "Mannequin: Orc Man", refId = "mannequin_script_item_orc_male", price = config.DefaultMannequinPrice, qty = 1},
+	{name = "Mannequin: Orc Woman", refId = "mannequin_script_item_orc_female", price = config.DefaultMannequinPrice, qty = 1},
+	{name = "Mannequin: Rougegarde Man", refId = "mannequin_script_item_redguard_male", price = config.DefaultMannequinPrice, qty = 1},
+	{name = "Mannequin: Rougegarde Woman", refId = "mannequin_script_item_redguard_female", price = config.DefaultMannequinPrice, qty = 1}
 }
 
 local targetMannequin = {}
@@ -302,7 +302,7 @@ local function createRecord()
 	}	
 	recordStore = RecordStores["npc"]	
 	recordStore.data.permanentRecords["mannequin_script_dunmer_male"] = {
-		name = "Mannequin: Dunmer Homme",
+		name = "Mannequin: Dunmer Man",
 		--gender = 1,
 		baseId = "belvis sedri",
 		health = 999999999,
@@ -317,7 +317,7 @@ local function createRecord()
 	recordStore:Save()
 	
 	recordStore.data.permanentRecords["mannequin_script_dunmer_female"] = {
-		name = "Mannequin: Dunmer Femme",
+		name = "Mannequin: Dunmer Woman",
 		gender = 0,
 		baseId = "belvis sedri",
 		health = 999999999,
@@ -332,7 +332,7 @@ local function createRecord()
 	recordStore:Save()
 	
 	recordStore.data.permanentRecords["mannequin_script_breton_male"] = {
-		name = "Mannequin: Breton Homme",
+		name = "Mannequin: Breton Man",
 		baseId = "belvis sedri",
 		health = 999999999,
 		fatigue = 999999999,
@@ -346,7 +346,7 @@ local function createRecord()
 	recordStore:Save()
 	
 	recordStore.data.permanentRecords["mannequin_script_breton_female"] = {
-		name = "Mannequin: Breton Femme",
+		name = "Mannequin: Breton Woman",
 		gender = 0,
 		baseId = "belvis sedri",
 		health = 999999999,
@@ -361,7 +361,7 @@ local function createRecord()
 	recordStore:Save()
 	
 	recordStore.data.permanentRecords["mannequin_script_altmer_male"] = {
-		name = "Mannequin: Altmer Homme",
+		name = "Mannequin: Altmer Man",
 		baseId = "belvis sedri",
 		health = 999999999,
 		fatigue = 999999999,
@@ -375,7 +375,7 @@ local function createRecord()
 	recordStore:Save()
 	
 	recordStore.data.permanentRecords["mannequin_script_altmer_female"] = {
-		name = "Mannequin: Altmer Femme",
+		name = "Mannequin: Altmer Woman",
 		gender = 0,
 		baseId = "belvis sedri",
 		health = 999999999,
@@ -390,7 +390,7 @@ local function createRecord()
 	recordStore:Save()
 	
 	recordStore.data.permanentRecords["mannequin_script_imperial_male"] = {
-		name = "Mannequin: Imperial Homme",
+		name = "Mannequin: Imperial Man",
 		baseId = "belvis sedri",
 		health = 999999999,
 		fatigue = 999999999,
@@ -404,7 +404,7 @@ local function createRecord()
 	recordStore:Save()
 	
 	recordStore.data.permanentRecords["mannequin_script_imperial_female"] = {
-		name = "Mannequin: Imperial Femme",
+		name = "Mannequin: Imperial Woman",
 		gender = 0,
 		baseId = "belvis sedri",
 		health = 999999999,
@@ -419,7 +419,7 @@ local function createRecord()
 	recordStore:Save()
 	
 	recordStore.data.permanentRecords["mannequin_script_nord_male"] = {
-		name = "Mannequin: Nord Homme",
+		name = "Mannequin: Nord Man",
 		baseId = "belvis sedri",
 		health = 999999999,
 		fatigue = 999999999,
@@ -433,7 +433,7 @@ local function createRecord()
 	recordStore:Save()
 	
 	recordStore.data.permanentRecords["mannequin_script_nord_female"] = {
-		name = "Mannequin: Nord Femme",
+		name = "Mannequin: Nord Woman",
 		gender = 0,
 		baseId = "belvis sedri",
 		health = 999999999,
@@ -448,7 +448,7 @@ local function createRecord()
 	recordStore:Save()
 	
 	recordStore.data.permanentRecords["mannequin_script_orc_male"] = {
-		name = "Mannequin: Orc Homme",
+		name = "Mannequin: Orc Man",
 		baseId = "belvis sedri",
 		health = 999999999,
 		fatigue = 999999999,
@@ -462,7 +462,7 @@ local function createRecord()
 	recordStore:Save()
 	
 	recordStore.data.permanentRecords["mannequin_script_orc_female"] = {
-		name = "Mannequin: Orc Femme",
+		name = "Mannequin: Orc Woman",
 		gender = 0,
 		baseId = "belvis sedri",
 		health = 999999999,
@@ -477,7 +477,7 @@ local function createRecord()
 	recordStore:Save()
 	
 	recordStore.data.permanentRecords["mannequin_script_redguard_male"] = {
-		name = "Mannequin: Rougegarde Homme",
+		name = "Mannequin: Rougegarde Man",
 		baseId = "belvis sedri",
 		health = 999999999,
 		fatigue = 999999999,
@@ -491,7 +491,7 @@ local function createRecord()
 	recordStore:Save()
 	
 	recordStore.data.permanentRecords["mannequin_script_redguard_female"] = {
-		name = "Mannequin: Rougegarde Femme",
+		name = "Mannequin: Rougegarde Woman",
 		gender = 0,
 		baseId = "belvis sedri",
 		health = 999999999,
@@ -506,7 +506,7 @@ local function createRecord()
 	recordStore:Save()
 	
 	recordStore.data.permanentRecords["mannequin_script_bosmer_male"] = {
-		name = "Mannequin: Bosmer Homme",
+		name = "Mannequin: Bosmer Man",
 		baseId = "belvis sedri",
 		health = 999999999,
 		fatigue = 999999999,
@@ -520,7 +520,7 @@ local function createRecord()
 	recordStore:Save()
 	
 	recordStore.data.permanentRecords["mannequin_script_bosmer_female"] = {
-		name = "Mannequin: Bosmer Femme",
+		name = "Mannequin: Bosmer Woman",
 		gender = 0,
 		baseId = "belvis sedri",
 		health = 999999999,
