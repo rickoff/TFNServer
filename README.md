@@ -14,7 +14,7 @@ script tes3mp for Tales from Nirn server :
 
 - ActivePlayer : Active player for resurrect with 25% health
 
-- RegenPlayer : Natural regen health for players +1pts/s
+- RegenPlayer : Natural regen health, mana, stamina for players +1pts/s + touch auto + bonus +20pts speed
 
 - LevelingPlayer : New Leveling system with GUI menu
 
