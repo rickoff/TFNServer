@@ -9,6 +9,10 @@ CONFIGURATION :
 
 ---------------------------
 INSTALLATION:
+Save the file as TFN_Creature.json inside your server/data/custom folder.
+Save the file as TFN_Npc.json inside your server/data/custom folder.
+Save the file as TFN_ListCell.json inside your server/data/custom folder.
+
 Save the file as TFN_ResetServer.lua inside your server/scripts/custom folder.
 
 Edits to customScripts.lua
