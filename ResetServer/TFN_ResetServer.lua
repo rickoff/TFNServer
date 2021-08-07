@@ -403,14 +403,16 @@ TFN_ResetServer.OnObjectDeleteValidator = function(eventStatus, pid, cellDescrip
 		local ObjectRefid
 		if TFN_HousingShop then
 			local cellData = TFN_HousingShop.GetCellData(cellDescription)
-			if cellData == true then
-				for _, object in pairs(objects) do
-					ObjectIndex = object.uniqueIndex
-					ObjectRefid = object.refId
-				end	
-				if ObjectIndex ~= nil and ObjectRefid ~= nil then
-					if ListAll[string.lower(ObjectRefid)] then
-						return customEventHooks.makeEventStatus(false,false) 
+			if cellData ~= nil and cellData ~= false then
+				if cellData.house == nil then
+					for _, object in pairs(objects) do
+						ObjectIndex = object.uniqueIndex
+						ObjectRefid = object.refId
+					end	
+					if ObjectIndex ~= nil and ObjectRefid ~= nil then
+						if ListAll[string.lower(ObjectRefid)] then
+							return customEventHooks.makeEventStatus(false,false) 
+						end
 					end
 				end	
 			end
