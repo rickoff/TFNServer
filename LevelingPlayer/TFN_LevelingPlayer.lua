@@ -35,6 +35,7 @@ trad.WereWolf = "Skill menu is forbidden in werewolf form"
 
 local config = {}
 config.levelMax = 50
+config.LevelHealth = 10
 config.talentProgress = 10
 config.RewardPoints = 10
 config.PlayerAddPoint = 555555
@@ -173,7 +174,10 @@ TFN_LevelingPlayer.NewLevelPlayer = function(pid)
 		if Players[pid].data.stats.level < config.levelMax then
 			Players[pid].data.stats.level = Players[pid].data.stats.level + 1
 			Players[pid].data.stats.levelProgress = 0 
+			tes3mp.SetHealthBase(pid, (Players[pid].data.stats.healthBase + config.LevelHealth)) 
 			Players[pid]:LoadLevel()
+			Players[pid]:SaveStatsDynamic()
+			tes3mp.SendStatsDynamic(pid)
 		end
 		Players[pid]:QuicksaveToDrive()
 	end
