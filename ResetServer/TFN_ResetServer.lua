@@ -159,7 +159,7 @@ function HasOnlinePlayerLoadedCellInSession(cellToCheck)
 		end
 		for pid, player in pairs(Players) do
 			if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
-				if player.initTimestamp <= mostRecent then
+				if player.data.timestamps.lastLogin <= mostRecent then
 					tableHelper.insertValueIfMissing(affectedPlayers, pid)
 					aPlayerHasLoaded = true
 				end
