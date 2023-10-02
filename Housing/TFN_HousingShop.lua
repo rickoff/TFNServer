@@ -1,6 +1,6 @@
 --[[
 TFN_HousingShop by Rickoff
-tes3mp 0.7.0
+tes3mp 0.8.1
 ---------------------------
 DESCRIPTION :
 Script principal housing
@@ -9,6 +9,7 @@ INSTALLATION:
 Require TFN_Decorate, TFN_Furniture
 Save the file as TFN_HousingShop.lua inside your server/scripts/custom folder.
 Save the file as TFN_Door.json inside your server/data/custom folder.
+Save the file as TFN_ListCell.json inside your server/data/custom/ folder.
 Save the folder as CellDataBase with all files contain inside your server/data/custom/CellDataBase/
 Save the file as CellDataBaseStat.json inside your server/data/custom/CellDataBase folder.
 Save the file as MenuHousing.lua inside your scripts/menu folder
@@ -152,12 +153,13 @@ local trad = {
 local config = {
 	defaultPrice = 5000, --The price a house defaults to when it's created
 	requiredAdminRank = 1, --The admin rank required to use the admin GUI
-	allowWarp = true, --Whether or not players can use the option to warp to their home
-	allowWarpCo = true, --Whether or not players can use the option to warp to their home	
+	allowWarp = false, --Whether or not players can use the option to warp to their home
+	allowWarpCo = false, --Whether or not players can use the option to warp to their home	
 	logging = true, --If the script reports its own information to the server log
 	chatColor = "#FFDC00", --The color used for the script's chat messages
-	CountMaxOwners = 2, --The max house by player
-	NextLocation = 2628000, --Time location
+	CountMaxOwners = 3, --The max house by player
+	NextLocation = -1, --Time location
+	Location = false, --activate or not the rental
 	Furn = true,
 	Actor = true,
 	AdminMainGUI = 31371,
@@ -181,7 +183,8 @@ local config = {
 	ViewShopOptionsGUI = 31389,
 	ItemEditPriceGUI = 31390,
 	PlayerSettingGUICo = 31391,
-	PlayerOwnedHouseSelectCo = 31392
+	PlayerOwnedHouseSelectCo = 31392,
+	EnterDoor = 31393
 }
 
 local serverConfig = require("config")
@@ -198,6 +201,16 @@ local FurnData = {}
 local StaticData = {}
 local DoorData = {}
 local housingData = {houses = {}, cells = {}, owners = {}}
+local DataBaseCellName = jsonInterface.load("custom/TFN_ListCell.json")
+local DataCell = {}
+local temporalyDoor = {}
+
+for _, cellDescription in ipairs(DataBaseCellName) do
+    local cellData = jsonInterface.load("custom/CellDataBase/"..cellDescription..".json")
+    if cellData then        
+        DataCell[cellDescription] = cellData
+    end
+end
 
 local TFN_HousingShop = {}
 
@@ -237,7 +250,7 @@ local function Save()
 end
 
 local function getPlayerGold(playerName)
-	if playerName ~= nil then
+	if playerName then
 		local player = logicHandler.GetPlayerByName(playerName)		
 		if player then
 			local goldLoc = inventoryHelper.getItemIndex(player.data.inventory, "gold_001", -1)
@@ -701,60 +714,60 @@ local function isAllowedEnter(pid, cell)
 end
 
 local function onLockStatusChange(houseName)
-	local hdata = housingData.houses[houseName]
-	local destinationCell, destinationPos
-	if hdata.outside.cell then 
-		destinationCell = hdata.outside.cell
-		destinationPos = hdata.outside.pos
-	else
-		destinationCell = serverConfig.defaultSpawnCell
-		destinationPos = {x = serverConfig.defaultSpawnPos[1], y = serverConfig.defaultSpawnPos[2], z = serverConfig.defaultSpawnPos[3]}
-	end	
-	if isLocked(houseName) then
-		for playerId, player in pairs(Players) do
-			if player:IsLoggedIn() then
-				local inHouse, cdata = getIsInHouse(playerId)			
-				if inHouse == houseName then
-					local canEnter, reason = isAllowedEnter(playerId, cdata.name)
-					if reason == "owner" or reason == "coowner" or reason == "admin" then
-					
-					elseif reason == "access" then
-						msg(playerId, trad.LockQuestPass)
-					else
-						warpPlayer(playerId, destinationCell, destinationPos)
-						msg(playerId, trad.Close)
-					end
-				end
-			end
-		end
-	end	
+    local hdata = housingData.houses[houseName]
+    local destinationCell, destinationPos
+    if hdata.outside.cell then 
+        destinationCell = hdata.outside.cell
+        destinationPos = hdata.outside.pos
+    else
+        destinationCell = serverConfig.defaultRespawn.cellDescription
+        destinationPos = {x = serverConfig.defaultRespawn.position[1], y = serverConfig.defaultRespawn.position[2], z = serverConfig.defaultRespawn.position[3]}
+    end    
+    if isLocked(houseName) then
+        for playerId, player in pairs(Players) do
+            if player:IsLoggedIn() then
+                local inHouse, cdata = getIsInHouse(playerId)            
+                if inHouse == houseName then
+                    local canEnter, reason = isAllowedEnter(playerId, cdata.name)
+                    if reason == "owner" or reason == "coowner" or reason == "admin" then
+                    
+                    elseif reason == "access" then
+                        msg(playerId, trad.LockQuestPass)
+                    else
+                        warpPlayer(playerId, destinationCell, destinationPos)
+                        msg(playerId, trad.Close)
+                    end
+                end
+            end
+        end
+    end    
 end
 
 local function onShopStatusChange(houseName)
-	local hdata = housingData.houses[houseName]
-	local destinationCell, destinationPos
-	if hdata.outside.cell then
-		destinationCell = hdata.outside.cell
-		destinationPos = hdata.outside.pos
-	else
-		destinationCell = serverConfig.defaultSpawnCell
-		destinationPos = {x = serverConfig.defaultSpawnPos[1], y = serverConfig.defaultSpawnPos[2], z = serverConfig.defaultSpawnPos[3]}
-	end
-	if isShop(houseName) then
-		for playerId, player in pairs(Players) do
-			if player:IsLoggedIn() then
-				local inHouse, cdata = getIsInHouse(playerId)
-				
-				if inHouse == houseName then
-					local canEnter, reason = isAllowedEnter(playerId, cdata.name)
-					if reason == "owner" or reason == "coowner" or reason == "admin" then
-					else
-						msg(playerId, trad.WelcomeShop)
-					end
-				end
-			end
-		end
-	end	
+    local hdata = housingData.houses[houseName]
+    local destinationCell, destinationPos
+    if hdata.outside.cell then
+        destinationCell = hdata.outside.cell
+        destinationPos = hdata.outside.pos
+    else
+        destinationCell = serverConfig.defaultRespawn.cellDescription
+        destinationPos = {x = serverConfig.defaultRespawn.position[1], y = serverConfig.defaultRespawn.position[2], z = serverConfig.defaultRespawn.position[3]}
+    end
+    if isShop(houseName) then
+        for playerId, player in pairs(Players) do
+            if player:IsLoggedIn() then
+                local inHouse, cdata = getIsInHouse(playerId)
+                
+                if inHouse == houseName then
+                    local canEnter, reason = isAllowedEnter(playerId, cdata.name)
+                    if reason == "owner" or reason == "coowner" or reason == "admin" then
+                    else
+                        msg(playerId, trad.WelcomeShop)
+                    end
+                end
+            end
+        end
+    end    
 end
 
 local function removeCoOwner(houseName, pname)
@@ -818,21 +831,39 @@ local function unlockChecks(cell)
 	end
 end
 
+local function UnlockObject(pid, refId, uniqueIndex, cellDescription)
+    tes3mp.ClearObjectList()
+    tes3mp.SetObjectListPid(pid)
+    tes3mp.SetObjectListCell(cellDescription)    
+    local splitIndex = uniqueIndex:split("-")
+    tes3mp.SetObjectRefNum(splitIndex[1])
+    tes3mp.SetObjectMpNum(splitIndex[2])    
+    tes3mp.SetObjectRefId(refId)    
+    tes3mp.SetObjectLockLevel(0)    
+    tes3mp.AddObject()    
+    if not LoadedCells[cellDescription]:ContainsObject(uniqueIndex) then
+        LoadedCells[cellDescription]:InitializeObjectData(uniqueIndex, refId)
+    end
+    LoadedCells[cellDescription].data.objectData[uniqueIndex].lockLevel = 0
+    tableHelper.insertValueIfMissing(LoadedCells[cellDescription].data.packets.lock, uniqueIndex)
+    tes3mp.SendObjectLock(true)
+end
+
 local function onDirtyThief(pid, houseName)
-	local destinationCell, destinationPos
-	local hdata = housingData.houses[houseName]
-	if hdata then
-		if hdata.outside.cell then
-			destinationCell = hdata.outside.cell
-			destinationPos = hdata.outside.pos
-		else
-			destinationCell = serverConfig.defaultSpawnCell
-			destinationPos = {x = serverConfig.defaultSpawnPos[1], y = serverConfig.defaultSpawnPos[2], z = serverConfig.defaultSpawnPos[3]}
-		end	
-		warpPlayer(pid, destinationCell, destinationPos)	
-		Players[pid].currentCustomMenu = "menu prison house"--Avertisseent
-		menuHelper.DisplayMenu(pid, Players[pid].currentCustomMenu)	
-	end
+    local destinationCell, destinationPos
+    local hdata = housingData.houses[houseName]
+    if hdata then
+        if hdata.outside.cell then
+            destinationCell = hdata.outside.cell
+            destinationPos = hdata.outside.pos
+        else
+            destinationCell = serverConfig.defaultRespawn.cellDescription
+            destinationPos = {x = serverConfig.defaultRespawn.position[1], y = serverConfig.defaultRespawn.position[2], z = serverConfig.defaultRespawn.position[3]}
+        end    
+        warpPlayer(pid, destinationCell, destinationPos)    
+        Players[pid].currentCustomMenu = "menu prison house"--Avertisseent
+        menuHelper.DisplayMenu(pid, Players[pid].currentCustomMenu)    
+    end
 end
 
 local function showAdminMain(pid)
@@ -1779,15 +1810,26 @@ TFN_HousingShop.OnGUIAction = function(eventStatus, pid, idGui, data)
         else
             TFN_HousingShop.addPriceItem(pid, tonumber(data))
             return true
-        end  		
-	end
+        end
+    elseif idGui == config.EnterDoor then
+        local temporalyData = temporalyDoor[getName(pid)]    
+        if tonumber(data) == 0 then --yes
+            local canEnter, enterReason = isAllowedEnter(pid, temporalyData.cellDescription) 
+            if canEnter then
+                warpPlayer(pid, temporalyData.cellDescription, temporalyData.location)                
+            else
+                tes3mp.MessageBox(pid, -1, "The owner locked the house.")                    
+            end
+            temporalyDoor[getName(pid)] = nil
+        else--no
+            return
+        end
+    end
 end
 
 TFN_HousingShop.MainMenuHouse = function(pid)
-    if Players[pid]~= nil and Players[pid]:IsLoggedIn() then
-		Players[pid].currentCustomMenu = "menu housing"
-		menuHelper.DisplayMenu(pid, Players[pid].currentCustomMenu)	
-	end
+	Players[pid].currentCustomMenu = "menu housing"
+	menuHelper.DisplayMenu(pid, Players[pid].currentCustomMenu)	
 end
 	
 TFN_HousingShop.OnUserMyHouse = function(pid)
@@ -1815,67 +1857,65 @@ TFN_HousingShop.OnAdminCommand = function(pid)
 end
 
 TFN_HousingShop.OnPlayerCellChange = function(eventStatus, pid)
-	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
-		local currentCell = tes3mp.GetCell(pid)	
-		if housingData.cells[currentCell] and housingData.cells[currentCell].house ~= nil then
-			local hdata = housingData.houses[housingData.cells[currentCell].house]
-			unlockChecks(currentCell)			
-			local canEnter, enterReason = isAllowedEnter(pid, currentCell)
-			if enterReason == "unowned" then
-				if lastEnteredHouse[getName(pid)] ~= hdata.name then
-					msg(pid, trad.coma..hdata.name..trad.count..hdata.price..trad.commandInfo)
-				end
-			elseif enterReason == "unlocked" then				
-				if lastEnteredHouse[getName(pid)] ~= hdata.name then
-					if isOwner(getName(pid), hdata.name) or isCoOwner(getName(pid), hdata.name) then
-						msg(pid, trad.welcomeHouse.. Players[pid].accountName..".")
-					else
-						if isShop(hdata.name) then					
-							Players[pid].data["itemPickUpBlocked"] = 1				
-							msg(pid, trad.welcome..getHouseOwnerName(hdata.name)..trad.shop)	
-						else
-							Players[pid].data["itemPickUpBlocked"] = 1					
-							msg(pid, trad.welcome..getHouseOwnerName(hdata.name)..trad.house)	
-						end
-					end
-				end			
-			elseif enterReason == "owner" or enterReason == "coowner" then
-				if lastEnteredHouse[getName(pid)] ~= hdata.name then 
-					local message = trad.welcomeHouse.. Players[pid].accountName.."."
-					if isLocked(hdata.name) then
-						message = message..trad.closeHouse			
-					end
-					if isShop(hdata.name) then
-						message = message..trad.openHouse			
-					end					
-					msg(pid, message)
-				end				
-			elseif enterReason == "Admin" then 
-				msg(pid, trad.welcome..getHouseOwnerName(hdata.name)..trad.closeHouse)
-			elseif enterReason == "access" then
-				local message = trad.access..getHouseOwnerName(hdata.name)..trad.questCell..getHouseOwnerName(hdata.name)..trad.questPass
-				msg(pid, message)
-				tes3mp.MessageBox(pid, -1, message)
-			elseif canEnter == false then
-				msg(pid, trad.Close)
-				local destinationCell, destinationPos
-				if hdata.outside.cell then 
-					destinationCell = hdata.outside.cell
-					destinationPos = hdata.outside.pos
-				else
-					destinationCell = serverConfig.defaultSpawnCell
-					destinationPos = {x = serverConfig.defaultSpawnPos[1], y = serverConfig.defaultSpawnPos[2], z = serverConfig.defaultSpawnPos[3]}
-				end
-				warpPlayer(pid, destinationCell, destinationPos)
-			end		
-			lastEnteredHouse[getName(pid)] = hdata.name
-		else
-			if Players[pid].data["itemPickUpBlocked"] == 1 then
-				Players[pid].data["itemPickUpBlocked"] = 0
+	local currentCell = tes3mp.GetCell(pid)	
+	if housingData.cells[currentCell] and housingData.cells[currentCell].house ~= nil then
+		local hdata = housingData.houses[housingData.cells[currentCell].house]
+		unlockChecks(currentCell)			
+		local canEnter, enterReason = isAllowedEnter(pid, currentCell)
+		if enterReason == "unowned" then
+			if lastEnteredHouse[getName(pid)] ~= hdata.name then
+				msg(pid, trad.coma..hdata.name..trad.count..hdata.price..trad.commandInfo)
 			end
-			lastEnteredHouse[getName(pid)] = nil
+		elseif enterReason == "unlocked" then				
+			if lastEnteredHouse[getName(pid)] ~= hdata.name then
+				if isOwner(getName(pid), hdata.name) or isCoOwner(getName(pid), hdata.name) then
+					msg(pid, trad.welcomeHouse.. Players[pid].accountName..".")
+				else
+					if isShop(hdata.name) then					
+						Players[pid].data["itemPickUpBlocked"] = 1				
+						msg(pid, trad.welcome..getHouseOwnerName(hdata.name)..trad.shop)	
+					else
+						Players[pid].data["itemPickUpBlocked"] = 1					
+						msg(pid, trad.welcome..getHouseOwnerName(hdata.name)..trad.house)	
+					end
+				end
+			end			
+		elseif enterReason == "owner" or enterReason == "coowner" then
+			if lastEnteredHouse[getName(pid)] ~= hdata.name then 
+				local message = trad.welcomeHouse.. Players[pid].accountName.."."
+				if isLocked(hdata.name) then
+					message = message..trad.closeHouse			
+				end
+				if isShop(hdata.name) then
+					message = message..trad.openHouse			
+				end					
+				msg(pid, message)
+			end				
+		elseif enterReason == "Admin" then 
+			msg(pid, trad.welcome..getHouseOwnerName(hdata.name)..trad.closeHouse)
+		elseif enterReason == "access" then
+			local message = trad.access..getHouseOwnerName(hdata.name)..trad.questCell..getHouseOwnerName(hdata.name)..trad.questPass
+			msg(pid, message)
+			tes3mp.MessageBox(pid, -1, message)
+		elseif canEnter == false then
+			msg(pid, trad.Close)
+			local destinationCell, destinationPos
+			if hdata.outside.cell then 
+				destinationCell = hdata.outside.cell
+				destinationPos = hdata.outside.pos
+			else
+				destinationCell = serverConfig.defaultRespawn.cellDescription
+				destinationPos = {x = serverConfig.defaultRespawn.position[1], y = serverConfig.defaultRespawn.position[2], z = serverConfig.defaultRespawn.position[3]}
+			end
+			warpPlayer(pid, destinationCell, destinationPos)
+		end    
+		lastEnteredHouse[getName(pid)] = hdata.name
+	else
+		if Players[pid].data["itemPickUpBlocked"] == 1 then
+			Players[pid].data["itemPickUpBlocked"] = 0
 		end
-	end	
+		lastEnteredHouse[getName(pid)] = nil
+	end
 end
 
 TFN_HousingShop.OnObjectLock = function(eventStatus, pid, cellDescription)
@@ -1888,7 +1928,7 @@ TFN_HousingShop.OnContainer = function(eventStatus, pid, cellDescription, object
 		ObjectIndex = object.uniqueIndex
 		ObjectRefid = object.refId
 	end	
-	if ObjectIndex ~= nil and ObjectRefid ~= nil then
+	if ObjectIndex and ObjectRefid then
 		tes3mp.ReadLastEvent()
 		local action = tes3mp.GetEventAction()
 		if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then	
@@ -1940,39 +1980,75 @@ TFN_HousingShop.OnActivatedObject = function(eventStatus, pid, cellDescription, 
 		ObjectIndex = object.uniqueIndex
 		ObjectRefid = object.refId
 	end	
-	if ObjectIndex ~= nil and ObjectRefid ~= nil then
-		if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
-			local houseName, cdata = getIsInHouse(pid)
-			local hdata = housingData.houses[houseName]		
-			if houseName then
-				if getHouseOwnerName(houseName) then
-					if not DoorData[string.lower(ObjectRefid)]then
-						if not isShop(hdata.name) then	
-							if not isOwner(getName(pid), houseName) and not isCoOwner(getName(pid), houseName) then
-								local dirtyThief = true
-								for index, resetData in pairs(cdata.resetInfo) do
-									if resetData.refIndex == ObjectIndex then
-										dirtyThief = false
-									end
-								end
-									
-								if dirtyThief then
-									return customEventHooks.makeEventStatus(false,false)
+	if ObjectIndex and ObjectRefid then
+		local houseName, cdata = getIsInHouse(pid)
+		local hdata = housingData.houses[houseName]		
+		if houseName then
+			if getHouseOwnerName(houseName) then
+				if not DoorData[string.lower(ObjectRefid)]then
+					if not isShop(hdata.name) then	
+						if not isOwner(getName(pid), houseName) and not isCoOwner(getName(pid), houseName) then
+							local dirtyThief = true
+							for index, resetData in pairs(cdata.resetInfo) do
+								if resetData.refIndex == ObjectIndex then
+									dirtyThief = false
 								end
 							end
-						else
-							if not isOwner(getName(pid), houseName) and not isCoOwner(getName(pid), houseName) then
-								TFN_HousingShop.showShopOptionGUI(pid, ObjectRefid)
+								
+							if dirtyThief then
 								return customEventHooks.makeEventStatus(false,false)
-							else
-								TFN_HousingShop.showViewOptionsGUI(pid, ObjectRefid)
-								return customEventHooks.makeEventStatus(false,false) 
 							end
+						end
+					else
+						if not isOwner(getName(pid), houseName) and not isCoOwner(getName(pid), houseName) then
+							TFN_HousingShop.showShopOptionGUI(pid, ObjectRefid)
+							return customEventHooks.makeEventStatus(false,false)
+						else
+							TFN_HousingShop.showViewOptionsGUI(pid, ObjectRefid)
+							return customEventHooks.makeEventStatus(false,false) 
 						end
 					end
 				end
 			end
 		end
+		if DoorData[string.lower(ObjectRefid)] then
+
+			local splitIndex = ObjectIndex:split("-")
+			
+			local DataCell = TFN_HousingShop.ReturnDataCell(cellDescription)
+			
+			if DataCell and DataCell.objects[splitIndex[1]] and DataCell.objects[splitIndex[1]].destCell then
+				
+				local targetCell = DataCell.objects[splitIndex[1]].destCell
+				
+				local HouseData = housingData.cells[targetCell]
+				
+				if HouseData then
+
+					UnlockObject(pid, ObjectRefid, ObjectIndex, cellDescription)
+					
+					temporalyDoor[getName(pid)] = {
+						cellDescription = targetCell,
+						location = {
+							x = DataCell.objects[splitIndex[1]].doorDest.XPos,
+							y = DataCell.objects[splitIndex[1]].doorDest.YPos,
+							z = DataCell.objects[splitIndex[1]].doorDest.ZPos
+						}
+					}
+
+					local ownerHouseName = getHouseOwnerName(HouseData.house)
+
+					if ownerHouseName then    
+						local canEnter, enterReason = isAllowedEnter(pid, targetCell)                     
+						if not canEnter then
+							local message = HouseData.house.." is currently closed by the owner : "..ownerHouseName
+							tes3mp.MessageBox(pid, -1, message)
+							return customEventHooks.makeEventStatus(false, false) 
+						end
+					end
+				end
+			end  
+		end  
 	end
 end
 
@@ -1983,62 +2059,60 @@ TFN_HousingShop.OnObjectDelete = function(eventStatus, pid, cellDescription, obj
 		ObjectIndex = object.uniqueIndex
 		ObjectRefid = object.refId
 	end	
-	if ObjectIndex ~= nil and ObjectRefid ~= nil then
-		if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
-			local houseName, cdata = getIsInHouse(pid)
-			local hdata = housingData.houses[houseName]		
-			if houseName then
-				if getHouseOwnerName(houseName) then			
-					if string.sub(ObjectIndex, 1, 1) == "0" then	
-						if not isShop(hdata.name) then	
-							if not isOwner(getName(pid), houseName) and not isCoOwner(getName(pid), houseName) then
-								local dirtyThief = true
-								for index, resetData in pairs(cdata.resetInfo) do
-									if resetData.refIndex == ObjectIndex then
-										dirtyThief = false
-									end
-								end
-									
-								if dirtyThief then
-									onDirtyThief(pid, houseName)
-									return customEventHooks.makeEventStatus(false,false)
+	if ObjectIndex and ObjectRefid then
+		local houseName, cdata = getIsInHouse(pid)
+		local hdata = housingData.houses[houseName]		
+		if houseName then
+			if getHouseOwnerName(houseName) then			
+				if string.sub(ObjectIndex, 1, 1) == "0" then	
+					if not isShop(hdata.name) then	
+						if not isOwner(getName(pid), houseName) and not isCoOwner(getName(pid), houseName) then
+							local dirtyThief = true
+							for index, resetData in pairs(cdata.resetInfo) do
+								if resetData.refIndex == ObjectIndex then
+									dirtyThief = false
 								end
 							end
-						else
-							if not isOwner(getName(pid), houseName) and not isCoOwner(getName(pid), houseName) then
-								local dirtyThief = true
-								for index, resetData in pairs(cdata.resetInfo) do
-									if resetData.refIndex == ObjectIndex then
-										dirtyThief = false
+								
+							if dirtyThief then
+								onDirtyThief(pid, houseName)
+								return customEventHooks.makeEventStatus(false,false)
+							end
+						end
+					else
+						if not isOwner(getName(pid), houseName) and not isCoOwner(getName(pid), houseName) then
+							local dirtyThief = true
+							for index, resetData in pairs(cdata.resetInfo) do
+								if resetData.refIndex == ObjectIndex then
+									dirtyThief = false
+								end
+							end					
+							if dirtyThief then			
+								local removedCount = 1
+								local existingIndex = nil				
+								for slot, item in pairs(Players[pid].data.inventory) do
+									if Players[pid].data.inventory[slot].refId == ObjectRefid then
+										existingIndex = slot
 									end
-								end					
-								if dirtyThief then			
-									local removedCount = 1
-									local existingIndex = nil				
-									for slot, item in pairs(Players[pid].data.inventory) do
-										if Players[pid].data.inventory[slot].refId == ObjectRefid then
-											existingIndex = slot
-										end
+								end			 
+								if existingIndex ~= nil then
+									local inventoryItem = Players[pid].data.inventory[existingIndex]			
+									local itemid = inventoryItem.refId				
+									for slot, inv in pairs(Players[pid].data.equipment) do
+										if inv.refId == itemid then
+											Players[pid].data.equipment[slot] = nil
+										end    
+									end							
+									inventoryItem.count = inventoryItem.count - removedCount					
+									if inventoryItem.count < 1 then
+										inventoryItem = nil
 									end			 
-									if existingIndex ~= nil then
-										local inventoryItem = Players[pid].data.inventory[existingIndex]			
-										local itemid = inventoryItem.refId				
-										for slot, inv in pairs(Players[pid].data.equipment) do
-											if inv.refId == itemid then
-												Players[pid].data.equipment[slot] = nil
-											end    
-										end							
-										inventoryItem.count = inventoryItem.count - removedCount					
-										if inventoryItem.count < 1 then
-											inventoryItem = nil
-										end			 
-										Players[pid].data.inventory[existingIndex] = inventoryItem
-										local itemref = {refId = ObjectRefid, count = 1, charge = -1}
-										Players[pid]:QuicksaveToDrive()
-										Players[pid]:LoadItemChanges({itemref}, enumerations.inventory.REMOVE)		
-										onDirtyThief(pid, houseName)
-										return customEventHooks.makeEventStatus(false,false)
-									end
+									Players[pid].data.inventory[existingIndex] = inventoryItem
+									local itemref = {refId = ObjectRefid, count = 1, charge = -1}
+									Players[pid]:QuicksaveToDrive()
+									Players[pid]:LoadItemChanges({itemref}, enumerations.inventory.REMOVE)		
+									onDirtyThief(pid, houseName)
+									return customEventHooks.makeEventStatus(false,false)
 								end
 							end
 						end
@@ -2065,128 +2139,122 @@ TFN_HousingShop.OnServerPostInit = function(eventStatus)
 end
 
 TFN_HousingShop.showShopOptionGUI = function(pid, refId)
-	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then	
-		local choice = refId
-		local message = choice
-		local cellId = tes3mp.GetCell(pid)
-		local cell = LoadedCells[cellId]
-		local price 
-		for index, uniqueIndex in pairs(cell.data.objectData) do
-			if cell.data.objectData[index].refId == choice then
+	local choice = refId
+	local message = choice
+	local cellId = tes3mp.GetCell(pid)
+	local cell = LoadedCells[cellId]
+	local price 
+	for index, uniqueIndex in pairs(cell.data.objectData) do
+		if cell.data.objectData[index].refId == choice then
+			price = cell.data.objectData[index].price
+			if price == nil then
+				cell.data.objectData[index].price = 0
 				price = cell.data.objectData[index].price
-				if price == nil then
-					cell.data.objectData[index].price = 0
-					price = cell.data.objectData[index].price
-				end
-				message = color.Red..message.." "..color.Yellow..trad.costPrice..color.White..price
 			end
-		end 
-		if price ~= nil and price > 0 then
-			playerViewChoice[getName(pid)] = choice
-			tes3mp.CustomMessageBox(pid, config.ViewShopOptionsGUI, message, trad.optBuy)
-		else
-			tes3mp.MessageBox(pid, -1, trad.notSell)
+			message = color.Red..message.." "..color.Yellow..trad.costPrice..color.White..price
 		end
+	end 
+	if price ~= nil and price > 0 then
+		playerViewChoice[getName(pid)] = choice
+		tes3mp.CustomMessageBox(pid, config.ViewShopOptionsGUI, message, trad.optBuy)
+	else
+		tes3mp.MessageBox(pid, -1, trad.notSell)
 	end
 end
 
 TFN_HousingShop.onShopOptionSelect = function(pid)
-	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
-		local choice = playerViewChoice[getName(pid)] 
-		local cellId = tes3mp.GetCell(pid)
-		local cell = LoadedCells[cellId]
-		local price
-		local count
-		for index, uniqueIndex in pairs(cell.data.objectData) do
-			if cell.data.objectData[index].refId == choice then
-				price = cell.data.objectData[index].price
-				break
-			end
-		end	
-		if price ~= nil then
-			local goldLoc = inventoryHelper.getItemIndex(Players[pid].data.inventory, "gold_001", -1)
-			if goldLoc == nil then
-				tes3mp.MessageBox(pid, -1, trad.noGold)
-			elseif goldLoc then
-				local goldcount = Players[pid].data.inventory[goldLoc].count		
-				if goldcount < price then
-					tes3mp.MessageBox(pid, -1, trad.noMoney)
-				elseif goldcount >= price then
-					for _, uniqueIndex in pairs(cell.data.packets.place) do			
-						if cell.data.objectData[uniqueIndex].refId == choice then
-							tableHelper.removeValue(cell.data.packets.place, uniqueIndex)
-							cell.data.objectData[uniqueIndex] = nil
-							tableHelper.cleanNils(cell.data.objectData)									
-							logicHandler.DeleteObjectForEveryone(cellId, uniqueIndex)	
-						end
+	local choice = playerViewChoice[getName(pid)] 
+	local cellId = tes3mp.GetCell(pid)
+	local cell = LoadedCells[cellId]
+	local price
+	local count
+	for index, uniqueIndex in pairs(cell.data.objectData) do
+		if cell.data.objectData[index].refId == choice then
+			price = cell.data.objectData[index].price
+			break
+		end
+	end	
+	if price ~= nil then
+		local goldLoc = inventoryHelper.getItemIndex(Players[pid].data.inventory, "gold_001", -1)
+		if goldLoc == nil then
+			tes3mp.MessageBox(pid, -1, trad.noGold)
+		elseif goldLoc then
+			local goldcount = Players[pid].data.inventory[goldLoc].count		
+			if goldcount < price then
+				tes3mp.MessageBox(pid, -1, trad.noMoney)
+			elseif goldcount >= price then
+				for _, uniqueIndex in pairs(cell.data.packets.place) do			
+					if cell.data.objectData[uniqueIndex].refId == choice then
+						tableHelper.removeValue(cell.data.packets.place, uniqueIndex)
+						cell.data.objectData[uniqueIndex] = nil
+						tableHelper.cleanNils(cell.data.objectData)									
+						logicHandler.DeleteObjectForEveryone(cellId, uniqueIndex)	
 					end
-					cell:QuicksaveToDrive()		
-					Players[pid].data.inventory[goldLoc].count = Players[pid].data.inventory[goldLoc].count - price
-					tes3mp.MessageBox(pid, -1, trad.buyItem)
-					table.insert(Players[pid].data.inventory, {refId = choice, count = 1, charge = -1, soul = ""})	
-					local itemref1 = {refId = choice, count = 1 , charge = -1, soul = ""}				
-					local itemref = {refId = "gold_001", count = price, charge = -1, soul = ""}			
-					Players[pid]:QuicksaveToDrive()
-					Players[pid]:LoadItemChanges({itemref}, enumerations.inventory.REMOVE)
-					Players[pid]:LoadItemChanges({itemref1}, enumerations.inventory.ADD)
-					local hdata = housingData.houses[housingData.cells[cellId].house]
-					local existingPlayer = getHouseOwnerName(hdata.name)
-					local player = logicHandler.GetPlayerByName(existingPlayer)
-					local goldLocSeller = nil					
-					for slot, item in pairs(player.data.inventory) do
-						if item.refId == "gold_001" then
-							goldLocSeller = slot
-						end
-					end					
-					if goldLocSeller ~= nil then
-						player.data.inventory[goldLocSeller].count = player.data.inventory[goldLocSeller].count + price					
-						if player:IsLoggedIn() then
-							local itemref = {refId = "gold_001", count = price, charge = -1, soul = ""}	
-							player:QuicksaveToDrive()
-							player:LoadItemChanges({itemref}, enumerations.inventory.ADD)						
-						else
-							player.loggedIn = true
-							player:QuicksaveToDrive()
-							player.loggedIn = false
-						end
-					else
-						table.insert(player.data.inventory, {refId = "gold_001", count = price, charge = -1, soul = ""})	
-						if player:IsLoggedIn() then
-							local itemref = {refId = "gold_001", count = price, charge = -1, soul = ""}	
-							player:QuicksaveToDrive()
-							player:LoadItemChanges({itemref}, enumerations.inventory.ADD)
-						else
-							player.loggedIn = true
-							player:QuicksaveToDrive()
-							player.loggedIn = false
-						end
-					end				
 				end
+				cell:QuicksaveToDrive()		
+				Players[pid].data.inventory[goldLoc].count = Players[pid].data.inventory[goldLoc].count - price
+				tes3mp.MessageBox(pid, -1, trad.buyItem)
+				table.insert(Players[pid].data.inventory, {refId = choice, count = 1, charge = -1, soul = ""})	
+				local itemref1 = {refId = choice, count = 1 , charge = -1, soul = ""}				
+				local itemref = {refId = "gold_001", count = price, charge = -1, soul = ""}			
+				Players[pid]:QuicksaveToDrive()
+				Players[pid]:LoadItemChanges({itemref}, enumerations.inventory.REMOVE)
+				Players[pid]:LoadItemChanges({itemref1}, enumerations.inventory.ADD)
+				local hdata = housingData.houses[housingData.cells[cellId].house]
+				local existingPlayer = getHouseOwnerName(hdata.name)
+				local player = logicHandler.GetPlayerByName(existingPlayer)
+				local goldLocSeller = nil					
+				for slot, item in pairs(player.data.inventory) do
+					if item.refId == "gold_001" then
+						goldLocSeller = slot
+					end
+				end					
+				if goldLocSeller ~= nil then
+					player.data.inventory[goldLocSeller].count = player.data.inventory[goldLocSeller].count + price					
+					if player:IsLoggedIn() then
+						local itemref = {refId = "gold_001", count = price, charge = -1, soul = ""}	
+						player:QuicksaveToDrive()
+						player:LoadItemChanges({itemref}, enumerations.inventory.ADD)						
+					else
+						player.loggedIn = true
+						player:QuicksaveToDrive()
+						player.loggedIn = false
+					end
+				else
+					table.insert(player.data.inventory, {refId = "gold_001", count = price, charge = -1, soul = ""})	
+					if player:IsLoggedIn() then
+						local itemref = {refId = "gold_001", count = price, charge = -1, soul = ""}	
+						player:QuicksaveToDrive()
+						player:LoadItemChanges({itemref}, enumerations.inventory.ADD)
+					else
+						player.loggedIn = true
+						player:QuicksaveToDrive()
+						player.loggedIn = false
+					end
+				end				
 			end
 		end
 	end
 end
 
 TFN_HousingShop.showViewOptionsGUI = function(pid, refId)
-	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
-		local choice = refId
-		local message = choice
-		local cellId = tes3mp.GetCell(pid)
-		local cell = LoadedCells[cellId]
-		local price 
-		for index, uniqueIndex in pairs(cell.data.objectData) do
-			if cell.data.objectData[index].refId == choice then
+	local choice = refId
+	local message = choice
+	local cellId = tes3mp.GetCell(pid)
+	local cell = LoadedCells[cellId]
+	local price 
+	for index, uniqueIndex in pairs(cell.data.objectData) do
+		if cell.data.objectData[index].refId == choice then
+			price = cell.data.objectData[index].price
+			if price == nil then
+				cell.data.objectData[index].price = 0
 				price = cell.data.objectData[index].price
-				if price == nil then
-					cell.data.objectData[index].price = 0
-					price = cell.data.objectData[index].price
-				end
-				message = color.Red..message.." "..color.Yellow..trad.costPrice..color.White..price
 			end
-		end  
-		playerViewChoice[getName(pid)] = choice
-		tes3mp.CustomMessageBox(pid, config.ViewOptionsGUI, message, trad.optPrice)
-	end
+			message = color.Red..message.." "..color.Yellow..trad.costPrice..color.White..price
+		end
+	end  
+	playerViewChoice[getName(pid)] = choice
+	tes3mp.CustomMessageBox(pid, config.ViewOptionsGUI, message, trad.optPrice)
 end
  
 TFN_HousingShop.onViewOptionSelect = function(pid)
@@ -2269,10 +2337,8 @@ TFN_HousingShop.IsShop = function(houseName)
 end
 
 TFN_HousingShop.MainMenu = function(houseName)
-    if Players[pid]~= nil and Players[pid]:IsLoggedIn() then
-		Players[pid].currentCustomMenu = "menu housing"
-		menuHelper.DisplayMenu(pid, Players[pid].currentCustomMenu)	
-	end
+	Players[pid].currentCustomMenu = "menu housing"
+	menuHelper.DisplayMenu(pid, Players[pid].currentCustomMenu)	
 end
 
 TFN_HousingShop.PunishPrison = function(pid)
@@ -2320,7 +2386,7 @@ TFN_HousingShop.PunishKick = function(pid) -- Used to send a player into the kic
 end
 
 TFN_HousingShop.OnPlayerAuthentified = function(eventStatus, pid)
-	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
+	if config.Location then
 		if not housingData.owners[getName(pid)] then return end
 		local odata = housingData.owners[getName(pid)].houses
 		if odata then
@@ -2339,7 +2405,7 @@ TFN_HousingShop.OnPlayerAuthentified = function(eventStatus, pid)
 end
 
 TFN_HousingShop.CleanCell = function(cellDescription, Stat)
-	if cellDescription ~= nil then
+	if cellDescription then
 		local cell = LoadedCells[cellDescription]
 		local cellData = jsonInterface.load("custom/CellDataBase/"..cellDescription..".json")	
 		if cellData == nil then
@@ -2406,15 +2472,17 @@ TFN_HousingShop.CleanCell = function(cellDescription, Stat)
 end
 
 TFN_HousingShop.OnCellLoad = function(eventStatus, pid, cellDescription)
-	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
-		if housingData.cells[cellDescription] and housingData.cells[cellDescription].house ~= nil then
-			if housingData.houses[housingData.cells[cellDescription].house].statut == nil then
-				housingData.houses[housingData.cells[cellDescription].house].statut = "nothing"
-			end				
-			local Stat = housingData.houses[housingData.cells[cellDescription].house].statut 		
-			TFN_HousingShop.CleanCell(cellDescription, Stat)
-		end
+	if housingData.cells[cellDescription] and housingData.cells[cellDescription].house ~= nil then
+		if housingData.houses[housingData.cells[cellDescription].house].statut == nil then
+			housingData.houses[housingData.cells[cellDescription].house].statut = "nothing"
+		end                
+		local Stat = housingData.houses[housingData.cells[cellDescription].house].statut         
+		TFN_HousingShop.CleanCell(cellDescription, Stat)
 	end
+end
+
+TFN_HousingShop.ReturnDataCell = function(cellDescription)
+    return DataCell[cellDescription]
 end
 
 customCommandHooks.registerCommand("home", TFN_HousingShop.MainMenuHouse)
@@ -2430,7 +2498,7 @@ customEventHooks.registerHandler("OnServerPostInit", TFN_HousingShop.OnServerPos
 customEventHooks.registerHandler("OnPlayerCellChange", TFN_HousingShop.OnPlayerCellChange)
 customEventHooks.registerHandler("OnObjectLock", TFN_HousingShop.OnObjectLock)
 customEventHooks.registerHandler("OnPlayerAuthentified", TFN_HousingShop.OnPlayerAuthentified)
-customEventHooks.registerValidator("OnCellLoad", TFN_HousingShop.OnCellLoad)
+customEventHooks.registerHandler("OnCellLoad", TFN_HousingShop.OnCellLoad)
 customEventHooks.registerValidator("OnContainer", TFN_HousingShop.OnContainer)
 customEventHooks.registerValidator("OnObjectDelete", TFN_HousingShop.OnObjectDelete)
 customEventHooks.registerValidator("OnObjectActivate", TFN_HousingShop.OnActivatedObject)
