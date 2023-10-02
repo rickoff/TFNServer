@@ -1,6 +1,6 @@
 --[[
 TFN_ResetServer.lua
-tes3mp 0.7.0
+tes3mp 0.8.1
 ---------------------------
 DESCRIPTION :
 
@@ -12,7 +12,6 @@ INSTALLATION:
 Save the file as TFN_Creature.json inside your server/data/custom folder.
 Save the file as TFN_Npc.json inside your server/data/custom folder.
 Save the file as TFN_ListCell.json inside your server/data/custom folder.
-
 Save the file as TFN_ResetServer.lua inside your server/scripts/custom folder.
 
 Edits to customScripts.lua
@@ -58,8 +57,8 @@ function StartReset()
 	local Minute =  os.date("%M")
 	if tonumber(Heure) == 06 then
 		if tonumber(Minute) == 00 then	
-			for x, cell in pairs(cellReseting) do
-				if cell ~= nil then
+			for _, cell in ipairs(cellReseting) do
+				if cell then
 					TFN_ResetServer.ResetCell(cell)
 				end
 			end		
@@ -91,7 +90,7 @@ function RespawnNpc(cellDescription)
 		if tempCell ~= nil then
 			local calculTime = Time - tempCell		
 			if calculTime > config.timerRespawn then				
-				for x, index in pairs(cell.data.packets.actorList) do
+				for _, index in ipairs(cell.data.packets.actorList) do
 					if tableHelper.containsValue(cell.data.packets.death, index, true) then
 						if cell.data.objectData[index] then
 							local refId = cell.data.objectData[index].refId
@@ -107,7 +106,7 @@ function RespawnNpc(cellDescription)
 									logicHandler.DeleteObjectForEveryone(cellDescription, index)
 								end							
 							end
-							logicHandler.CreateObjectAtLocation(cellDescription, position, refId, "spawn")
+							logicHandler.CreateObjectAtLocation(cellDescription, position, dataTableBuilder.BuildObjectData(refId), "spawn")
 						end
 					end
 				end									
@@ -212,27 +211,27 @@ TFN_ResetServer.ResetCell = function(cellDescription)
 			newCellData.packets[packetKey] = {}
 		end		
 		local uniqueIndexesToPreserve = {}		
-		for index, uniqueIndex in pairs(oldCellData.packets.place) do
+		for _, uniqueIndex in ipairs(oldCellData.packets.place) do
 			if not tableHelper.containsValue(oldCellData.packets.spawn, uniqueIndex) then
 				tableHelper.insertValueIfMissing(uniqueIndexesToPreserve, uniqueIndex)
 			end
 		end 		
 		if config.NpcChangeCell then
 			if not tableHelper.isEmpty(oldCellData.packets.cellChangeTo) then
-				for index, uniqueIndex in pairs(oldCellData.packets.cellChangeTo) do
+				for _, uniqueIndex in ipairs(oldCellData.packets.cellChangeTo) do
 					newCellData.objectData[uniqueIndex] = oldCellData.objectData[uniqueIndex]
 				end
 				newCellData.packets.cellChangeTo = oldCellData.packets.cellChangeTo
 			end
 			if not tableHelper.isEmpty(oldCellData.packets.cellChangeFrom) then
 				newCellData.packets.cellChangeFrom = oldCellData.packets.cellChangeFrom
-				for index, uniqueIndex in pairs(newCellData.packets.cellChangeFrom) do
+				for _, uniqueIndex in ipairs(newCellData.packets.cellChangeFrom) do
 					tableHelper.insertValueIfMissing(uniqueIndexesToPreserve, uniqueIndex)
 				end				
 			end
 		end
 		for packetKey, uniqueIndexList in pairs(oldCellData.packets) do
-			for index, uniqueIndex in pairs(uniqueIndexList) do
+			for _, uniqueIndex in ipairs(uniqueIndexList) do
 				if tableHelper.containsValue(uniqueIndexesToPreserve, uniqueIndex) then
 					tableHelper.insertValueIfMissing(newCellData.packets[packetKey], uniqueIndex)
 				end
@@ -292,27 +291,27 @@ TFN_ResetServer.ResetLoadCell = function(cellDescription)
 		newCellData.packets[packetKey] = {}
 	end	
 	local uniqueIndexesToPreserve = {}	
-	for index, uniqueIndex in pairs(oldCellData.packets.place) do
+	for _, uniqueIndex in ipairs(oldCellData.packets.place) do
 		if not tableHelper.containsValue(oldCellData.packets.spawn, uniqueIndex) then
 			tableHelper.insertValueIfMissing(uniqueIndexesToPreserve, uniqueIndex)
 		end
 	end 	
 	if config.NpcChangeCell then
 		if not tableHelper.isEmpty(oldCellData.packets.cellChangeTo) then
-			for index, uniqueIndex in pairs(oldCellData.packets.cellChangeTo) do
+			for _, uniqueIndex in ipairs(oldCellData.packets.cellChangeTo) do
 				newCellData.objectData[uniqueIndex] = oldCellData.objectData[uniqueIndex]
 			end
 			newCellData.packets.cellChangeTo = oldCellData.packets.cellChangeTo
 		end
 		if not tableHelper.isEmpty(oldCellData.packets.cellChangeFrom) then
 			newCellData.packets.cellChangeFrom = oldCellData.packets.cellChangeFrom
-			for index, uniqueIndex in pairs(newCellData.packets.cellChangeFrom) do
+			for _, uniqueIndex in ipairs(newCellData.packets.cellChangeFrom) do
 				tableHelper.insertValueIfMissing(uniqueIndexesToPreserve, uniqueIndex)
 			end			
 		end
 	end
 	for packetKey, uniqueIndexList in pairs(oldCellData.packets) do
-		for index, uniqueIndex in pairs(uniqueIndexList) do
+		for _, uniqueIndex in ipairs(uniqueIndexList) do
 			if tableHelper.containsValue(uniqueIndexesToPreserve, uniqueIndex) then
 				tableHelper.insertValueIfMissing(newCellData.packets[packetKey], uniqueIndex)
 			end
@@ -390,31 +389,17 @@ TFN_ResetServer.CheckCellReset = function(cellDescription)
 end
 
 TFN_ResetServer.OnCellLoadValidator = function(eventStatus, pid, cellDescription)
-	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
-		if TFN_ResetServer.CheckCellReset(cellDescription) then
-			TFN_ResetServer.ResetLoadCell(cellDescription)
-		end	
-	end
+	if TFN_ResetServer.CheckCellReset(cellDescription) then
+		TFN_ResetServer.ResetLoadCell(cellDescription)
+	end	
 end
 
 TFN_ResetServer.OnObjectDeleteValidator = function(eventStatus, pid, cellDescription, objects)
-	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
-		local ObjectIndex
-		local ObjectRefid
-		if TFN_HousingShop then
-			local cellData = TFN_HousingShop.GetCellData(cellDescription)
-			if cellData ~= nil and cellData == false then
-				for _, object in pairs(objects) do
-					ObjectIndex = object.uniqueIndex
-					ObjectRefid = object.refId
-				end	
-				if ObjectIndex ~= nil and ObjectRefid ~= nil then
-					if ListAll[string.lower(ObjectRefid)] then
-						return customEventHooks.makeEventStatus(false,false) 
-					end
-				end
-			end
-		else
+	local ObjectIndex
+	local ObjectRefid
+	if TFN_HousingShop then
+		local cellData = TFN_HousingShop.GetCellData(cellDescription)
+		if cellData ~= nil and cellData == false then
 			for _, object in pairs(objects) do
 				ObjectIndex = object.uniqueIndex
 				ObjectRefid = object.refId
@@ -423,21 +408,29 @@ TFN_ResetServer.OnObjectDeleteValidator = function(eventStatus, pid, cellDescrip
 				if ListAll[string.lower(ObjectRefid)] then
 					return customEventHooks.makeEventStatus(false,false) 
 				end
-			end	
+			end
 		end
+	else
+		for _, object in pairs(objects) do
+			ObjectIndex = object.uniqueIndex
+			ObjectRefid = object.refId
+		end	
+		if ObjectIndex and ObjectRefid then
+			if ListAll[string.lower(ObjectRefid)] then
+				return customEventHooks.makeEventStatus(false,false) 
+			end
+		end	
 	end
 end
 
 TFN_ResetServer.OnCellLoadHandler = function(eventStatus, pid, cellDescription)
-	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
-		RespawnNpc(cellDescription)
-	end
+	RespawnNpc(cellDescription)
 end
 
 TFN_ResetServer.OnBigResetCommand = function(pid)
-	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() and Players[pid]:IsServerStaff() then
-		for x, cell in pairs(cellReseting) do
-			if cell ~= nil then
+	if Players[pid]:IsServerStaff() then
+		for _, cell in ipairs(cellReseting) do
+			if cell then
 				TFN_ResetServer.ResetCell(cell)
 			end
 		end	
