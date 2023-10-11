@@ -1,6 +1,6 @@
 --[[
 TFN_SystemClass by Rickoff
-tes3mp 0.7.0
+tes3mp 0.8.1
 ---------------------------
 DESCRIPTION :
 class system limiting the use of weapons, armor, various items and sort according to the corresponding talent.
@@ -74,6 +74,45 @@ local function CheckSkills(pid, skill)
 	end
 end
 
+local function OnCheckSpellbook(pid)
+	local reloadAtEnd = false		
+	for index, spellId in pairs(Players[pid].data.spellbook) do
+		if spellId ~= "" then
+			if listSpell[string.lower(spellId)] then
+				local Skill = listSpell[string.lower(spellId)].skill 
+				if CheckSkills(pid, Skill) == false then
+					Players[pid].data.spellbook[index] = nil
+					reloadAtEnd = true
+				end
+			end
+		end			
+	end
+	if reloadAtEnd == true then	
+		tableHelper.cleanNils(Players[pid].data.spellbook)		
+		Players[pid]:LoadSpellbook()
+	end
+end
+
+local function OnCheckEquipment(pid)
+	local reloadAtEnd = false
+	for index, slot in pairs(Players[pid].data.equipment) do
+		local itemRefId = slot.refId
+		if itemRefId ~= "" then
+			if listItems[string.lower(itemRefId)] then
+				local Skill = listItems[string.lower(itemRefId)].skill 
+				if CheckSkills(pid, Skill) == false then
+					Players[pid].data.equipment[index] = nil
+					reloadAtEnd = true
+				end
+			end
+		end
+	end
+	if reloadAtEnd == true then
+		tableHelper.cleanNils(Players[pid].data.equipment)		
+		Players[pid]:LoadEquipment()		
+	end
+end
+
 local TFN_SystemClass = {}
 
 TFN_SystemClass.OnServerInit = function(eventStatus)
@@ -90,160 +129,103 @@ TFN_SystemClass.OnServerInit = function(eventStatus)
 end
 
 TFN_SystemClass.OnPlayerEquipment = function(eventStatus, pid)
-	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
-	    local reloadAtEnd = false
-		for index = 0, tes3mp.GetEquipmentSize() - 1 do
-			local itemRefId = tes3mp.GetEquipmentItemRefId(pid, index)
-			if itemRefId ~= "" then
-				if listItems[string.lower(itemRefId)] then
-					local Skill = listItems[string.lower(itemRefId)].skill 
-					if CheckSkills(pid, Skill) == false then
-						tes3mp.MessageBox(pid, -1, trad.NoSkillItem..color.Red..Skill)
-						reloadAtEnd = true
-					end
+	local reloadAtEnd = false
+	for index = 0, tes3mp.GetEquipmentSize() - 1 do
+		local itemRefId = tes3mp.GetEquipmentItemRefId(pid, index)
+		if itemRefId ~= "" then
+			if listItems[string.lower(itemRefId)] then
+				local Skill = listItems[string.lower(itemRefId)].skill 
+				if CheckSkills(pid, Skill) == false then
+					tes3mp.MessageBox(pid, -1, trad.NoSkillItem..color.Red..Skill)
+					reloadAtEnd = true
 				end
 			end
 		end
-		if reloadAtEnd == true then
-			Players[pid]:LoadEquipment()
-			return customEventHooks.makeEventStatus(false, false)
-		end
+	end
+	if reloadAtEnd == true then
+		Players[pid]:LoadEquipment()
+		return customEventHooks.makeEventStatus(false, false)
 	end
 end
 
 TFN_SystemClass.OnPlayerSpellbook = function(eventStatus, pid)
-	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
-		local action = tes3mp.GetSpellbookChangesAction(pid)
-	    local reloadAtEnd = false		
-		for index = 0, tes3mp.GetSpellbookChangesSize(pid) - 1 do
-			local spellId = tes3mp.GetSpellId(pid, index)
-			if action == enumerations.spellbook.ADD then
-				if spellId ~= "" then
-					if listSpell[string.lower(spellId)] then
-						local Skill = listSpell[string.lower(spellId)].skill 
-						if CheckSkills(pid, Skill) == false then
-							tes3mp.MessageBox(pid, -1, trad.NoSkillSpell..color.Red..Skill)
-							reloadAtEnd = true
-						end
-					end
-				end			
-			end
-		end
-		if reloadAtEnd == true then
-			Players[pid]:LoadSpellbook()
-			return customEventHooks.makeEventStatus(false, false)
-		end		
-	end
-end
-
-TFN_SystemClass.OnPlayerItemUse = function(eventStatus, pid, itemRefId)
-	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
-		if itemRefId ~= "" then
-			if listMisc[string.lower(itemRefId)] then
-				local Skill = listMisc[string.lower(itemRefId)].skill 
-				if CheckSkills(pid, Skill) == false then
-					tes3mp.MessageBox(pid, -1, trad.NoSkillMisc..color.Red..Skill)
-					return customEventHooks.makeEventStatus(false, false)
-				end
-			end
-		end			
-	end
-end
-
-TFN_SystemClass.OnPlayerQuickKeys = function(eventStatus, pid)
-	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
-		local reloadAtEnd = false
-		for index = 0, tes3mp.GetQuickKeyChangesSize(pid) - 1 do
-			local slot = tes3mp.GetQuickKeySlot(pid, index)
-			local itemRefId = tes3mp.GetQuickKeyItemId(pid, index)
-			if itemRefId ~= "" then
-				if listMisc[string.lower(itemRefId)] then
-					local Skill = listMisc[string.lower(itemRefId)].skill 
-					if CheckSkills(pid, Skill) == false then
-						tes3mp.MessageBox(pid, -1, trad.NoSkillMisc..color.Red..Skill)
-						Players[pid].data.quickKeys[slot] = {
-							keyType = 0,
-							itemId = "Misc_Potion_Cheap_01"
-						}						
-						reloadAtEnd = true
-					end
-				end
-			end
-		end
-		if reloadAtEnd == true then
-			logicHandler.RunConsoleCommandOnPlayer(pid, "player->additem Misc_Potion_Cheap_01 1")		
-			Players[pid]:LoadQuickKeys() 
-			logicHandler.RunConsoleCommandOnPlayer(pid, "player->removeitem Misc_Potion_Cheap_01 1")			
-			return customEventHooks.makeEventStatus(false, false)
-		end
-	end
-end
-
-TFN_SystemClass.OnRecordDynamic = function(eventStatus, pid)
-	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
-		local weaponsCustom = jsonInterface.load("recordstore/weapon.json")
-		for index, item in pairs(weaponsCustom.generatedRecords) do
-			local Slot = weaponsCustom.generatedRecords[index]
-			listItems[string.lower(index)] = listItems[string.lower(Slot.baseId)]
-		end
-		local armorCustom = jsonInterface.load("recordstore/armor.json")
-		for index, item in pairs(armorCustom.generatedRecords) do
-			local Slot = armorCustom.generatedRecords[index]
-			listItems[string.lower(index)] = listItems[string.lower(Slot.baseId)]
-		end
-	end
-end
-
-TFN_SystemClass.OnPlayerAuthentified = function(eventStatus, pid)
-	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
-		TFN_SystemClass.OnCheckEquipment(pid)
-		TFN_SystemClass.OnCheckSpellbook(pid)	
-	end
-end
-
-TFN_SystemClass.OnCheckEquipment = function(pid)
-	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
-	    local reloadAtEnd = false
-		for index, slot in pairs(Players[pid].data.equipment) do
-			local itemRefId = slot.refId
-			if itemRefId ~= "" then
-				if listItems[string.lower(itemRefId)] then
-					local Skill = listItems[string.lower(itemRefId)].skill 
-					if CheckSkills(pid, Skill) == false then
-						Players[pid].data.equipment[index] = nil
-						reloadAtEnd = true
-					end
-				end
-			end
-		end
-		if reloadAtEnd == true then		
-			Players[pid]:QuicksaveToDrive()
-			Players[pid]:LoadEquipment()
-			tableHelper.cleanNils(Players[pid].data.equipment)			
-		end
-	end
-end
-
-TFN_SystemClass.OnCheckSpellbook = function(pid)
-	if Players[pid] ~= nil and Players[pid]:IsLoggedIn() then
-	    local reloadAtEnd = false		
-		for index, spellId in pairs(Players[pid].data.spellbook) do
+	local action = tes3mp.GetSpellbookChangesAction(pid)
+	local reloadAtEnd = false		
+	for index = 0, tes3mp.GetSpellbookChangesSize(pid) - 1 do
+		local spellId = tes3mp.GetSpellId(pid, index)
+		if action == enumerations.spellbook.ADD then
 			if spellId ~= "" then
 				if listSpell[string.lower(spellId)] then
 					local Skill = listSpell[string.lower(spellId)].skill 
 					if CheckSkills(pid, Skill) == false then
-						Players[pid].data.spellbook[index] = nil
+						tes3mp.MessageBox(pid, -1, trad.NoSkillSpell..color.Red..Skill)
 						reloadAtEnd = true
 					end
 				end
 			end			
 		end
-		if reloadAtEnd == true then	
-			Players[pid]:QuicksaveToDrive()		
-			Players[pid]:LoadSpellbook()
-			tableHelper.cleanNils(Players[pid].data.spellbook)				
-		end		
 	end
+	if reloadAtEnd == true then
+		Players[pid]:LoadSpellbook()
+		return customEventHooks.makeEventStatus(false, false)
+	end
+end
+
+TFN_SystemClass.OnPlayerItemUse = function(eventStatus, pid, itemRefId)
+	if itemRefId ~= "" then
+		if listMisc[string.lower(itemRefId)] then
+			local Skill = listMisc[string.lower(itemRefId)].skill 
+			if CheckSkills(pid, Skill) == false then
+				tes3mp.MessageBox(pid, -1, trad.NoSkillMisc..color.Red..Skill)
+				return customEventHooks.makeEventStatus(false, false)
+			end
+		end
+	end
+end
+
+TFN_SystemClass.OnPlayerQuickKeys = function(eventStatus, pid)
+	local reloadAtEnd = false
+	for index = 0, tes3mp.GetQuickKeyChangesSize(pid) - 1 do
+		local slot = tes3mp.GetQuickKeySlot(pid, index)
+		local itemRefId = tes3mp.GetQuickKeyItemId(pid, index)
+		if itemRefId ~= "" then
+			if listMisc[string.lower(itemRefId)] then
+				local Skill = listMisc[string.lower(itemRefId)].skill 
+				if CheckSkills(pid, Skill) == false then
+					tes3mp.MessageBox(pid, -1, trad.NoSkillMisc..color.Red..Skill)
+					Players[pid].data.quickKeys[slot] = {
+						keyType = 0,
+						itemId = "Misc_Potion_Cheap_01"
+					}						
+					reloadAtEnd = true
+				end
+			end
+		end
+	end
+	if reloadAtEnd == true then
+		logicHandler.RunConsoleCommandOnPlayer(pid, "player->additem Misc_Potion_Cheap_01 1")		
+		Players[pid]:LoadQuickKeys() 
+		logicHandler.RunConsoleCommandOnPlayer(pid, "player->removeitem Misc_Potion_Cheap_01 1")			
+		return customEventHooks.makeEventStatus(false, false)
+	end
+end
+
+TFN_SystemClass.OnRecordDynamic = function(eventStatus, pid)
+	local weaponsCustom = jsonInterface.load("recordstore/weapon.json")
+	for index, item in pairs(weaponsCustom.generatedRecords) do
+		local Slot = weaponsCustom.generatedRecords[index]
+		listItems[string.lower(index)] = listItems[string.lower(Slot.baseId)]
+	end
+	local armorCustom = jsonInterface.load("recordstore/armor.json")
+	for index, item in pairs(armorCustom.generatedRecords) do
+		local Slot = armorCustom.generatedRecords[index]
+		listItems[string.lower(index)] = listItems[string.lower(Slot.baseId)]
+	end
+end
+
+TFN_SystemClass.OnPlayerAuthentified = function(eventStatus, pid)
+	OnCheckEquipment(pid)
+	OnCheckSpellbook(pid)
 end
 
 customEventHooks.registerHandler("OnServerInit", TFN_SystemClass.OnServerInit)
