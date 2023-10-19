@@ -137,8 +137,7 @@ TFN_MessageRp.ShowMainGUI = function(pid)
 end
 
 TFN_MessageRp.OnPlayerSendMessage = function(eventStatus, pid, message)	
-	local chat = Players[pid].data.customVariables.TFN_MessageRp.chat	
-	local faction = Players[pid].data.customVariables.ecWar.team	
+	local chat = Players[pid].data.customVariables.TFN_MessageRp.chat
 	if message:sub(1, 1) == '/' then	
 	else
 		local PlayerName = Players[pid].accountName		
