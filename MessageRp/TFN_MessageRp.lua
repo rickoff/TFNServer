@@ -74,25 +74,21 @@ local function SendMessageToAllInCell(pidcible, cellDescription, message, state)
 end
 
 local function SendLocalMessage(pid, message, state)	
-	local localChatCellRadius = 1		
-	local myCellDescription = Players[pid].data.location.cell	
-	if not myCellDescription then return end	
+	local cellDescription = Players[pid].data.location.cell	
+	if not cellDescription then return end	
 	if tes3mp.IsInExterior(pid) then	
-		local cellX = tonumber(string.sub(myCellDescription, 1, string.find(myCellDescription, ",") - 1))		
-		local cellY = tonumber(string.sub(myCellDescription, string.find(myCellDescription, ",") + 2))		
-		local firstCellX = cellX - localChatCellRadius		
-		local firstCellY = cellY + localChatCellRadius			
-		local length = localChatCellRadius * 2			
-		for x = 0, length, 1 do
-			for y = 0, length, 1 do
-				local tempCell = (x+firstCellX)..", "..(firstCellY-y)
-				if LoadedCells[tempCell] ~= nil then
+		local cellX = tonumber(string.sub(cellDescription, 1, string.find(cellDescription, ",") - 1))		
+		local cellY = tonumber(string.sub(cellDescription, string.find(cellDescription, ",") + 2))		
+		for x = -1, 1 do
+			for y = -1, 1 do
+				local tempCell = (cellX+x)..", "..(cellY+y)
+				if LoadedCells[tempCell] then
 					SendMessageToAllInCell(pid, tempCell, message, state)
 				end
 			end
 		end		
 	else	
-		SendMessageToAllInCell(pid, myCellDescription, message, state)		
+		SendMessageToAllInCell(pid, cellDescription, message, state)		
 	end
 end
 
