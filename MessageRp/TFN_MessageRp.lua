@@ -65,7 +65,7 @@ local function SendMessageToAllInCell(pidcible, cellDescription, message, state)
 		if Players[pid] and Players[pid]:IsLoggedIn() then		
 			local pPosX = tes3mp.GetPosX(pid)
 			local pPosY = tes3mp.GetPosY(pid)
-			local distance = math.sqrt((playerPosX - pPosX)^2 + (playerPosY - pPosY)^2		
+			local distance = math.sqrt((playerPosX - pPosX)^2 + (playerPosY - pPosY)^2)		
 			if distance < (cfg.rad / mult) then
 				tes3mp.SendMessage(pid, message, false)
 			end
