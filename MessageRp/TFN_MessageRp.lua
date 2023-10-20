@@ -50,7 +50,7 @@ local gui = {
 --------------
 -- FUNCTION --
 --------------
-local function SendMessageToAllInCell(pidcible, cellDescription, message, state)
+local function SendMessageToAllInCell(pid, cellDescription, message, state)
 	local mult = 1	
 	if state == "short" then	
 		mult = 2			
@@ -59,15 +59,15 @@ local function SendMessageToAllInCell(pidcible, cellDescription, message, state)
 	elseif state == "long" then		
 		mult = 0.5		
 	end	
-	local playerPosX = tes3mp.GetPosX(pidcible)
-	local playerPosY = tes3mp.GetPosY(pidcible)			
-	for index, pid in pairs(LoadedCells[cellDescription].visitors) do	
-		if Players[pid] and Players[pid]:IsLoggedIn() then		
-			local pPosX = tes3mp.GetPosX(pid)
-			local pPosY = tes3mp.GetPosY(pid)
+	local playerPosX = tes3mp.GetPosX(pid)
+	local playerPosY = tes3mp.GetPosY(pid)			
+	for index, targetPid in pairs(LoadedCells[cellDescription].visitors) do	
+		if targetPid ~= pid and Players[targetPid] and Players[targetPid]:IsLoggedIn() then		
+			local pPosX = tes3mp.GetPosX(targetPid)
+			local pPosY = tes3mp.GetPosY(targetPid)
 			local distance = math.sqrt((playerPosX - pPosX)^2 + (playerPosY - pPosY)^2)		
 			if distance < (cfg.rad / mult) then
-				tes3mp.SendMessage(pid, message, false)
+				tes3mp.SendMessage(targetPid, message, false)
 			end
 		end
 	end
@@ -90,6 +90,7 @@ local function SendLocalMessage(pid, message, state)
 	else	
 		SendMessageToAllInCell(pid, cellDescription, message, state)		
 	end
+	tes3mp.SendMessage(pid, message, false)
 end
 
 local function customVariableShort(pid)
