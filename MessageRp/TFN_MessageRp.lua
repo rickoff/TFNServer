@@ -82,17 +82,17 @@ local function SendMessageToAllInCell(pid, cellList, message, state)
 	local playerPosY = tes3mp.GetPosY(pid)	
 	for _, cellDescription in ipairs(cellList) do
 		for _, targetPid in ipairs(LoadedCells[cellDescription].visitors) do	
-			if Players[targetPid] and Players[targetPid]:IsLoggedIn() then		
+			if not pidList[targetPid] and Players[targetPid] and Players[targetPid]:IsLoggedIn() then		
 				local pPosX = tes3mp.GetPosX(targetPid)
 				local pPosY = tes3mp.GetPosY(targetPid)
 				local distance = math.sqrt((playerPosX - pPosX)^2 + (playerPosY - pPosY)^2)		
 				if distance < (cfg.zone / mult) then
-					tableHelper.insertValueIfMissing(pidList, targetPid)
+					pidList[targetPid] = true
 				end
 			end
 		end
 	end
-	for _, targetPid in ipairs(pidList) do
+	for targetPid, bool in pairs(pidList) do
 		tes3mp.SendMessage(targetPid, message, false)
 	end
 end
