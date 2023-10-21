@@ -24,12 +24,12 @@ local function GetAdjacentCells(cellDescription)
 	local cellX = tonumber(string.sub(cellDescription, 1, string.find(cellDescription, ",") - 1))
 	local cellY = tonumber(string.sub(cellDescription, string.find(cellDescription, ",") + 2))
 	local adjacentCells = {}
-	for dx = -1, 1 do
-		for dy = -1, 1 do
-			local adjacentX = cellX + dx
-			local adjacentY = cellY + dy
-			local tempCell = (adjacentX..", "..adjacentY)
-			table.insert(adjacentCells, tempCell)
+	for x = -1, 1 do
+		for y = -1, 1 do
+			local tempCell = (cellX + x..", "..cellY + y)
+			if LoadedCells[tempCell] then
+				table.insert(adjacentCells, tempCell)
+			end
 		end
 	end
 	return adjacentCells
