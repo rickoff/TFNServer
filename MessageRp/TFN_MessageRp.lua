@@ -16,7 +16,7 @@ FUNCTION:
 /medium before message in your chat for speak "White" 5 meters
 /long before message in your chat for cry "Orange" 10 meters
 /global before message in your chat for global "Red" all world
-Change the value cfg.rad, actualy: 500 ~ 5 meters
+Change the value cfg.zone, actualy: 500 ~ 5 meters
 ---------------------------
 ]]
 ------------
@@ -40,7 +40,10 @@ local trd = {
 }
 
 local cfg = {
-	rad = 500
+	zone = 500,
+	short = 2,
+	medium = 1,
+	long = 0.5
 }
 
 local gui = {
@@ -50,26 +53,47 @@ local gui = {
 --------------
 -- FUNCTION --
 --------------
-local function SendMessageToAllInCell(pid, cellDescription, message, state)
-	local mult = 1	
-	if state == "short" then	
-		mult = 2			
-	elseif state == "medium" then	
-		mult = 1			
-	elseif state == "long" then		
-		mult = 0.5		
-	end	
-	local playerPosX = tes3mp.GetPosX(pid)
-	local playerPosY = tes3mp.GetPosY(pid)			
-	for index, targetPid in pairs(LoadedCells[cellDescription].visitors) do	
-		if targetPid ~= pid and Players[targetPid] and Players[targetPid]:IsLoggedIn() then		
-			local pPosX = tes3mp.GetPosX(targetPid)
-			local pPosY = tes3mp.GetPosY(targetPid)
-			local distance = math.sqrt((playerPosX - pPosX)^2 + (playerPosY - pPosY)^2)		
-			if distance < (cfg.rad / mult) then
-				tes3mp.SendMessage(targetPid, message, false)
+local function AdjacentCell(cellDescription)
+	local cellList = {}
+	local cellX = tonumber(string.sub(cellDescription, 1, string.find(cellDescription, ",") - 1))		
+	local cellY = tonumber(string.sub(cellDescription, string.find(cellDescription, ",") + 2))		
+	for x = -1, 1 do
+		for y = -1, 1 do
+			local tempCell = (cellX+x)..", "..(cellY+y)
+			if LoadedCells[tempCell] then
+				table.insert(cellList, tempCell)
 			end
 		end
+	end	
+	return cellList
+end
+
+local function SendMessageToAllInCell(pid, cellList, message, state)
+	local pidList = {}
+	local mult = 1	
+	if state == "short" then	
+		mult = cfg.short			
+	elseif state == "medium" then	
+		mult = cfg.medium		
+	elseif state == "long" then		
+		mult = cfg.long		
+	end	
+	local playerPosX = tes3mp.GetPosX(pid)
+	local playerPosY = tes3mp.GetPosY(pid)	
+	for _, cellDescription in ipairs(cellList) do
+		for _, targetPid in ipairs(LoadedCells[cellDescription].visitors) do	
+			if Players[targetPid] and Players[targetPid]:IsLoggedIn() then		
+				local pPosX = tes3mp.GetPosX(targetPid)
+				local pPosY = tes3mp.GetPosY(targetPid)
+				local distance = math.sqrt((playerPosX - pPosX)^2 + (playerPosY - pPosY)^2)		
+				if distance < (cfg.zone / mult) then
+					tableHelper.insertValueIfMissing(pidList, targetPid)
+				end
+			end
+		end
+	end
+	for _, targetPid in ipairs(pidList) do
+		tes3mp.SendMessage(targetPid, message, false)
 	end
 end
 
@@ -77,20 +101,11 @@ local function SendLocalMessage(pid, message, state)
 	local cellDescription = Players[pid].data.location.cell	
 	if not cellDescription then return end	
 	if tes3mp.IsInExterior(pid) then	
-		local cellX = tonumber(string.sub(cellDescription, 1, string.find(cellDescription, ",") - 1))		
-		local cellY = tonumber(string.sub(cellDescription, string.find(cellDescription, ",") + 2))		
-		for x = -1, 1 do
-			for y = -1, 1 do
-				local tempCell = (cellX+x)..", "..(cellY+y)
-				if LoadedCells[tempCell] then
-					SendMessageToAllInCell(pid, tempCell, message, state)
-				end
-			end
-		end		
+		local cellList = AdjacentCell(cellDescription)	
+		SendMessageToAllInCell(pid, cellList, message, state)		
 	else	
-		SendMessageToAllInCell(pid, cellDescription, message, state)		
+		SendMessageToAllInCell(pid, {cellDescription}, message, state)		
 	end
-	tes3mp.SendMessage(pid, message, false)
 end
 
 local function customVariableShort(pid)
