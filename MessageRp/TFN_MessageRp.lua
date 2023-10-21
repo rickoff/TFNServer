@@ -68,32 +68,41 @@ local function AdjacentCell(cellDescription)
 	return cellList
 end
 
-local function SendMessageToAllInCell(pid, cellList, message, state)
+local function AdjacentPid(cellList)
+	local pidCheck = {}
 	local pidList = {}
+	for _, cellDescription in ipairs(cellList) do
+		for _, targetPid in ipairs(LoadedCells[cellDescription].visitors) do
+			if not pidCheck[targetPid] then
+				pidCheck[targetPid] = true
+				table.insert(pidList, targetPid)
+			end
+		end
+	end
+	return pidList
+end
+
+local function SendMessageToAllInCell(pid, cellList, message, state)
 	local mult = 1	
 	if state == "short" then	
-		mult = cfg.short			
+		mult = cfg.short		
 	elseif state == "medium" then	
-		mult = cfg.medium		
+		mult = cfg.medium			
 	elseif state == "long" then		
 		mult = cfg.long		
 	end	
 	local playerPosX = tes3mp.GetPosX(pid)
 	local playerPosY = tes3mp.GetPosY(pid)	
-	for _, cellDescription in ipairs(cellList) do
-		for _, targetPid in ipairs(LoadedCells[cellDescription].visitors) do	
-			if not pidList[targetPid] and Players[targetPid] and Players[targetPid]:IsLoggedIn() then		
-				local pPosX = tes3mp.GetPosX(targetPid)
-				local pPosY = tes3mp.GetPosY(targetPid)
-				local distance = math.sqrt((playerPosX - pPosX)^2 + (playerPosY - pPosY)^2)		
-				if distance < (cfg.zone / mult) then
-					pidList[targetPid] = true
-				end
+	local pidList = AdjacentPid(cellList)
+	for _, targetPid in ipairs(pidList) do
+		if Players[targetPid] and Players[targetPid]:IsLoggedIn() then		
+			local pPosX = tes3mp.GetPosX(targetPid)
+			local pPosY = tes3mp.GetPosY(targetPid)
+			local distance = math.sqrt((playerPosX - pPosX)^2 + (playerPosY - pPosY)^2)		
+			if distance < (cfg.rad / mult) then
+				tes3mp.SendMessage(targetPid, message, false)
 			end
-		end
-	end
-	for targetPid, bool in pairs(pidList) do
-		tes3mp.SendMessage(targetPid, message, false)
+		end	
 	end
 end
 
