@@ -99,7 +99,7 @@ local function SendMessageToAllInCell(pid, cellList, message, state)
 			local pPosX = tes3mp.GetPosX(targetPid)
 			local pPosY = tes3mp.GetPosY(targetPid)
 			local distance = math.sqrt((playerPosX - pPosX)^2 + (playerPosY - pPosY)^2)		
-			if distance < (cfg.rad / mult) then
+			if distance <= (cfg.zone / mult) then
 				tes3mp.SendMessage(targetPid, message, false)
 			end
 		end	
